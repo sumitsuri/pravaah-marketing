@@ -19,8 +19,8 @@ export function LeakSolutionsSection() {
           An ops system to plug every revenue leak
         </h2>
         <p className="mt-5 max-w-2xl text-base leading-relaxed text-ink-mute md:text-lg">
-          Like market leaders frame AI agents against missed calls and churn, Pravaah maps each
-          leak Indian salon chains actually feel — and ships the workflow that closes it.
+          Pravaah maps each leak Indian salon chains actually feel — slow desks, blind P&amp;L, quiet
+          chairs, paper timesheets — and ships the workflow that closes it.
         </p>
 
         <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">

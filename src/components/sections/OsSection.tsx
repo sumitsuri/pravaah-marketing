@@ -14,8 +14,8 @@ export function OsSection() {
           Built so floor work and CEO decisions share one flow.
         </h2>
         <p className="mt-5 max-w-2xl text-base text-mist/70 md:text-lg">
-          Zenoti calls it an OS for AI. We call it an OS for Indian multi-branch reality — walk-ins,
-          GST, WhatsApp, attendance, and P&amp;L tightly integrated so nothing falls between apps.
+          One operating system for Indian multi-branch reality — walk-ins, GST, WhatsApp, attendance,
+          and P&amp;L tightly integrated so nothing falls between apps.
         </p>
 
         <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-4">

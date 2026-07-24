@@ -12,8 +12,8 @@ export function VerticalsSection() {
         <p className="eyebrow">Built for your vertical</p>
         <h2 className="display mt-3 max-w-3xl">Complete software tailored to how you operate.</h2>
         <p className="mt-5 max-w-2xl text-ink-mute">
-          Like Phorest and Zenoti segment by industry — we speak to the salon formats Indian chains
-          actually run.
+          Tailored for the salon formats Indian chains actually run — hair, beauty, spa, and growing
+          brands.
         </p>
         <div className="mt-12 grid gap-4 md:grid-cols-2">
           {verticals.map((v, i) => (

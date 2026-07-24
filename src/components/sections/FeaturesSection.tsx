@@ -11,8 +11,8 @@ export function FeaturesSection() {
         <p className="eyebrow">Platform</p>
         <h2 className="display mt-3 max-w-3xl">Everything in the flow — organised the way buyers shop.</h2>
         <p className="mt-5 max-w-2xl text-base text-ink-mute md:text-lg">
-          Market leaders taxonomise delight / grow / productive / unify. Here&apos;s the Pravaah map —
-          only capabilities we have shipped.
+          Organised around delight, grow, productive teams, and unify ops — only capabilities we have
+          shipped.
         </p>
 
         <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
@@ -44,8 +44,7 @@ export function FeaturesSection() {
             <h3 className="mt-2 font-display text-3xl text-ink">WhatsApp that earns its keep</h3>
             <p className="mt-3 text-sm leading-relaxed text-ink-mute">
               Preview audiences by visit history and spend, then send. Campaigns ship with the
-              product — the same job Zenoti assigns to an “AI Marketer,” delivered for India desks
-              that already live on WhatsApp.
+              product — built for India desks that already live on WhatsApp.
             </p>
           </div>
         </div>

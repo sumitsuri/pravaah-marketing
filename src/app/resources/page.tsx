@@ -16,7 +16,7 @@ export default function ResourcesPage() {
       <PageHero
         eyebrow="Resources"
         title="Knowledge that helps owners buy — and run — better."
-        body="Guides and tools modelled on how Phorest and Zenoti educate buyers: practical, ROI-minded, and specific to multi-branch India ops."
+        body="Practical, ROI-minded guides and tools for multi-branch salon operators in India."
       />
       <section className="section-pad bg-white">
         <div className="container-wide grid gap-5 md:grid-cols-2">

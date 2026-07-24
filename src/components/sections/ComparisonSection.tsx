@@ -16,8 +16,8 @@ export function ComparisonSection() {
         <p className="eyebrow">Compare</p>
         <h2 className="display mt-3 max-w-3xl">Where Pravaah wins for India mid-market chains.</h2>
         <p className="mt-5 max-w-2xl text-ink-mute">
-          Honest matrix vs enterprise suites, marketplace tools, and India SMB software — based on
-          public positioning and what we have shipped.
+          How Pravaah stacks up against typical enterprise suites, marketplace apps, and India SMB tools —
+          based on what we have shipped.
         </p>
 
         <div className="mt-10 overflow-x-auto rounded-2xl border border-ink/10">
@@ -26,9 +26,9 @@ export function ComparisonSection() {
               <tr>
                 <th className="px-4 py-3 font-semibold text-ink">Capability</th>
                 <th className="px-4 py-3 font-semibold text-jade">Pravaah</th>
-                <th className="px-4 py-3 font-semibold text-ink-mute">Zenoti</th>
-                <th className="px-4 py-3 font-semibold text-ink-mute">Fresha</th>
-                <th className="px-4 py-3 font-semibold text-ink-mute">MioSalon</th>
+                <th className="px-4 py-3 font-semibold text-ink-mute">Enterprise suites</th>
+                <th className="px-4 py-3 font-semibold text-ink-mute">Marketplace apps</th>
+                <th className="px-4 py-3 font-semibold text-ink-mute">India SMB tools</th>
               </tr>
             </thead>
             <tbody>
@@ -39,13 +39,13 @@ export function ComparisonSection() {
                     <Cell value={row.pravaah} />
                   </td>
                   <td className="px-4 py-3">
-                    <Cell value={row.zenoti} />
+                    <Cell value={row.enterprise} />
                   </td>
                   <td className="px-4 py-3">
-                    <Cell value={row.fresha} />
+                    <Cell value={row.marketplace} />
                   </td>
                   <td className="px-4 py-3">
-                    <Cell value={row.miosalon} />
+                    <Cell value={row.smb} />
                   </td>
                 </tr>
               ))}
@@ -53,12 +53,11 @@ export function ComparisonSection() {
           </table>
         </div>
         <p className="mt-4 text-xs text-ink-mute">
-          Competitor cells summarise public marketing and common market packaging — validate in your
-          own RFP.{" "}
+          Category columns are directional — validate against your shortlist.{" "}
           <Link href="/demo" className="font-semibold text-jade">
             Book a demo
           </Link>{" "}
-          for a live side-by-side.
+          for a live walkthrough.
         </p>
       </div>
     </section>

@@ -36,8 +36,8 @@ export default function RoiCalculatorPage() {
             <p className="eyebrow">Tool</p>
             <h1 className="display mt-3">Branch revenue opportunity calculator</h1>
             <p className="lede mt-5">
-              Inspired by Phorest-style ROI tools — estimate hours saved at the desk and WhatsApp
-              win-back upside for your chain size. Directional, not a guarantee.
+              Estimate hours saved at the desk and WhatsApp win-back upside for your chain size.
+              Directional, not a guarantee.
             </p>
 
             <div className="mt-10 space-y-6 rounded-3xl border border-ink/10 bg-white p-6 md:p-8">

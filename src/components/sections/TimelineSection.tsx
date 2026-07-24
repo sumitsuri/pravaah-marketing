@@ -10,8 +10,8 @@ export function TimelineSection() {
         <p className="eyebrow">Go-live</p>
         <h2 className="display mt-3 max-w-3xl">From zero to flowing — without a six-month programme.</h2>
         <p className="mt-5 max-w-2xl text-base text-ink-mute md:text-lg">
-          Enterprise platforms sell 4-week white-glove transformations. Mid-market chains need
-          days, not quarters — with your managers billing on the floor by week one.
+          Mid-market chains need days, not quarters — with your managers billing on the floor by week
+          one, without a long transformation programme.
         </p>
 
         <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-4">

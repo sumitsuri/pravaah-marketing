@@ -17,7 +17,7 @@ export function VideoStoriesSection() {
           Watch the flow
         </p>
         <h2 className="mt-4 max-w-3xl font-display text-4xl leading-tight md:text-5xl">
-          Product stories — the way market leaders show proof on video.
+          Product stories you can watch before the demo.
         </h2>
         <p className="mt-5 max-w-2xl text-mist/70">
           Interactive product films walk the exact demos we run with buyers: desk billing, attendance
