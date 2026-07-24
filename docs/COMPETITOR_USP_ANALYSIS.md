@@ -55,14 +55,24 @@
 
 ## Messaging used on this site
 
+**Layout pattern (inspired by [Zenoti](https://www.zenoti.com/) + peers):**
+1. Brand-first hero + dual CTA (Book a demo / Talk to us)
+2. Trust strip
+3. Problem → solution cards (“plug every revenue leak”) with live product mock
+4. Predictive systems row (Market Pulse · P&L · Attendance)
+5. Pravaah OS narrative
+6. Go-live timeline (days, not 6-month enterprise)
+7. Results / quotes
+8. Platform taxonomy (Delight / Grow / Productive / Unify) — Zenoti-style footer map
+9. Transparent pricing
+10. Final CTA: “Stop the leaks. Start the flow.”
+
 **Positioning:**  
-*The operating system for multi-branch salon chains in India — GST billing, branch P&L, WhatsApp campaigns, and a manager floor app in one continuous flow.*
+*The multi-branch salon OS designed to stop leaks and grow your chain.*
 
-**Hero:** Brand-first (Pravaah) → “Run every salon like your best one.”
-
-**Conversion demo path:** Walk-in GST → Branch P&L → WhatsApp campaign → Market Pulse.
+**Hero echo of Zenoti cadence:** “You built something beautiful. Now watch every outlet flow…”
 
 **Explicit constraints for this site:**
 - Independent SaaS brand — no consumer salon brand references  
-- No “society / RWA / apartment” messaging  
+- No society / RWA / apartment messaging  
 - Transparent mid-market pricing vs Zenoti opacity / Fresha commission anxiety

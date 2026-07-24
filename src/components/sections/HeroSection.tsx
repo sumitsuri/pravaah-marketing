@@ -2,13 +2,13 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Phone } from "lucide-react";
 import { brand } from "@/lib/content";
 import { HeroProductMock } from "@/components/mockups/HeroProductMock";
 
 export function HeroSection() {
   return (
-    <section className="relative min-h-[100svh] overflow-hidden bg-flow-hero pt-24">
+    <section className="relative min-h-[100svh] overflow-hidden bg-flow-hero pt-28">
       <div
         className="pointer-events-none absolute inset-0 opacity-40"
         style={{
@@ -18,7 +18,7 @@ export function HeroSection() {
         aria-hidden
       />
 
-      <div className="container-narrow relative grid items-center gap-14 px-5 pb-28 pt-10 md:px-8 lg:grid-cols-[1.05fr_0.95fr] lg:gap-10 lg:px-12 lg:pb-32 lg:pt-16">
+      <div className="container-wide relative grid items-center gap-14 px-5 pb-24 pt-8 md:px-8 lg:grid-cols-[1.05fr_0.95fr] lg:gap-12 lg:px-12 lg:pb-28 lg:pt-12">
         <div>
           <motion.p
             className="font-display text-5xl leading-none tracking-tight text-ink md:text-6xl lg:text-7xl"
@@ -32,28 +32,28 @@ export function HeroSection() {
             className="mt-2 text-sm text-jade md:text-base"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 0.15 }}
+            transition={{ delay: 0.12 }}
           >
             {brand.sanskrit} · {brand.tagline}
           </motion.p>
 
           <motion.h1
-            className="mt-8 max-w-lg font-display text-3xl leading-[1.12] text-ink md:text-4xl lg:text-[2.65rem]"
+            className="mt-8 max-w-xl font-display text-[1.85rem] leading-[1.12] text-ink md:text-4xl lg:text-[2.75rem]"
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.7 }}
           >
-            Run every salon like your best one.
+            The multi-branch salon OS designed to stop leaks and grow your chain.
           </motion.h1>
 
           <motion.p
-            className="lede mt-5"
+            className="mt-5 max-w-lg text-base leading-relaxed text-ink-mute md:text-lg"
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.32 }}
           >
-            The operating system for multi-branch salon chains in India — GST billing,
-            branch P&L, WhatsApp campaigns, and a manager floor app in one continuous flow.
+            You built something beautiful. Now watch every outlet flow — GST billing, branch P&amp;L,
+            WhatsApp campaigns, and a manager floor app on one system of record.
           </motion.p>
 
           <motion.div
@@ -65,10 +65,19 @@ export function HeroSection() {
             <Link href="/demo" className="btn-primary">
               Book a demo <ArrowRight className="h-4 w-4" />
             </Link>
-            <Link href="/#workflows" className="btn-secondary">
-              See the workflows
-            </Link>
+            <a href="mailto:hello@pravaah.app" className="btn-secondary">
+              <Phone className="h-4 w-4" /> Talk to us
+            </a>
           </motion.div>
+
+          <motion.p
+            className="mt-6 text-xs text-ink-mute"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.55 }}
+          >
+            Built for 3–20 branch chains in India · No marketplace commission · Transparent pricing
+          </motion.p>
         </div>
 
         <div className="pb-10 lg:pb-0">

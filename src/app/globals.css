@@ -42,6 +42,10 @@ body {
     @apply mx-auto w-full max-w-6xl;
   }
 
+  .container-wide {
+    @apply mx-auto w-full max-w-7xl;
+  }
+
   .eyebrow {
     @apply text-xs font-semibold uppercase tracking-[0.18em] text-jade;
   }

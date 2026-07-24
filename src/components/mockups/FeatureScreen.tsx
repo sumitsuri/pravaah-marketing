@@ -19,7 +19,10 @@ const screens = {
           ["Keratin treatment", "Riya", "₹4,500"],
           ["Haircut", "Aman", "₹700"],
         ].map(([svc, staff, price]) => (
-          <div key={svc} className="flex items-center justify-between rounded-lg border border-ink/8 px-3 py-2 text-sm">
+          <div
+            key={svc}
+            className="flex items-center justify-between rounded-lg border border-ink/8 px-3 py-2 text-sm"
+          >
             <div>
               <p className="font-medium text-ink">{svc}</p>
               <p className="text-xs text-ink-mute">{staff}</p>
@@ -35,7 +38,9 @@ const screens = {
   ),
   pnl: (
     <div className="space-y-3 p-4">
-      <p className="text-xs font-semibold uppercase tracking-wider text-ink-mute">Branch P&L · March</p>
+      <p className="text-xs font-semibold uppercase tracking-wider text-ink-mute">
+        Branch P&L · March
+      </p>
       <div className="grid grid-cols-2 gap-2">
         <div className="rounded-xl bg-mist-soft p-3">
           <p className="text-[11px] text-ink-mute">Revenue</p>
@@ -81,7 +86,10 @@ const screens = {
           ["Priya", "09:12", "On time"],
           ["Kabir", "—", "Missing"],
         ].map(([name, time, status]) => (
-          <div key={name} className="flex items-center justify-between rounded-lg bg-mist-soft px-3 py-2 text-sm">
+          <div
+            key={name}
+            className="flex items-center justify-between rounded-lg bg-mist-soft px-3 py-2 text-sm"
+          >
             <span className="font-medium">{name}</span>
             <span className="text-ink-mute">{time}</span>
             <span className={status === "Late" || status === "Missing" ? "text-amber" : "text-jade"}>
@@ -94,7 +102,9 @@ const screens = {
   ),
   campaign: (
     <div className="space-y-3 p-4">
-      <p className="text-xs font-semibold uppercase tracking-wider text-ink-mute">WhatsApp campaign</p>
+      <p className="text-xs font-semibold uppercase tracking-wider text-ink-mute">
+        WhatsApp campaign
+      </p>
       <div className="rounded-xl border border-ink/8 p-3">
         <p className="text-sm font-semibold text-ink">Win-back · 45–90 days</p>
         <p className="mt-1 text-xs leading-relaxed text-ink-mute">
@@ -118,13 +128,56 @@ const screens = {
       </div>
     </div>
   ),
+  pulse: (
+    <div className="space-y-3 p-4">
+      <p className="text-xs font-semibold uppercase tracking-wider text-ink-mute">Market Pulse</p>
+      {[
+        { name: "Indiranagar", rank: "#1", score: "92", note: "Peer top quartile" },
+        { name: "Whitefield", rank: "#2", score: "86", note: "Stable" },
+        { name: "HSR Layout", rank: "#4", score: "71", note: "Playbook: weekday colour" },
+      ].map((row) => (
+        <div
+          key={row.name}
+          className="flex items-center justify-between rounded-xl bg-mist-soft px-3 py-3"
+        >
+          <div>
+            <p className="text-sm font-semibold text-ink">{row.name}</p>
+            <p className="text-xs text-ink-mute">
+              {row.rank} · {row.note}
+            </p>
+          </div>
+          <span className="font-display text-lg text-jade">{row.score}</span>
+        </div>
+      ))}
+    </div>
+  ),
+  inventory: (
+    <div className="space-y-3 p-4">
+      <p className="text-xs font-semibold uppercase tracking-wider text-ink-mute">
+        Branch inventory
+      </p>
+      {[
+        ["Keratin kit", "14", "OK"],
+        ["Colour — ash blonde", "3", "Low"],
+        ["Shampoo retail", "22", "OK"],
+        ["Developer 20vol", "1", "Critical"],
+      ].map(([name, qty, status]) => (
+        <div
+          key={name}
+          className="flex items-center justify-between rounded-lg border border-ink/8 px-3 py-2 text-sm"
+        >
+          <span className="font-medium">{name}</span>
+          <span className="text-ink-mute">{qty} units</span>
+          <span className={status === "OK" ? "text-jade" : "text-amber"}>{status}</span>
+        </div>
+      ))}
+    </div>
+  ),
 };
 
-export function FeatureScreen({
-  variant,
-}: {
-  variant: keyof typeof screens;
-}) {
+export type ScreenVariant = keyof typeof screens;
+
+export function FeatureScreen({ variant }: { variant: ScreenVariant }) {
   return (
     <motion.div
       className="overflow-hidden rounded-2xl border border-ink/10 bg-white shadow-[0_20px_50px_-30px_rgba(11,31,28,0.4)]"

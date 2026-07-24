@@ -7,7 +7,7 @@ import { pricing } from "@/lib/content";
 export function PricingPreview() {
   return (
     <section className="section-pad bg-mist-soft">
-      <div className="container-narrow">
+      <div className="container-wide">
         <p className="eyebrow">Pricing</p>
         <h2 className="display mt-3 max-w-2xl">Transparent mid-market pricing. No demo tax to see the number.</h2>
         <p className="lede mt-5">
