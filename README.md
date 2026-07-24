@@ -1,55 +1,36 @@
 # Pravaah Marketing Site
 
-Public marketing website for **Pravaah** (प्रवाह) — an independent multi-branch salon operations SaaS for India.
+Public marketing website for **Pravaah** — independent multi-branch salon operations SaaS for India.
 
-This repository is **separate** from any consumer salon brand marketing site. Do not mix brands.
+Separate from any consumer salon brand site.
 
-## Positioning
-
-> The operating system for multi-branch salon chains in India — GST billing, branch P&L, WhatsApp campaigns, and a manager floor app in one continuous flow.
-
-## Stack
-
-- Next.js 16 (App Router)
-- React 19
-- Tailwind CSS 3
-- Framer Motion
-- Fraunces + Sora fonts
-
-## Develop
+## Run
 
 ```bash
-cd pravaah-marketing
 npm install
-npm run dev
+npm run dev   # http://localhost:3010
 ```
-
-Open [http://localhost:3010](http://localhost:3010).
-
-## Scripts
-
-| Command | Purpose |
-|---------|---------|
-| `npm run dev` | Local marketing site on port 3010 |
-| `npm run build` | Production build |
-| `npm start` | Serve production build |
 
 ## Site map
 
 | Route | Purpose |
 |-------|---------|
-| `/` | Hero, pillars, interactive workflows, features, pricing preview, CTA |
-| `/pricing` | Full pricing |
-| `/demo` | Demo request form |
+| `/` | Full market-leader homepage (film, leaks, stories, OS, compare, FAQ) |
+| `/solutions/[slug]` | Multi-branch · Owners · Managers |
+| `/products` | Product hub |
+| `/products/[slug]` | Billing · Analytics · Attendance · Campaigns · Inventory |
+| `/customers` | Stories + film proofs |
+| `/resources` | Guides, playbooks, comparisons |
+| `/roi-calculator` | Interactive opportunity model |
+| `/pricing` | Plans |
+| `/demo` | Demo request |
 
-## Docs
+## Design references absorbed
 
-- [`docs/COMPETITOR_USP_ANALYSIS.md`](./docs/COMPETITOR_USP_ANALYSIS.md) — Zenoti / global / India USP audit and how this site differentiates
+- **Zenoti** — leak→solution cards, OS narrative, dual CTA
+- **Boulevard** — product tour / film energy, testimonial density
+- **Phorest** — verticals, ROI calculator, feature taxonomy, video stories
 
-## Brand notes
+## Stack
 
-- Product name: **Pravaah**
-- Tagline: *The flow of salon success*
-- Visual language: cool mist + jade flow (water/current), not purple SaaS chrome
-- No society/RWA copy on this site
-- No consumer salon brand cross-links
+Next.js 16 · React 19 · Tailwind 3 · Framer Motion · Fraunces + Sora

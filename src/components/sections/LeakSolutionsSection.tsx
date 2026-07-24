@@ -73,9 +73,14 @@ export function LeakSolutionsSection() {
                   </li>
                 ))}
               </ul>
-              <Link href="/demo" className="btn-primary mt-8 inline-flex">
-                See it in a demo <ArrowRight className="h-4 w-4" />
-              </Link>
+              <div className="mt-8 flex flex-wrap gap-3">
+                <Link href="/demo" className="btn-primary inline-flex">
+                  See it in a demo <ArrowRight className="h-4 w-4" />
+                </Link>
+                <Link href={current.href} className="btn-secondary inline-flex">
+                  Product details
+                </Link>
+              </div>
             </motion.div>
           </AnimatePresence>
 

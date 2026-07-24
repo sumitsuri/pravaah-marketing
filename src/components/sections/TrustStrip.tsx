@@ -3,17 +3,20 @@
 import { trustLogos } from "@/lib/content";
 
 export function TrustStrip() {
+  const row = [...trustLogos, ...trustLogos];
   return (
-    <section className="border-y border-ink/8 bg-white py-10">
-      <div className="container-wide px-5 md:px-8 lg:px-12">
-        <p className="text-center text-xs font-semibold uppercase tracking-[0.2em] text-ink-mute">
-          Trusted pattern for multi-branch salon operators across India
-        </p>
-        <div className="mt-6 flex flex-wrap items-center justify-center gap-x-10 gap-y-4">
-          {trustLogos.map((logo) => (
+    <section className="overflow-hidden border-y border-ink/8 bg-white py-8">
+      <p className="px-5 text-center text-xs font-semibold uppercase tracking-[0.2em] text-ink-mute md:px-8">
+        Built for multi-branch salon operators across India
+      </p>
+      <div className="relative mt-6">
+        <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-16 bg-gradient-to-r from-white to-transparent" />
+        <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-16 bg-gradient-to-l from-white to-transparent" />
+        <div className="flex w-max animate-marquee gap-12 px-6">
+          {row.map((logo, i) => (
             <span
-              key={logo}
-              className="font-display text-lg tracking-tight text-ink/45 md:text-xl"
+              key={`${logo}-${i}`}
+              className="whitespace-nowrap font-display text-xl tracking-tight text-ink/40 md:text-2xl"
             >
               {logo}
             </span>
