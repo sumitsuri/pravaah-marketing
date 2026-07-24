@@ -1,0 +1,69 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --ink: #0b1f1c;
+  --mist: #e8f0ee;
+  --jade: #0f6b5c;
+  --foam: #7bc4b2;
+  --paper: #f3f7f6;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--ink);
+  background: var(--paper);
+  font-family: var(--font-sans), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: rgba(15, 107, 92, 0.18);
+}
+
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl bg-jade px-6 py-3 text-sm font-semibold text-white transition hover:bg-jade-bright focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-jade;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-xl border border-ink/15 bg-white/70 px-6 py-3 text-sm font-semibold text-ink backdrop-blur transition hover:border-jade/40 hover:bg-white;
+  }
+
+  .section-pad {
+    @apply px-5 py-20 md:px-8 md:py-28 lg:px-12;
+  }
+
+  .container-narrow {
+    @apply mx-auto w-full max-w-6xl;
+  }
+
+  .eyebrow {
+    @apply text-xs font-semibold uppercase tracking-[0.18em] text-jade;
+  }
+
+  .display {
+    @apply font-display text-4xl leading-[1.08] tracking-tight text-ink md:text-5xl lg:text-6xl;
+  }
+
+  .lede {
+    @apply max-w-xl text-base leading-relaxed text-ink-mute md:text-lg;
+  }
+}
+
+/* Flowing SVG ribbon under hero brand */
+.flow-path {
+  stroke-dasharray: 240;
+  stroke-dashoffset: 240;
+  animation: draw-line 1.8s ease-out 0.4s forwards;
+}
+
+@keyframes draw-line {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
