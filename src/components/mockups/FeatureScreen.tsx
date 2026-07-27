@@ -177,10 +177,20 @@ const screens = {
 
 export type ScreenVariant = keyof typeof screens;
 
-export function FeatureScreen({ variant }: { variant: ScreenVariant }) {
+export function FeatureScreen({
+  variant,
+  elevated = false,
+}: {
+  variant: ScreenVariant;
+  elevated?: boolean;
+}) {
   return (
     <motion.div
-      className="overflow-hidden rounded-2xl border border-ink/10 bg-white shadow-[0_20px_50px_-30px_rgba(11,31,28,0.4)]"
+      className={`overflow-hidden rounded-2xl border bg-white ${
+        elevated
+          ? "border-ink/12 shadow-premium ring-1 ring-white/80"
+          : "border-ink/10 shadow-[0_20px_50px_-30px_rgba(11,31,28,0.4)]"
+      }`}
       initial={{ opacity: 0, y: 16 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-80px" }}

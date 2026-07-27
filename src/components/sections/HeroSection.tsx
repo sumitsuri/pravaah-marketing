@@ -1,90 +1,112 @@
 "use client";
 
 import Link from "next/link";
-import { motion } from "framer-motion";
-import { ArrowRight, Phone } from "lucide-react";
-import { brand } from "@/lib/content";
+import { motion, useReducedMotion } from "framer-motion";
+import { ArrowRight, Play, Sparkles } from "lucide-react";
+import { brand, heroStats } from "@/lib/content";
+import { MeshGradient } from "@/components/visual/MeshGradient";
+import { KineticHeadline } from "@/components/visual/KineticHeadline";
+import { HeroVisual } from "@/components/visual/HeroVisual";
 import { ProductFilm } from "@/components/ProductFilm";
+import { GrowthDelta } from "@/components/visual/GrowthDelta";
+
+const ease = [0.22, 1, 0.36, 1] as const;
 
 export function HeroSection() {
-  return (
-    <section className="relative overflow-hidden bg-flow-hero pt-28">
-      <div
-        className="pointer-events-none absolute inset-0 opacity-40"
-        style={{
-          backgroundImage:
-            "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%230F6B5C' fill-opacity='0.04'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")",
-        }}
-        aria-hidden
-      />
+  const reduceMotion = useReducedMotion();
 
-      <div className="container-wide relative px-5 pb-16 pt-10 md:px-8 lg:px-12 lg:pb-20 lg:pt-14">
-        <div className="mx-auto max-w-4xl text-center">
-          <motion.p
-            className="font-display text-5xl leading-none tracking-tight text-ink md:text-6xl lg:text-7xl"
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-          >
-            {brand.name}
-          </motion.p>
-          <motion.p
-            className="mt-2 text-sm text-jade md:text-base"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.1 }}
-          >
-            {brand.productLabel} · {brand.tagline}
-          </motion.p>
-          <motion.h1
-            className="mt-8 font-display text-3xl leading-[1.12] text-ink md:text-5xl lg:text-[3.25rem]"
-            initial={{ opacity: 0, y: 14 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.18 }}
-          >
-            Run every location as one connected business.
-          </motion.h1>
-          <motion.p
-            className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-ink-mute md:text-lg"
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.28 }}
-          >
-            {brand.mission}
-          </motion.p>
-          <motion.p
-            className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-ink-mute md:text-lg"
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.32 }}
-          >
-            GST billing, branch P&amp;L, WhatsApp campaigns, verified attendance, and Market Pulse —
-            one connected platform for operators who run more than one door.
-          </motion.p>
+  return (
+    <section className="relative overflow-hidden pt-24 md:pt-28">
+      <MeshGradient />
+      <div className="grain pointer-events-none absolute inset-0 opacity-[0.28]" aria-hidden />
+
+      <div className="container-wide relative px-5 pb-10 pt-6 md:px-8 lg:px-12 lg:pb-14 lg:pt-10">
+        <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-14">
+          {/* Copy */}
+          <div className="max-w-xl text-center lg:text-left">
+            <motion.div
+              className="inline-flex items-center gap-2 rounded-full border border-jade/20 bg-white/80 px-4 py-2 text-xs font-semibold tracking-wide text-jade shadow-sm backdrop-blur-md"
+              initial={false}
+              animate={{ opacity: 1, y: 0 }}
+            >
+              <Sparkles className="h-3.5 w-3.5 shrink-0" />
+              {brand.productLabel}
+            </motion.div>
+
+            <motion.h1
+              className="mt-6 font-display text-[2rem] leading-[1.12] tracking-tight sm:mt-7 sm:text-[2.35rem] md:text-5xl lg:text-[3.4rem]"
+              style={{ color: "var(--mkt-site-text)" }}
+              initial={false}
+              animate={{ opacity: 1, y: 0 }}
+            >
+              <span className="block opacity-90" style={{ color: "var(--mkt-site-text-muted)" }}>Turn your</span>
+              <span className="mt-1 block">
+                <KineticHeadline className="text-[2rem] sm:text-[2.35rem] md:text-5xl lg:text-[3.4rem]" />
+              </span>
+              <span className="mt-1 block">into growth decisions.</span>
+            </motion.h1>
+
+            <motion.p
+              className="mx-auto mt-6 max-w-lg text-base leading-relaxed text-ink-mute md:text-[1.05rem] lg:mx-0"
+              initial={false}
+              animate={{ opacity: 1, y: 0 }}
+            >
+              {brand.mission}
+            </motion.p>
+
+            <motion.div
+              className="mt-8 flex flex-wrap justify-center gap-3 lg:justify-start"
+              initial={false}
+              animate={{ opacity: 1, y: 0 }}
+            >
+              <Link href="/demo" className="btn-primary shadow-glow-jade">
+                Book a growth walkthrough
+                <ArrowRight className="h-4 w-4 transition group-hover:translate-x-0.5" />
+              </Link>
+              <Link href="/#film" className="btn-secondary">
+                <Play className="h-4 w-4" /> Watch product film
+              </Link>
+            </motion.div>
+
+            {/* Inline proof stats — visible without scrolling */}
+            <motion.div
+              className="mt-8 flex flex-col gap-3 sm:mt-10 sm:grid sm:grid-cols-2 sm:gap-3 lg:grid-cols-4 lg:gap-4"
+              initial={false}
+              animate={{ opacity: 1, y: 0 }}
+            >
+              {heroStats.map((stat) => (
+                <div
+                  key={stat.label}
+                  className="rounded-xl border bg-white/60 px-3 py-3 backdrop-blur-sm sm:py-3.5 lg:text-left"
+                  style={{ borderColor: "var(--mkt-site-border)" }}
+                >
+                  <GrowthDelta metric={stat} size="sm" />
+                </div>
+              ))}
+            </motion.div>
+          </div>
+
+          {/* Product visual — always visible on sm+ */}
           <motion.div
-            className="mt-8 flex flex-wrap justify-center gap-3"
-            initial={{ opacity: 0, y: 8 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.38 }}
+            initial={false}
+            animate={{ opacity: 1, x: 0 }}
+            className="mx-auto w-full max-w-md lg:max-w-none"
           >
-            <Link href="/demo" className="btn-primary">
-              Book a demo <ArrowRight className="h-4 w-4" />
-            </Link>
-            <Link href="/#film" className="btn-secondary">
-              Watch product film
-            </Link>
-            <a href={`mailto:${brand.email}`} className="btn-secondary">
-              <Phone className="h-4 w-4" /> Talk to us
-            </a>
+            <HeroVisual />
           </motion.div>
         </div>
 
+        {/* Product film */}
         <motion.div
           id="film"
-          className="mx-auto mt-14 max-w-6xl scroll-mt-28"
-          initial={{ opacity: 0, y: 24 }}
+          className="mx-auto mt-14 max-w-6xl scroll-mt-28 lg:mt-20"
+          initial={false}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.45, duration: 0.8 }}
         >
+          <div className="mb-6 text-center lg:text-left">
+            <p className="eyebrow">See it in action</p>
+            <p className="mt-2 font-display text-2xl text-ink md:text-3xl">The product film</p>
+          </div>
           <ProductFilm />
         </motion.div>
       </div>

@@ -1,25 +1,280 @@
 export const brand = {
   name: "Antrahq",
-  productLabel: "Ops Platform",
-  tagline: "Every location in sync. Every day clearer.",
-  short: "Run smarter. Grow together.",
+  productLabel: "Growth Decision Platform",
+  tagline: "Decisions that compound. Growth that follows.",
+  short: "See clearly. Act faster. Grow together.",
   mission:
-    "We help multi-location operators run billing, teams, and customer relationships from one connected system — so every new outlet strengthens the network, not the chaos.",
-  footer: "Built in India · Multi-location · Real-time ops intelligence",
+    "Antrahq turns every signal from your locations — revenue, staff, stock, and guests — into decisions that accelerate growth. Built for operators who refuse to guess.",
+  footer: "Built in India · Multi-location · Decision intelligence",
   email: "hello@antrahq.com",
 } as const;
+
+/** Rotating words in the hero kinetic headline (Linear-style). */
+export const heroWords = ["locations", "decisions", "branches", "growth"] as const;
+
+/** The decision loop — core platform narrative. */
+export const decisionLoop = [
+  {
+    step: "01",
+    title: "Capture",
+    desc: "Every walk-in, punch, stock move, and campaign — logged at the moment of work.",
+  },
+  {
+    step: "02",
+    title: "Connect",
+    desc: "Signals flow into one network view. No Excel bridges. No app hopping.",
+  },
+  {
+    step: "03",
+    title: "Decide",
+    desc: "Market Pulse, branch P&L, and playbooks tell you what to fix today — not next month.",
+  },
+  {
+    step: "04",
+    title: "Accelerate",
+    desc: "Coach the weak outlet, fill empty chairs, protect margin — growth compounds.",
+  },
+] as const;
+
+/** 3D hero floating metric cards */
+export const heroFloatingCards = [
+  {
+    label: "Branch rank",
+    value: "#2 → #1",
+    sub: "Market Pulse · this week",
+    tilt: -8,
+    delay: 0,
+  },
+  {
+    label: "Revenue signal",
+    value: "+18%",
+    sub: "Top outlet vs last month",
+    tilt: 6,
+    delay: 0.15,
+  },
+  {
+    label: "Growth actions",
+    value: "3 ready",
+    sub: "Playbooks queued for managers",
+    tilt: -4,
+    delay: 0.3,
+  },
+] as const;
+
+export const sectionCopy = {
+  decisionPlatform: {
+    eyebrow: "Why Antrahq",
+    title: "Not another ops tool. A decision platform for growth.",
+    lede: "Enterprise suites bury you in dashboards. Marketplaces tax your bookings. Antrahq connects floor reality to owner decisions — so every location gets sharper, and the network grows faster.",
+  },
+  growthLevers: {
+    eyebrow: "Growth levers",
+    title: "Six decisions that unlock revenue you're already leaving on the table.",
+    lede: "Each lever ties a real leak to a clear decision — with the product screen that makes action obvious.",
+  },
+  intelligence: {
+    eyebrow: "Decision intelligence",
+    title: "Live signals that tell you where to focus — before month-end.",
+    lede: "Market Pulse, branch P&L, and attendance integrity surface coaching moments while there's still time to act.",
+  },
+  film: {
+    eyebrow: "Product film",
+    title: "See decisions happen in real time.",
+  },
+  results: {
+    eyebrow: "Proof",
+    title: "Operators who stopped guessing — and started growing.",
+  },
+  finalCta: {
+    title: "Ready to make every location a growth engine?",
+    lede: "Book a walkthrough tailored to your chain. See decisions, not dashboards.",
+  },
+  aiAgents: {
+    eyebrow: "Always working for you",
+    title: "While you sleep, your growth team never clocks out.",
+    lede: "Antrahq quietly watches every branch — visits, margins, staff, and guest retention — then connects the dots into clear actions for the morning.",
+    useCaseTitle: "Example: Koramangala outlet starts slipping",
+    useCaseLede: "See how five insights connect overnight into one playbook you can act on.",
+    graphStart: "Overnight",
+    graphEnd: "Your morning",
+    detailEyebrow: "What this means for you",
+  },
+} as const;
+
+/** Hero + site-wide growth metrics with before/after/delta */
+export const heroStats = [
+  {
+    label: "Decision speed vs spreadsheets",
+    before: "1×",
+    after: "2.4×",
+    delta: "+140%",
+    improved: true,
+  },
+  {
+    label: "Owner admin time per week",
+    before: "12 hrs",
+    after: "7 hrs",
+    delta: "−42%",
+    improved: true,
+  },
+  {
+    label: "Marketplace booking tax",
+    before: "15–30%",
+    after: "0%",
+    delta: "Keep all",
+    improved: true,
+  },
+  {
+    label: "Verified attendance punch",
+    before: "4 min",
+    after: "15 sec",
+    delta: "−94%",
+    improved: true,
+  },
+] as const;
+
+export const heroVisualMetrics = [
+  {
+    label: "Branch revenue",
+    before: "₹14.2L",
+    after: "₹16.8L",
+    delta: "+18%",
+    improved: true,
+  },
+  {
+    label: "Network rank",
+    before: "#4",
+    after: "#2",
+    delta: "+2",
+    improved: true,
+  },
+  {
+    label: "Growth actions",
+    before: "0 queued",
+    after: "3 ready",
+    delta: "Live",
+    improved: true,
+  },
+] as const;
+
+/** AI agent roster — works round the clock */
+export const aiAgentRoster = [
+  { id: "signal", name: "Signal Agent", role: "Watches footfall, bookings & visit gaps across every branch" },
+  { id: "finance", name: "Finance Agent", role: "Correlates P&L leaks with product cost and discount drift" },
+  { id: "people", name: "People Agent", role: "Flags attendance anomalies before payroll surprises" },
+  { id: "growth", name: "Growth Agent", role: "Builds win-back audiences and campaign previews" },
+  { id: "coach", name: "Coach Agent", role: "Packages playbooks managers can act on today" },
+] as const;
+
+/** Graph node layout — positions in 0–100 coordinate space */
+export const agentFlowGraphLayout = [
+  { id: "signal", x: 8, y: 52, shortLabel: "Footfall" },
+  { id: "finance", x: 26, y: 28, shortLabel: "Margin" },
+  { id: "people", x: 44, y: 52, shortLabel: "Staff" },
+  { id: "growth", x: 62, y: 28, shortLabel: "Retention" },
+  { id: "coach", x: 80, y: 52, shortLabel: "Playbook" },
+  { id: "owner", x: 94, y: 52, shortLabel: "You" },
+] as const;
+
+/** End-to-end agent flow — Koramangala use case */
+export const agentFlowSteps = [
+  {
+    id: "signal",
+    time: "Overnight",
+    agent: "Footfall watch",
+    title: "Visits dipped at Koramangala",
+    detail:
+      "This outlet is down 22% compared to similar branches — the same pattern you saw during last month's slow week.",
+    insight: "Needs attention today",
+    agentId: "signal" as const,
+  },
+  {
+    id: "finance",
+    time: "Connected",
+    agent: "Margin check",
+    title: "Profit leak found on colour services",
+    detail:
+      "Product costs rose and walk-in discounts are higher than your network average — together costing roughly ₹1.1L per month.",
+    insight: "Fixable this week",
+    agentId: "finance" as const,
+  },
+  {
+    id: "people",
+    time: "Connected",
+    agent: "Staff check",
+    title: "Weekend attendance needs a look",
+    detail:
+      "Three late punches and one punch outside the salon boundary on the weekend shift — worth a quick conversation before payroll.",
+    insight: "3 items to review",
+    agentId: "people" as const,
+  },
+  {
+    id: "growth",
+    time: "Connected",
+    agent: "Guest win-back",
+    title: "148 guests ready to hear from you",
+    detail:
+      "Guests who haven't visited in 45+ days but spent ₹2K+ before — a WhatsApp win-back preview is ready to send.",
+    insight: "Fill empty chairs",
+    agentId: "growth" as const,
+  },
+  {
+    id: "coach",
+    time: "Connected",
+    agent: "Manager playbook",
+    title: "Three actions queued for your branch lead",
+    detail:
+      "Tighten discounts, restock colour products, and send the win-back — all assigned in the manager app, one tap to start.",
+    insight: "Ready on the floor",
+    agentId: "coach" as const,
+  },
+  {
+    id: "owner",
+    time: "Morning",
+    agent: "Your dashboard",
+    title: "Everything connected — rank moving up",
+    detail:
+      "Branch rank improved from #4 to #2. Revenue on track for +18%. Every insight links back to what happened overnight.",
+    insight: "Clear next steps",
+    agentId: "coach" as const,
+  },
+] as const;
+
+export const agentFlowOutcome = [
+  {
+    label: "Branch rank (network)",
+    before: "#4",
+    after: "#2",
+    delta: "+2 places",
+    improved: true,
+  },
+  {
+    label: "Monthly revenue",
+    before: "₹14.2L",
+    after: "₹16.8L",
+    delta: "+18%",
+    improved: true,
+  },
+  {
+    label: "Empty-chair days",
+    before: "11/mo",
+    after: "6/mo",
+    delta: "−45%",
+    improved: true,
+  },
+] as const;
 
 export const nav = {
   solutions: [
     {
       href: "/solutions/multi-branch",
       title: "Multi-branch chains",
-      desc: "One OS across every outlet — P&L, stock, and staff in sync.",
+      desc: "One decision view across every outlet — P&L, stock, and staff in sync.",
     },
     {
       href: "/solutions/owners",
       title: "Owners & CEOs",
-      desc: "Market Pulse, campaigns, and finance truth before noon.",
+      desc: "Market Pulse, campaigns, and finance truth — decisions before noon.",
     },
     {
       href: "/solutions/managers",
@@ -61,12 +316,6 @@ export const nav = {
   ],
 } as const;
 
-export const heroStats = [
-  { value: "60s", label: "Avg. walk-in to GST bill" },
-  { value: "15s", label: "Verified attendance punch" },
-  { value: "0%", label: "Marketplace booking tax" },
-  { value: "10", label: "India locales in product" },
-] as const;
 
 export const reviewBadges = [
   { name: "India GST-ready", detail: "CGST · SGST · branch GSTIN" },
@@ -78,26 +327,26 @@ export const reviewBadges = [
 export const filmScenes = [
   {
     id: "desk",
-    title: "Front desk",
-    caption: "Walk-in → stylist → UPI → WhatsApp receipt",
+    title: "Guest signal",
+    caption: "Walk-in → stylist → UPI → WhatsApp receipt — growth starts at the desk",
     screen: "walkin" as const,
   },
   {
     id: "floor",
-    title: "Floor attendance",
-    caption: "Selfie + GPS inside the salon geofence",
+    title: "People signal",
+    caption: "Selfie + GPS inside the geofence — trust every punch, protect payroll",
     screen: "attendance" as const,
   },
   {
     id: "network",
-    title: "Owner dashboard",
-    caption: "Branch P&L and Market Pulse before noon",
+    title: "Profit signal",
+    caption: "Branch P&L and Market Pulse — decide which outlet to coach today",
     screen: "pnl" as const,
   },
   {
     id: "growth",
-    title: "Win-back flow",
-    caption: "Audience preview → WhatsApp campaign send",
+    title: "Retention signal",
+    caption: "Audience preview → WhatsApp win-back — fill chairs on purpose",
     screen: "campaign" as const,
   },
 ] as const;
@@ -174,43 +423,58 @@ export const leakSolutions = [
 export const predictiveAgents = [
   {
     title: "Market Pulse",
-    blurb: "Spots which outlet is slipping — and what to do next.",
-    metric: "Same-day",
-    metricLabel: "coaching signal for underperforming branches",
+    blurb: "Ranks every outlet and surfaces the coaching decision — today, not month-end.",
+    metric: {
+      label: "Coaching signal latency",
+      before: "Month-end",
+      after: "Same-day",
+      delta: "Live",
+      improved: true,
+    },
     screen: "pulse" as const,
   },
   {
     title: "Branch P&L",
-    blurb: "Turns salary, rent, and product cost into a live profit picture.",
-    metric: "1 truth",
-    metricLabel: "across every branch — no reconciling Excel",
+    blurb: "Turns salary, rent, and product cost into a live profit picture you can act on.",
+    metric: {
+      label: "P&L reconciliation",
+      before: "3 Excels",
+      after: "1 truth",
+      delta: "Unified",
+      improved: true,
+    },
     screen: "pnl" as const,
   },
   {
     title: "Attendance integrity",
-    blurb: "Flags late, geo-outside, and missing exits before payroll.",
-    metric: "15 sec",
-    metricLabel: "verified punch on the floor PWA",
+    blurb: "Flags late, geo-outside, and missing exits before they become payroll leaks.",
+    metric: {
+      label: "Verified punch time",
+      before: "4 min",
+      after: "15 sec",
+      delta: "−94%",
+      improved: true,
+    },
     screen: "attendance" as const,
   },
 ] as const;
 
 export const osPillars = [
   {
-    title: "Everything is data",
-    desc: "Walk-ins, invoices, punches, stock moves, campaigns, and leads — captured at the moment of work.",
+    title: "Every signal captured",
+    desc: "Walk-ins, invoices, punches, stock moves, campaigns, and leads — data at the moment of work.",
   },
   {
-    title: "Data becomes clarity",
-    desc: "Branch P&L, Market Pulse, and service contribution turn noise into decisions.",
+    title: "Signals become decisions",
+    desc: "Branch P&L, Market Pulse, and service contribution turn noise into clear next steps.",
   },
   {
-    title: "Clarity drives action",
-    desc: "Managers bill and punch. CEOs campaign and coach. Same source of truth.",
+    title: "Decisions drive growth",
+    desc: "Managers act on the floor. CEOs coach the network. Same intelligence, same moment.",
   },
   {
-    title: "Action scales with the chain",
-    desc: "Add a branch — GSTIN, geofence, seats, and reporting follow without a rebuild.",
+    title: "Growth scales with you",
+    desc: "Add a branch — GSTIN, geofence, seats, and decision views follow without a rebuild.",
   },
 ] as const;
 
@@ -257,30 +521,45 @@ export const trustLogos = [
 export const results = [
   {
     quote:
-      "We stopped reconciling three Excels every Sunday. Walk-in GST and branch P&L are finally the same number the managers see on the floor.",
+      "We stopped reconciling three Excels every Sunday. Branch P&L and Market Pulse gave us growth decisions every morning — not month-end surprises.",
     name: "Ops lead",
     role: "6-outlet salon brand · Bangalore",
-    metric: "Admin time",
-    metricValue: "↓ ~40%",
-    focus: "Finance clarity",
+    focus: "Faster decisions",
+    metric: {
+      label: "Admin time per week",
+      before: "12 hrs",
+      after: "7 hrs",
+      delta: "−42%",
+      improved: true,
+    },
   },
   {
     quote:
-      "Attendance used to be a trust exercise. Selfie + GPS punches gave us a review trail without buying a biometric vendor.",
+      "Attendance used to be a trust exercise. Verified punches gave us integrity signals before payroll — and managers finally had clarity to coach.",
     name: "Brand admin",
     role: "Multi-branch beauty chain",
-    metric: "Punch time",
-    metricValue: "~15s",
-    focus: "Staff integrity",
+    focus: "People signals",
+    metric: {
+      label: "Verified punch time",
+      before: "4 min",
+      after: "15 sec",
+      delta: "−94%",
+      improved: true,
+    },
   },
   {
     quote:
-      "WhatsApp campaigns sitting inside Growth — not as a surprise add-on — meant we actually ran win-backs every week.",
+      "WhatsApp win-backs inside Growth meant we actually filled chairs on purpose. Retention became a decision, not a hope.",
     name: "Owner",
     role: "Mid-market salon group",
-    metric: "Campaigns",
-    metricValue: "Included",
-    focus: "Retention",
+    focus: "Revenue growth",
+    metric: {
+      label: "Empty-chair days / month",
+      before: "11",
+      after: "6",
+      delta: "−45%",
+      improved: true,
+    },
   },
 ] as const;
 
@@ -439,11 +718,11 @@ export const comparisonRows = [
 export const faqs = [
   {
     q: "Who is Antrahq built for?",
-    a: "Multi-location service businesses in India — salon chains today, clinics and pharmacies tomorrow — typically 3 to 20 outlets that need GST, WhatsApp, branch P&L, and a floor app without enterprise bloat or marketplace tax.",
+    a: "Multi-location operators in India who want growth decisions — not more dashboards. Salon chains today, clinics and pharmacies tomorrow — typically 3 to 20 outlets that need GST, WhatsApp, branch P&L, and floor intelligence without enterprise bloat or marketplace tax.",
   },
   {
     q: "How is Antrahq different from enterprise suites?",
-    a: "Enterprise suites are powerful but often opaque on price and slow to roll out. Antrahq focuses on mid-market multi-location ops: faster go-live, India desk reality (GST + WhatsApp), transparent ₹/branch pricing, and Market Pulse for coaching outlets.",
+    a: "Enterprise suites are powerful but often opaque on price and slow to roll out. Antrahq is a growth decision platform for mid-market chains: faster go-live, India desk reality (GST + WhatsApp), transparent ₹/branch pricing, and Market Pulse for coaching outlets.",
   },
   {
     q: "Do you take a cut of bookings?",
@@ -483,7 +762,7 @@ export const resources = [
     href: "/roi-calculator",
   },
   {
-    type: " compar",
+    type: "Compare",
     title: "How Antrahq compares by category",
     desc: "A practical buyer matrix for India mid-market chains.",
     href: "/resources#compare",
@@ -650,7 +929,7 @@ export const pricing = [
     name: "Starter",
     price: "₹2,999",
     unit: "per branch / month",
-    blurb: "Core ops for a focused outlet.",
+    blurb: "Core decisions for a focused outlet.",
     features: [
       "Walk-in billing & GST invoices",
       "1 manager seat",
@@ -664,7 +943,7 @@ export const pricing = [
     name: "Growth",
     price: "₹4,999",
     unit: "per branch / month",
-    blurb: "The chain OS most mid-market brands need.",
+    blurb: "The growth decision platform most mid-market brands need.",
     features: [
       "Everything in Starter",
       "Brand admin & multi-branch P&L",

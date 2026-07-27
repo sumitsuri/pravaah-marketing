@@ -8,17 +8,35 @@
   --jade: #0f6b5c;
   --foam: #7bc4b2;
   --paper: #f3f7f6;
+  /* Marketing theme fallbacks (forest-dark) */
+  --mkt-page-bg: #f3f7f6;
+  --mkt-header-bg: rgba(243, 247, 246, 0.95);
+  --mkt-site-text: #0b1f1c;
+  --mkt-site-text-muted: #3d5652;
+  --mkt-primary: #0f6b5c;
+  --mkt-primary-hover: #148f7a;
+  --mkt-primary-soft: #7bc4b2;
+  --mkt-primary-glow: rgba(15, 107, 92, 0.35);
+  --mkt-site-border: rgba(11, 31, 28, 0.1);
 }
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
 }
 
 body {
-  color: var(--ink);
-  background: var(--paper);
+  color: var(--mkt-site-text, var(--ink));
+  background: var(--mkt-page-bg, var(--paper));
   font-family: var(--font-sans), system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
 
 ::selection {
@@ -27,11 +45,33 @@ body {
 
 @layer components {
   .btn-primary {
-    @apply inline-flex items-center justify-center gap-2 rounded-xl bg-jade px-6 py-3 text-sm font-semibold text-white transition hover:bg-jade-bright focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-jade;
+    @apply inline-flex items-center justify-center gap-2 rounded-xl px-6 py-3.5 text-sm font-semibold text-white transition focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 active:scale-[0.98];
+    background: var(--mkt-primary, #0f6b5c);
+    box-shadow: 0 4px 14px -2px var(--mkt-primary-glow, rgba(15, 107, 92, 0.35)),
+      0 0 0 1px color-mix(in srgb, var(--mkt-primary, #0f6b5c) 8%, transparent);
+  }
+
+  .btn-primary:hover {
+    background: var(--mkt-primary-hover, #148f7a);
+    box-shadow: 0 6px 20px -4px var(--mkt-primary-glow, rgba(15, 107, 92, 0.45));
+  }
+
+  .btn-primary:focus-visible {
+    outline-color: var(--mkt-primary, #0f6b5c);
   }
 
   .btn-secondary {
-    @apply inline-flex items-center justify-center gap-2 rounded-xl border border-ink/15 bg-white/70 px-6 py-3 text-sm font-semibold text-ink backdrop-blur transition hover:border-jade/40 hover:bg-white;
+    @apply inline-flex items-center justify-center gap-2 rounded-xl border bg-white/80 px-6 py-3.5 text-sm font-semibold shadow-sm backdrop-blur transition hover:bg-white hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 active:scale-[0.98];
+    border-color: var(--mkt-site-border, rgba(11, 31, 28, 0.1));
+    color: var(--mkt-site-text, #0b1f1c);
+  }
+
+  .btn-secondary:hover {
+    border-color: color-mix(in srgb, var(--mkt-primary, #0f6b5c) 35%, transparent);
+  }
+
+  .btn-secondary:focus-visible {
+    outline-color: color-mix(in srgb, var(--mkt-primary, #0f6b5c) 50%, transparent);
   }
 
   .section-pad {
@@ -47,29 +87,68 @@ body {
   }
 
   .eyebrow {
-    @apply text-xs font-semibold uppercase tracking-[0.18em] text-jade;
+    @apply text-xs font-semibold uppercase tracking-[0.18em];
+    color: var(--mkt-primary, #0f6b5c);
   }
 
   .display {
-    @apply font-display text-4xl leading-[1.08] tracking-tight text-ink md:text-5xl lg:text-6xl;
+    @apply font-display text-3xl leading-[1.08] tracking-tight sm:text-4xl md:text-5xl lg:text-6xl;
+    color: var(--mkt-site-text, #0b1f1c);
   }
 
   .lede {
     @apply max-w-xl text-base leading-relaxed text-ink-mute md:text-lg;
   }
-}
 
-/* Flowing SVG ribbon under hero brand */
-.flow-path {
-  stroke-dasharray: 240;
-  stroke-dashoffset: 240;
-  animation: draw-line 1.8s ease-out 0.4s forwards;
-}
-
-@keyframes draw-line {
-  to {
-    stroke-dashoffset: 0;
+  .glass-card {
+    @apply border border-white/50 bg-white/75 shadow-premium backdrop-blur-xl;
   }
+
+  .shadow-premium {
+    box-shadow:
+      0 4px 6px -1px rgba(11, 31, 28, 0.04),
+      0 24px 60px -20px rgba(11, 31, 28, 0.18);
+  }
+
+  .shadow-premium-lg {
+    box-shadow:
+      0 8px 16px -4px rgba(11, 31, 28, 0.08),
+      0 40px 100px -40px rgba(11, 31, 28, 0.45);
+  }
+
+  .shadow-glow-jade {
+    box-shadow:
+      0 4px 14px -2px rgba(15, 107, 92, 0.35),
+      0 0 0 1px rgba(15, 107, 92, 0.08);
+  }
+}
+
+/* Film-like shimmer on product narrative panel */
+.film-shimmer {
+  background: linear-gradient(
+    105deg,
+    transparent 40%,
+    rgba(255, 255, 255, 0.06) 45%,
+    rgba(255, 255, 255, 0.12) 50%,
+    rgba(255, 255, 255, 0.06) 55%,
+    transparent 60%
+  );
+  background-size: 200% 100%;
+  animation: film-shimmer 4s ease-in-out infinite;
+}
+
+@keyframes film-shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* Subtle grain overlay for premium depth */
+.grain {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
 }
 
 @keyframes marquee {
@@ -83,4 +162,46 @@ body {
 
 .animate-marquee {
   animation: marquee 32s linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee,
+  .film-shimmer,
+  .agent-pulse-ring::after {
+    animation: none;
+  }
+}
+
+/* AI agent section — grid + pulse ring */
+.agent-grid {
+  background-image:
+    linear-gradient(var(--mkt-grid, rgba(123, 196, 178, 0.12)) 1px, transparent 1px),
+    linear-gradient(90deg, var(--mkt-grid, rgba(123, 196, 178, 0.12)) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: radial-gradient(ellipse 80% 70% at 50% 40%, black 20%, transparent 75%);
+}
+
+.agent-pulse-ring {
+  position: relative;
+}
+
+.agent-pulse-ring::after {
+  content: "";
+  position: absolute;
+  inset: -3px;
+  border-radius: inherit;
+  border: 1px solid rgba(123, 196, 178, 0.45);
+  animation: agent-ring-pulse 2.4s ease-in-out infinite;
+}
+
+@keyframes agent-ring-pulse {
+  0%,
+  100% {
+    opacity: 0.35;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.06);
+  }
 }

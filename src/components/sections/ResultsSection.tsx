@@ -1,14 +1,17 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { results } from "@/lib/content";
+import { results, sectionCopy } from "@/lib/content";
+import { GrowthDelta } from "@/components/visual/GrowthDelta";
 
 export function ResultsSection() {
+  const copy = sectionCopy.results;
+
   return (
     <section id="results" className="section-pad bg-mist-soft">
       <div className="container-wide">
-        <p className="eyebrow">Real results</p>
-        <h2 className="display mt-3 max-w-3xl">Operators feel the flow — not another login.</h2>
+        <p className="eyebrow">{copy.eyebrow}</p>
+        <h2 className="display mt-3 max-w-3xl">{copy.title}</h2>
 
         <div className="mt-12 grid gap-6 lg:grid-cols-3">
           {results.map((item, i) => (
@@ -26,11 +29,8 @@ export function ResultsSection() {
               <footer className="mt-6 border-t border-ink/10 pt-4">
                 <p className="font-semibold text-ink">{item.name}</p>
                 <p className="text-xs text-ink-mute">{item.role}</p>
-                <div className="mt-4 flex items-baseline justify-between">
-                  <span className="text-xs uppercase tracking-wider text-ink-mute">
-                    {item.metric}
-                  </span>
-                  <span className="font-display text-2xl text-jade">{item.metricValue}</span>
+                <div className="mt-4">
+                  <GrowthDelta metric={item.metric} size="sm" />
                 </div>
               </footer>
             </motion.blockquote>

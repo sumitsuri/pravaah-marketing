@@ -1,104 +1,130 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { AnimatePresence, motion } from "framer-motion";
-import { Play } from "lucide-react";
-import { brand, filmScenes } from "@/lib/content";
+import { AnimatePresence, motion, useReducedMotion } from "framer-motion";
+import { Pause, Play } from "lucide-react";
+import { brand, filmScenes, sectionCopy } from "@/lib/content";
 import { FeatureScreen } from "@/components/mockups/FeatureScreen";
+import { Scene3DWrapper } from "@/components/visual/Scene3DWrapper";
 
-/** Cinematic product “film” — auto-advancing UI scenes (leader-site product tour feel). */
+/** Cinematic product film — auto-advancing UI scenes with 3D depth and progress rail. */
 export function ProductFilm({ autoPlay = true }: { autoPlay?: boolean }) {
   const [index, setIndex] = useState(0);
   const [playing, setPlaying] = useState(autoPlay);
+  const reduceMotion = useReducedMotion();
   const scene = filmScenes[index];
 
   useEffect(() => {
-    if (!playing) return;
+    if (!playing || reduceMotion) return;
     const id = setInterval(() => {
       setIndex((i) => (i + 1) % filmScenes.length);
-    }, 4200);
+    }, 4800);
     return () => clearInterval(id);
-  }, [playing]);
+  }, [playing, reduceMotion]);
 
   return (
-    <div className="overflow-hidden rounded-[1.75rem] border border-ink/10 bg-ink shadow-[0_40px_100px_-50px_rgba(11,31,28,0.7)]">
-      <div className="flex items-center justify-between border-b border-white/10 px-4 py-3 md:px-5">
-        <div className="flex items-center gap-2">
-          <button
-            type="button"
-            onClick={() => setPlaying((p) => !p)}
-            className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-jade text-white"
-            aria-label={playing ? "Pause film" : "Play film"}
-          >
-            <Play className={`h-3.5 w-3.5 ${playing ? "opacity-40" : ""}`} />
-          </button>
-          <div>
-            <p className="text-xs font-semibold text-white">{brand.name} product film</p>
-            <p className="text-[11px] text-mist/60">
-              Scene {index + 1}/{filmScenes.length} · {scene.title}
-            </p>
+    <div className="group relative">
+      {/* Glow halo */}
+      <div
+        className="pointer-events-none absolute -inset-4 rounded-[2.5rem] bg-gradient-to-r from-jade/25 via-jade-soft/15 to-amber/10 opacity-70 blur-2xl transition duration-700 group-hover:opacity-100"
+        aria-hidden
+      />
+
+      <div
+        className="relative overflow-hidden rounded-[1.75rem] border border-ink/10 bg-ink shadow-premium-lg"
+        style={{ transformStyle: "preserve-3d" }}
+      >
+        {/* Chrome bar */}
+        <div className="flex items-center justify-between border-b border-white/10 bg-ink-soft/80 px-4 py-3 backdrop-blur md:px-5">
+          <div className="flex items-center gap-3">
+            <div className="hidden gap-1.5 sm:flex" aria-hidden>
+              <span className="h-2.5 w-2.5 rounded-full bg-white/20" />
+              <span className="h-2.5 w-2.5 rounded-full bg-white/20" />
+              <span className="h-2.5 w-2.5 rounded-full bg-white/20" />
+            </div>
+            <button
+              type="button"
+              onClick={() => setPlaying((p) => !p)}
+              className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-jade text-white shadow-glow-jade transition hover:bg-jade-bright"
+              aria-label={playing ? "Pause film" : "Play film"}
+            >
+              {playing ? <Pause className="h-3.5 w-3.5" /> : <Play className="h-3.5 w-3.5 ml-0.5" />}
+            </button>
+            <div>
+              <p className="text-xs font-semibold text-white">{brand.name} · {sectionCopy.film.title}</p>
+              <p className="text-[11px] text-mist/55">
+                Scene {index + 1}/{filmScenes.length} · {scene.title}
+              </p>
+            </div>
+          </div>
+          <div className="flex items-center gap-1.5">
+            {filmScenes.map((s, i) => (
+              <button
+                key={s.id}
+                type="button"
+                onClick={() => {
+                  setIndex(i);
+                  setPlaying(false);
+                }}
+                className={`h-1.5 rounded-full transition-all duration-300 ${
+                  i === index ? "w-8 bg-jade" : "w-3 bg-white/25 hover:bg-white/45"
+                }`}
+                aria-label={`Show ${s.title}`}
+              />
+            ))}
           </div>
         </div>
-        <div className="hidden items-center gap-1.5 sm:flex">
-          {filmScenes.map((s, i) => (
-            <button
-              key={s.id}
-              type="button"
-              onClick={() => {
-                setIndex(i);
-                setPlaying(false);
-              }}
-              className={`h-1.5 rounded-full transition-all ${
-                i === index ? "w-8 bg-jade" : "w-3 bg-white/25 hover:bg-white/40"
-              }`}
-              aria-label={`Show ${s.title}`}
-            />
-          ))}
-        </div>
-      </div>
 
-      <div className="grid gap-0 lg:grid-cols-[1.05fr_0.95fr]">
-        <div className="relative min-h-[280px] bg-gradient-to-br from-ink via-ink-soft to-[#0a2f28] p-6 md:p-8">
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={scene.id}
-              initial={{ opacity: 0, y: 12 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -8 }}
-              transition={{ duration: 0.4 }}
-              className="flex h-full flex-col justify-end"
-            >
-              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-jade-soft">
-                {scene.title}
-              </p>
-              <p className="mt-3 max-w-md font-display text-3xl leading-tight text-white md:text-4xl">
-                {scene.caption}
-              </p>
-              <div className="mt-6 h-1 overflow-hidden rounded-full bg-white/10">
-                <motion.div
-                  key={`${scene.id}-bar`}
-                  className="h-full bg-jade"
-                  initial={{ width: "0%" }}
-                  animate={{ width: playing ? "100%" : "0%" }}
-                  transition={{ duration: playing ? 4.2 : 0, ease: "linear" }}
-                />
-              </div>
-            </motion.div>
-          </AnimatePresence>
-        </div>
+        <div className="grid lg:grid-cols-[1.05fr_0.95fr]">
+          {/* Narrative panel — video-like gradient motion */}
+          <div className="relative min-h-[260px] overflow-hidden bg-gradient-to-br from-ink via-ink-soft to-[#0a2f28] p-6 md:min-h-[320px] md:p-8">
+            <div className="pointer-events-none absolute inset-0 film-shimmer opacity-40" aria-hidden />
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={scene.id}
+                initial={{ opacity: 0, x: -16 }}
+                animate={{ opacity: 1, x: 0 }}
+                exit={{ opacity: 0, x: 12 }}
+                transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
+                className="relative flex h-full flex-col justify-end"
+              >
+                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-jade-soft">{scene.title}</p>
+                <p className="mt-3 max-w-md font-display text-2xl leading-tight text-white md:text-4xl">
+                  {scene.caption}
+                </p>
+                <div className="mt-6 h-1 overflow-hidden rounded-full bg-white/10">
+                  <motion.div
+                    key={`${scene.id}-bar`}
+                    className="h-full rounded-full bg-gradient-to-r from-jade to-jade-soft"
+                    initial={{ width: "0%" }}
+                    animate={{ width: playing && !reduceMotion ? "100%" : `${((index + 1) / filmScenes.length) * 100}%` }}
+                    transition={{
+                      duration: playing && !reduceMotion ? 4.8 : 0.4,
+                      ease: playing ? "linear" : [0.22, 1, 0.36, 1],
+                    }}
+                  />
+                </div>
+              </motion.div>
+            </AnimatePresence>
+          </div>
 
-        <div className="bg-mist-soft p-4 md:p-6">
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={`${scene.id}-ui`}
-              initial={{ opacity: 0, scale: 0.98 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.35 }}
-            >
-              <FeatureScreen variant={scene.screen} />
-            </motion.div>
-          </AnimatePresence>
+          {/* Product UI — 3D tilt */}
+          <div className="relative bg-gradient-to-br from-mist-soft to-white p-4 md:p-6">
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={`${scene.id}-ui`}
+                initial={{ opacity: 0, scale: 0.96, rotateY: -4 }}
+                animate={{ opacity: 1, scale: 1, rotateY: 0 }}
+                exit={{ opacity: 0, scale: 0.98, rotateY: 4 }}
+                transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
+                style={{ transformStyle: "preserve-3d" }}
+              >
+                <Scene3DWrapper depth={0.6}>
+                  <FeatureScreen variant={scene.screen} elevated />
+                </Scene3DWrapper>
+              </motion.div>
+            </AnimatePresence>
+          </div>
         </div>
       </div>
     </div>

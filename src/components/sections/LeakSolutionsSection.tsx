@@ -4,24 +4,21 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import { brand, leakSolutions } from "@/lib/content";
+import { leakSolutions, sectionCopy } from "@/lib/content";
 import { FeatureScreen } from "@/components/mockups/FeatureScreen";
+import { Scene3DWrapper } from "@/components/visual/Scene3DWrapper";
 
 export function LeakSolutionsSection() {
   const [active, setActive] = useState(0);
   const current = leakSolutions[active];
+  const copy = sectionCopy.growthLevers;
 
   return (
     <section id="leaks" className="section-pad bg-white">
       <div className="container-wide">
-        <p className="eyebrow">Your ops workforce</p>
-        <h2 className="display mt-3 max-w-4xl">
-          An ops system to plug every revenue leak
-        </h2>
-        <p className="mt-5 max-w-2xl text-base leading-relaxed text-ink-mute md:text-lg">
-          {brand.name} maps each leak multi-location operators actually feel — slow desks, blind P&amp;L, quiet
-          chairs, paper timesheets — and ships the workflow that closes it.
-        </p>
+        <p className="eyebrow">{copy.eyebrow}</p>
+        <h2 className="display mt-3 max-w-4xl">{copy.title}</h2>
+        <p className="mt-5 max-w-2xl text-base leading-relaxed text-ink-mute md:text-lg">{copy.lede}</p>
 
         <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {leakSolutions.map((item, i) => {
@@ -92,7 +89,9 @@ export function LeakSolutionsSection() {
               exit={{ opacity: 0 }}
               transition={{ duration: 0.3 }}
             >
-              <FeatureScreen variant={current.screen} />
+              <Scene3DWrapper depth={0.5}>
+                <FeatureScreen variant={current.screen} elevated />
+              </Scene3DWrapper>
             </motion.div>
           </AnimatePresence>
         </div>

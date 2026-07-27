@@ -18,17 +18,17 @@ export default function DemoPage() {
       <section className="section-pad !pt-10">
         <div className="container-narrow grid gap-12 lg:grid-cols-[1.05fr_0.95fr]">
           <div>
-            <p className="eyebrow">Demo</p>
-            <h1 className="display mt-3">See {brand.name} in thirty minutes.</h1>
+            <p className="eyebrow">Growth walkthrough</p>
+            <h1 className="display mt-3">See your decision platform in thirty minutes.</h1>
             <p className="lede mt-5">
-              We&apos;ll walk walk-in → GST invoice, branch P&L, WhatsApp campaign, and Market Pulse
-              using a live multi-branch demo — the same path we use in sales.
+              We&apos;ll walk Market Pulse, branch P&L, WhatsApp win-backs, and floor signals using a live
+              multi-branch demo — the same growth map we use with operators like you.
             </p>
             <ul className="mt-8 space-y-3 text-sm text-ink-mute">
               {[
-                "Built for multi-location operators in India",
+                "Built for multi-location operators who want growth decisions, not dashboards",
                 "No marketplace pitch — your brand keeps every booking",
-                "Clear next steps on Starter vs Growth vs Enterprise",
+                "Clear path on Starter vs Growth vs Enterprise",
               ].map((item) => (
                 <li key={item} className="flex gap-3">
                   <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-jade" />

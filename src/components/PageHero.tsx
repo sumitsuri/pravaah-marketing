@@ -5,7 +5,7 @@ export function PageHero({
   title,
   body,
   ctaHref = "/demo",
-  ctaLabel = "Book a demo",
+  ctaLabel = "Book a walkthrough",
 }: {
   eyebrow: string;
   title: string;
