@@ -73,13 +73,13 @@ export function SiteFooter() {
           <Link href="/pricing" className="text-mist/80 hover:text-white">
             Pricing
           </Link>
-          <a href="mailto:hello@pravaah.app" className="text-mist/80 hover:text-white">
-            hello@pravaah.app
+          <a href={`mailto:${brand.email}`} className="text-mist/80 hover:text-white">
+            {brand.email}
           </a>
         </div>
       </div>
       <div className="border-t border-white/10 px-5 py-5 text-center text-xs text-mist/50 md:px-8">
-        © {new Date().getFullYear()} Pravaah. Independent salon ops platform.
+        © {new Date().getFullYear()} {brand.name}. {brand.productLabel} for multi-location businesses.
       </div>
     </footer>
   );

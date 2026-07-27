@@ -1,20 +1,20 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { osPillars } from "@/lib/content";
+import { brand, osPillars } from "@/lib/content";
 
 export function OsSection() {
   return (
     <section id="os" className="section-pad bg-ink text-white">
       <div className="container-wide">
         <p className="text-xs font-semibold uppercase tracking-[0.18em] text-jade-soft">
-          Pravaah OS
+          {brand.name} platform
         </p>
         <h2 className="mt-4 max-w-3xl font-display text-4xl leading-tight md:text-5xl">
-          Built so floor work and CEO decisions share one flow.
+          Built so floor work and owner decisions share one connected view.
         </h2>
         <p className="mt-5 max-w-2xl text-base text-mist/70 md:text-lg">
-          One operating system for Indian multi-branch reality — walk-ins, GST, WhatsApp, attendance,
+          One ops platform for India&apos;s multi-location reality — walk-ins, GST, WhatsApp, attendance,
           and P&amp;L tightly integrated so nothing falls between apps.
         </p>
 

@@ -4,7 +4,7 @@ import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import { leakSolutions } from "@/lib/content";
+import { brand, leakSolutions } from "@/lib/content";
 import { FeatureScreen } from "@/components/mockups/FeatureScreen";
 
 export function LeakSolutionsSection() {
@@ -19,7 +19,7 @@ export function LeakSolutionsSection() {
           An ops system to plug every revenue leak
         </h2>
         <p className="mt-5 max-w-2xl text-base leading-relaxed text-ink-mute md:text-lg">
-          Pravaah maps each leak Indian salon chains actually feel — slow desks, blind P&amp;L, quiet
+          {brand.name} maps each leak multi-location operators actually feel — slow desks, blind P&amp;L, quiet
           chairs, paper timesheets — and ships the workflow that closes it.
         </p>
 

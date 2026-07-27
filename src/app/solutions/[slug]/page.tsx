@@ -6,6 +6,8 @@ import { ProductFilm } from "@/components/ProductFilm";
 import { FinalCta } from "@/components/sections/FinalCta";
 import { TimelineSection } from "@/components/sections/TimelineSection";
 
+import { brand } from "@/lib/content";
+
 const solutions = {
   "multi-branch": {
     eyebrow: "Solution · Multi-branch",
@@ -30,7 +32,7 @@ const solutions = {
   owners: {
     eyebrow: "Solution · Owners & CEOs",
     title: "Morning command: revenue, leaks, and win-backs.",
-    body: "Pravaah gives owners a five-minute ritual — chain KPIs, branch P&L, Market Pulse, then a WhatsApp campaign to fill quiet chairs.",
+    body: `${brand.name} gives owners a five-minute ritual — network KPIs, branch P&L, Market Pulse, then a WhatsApp campaign to fill quiet chairs.`,
     points: [
       {
         title: "Market Pulse",

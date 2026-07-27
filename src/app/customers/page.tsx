@@ -4,9 +4,11 @@ import { VideoStoriesSection } from "@/components/sections/VideoStoriesSection";
 import { StatsBand } from "@/components/sections/StatsBand";
 import { FinalCta } from "@/components/sections/FinalCta";
 
+import { brand } from "@/lib/content";
+
 export const metadata = {
   title: "Customers",
-  description: "Stories and outcomes from multi-branch salon operators using Pravaah.",
+  description: `Stories and outcomes from multi-location operators using ${brand.name}.`,
 };
 
 export default function CustomersPage() {

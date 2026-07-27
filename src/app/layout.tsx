@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Fraunces, Sora } from "next/font/google";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
+import { brand } from "@/lib/content";
 import "./globals.css";
 
 const display = Fraunces({
@@ -18,15 +19,15 @@ const sans = Sora({
 
 export const metadata: Metadata = {
   title: {
-    default: "Pravaah — The flow of salon success",
-    template: "%s · Pravaah",
+    default: `${brand.name} — ${brand.tagline}`,
+    template: `%s · ${brand.name}`,
   },
   description:
-    "The operating system for multi-branch salon chains in India. GST billing, branch P&L, WhatsApp campaigns, and a manager floor app — in one continuous flow.",
+    "Ops platform for multi-location businesses in India. GST billing, branch P&L, WhatsApp campaigns, verified attendance, and Market Pulse — one connected system.",
   openGraph: {
-    title: "Pravaah — The flow of salon success",
+    title: `${brand.name} — ${brand.tagline}`,
     description:
-      "Multi-branch salon ops for India: GST, P&L, WhatsApp, attendance, Market Pulse.",
+      "Run every location as one connected business. Built for salon chains, clinics, and growing local service networks.",
     type: "website",
   },
 };

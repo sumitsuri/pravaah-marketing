@@ -1,11 +1,12 @@
 export const brand = {
-  name: "Pravaah",
-  sanskrit: "प्रवाह",
-  tagline: "The flow of salon success",
-  short: "Flow smarter. Grow faster.",
+  name: "Antrahq",
+  productLabel: "Ops Platform",
+  tagline: "Every location in sync. Every day clearer.",
+  short: "Run smarter. Grow together.",
   mission:
-    "We help salon chains run smoother, grow faster, and delight customers at every visit.",
-  footer: "Built for Indian salon chains · Multi-branch · Real-time intelligence",
+    "We help multi-location operators run billing, teams, and customer relationships from one connected system — so every new outlet strengthens the network, not the chaos.",
+  footer: "Built in India · Multi-location · Real-time ops intelligence",
+  email: "hello@antrahq.com",
 } as const;
 
 export const nav = {
@@ -88,8 +89,8 @@ export const filmScenes = [
     screen: "attendance" as const,
   },
   {
-    id: "hq",
-    title: "CEO command",
+    id: "network",
+    title: "Owner dashboard",
     caption: "Branch P&L and Market Pulse before noon",
     screen: "pnl" as const,
   },
@@ -152,7 +153,7 @@ export const leakSolutions = [
     problemStat: "No idea which branch is actually winning",
     title: "Market Pulse",
     promise: "Rank. Compare. Act.",
-    desc: "In-brand branch rank plus anonymised peer cohorts and playbooks — so HQ coaches the outlet that needs it today.",
+    desc: "In-brand branch rank plus anonymised peer cohorts and playbooks — so owners coach the outlet that needs it today.",
     bullets: ["In-brand leaderboard", "Peer cohort scores", "Local rival context", "Action playbooks"],
     screen: "pulse" as const,
     href: "/products/analytics",
@@ -230,8 +231,8 @@ export const timeline = [
   },
   {
     week: "Day 4–5",
-    title: "CEO command centre",
-    detail: "P&L, Market Pulse, campaigns, and leads configured for how you run the chain.",
+    title: "Owner workspace live",
+    detail: "P&L, Market Pulse, campaigns, and leads configured for how you run the network.",
     stat: "1 view",
     statLabel: "across every outlet",
   },
@@ -289,7 +290,7 @@ export const videoStories = [
     title: "How a 6-branch brand found Sunday P&L in five minutes",
     runtime: "3:12",
     persona: "Owner story",
-    takeaway: "One truth from desk to HQ",
+    takeaway: "One truth from desk to dashboard",
     screen: "pnl" as const,
   },
   {
@@ -379,56 +380,56 @@ export const platformTaxonomy = [
 export const comparisonRows = [
   {
     capability: "India GST depth (branch GSTIN, CGST/SGST PDF)",
-    pravaah: true,
+    antrahq: true,
     enterprise: "Heavy config",
     marketplace: "Limited",
     smb: true,
   },
   {
     capability: "WhatsApp campaigns included in mid tier",
-    pravaah: true,
+    antrahq: true,
     enterprise: "Often add-on",
     marketplace: "Messaging fees",
     smb: "Often extra",
   },
   {
     capability: "Branch P&L for mid-market chains",
-    pravaah: true,
+    antrahq: true,
     enterprise: true,
     marketplace: false,
     smb: "Basic",
   },
   {
     capability: "Geofenced selfie attendance",
-    pravaah: true,
+    antrahq: true,
     enterprise: "Hardware partners",
     marketplace: false,
     smb: false,
   },
   {
     capability: "Market Pulse peer ranking",
-    pravaah: true,
+    antrahq: true,
     enterprise: "Enterprise-only",
     marketplace: false,
     smb: false,
   },
   {
     capability: "No marketplace commission on bookings",
-    pravaah: true,
+    antrahq: true,
     enterprise: true,
     marketplace: false,
     smb: true,
   },
   {
     capability: "Go-live in days for 3–20 branches",
-    pravaah: true,
+    antrahq: true,
     enterprise: "Weeks–months",
     marketplace: true,
     smb: true,
   },
   {
     capability: "Transparent ₹/branch public pricing",
-    pravaah: true,
+    antrahq: true,
     enterprise: false,
     marketplace: "Seat + fees",
     smb: "Soft-hidden",
@@ -437,16 +438,16 @@ export const comparisonRows = [
 
 export const faqs = [
   {
-    q: "Who is Pravaah built for?",
-    a: "Multi-branch salon and beauty brands in India — typically 3 to 20 outlets — that need GST, WhatsApp, branch P&L, and a manager floor app without enterprise bloat or marketplace tax.",
+    q: "Who is Antrahq built for?",
+    a: "Multi-location service businesses in India — salon chains today, clinics and pharmacies tomorrow — typically 3 to 20 outlets that need GST, WhatsApp, branch P&L, and a floor app without enterprise bloat or marketplace tax.",
   },
   {
-    q: "How is Pravaah different from enterprise salon suites?",
-    a: "Enterprise suites are powerful but often opaque on price and slow to roll out. Pravaah focuses on mid-market chain ops: faster go-live, India desk reality (GST + WhatsApp), transparent ₹/branch pricing, and Market Pulse for coaching outlets.",
+    q: "How is Antrahq different from enterprise suites?",
+    a: "Enterprise suites are powerful but often opaque on price and slow to roll out. Antrahq focuses on mid-market multi-location ops: faster go-live, India desk reality (GST + WhatsApp), transparent ₹/branch pricing, and Market Pulse for coaching outlets.",
   },
   {
     q: "Do you take a cut of bookings?",
-    a: "No. Pravaah is brand-owned software. You keep 100% of booking revenue. We monetise via subscription, not marketplace commission.",
+    a: "No. Antrahq is brand-owned software. You keep 100% of booking revenue. We monetise via subscription, not marketplace commission.",
   },
   {
     q: "Is WhatsApp really included?",
@@ -483,7 +484,7 @@ export const resources = [
   },
   {
     type: " compar",
-    title: "How Pravaah compares by category",
+    title: "How Antrahq compares by category",
     desc: "A practical buyer matrix for India mid-market chains.",
     href: "/resources#compare",
   },
@@ -522,7 +523,7 @@ export const productPages = {
     title: "Verified attendance",
     eyebrow: "Product · People ops",
     hero: "Selfie. GPS. Geofence. Trust.",
-    body: "Managers and staff punch on the salon device. Pravaah stores photo evidence, distance from branch, and inside/outside status — then surfaces late arrivals and missing exits for review.",
+    body: "Managers and staff punch on the branch device. Antrahq stores photo evidence, distance from location, and inside/outside status — then surfaces late arrivals and missing exits for review.",
     bullets: [
       "Front-camera selfie capture",
       "Accuracy-aware GPS with distance-to-branch",
@@ -567,7 +568,7 @@ export const featureGroups = [
     buyer: "Owner / CEO",
     items: [
       {
-        name: "Multi-branch command centre",
+        name: "Network overview",
         desc: "Live KPIs across every outlet — revenue, discounts, footfall, and staff presence.",
       },
       {
@@ -617,7 +618,7 @@ export const featureGroups = [
       },
       {
         name: "Local insights",
-        desc: "Branch-level tips and service contribution so managers act without waiting for HQ.",
+        desc: "Branch-level tips and service contribution so managers act without waiting for head office.",
       },
     ],
   },

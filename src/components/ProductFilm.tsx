@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Play } from "lucide-react";
-import { filmScenes } from "@/lib/content";
+import { brand, filmScenes } from "@/lib/content";
 import { FeatureScreen } from "@/components/mockups/FeatureScreen";
 
 /** Cinematic product “film” — auto-advancing UI scenes (leader-site product tour feel). */
@@ -33,7 +33,7 @@ export function ProductFilm({ autoPlay = true }: { autoPlay?: boolean }) {
             <Play className={`h-3.5 w-3.5 ${playing ? "opacity-40" : ""}`} />
           </button>
           <div>
-            <p className="text-xs font-semibold text-white">Pravaah product film</p>
+            <p className="text-xs font-semibold text-white">{brand.name} product film</p>
             <p className="text-[11px] text-mist/60">
               Scene {index + 1}/{filmScenes.length} · {scene.title}
             </p>

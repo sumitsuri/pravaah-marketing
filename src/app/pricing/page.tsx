@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { pricing } from "@/lib/content";
+import { brand, pricing } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "Pricing",
@@ -50,7 +50,7 @@ export default function PricingPage() {
           </div>
 
           <p className="mt-12 max-w-2xl text-sm text-ink-mute">
-            Compared to opaque enterprise quotes and marketplace commission models, Pravaah keeps
+            Compared to opaque enterprise quotes and marketplace commission models, {brand.name} keeps
             economics simple: pay per branch, keep 100% of bookings, and get campaigns in Growth.
           </p>
         </div>

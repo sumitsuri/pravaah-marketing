@@ -1,33 +1,24 @@
-# Pravaah Marketing Site
+# Antrahq Marketing Site
 
-Public marketing website for **Pravaah** — independent multi-branch salon operations SaaS for India.
+Public marketing website for **Antrahq** — independent multi-location ops platform for India (salon chains today; clinics, pharmacies, and more tomorrow).
 
-This repository is separate from any consumer salon brand marketing site.
+Repo folder name remains `pravaah-marketing` for deployment continuity; all user-facing copy uses **Antrahq**.
 
 ## Run locally
 
 ```bash
 npm install
-npm run dev   # http://localhost:3010
+npm run dev
 ```
 
-## Production
+Open [http://localhost:3000](http://localhost:3000)
 
-Pushes to `main` build an ARM64 Docker image, push to ECR (`salon-platform-prod-marketing`), and deploy via SSM (`deploy.sh marketing`). Serves on the production host root path (port 3001 behind nginx).
+## Brand
 
-## Site map
+- **Site:** `antrahq.com` (primary)
+- **Email:** `hello@antrahq.com`
+- **Tagline:** Every location in sync. Every day clearer.
 
-| Route | Purpose |
-|-------|---------|
-| `/` | Homepage |
-| `/solutions/*` | Multi-branch · Owners · Managers |
-| `/products/*` | Billing · Analytics · Attendance · Campaigns · Inventory |
-| `/customers` | Stories |
-| `/resources` | Guides & comparisons |
-| `/roi-calculator` | Opportunity model |
-| `/pricing` | Plans |
-| `/demo` | Demo request |
+## Deploy
 
-## Stack
-
-Next.js 16 · React 19 · Tailwind 3 · Framer Motion
+See `.github/workflows/deploy.yml` — builds Docker image and triggers EC2 deploy via SSM.

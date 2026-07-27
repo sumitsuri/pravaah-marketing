@@ -35,7 +35,7 @@ export function SiteHeader() {
       <div className="container-wide flex items-center justify-between px-5 py-3.5 md:px-8 lg:px-12">
         <Link href="/" className="flex items-baseline gap-2" onClick={() => setMobile(false)}>
           <span className="font-display text-2xl tracking-tight text-ink">{brand.name}</span>
-          <span className="hidden text-xs text-ink-mute sm:inline">{brand.sanskrit}</span>
+          <span className="hidden text-xs text-ink-mute sm:inline">{brand.productLabel}</span>
         </Link>
 
         <nav className="hidden items-center gap-1 lg:flex" aria-label="Primary">

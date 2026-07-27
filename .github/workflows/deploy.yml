@@ -1,4 +1,4 @@
-name: Build and Deploy Pravaah Marketing
+name: Build and Deploy Antrahq Marketing
 
 on:
   push:
@@ -11,7 +11,7 @@ permissions:
 
 env:
   AWS_REGION: ap-south-1
-  ECR_REPOSITORY: salon-platform-prod-marketing
+  ECR_REPOSITORY: salon-platform-prod-antrahq-marketing
 
 jobs:
   deploy:
@@ -47,6 +47,6 @@ jobs:
           aws ssm send-command \
             --instance-ids "${{ vars.EC2_INSTANCE_ID }}" \
             --document-name "AWS-RunShellScript" \
-            --comment "Deploy Pravaah marketing ${{ github.sha }}" \
-            --parameters 'commands=["/opt/salon-platform/scripts/deploy.sh marketing"]' \
+            --comment "Deploy Antrahq marketing ${{ github.sha }}" \
+            --parameters 'commands=["/opt/salon-platform/scripts/deploy.sh antrahq-marketing"]' \
             --output text

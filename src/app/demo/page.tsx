@@ -3,6 +3,8 @@
 import { useState, FormEvent } from "react";
 import { motion } from "framer-motion";
 
+import { brand } from "@/lib/content";
+
 export default function DemoPage() {
   const [submitted, setSubmitted] = useState(false);
 
@@ -17,14 +19,14 @@ export default function DemoPage() {
         <div className="container-narrow grid gap-12 lg:grid-cols-[1.05fr_0.95fr]">
           <div>
             <p className="eyebrow">Demo</p>
-            <h1 className="display mt-3">See the flow in thirty minutes.</h1>
+            <h1 className="display mt-3">See {brand.name} in thirty minutes.</h1>
             <p className="lede mt-5">
               We&apos;ll walk walk-in → GST invoice, branch P&L, WhatsApp campaign, and Market Pulse
               using a live multi-branch demo — the same path we use in sales.
             </p>
             <ul className="mt-8 space-y-3 text-sm text-ink-mute">
               {[
-                "Built for multi-branch salon operators in India",
+                "Built for multi-location operators in India",
                 "No marketplace pitch — your brand keeps every booking",
                 "Clear next steps on Starter vs Growth vs Enterprise",
               ].map((item) => (
@@ -112,8 +114,8 @@ export default function DemoPage() {
                 </button>
                 <p className="text-center text-xs text-ink-mute">
                   Or email{" "}
-                  <a className="text-jade underline" href="mailto:hello@pravaah.app">
-                    hello@pravaah.app
+                  <a className="text-jade underline" href={`mailto:${brand.email}`}>
+                    {brand.email}
                   </a>
                 </p>
               </form>

@@ -1,12 +1,13 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 import { PageHero } from "@/components/PageHero";
 import { FeatureScreen } from "@/components/mockups/FeatureScreen";
-import { productPages, nav } from "@/lib/content";
+import { brand, productPages, nav } from "@/lib/content";
 import { FinalCta } from "@/components/sections/FinalCta";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Products",
-  description: "Pravaah product suite — billing, analytics, attendance, campaigns, inventory.",
+  description: `${brand.name} product suite — billing, analytics, attendance, campaigns, inventory.`,
 };
 
 export default function ProductsHubPage() {
@@ -14,7 +15,7 @@ export default function ProductsHubPage() {
     <>
       <PageHero
         eyebrow="Products"
-        title="Every module your chain touches in a day — in one flow."
+        title="Every module your locations touch in a day — connected."
         body="Explore the product surfaces managers and owners use daily. Each page shows the workflow, UI, and outcomes we demo live."
       />
       <section className="section-pad bg-white">

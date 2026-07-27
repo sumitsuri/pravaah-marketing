@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowRight, Phone } from "lucide-react";
+import { brand } from "@/lib/content";
 
 export function FinalCta() {
   return (
@@ -15,10 +16,11 @@ export function FinalCta() {
           viewport={{ once: true }}
         >
           <h2 className="mx-auto max-w-3xl font-display text-4xl leading-tight md:text-5xl lg:text-6xl">
-            Stop the leaks. Start the flow.
+            Every location deserves to run in sync.
           </h2>
           <p className="mx-auto mt-5 max-w-xl text-base text-mist/70 md:text-lg">
-            See how Pravaah transforms multi-branch salon ops — book a personalized demo today.
+            See how {brand.name} connects billing, teams, and customer outreach across your network —
+            book a personalized walkthrough today.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-3">
             <Link
@@ -28,7 +30,7 @@ export function FinalCta() {
               Book a demo <ArrowRight className="h-4 w-4" />
             </Link>
             <a
-              href="mailto:hello@pravaah.app"
+              href={`mailto:${brand.email}`}
               className="inline-flex items-center gap-2 rounded-xl border border-white/20 px-6 py-3 text-sm font-semibold text-white hover:bg-white/5"
             >
               <Phone className="h-4 w-4" /> Call / email now

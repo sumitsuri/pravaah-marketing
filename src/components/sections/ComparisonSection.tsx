@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { comparisonRows } from "@/lib/content";
+import { brand, comparisonRows } from "@/lib/content";
 
 function Cell({ value }: { value: boolean | string }) {
   if (value === true) return <span className="font-semibold text-jade">Yes</span>;
@@ -14,9 +14,9 @@ export function ComparisonSection() {
     <section id="compare" className="section-pad bg-white">
       <div className="container-wide">
         <p className="eyebrow">Compare</p>
-        <h2 className="display mt-3 max-w-3xl">Where Pravaah wins for India mid-market chains.</h2>
+        <h2 className="display mt-3 max-w-3xl">Why operators choose {brand.name}.</h2>
         <p className="mt-5 max-w-2xl text-ink-mute">
-          How Pravaah stacks up against typical enterprise suites, marketplace apps, and India SMB tools —
+          How {brand.name} stacks up against typical enterprise suites, marketplace apps, and India SMB tools —
           based on what we have shipped.
         </p>
 
@@ -25,7 +25,7 @@ export function ComparisonSection() {
             <thead className="bg-mist-soft">
               <tr>
                 <th className="px-4 py-3 font-semibold text-ink">Capability</th>
-                <th className="px-4 py-3 font-semibold text-jade">Pravaah</th>
+                <th className="px-4 py-3 font-semibold text-jade">{brand.name}</th>
                 <th className="px-4 py-3 font-semibold text-ink-mute">Enterprise suites</th>
                 <th className="px-4 py-3 font-semibold text-ink-mute">Marketplace apps</th>
                 <th className="px-4 py-3 font-semibold text-ink-mute">India SMB tools</th>
@@ -36,7 +36,7 @@ export function ComparisonSection() {
                 <tr key={row.capability} className="border-t border-ink/8">
                   <td className="px-4 py-3 font-medium text-ink">{row.capability}</td>
                   <td className="px-4 py-3">
-                    <Cell value={row.pravaah} />
+                    <Cell value={row.antrahq} />
                   </td>
                   <td className="px-4 py-3">
                     <Cell value={row.enterprise} />

@@ -33,7 +33,7 @@ export function HeroSection() {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.1 }}
           >
-            {brand.sanskrit} · {brand.tagline}
+            {brand.productLabel} · {brand.tagline}
           </motion.p>
           <motion.h1
             className="mt-8 font-display text-3xl leading-[1.12] text-ink md:text-5xl lg:text-[3.25rem]"
@@ -41,7 +41,7 @@ export function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.18 }}
           >
-            The multi-branch salon OS that stops leaks and grows your chain.
+            Run every location as one connected business.
           </motion.h1>
           <motion.p
             className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-ink-mute md:text-lg"
@@ -49,8 +49,16 @@ export function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.28 }}
           >
-            You built something beautiful. Now watch every outlet flow — GST billing, branch P&amp;L,
-            WhatsApp campaigns, verified attendance, and Market Pulse on one system of record.
+            {brand.mission}
+          </motion.p>
+          <motion.p
+            className="mx-auto mt-4 max-w-2xl text-base leading-relaxed text-ink-mute md:text-lg"
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.32 }}
+          >
+            GST billing, branch P&amp;L, WhatsApp campaigns, verified attendance, and Market Pulse —
+            one connected platform for operators who run more than one door.
           </motion.p>
           <motion.div
             className="mt-8 flex flex-wrap justify-center gap-3"
@@ -64,7 +72,7 @@ export function HeroSection() {
             <Link href="/#film" className="btn-secondary">
               Watch product film
             </Link>
-            <a href="mailto:hello@pravaah.app" className="btn-secondary">
+            <a href={`mailto:${brand.email}`} className="btn-secondary">
               <Phone className="h-4 w-4" /> Talk to us
             </a>
           </motion.div>

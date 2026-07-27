@@ -2,7 +2,7 @@
   "name": "pravaah-marketing",
   "version": "1.0.0",
   "private": true,
-  "description": "Public marketing site for Pravaah — multi-branch salon ops platform for India",
+  "description": "Public marketing site for Antrahq — multi-location ops platform for India",
   "scripts": {
     "dev": "next dev -p 3010",
     "build": "next build",
