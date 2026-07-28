@@ -5,12 +5,43 @@ import { motion } from "framer-motion";
 
 import { brand } from "@/lib/content";
 
+const API_URL =
+  process.env.NEXT_PUBLIC_SALES_API_URL ||
+  process.env.NEXT_PUBLIC_API_URL ||
+  "http://localhost:8080";
+
 export default function DemoPage() {
   const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
 
-  function onSubmit(e: FormEvent<HTMLFormElement>) {
+  async function onSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    setSubmitted(true);
+    setLoading(true);
+    setError("");
+    const form = new FormData(e.currentTarget);
+    try {
+      const res = await fetch(`${API_URL}/api/v1/public/sales-leads`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: form.get("name"),
+          email: form.get("email"),
+          phone: form.get("phone"),
+          branches: form.get("branches"),
+          notes: form.get("notes"),
+        }),
+      });
+      const body = await res.json();
+      if (!res.ok || !body.success) {
+        throw new Error(body.message || "Submission failed");
+      }
+      setSubmitted(true);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Something went wrong");
+    } finally {
+      setLoading(false);
+    }
   }
 
   return (
@@ -52,6 +83,9 @@ export default function DemoPage() {
               </div>
             ) : (
               <form onSubmit={onSubmit} className="space-y-4">
+                {error && (
+                  <p className="rounded-lg bg-red-50 px-3 py-2 text-sm text-red-700">{error}</p>
+                )}
                 <div>
                   <label className="text-xs font-semibold uppercase tracking-wider text-ink-mute">
                     Full name
@@ -109,8 +143,8 @@ export default function DemoPage() {
                     placeholder="P&L, attendance, WhatsApp campaigns…"
                   />
                 </div>
-                <button type="submit" className="btn-primary w-full">
-                  Request demo
+                <button type="submit" className="btn-primary w-full" disabled={loading}>
+                  {loading ? "Submitting…" : "Request demo"}
                 </button>
                 <p className="text-center text-xs text-ink-mute">
                   Or email{" "}

@@ -1,4 +1,4 @@
-name: Build and Deploy Antrahq Marketing
+name: Deploy Antrahq marketing
 
 on:
   push:
@@ -11,7 +11,7 @@ permissions:
 
 env:
   AWS_REGION: ap-south-1
-  ECR_REPOSITORY: salon-platform-prod-antrahq-marketing
+  SSM_PREFIX: /salon-platform-prod/marketing/antrahq
 
 jobs:
   deploy:
@@ -19,35 +19,36 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Configure AWS credentials
-        uses: aws-actions/configure-aws-credentials@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+
+      - name: Build static export
+        env:
+          NEXT_PUBLIC_API_URL: https://api.antrahq.com
+        run: |
+          npm ci
+          npm run build
+
+      - uses: aws-actions/configure-aws-credentials@v4
         with:
           role-to-assume: ${{ vars.AWS_ROLE_ARN }}
           aws-region: ${{ env.AWS_REGION }}
 
-      - name: Login to Amazon ECR
-        id: ecr
-        uses: aws-actions/amazon-ecr-login@v2
-
-      - name: Set up Docker Buildx
-        uses: docker/setup-buildx-action@v3
-
-      - name: Build and push image
-        env:
-          ECR_REGISTRY: ${{ steps.ecr.outputs.registry }}
-          IMAGE_TAG: ${{ github.sha }}
+      - name: Resolve deploy targets from SSM
+        id: ssm
         run: |
-          docker buildx build --platform linux/arm64 \
-            --build-arg NEXT_PUBLIC_BASE_PATH=/antrahq \
-            -t "$ECR_REGISTRY/$ECR_REPOSITORY:latest" \
-            -t "$ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG" \
-            --push .
+          echo "bucket=$(aws ssm get-parameter --name ${SSM_PREFIX}/s3_bucket --query Parameter.Value --output text)" >> "$GITHUB_OUTPUT"
+          echo "distribution_id=$(aws ssm get-parameter --name ${SSM_PREFIX}/cloudfront_distribution_id --query Parameter.Value --output text)" >> "$GITHUB_OUTPUT"
 
-      - name: Deploy to EC2 via SSM
+      - name: Sync to S3
         run: |
-          aws ssm send-command \
-            --instance-ids "${{ vars.EC2_INSTANCE_ID }}" \
-            --document-name "AWS-RunShellScript" \
-            --comment "Deploy Antrahq marketing ${{ github.sha }}" \
-            --parameters 'commands=["/opt/salon-platform/scripts/deploy.sh antrahq-marketing"]' \
-            --output text
+          aws s3 sync out/ "s3://${{ steps.ssm.outputs.bucket }}/" --delete \
+            --exclude "__app/*"
+
+      - name: Invalidate CloudFront
+        run: |
+          aws cloudfront create-invalidation \
+            --distribution-id "${{ steps.ssm.outputs.distribution_id }}" \
+            --paths "/*"
