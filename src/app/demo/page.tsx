@@ -20,14 +20,20 @@ export default function DemoPage() {
     setLoading(true);
     setError("");
     const form = new FormData(e.currentTarget);
+    const businessName = String(form.get("businessName") ?? "").trim();
+    const contactName = String(form.get("contactName") ?? "").trim();
     try {
       const res = await fetch(`${API_URL}/api/v1/public/sales-leads`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          name: form.get("name"),
+          // `name` kept for API versions that still require it
+          name: contactName || businessName,
+          businessName,
+          contactName,
           email: form.get("email"),
           phone: form.get("phone"),
+          city: form.get("city") || undefined,
           branches: form.get("branches"),
           notes: form.get("notes"),
         }),
@@ -52,7 +58,7 @@ export default function DemoPage() {
             <p className="eyebrow">Growth walkthrough</p>
             <h1 className="display mt-3">See your decision platform in thirty minutes.</h1>
             <p className="lede mt-5">
-              We&apos;ll walk Market Pulse, branch P&L, WhatsApp win-backs, and floor signals using a live
+              We&apos;ll walk Market Pulse, branch P&amp;L, WhatsApp win-backs, and floor signals using a live
               multi-branch demo — the same growth map we use with operators like you.
             </p>
             <ul className="mt-8 space-y-3 text-sm text-ink-mute">
@@ -88,12 +94,24 @@ export default function DemoPage() {
                 )}
                 <div>
                   <label className="text-xs font-semibold uppercase tracking-wider text-ink-mute">
-                    Full name
+                    Business / brand name
                   </label>
                   <input
                     required
-                    name="name"
+                    name="businessName"
                     className="mt-1.5 w-full rounded-xl border border-ink/15 bg-mist-soft px-4 py-3 text-sm outline-none ring-jade focus:ring-2"
+                    placeholder="Your salon chain or brand"
+                  />
+                </div>
+                <div>
+                  <label className="text-xs font-semibold uppercase tracking-wider text-ink-mute">
+                    Your name
+                  </label>
+                  <input
+                    required
+                    name="contactName"
+                    className="mt-1.5 w-full rounded-xl border border-ink/15 bg-mist-soft px-4 py-3 text-sm outline-none ring-jade focus:ring-2"
+                    placeholder="Owner or decision maker"
                   />
                 </div>
                 <div>
@@ -114,6 +132,16 @@ export default function DemoPage() {
                   <input
                     required
                     name="phone"
+                    className="mt-1.5 w-full rounded-xl border border-ink/15 bg-mist-soft px-4 py-3 text-sm outline-none ring-jade focus:ring-2"
+                  />
+                </div>
+                <div>
+                  <label className="text-xs font-semibold uppercase tracking-wider text-ink-mute">
+                    City
+                  </label>
+                  <input
+                    name="city"
+                    defaultValue="Bangalore"
                     className="mt-1.5 w-full rounded-xl border border-ink/15 bg-mist-soft px-4 py-3 text-sm outline-none ring-jade focus:ring-2"
                   />
                 </div>
