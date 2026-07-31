@@ -45,7 +45,7 @@ export function LeakSolutionsSection() {
           })}
         </div>
 
-        <div className="mt-10 grid items-center gap-10 rounded-3xl border border-ink/10 bg-mist-soft p-6 md:p-10 lg:grid-cols-[1.05fr_0.95fr]">
+        <div className="mt-10 grid items-center gap-10 overflow-hidden rounded-3xl border border-ink/10 bg-mist-soft p-6 md:p-10 lg:grid-cols-[1.05fr_0.95fr]">
           <AnimatePresence mode="wait">
             <motion.div
               key={current.id}

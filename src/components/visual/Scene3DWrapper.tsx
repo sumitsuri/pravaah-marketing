@@ -29,7 +29,7 @@ export function Scene3DWrapper({
   }
 
   return (
-    <div ref={ref} className={className} style={{ perspective: "1400px" }}>
+    <div ref={ref} className={`overflow-hidden ${className}`} style={{ perspective: "1400px" }}>
       <motion.div
         style={{ rotateX, rotateY, y, transformStyle: "preserve-3d" }}
         className="will-change-transform"

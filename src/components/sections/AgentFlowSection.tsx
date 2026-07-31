@@ -31,7 +31,7 @@ export function AgentFlowSection() {
   return (
     <section
       id="ai-agents"
-      className="section-pad relative overflow-hidden"
+      className="section-pad relative overflow-x-clip lg:overflow-hidden"
       style={{
         ...cssVars,
         backgroundColor: "var(--mkt-bg)",
@@ -90,7 +90,7 @@ export function AgentFlowSection() {
 
         {/* Use case header */}
         <div
-          className="mt-10 rounded-2xl border p-4 sm:mt-12 sm:p-6 md:p-8"
+          className="connected-story-shell connected-story-shell--scroll mt-10 rounded-2xl border p-4 sm:mt-12 sm:p-6 md:p-8"
           style={{
             borderColor: "var(--mkt-card-border)",
             background: "var(--mkt-card-bg)",
@@ -99,7 +99,7 @@ export function AgentFlowSection() {
           <div className="flex flex-wrap items-start justify-between gap-4">
             <div>
               <p className="text-xs font-semibold uppercase tracking-[0.14em]" style={{ color: "var(--mkt-accent)" }}>
-                Connected story
+                {copy.storyEyebrow}
               </p>
               <h3 className="mt-2 font-display text-2xl md:text-3xl">{copy.useCaseTitle}</h3>
               <p className="mt-2 text-sm" style={{ color: "var(--mkt-text-muted)" }}>
@@ -118,7 +118,7 @@ export function AgentFlowSection() {
           </div>
 
           {/* Connected graph */}
-          <div className="mt-10">
+          <div className="relative mt-10 min-w-0">
             <AgentFlowGraph activeIndex={activeStep} onSelect={setActiveStep} />
           </div>
 
@@ -130,7 +130,7 @@ export function AgentFlowSection() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -8 }}
               transition={{ duration: 0.35, ease }}
-              className="mt-8 rounded-xl border p-5 md:p-6"
+              className="mt-8 rounded-xl border p-5 md:p-6 connected-story-detail"
               style={{
                 borderColor: "var(--mkt-accent)",
                 background: "var(--mkt-node-active)",
@@ -163,19 +163,23 @@ export function AgentFlowSection() {
           </AnimatePresence>
 
           {/* Step dots for manual navigation */}
-          <div className="mt-6 flex justify-center gap-2">
+          <div className="mt-6 flex flex-wrap justify-center gap-1.5 sm:gap-2">
             {agentFlowSteps.map((step, i) => (
               <button
                 key={step.id}
                 type="button"
                 onClick={() => setActiveStep(i)}
-                className="h-2 rounded-full transition-all"
-                style={{
-                  width: i === activeStep ? "1.5rem" : "0.5rem",
-                  background: i === activeStep ? "var(--mkt-accent)" : "var(--mkt-edge)",
-                }}
+                className="flex h-11 w-11 items-center justify-center rounded-full"
                 aria-label={`Go to step ${i + 1}: ${step.title}`}
-              />
+                aria-current={i === activeStep ? "step" : undefined}
+              >
+                <span
+                  className={`block h-2 rounded-full transition-all ${i === activeStep ? "w-6" : "w-2"}`}
+                  style={{
+                    background: i === activeStep ? "var(--mkt-accent)" : "var(--mkt-edge)",
+                  }}
+                />
+              </button>
             ))}
           </div>
         </div>

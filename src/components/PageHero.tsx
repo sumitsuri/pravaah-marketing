@@ -17,7 +17,7 @@ export function PageHero({
     <section className="border-b border-ink/8 bg-flow-hero pt-28">
       <div className="container-wide px-5 py-16 md:px-8 md:py-20 lg:px-12">
         <p className="eyebrow">{eyebrow}</p>
-        <h1 className="mt-4 max-w-4xl font-display text-4xl leading-tight text-ink md:text-5xl lg:text-6xl">
+        <h1 className="mt-4 max-w-4xl font-display text-3xl leading-tight text-ink sm:text-4xl md:text-5xl lg:text-6xl">
           {title}
         </h1>
         <p className="mt-5 max-w-2xl text-base leading-relaxed text-ink-mute md:text-lg">{body}</p>

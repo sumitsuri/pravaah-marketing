@@ -739,7 +739,7 @@ export const marketingThemes: Record<MarketingThemeId, MarketingTheme> = {
   },
 };
 
-export const DEFAULT_MARKETING_THEME: MarketingThemeId = "forest-dark";
+export const DEFAULT_MARKETING_THEME: MarketingThemeId = "fuchsia-flash";
 export const STORAGE_KEY = "antrahq-marketing-theme";
 
 export const marketingThemeList = Object.values(marketingThemes);
@@ -797,4 +797,4 @@ export const MARKETING_THEME_BOOT = `(function(){try{var k='antrahq-marketing-th
   Object.fromEntries(
     Object.entries(marketingThemes).map(([id, t]) => [id, themeToCssVars(t)]),
   ),
-)};var id=localStorage.getItem(k)||'forest-dark';var p=new URLSearchParams(location.search);var q=p.get('theme');if(q&&themes[q])id=q;var v=themes[id]||themes['forest-dark'];var r=document.documentElement;for(var key in v)r.style.setProperty(key,v[key]);r.dataset.marketingTheme=id;}catch(e){}})();`;
+)};var id='fuchsia-flash';var p=new URLSearchParams(location.search);var q=p.get('theme');if(q&&themes[q])id=q;var v=themes[id]||themes['fuchsia-flash'];var r=document.documentElement;for(var key in v)r.style.setProperty(key,v[key]);r.dataset.marketingTheme=id;}catch(e){}})();`;

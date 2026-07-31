@@ -2,8 +2,9 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ArrowRight, Phone } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { brand, sectionCopy } from "@/lib/content";
+import { whatsappHref } from "@/lib/whatsapp";
 
 export function FinalCta() {
   const copy = sectionCopy.finalCta;
@@ -25,22 +26,25 @@ export function FinalCta() {
           viewport={{ once: true }}
           transition={{ duration: 0.65, ease: [0.22, 1, 0.36, 1] }}
         >
-          <h2 className="mx-auto max-w-3xl font-display text-4xl leading-tight md:text-5xl lg:text-6xl">
+          <h2 className="mx-auto max-w-3xl font-display text-3xl leading-tight sm:text-4xl md:text-5xl lg:text-6xl">
             {copy.title}
           </h2>
           <p className="mx-auto mt-5 max-w-xl text-base text-mist/70 md:text-lg">{copy.lede}</p>
           <div className="mt-8 flex flex-wrap justify-center gap-3">
             <Link
               href="/demo"
-              className="inline-flex items-center gap-2 rounded-xl bg-jade px-7 py-3.5 text-sm font-semibold text-white shadow-glow-jade transition hover:bg-jade-bright active:scale-[0.98]"
+              className="btn-primary shadow-glow-jade"
             >
               Book a growth walkthrough <ArrowRight className="h-4 w-4" />
             </Link>
             <a
-              href={`mailto:${brand.email}`}
+              href={whatsappHref()}
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-xl border border-white/20 px-7 py-3.5 text-sm font-semibold text-white transition hover:bg-white/5 active:scale-[0.98]"
+              aria-label={`Chat with ${brand.name}`}
             >
-              <Phone className="h-4 w-4" /> {brand.email}
+              {brand.whatsapp.ctaLabel}
             </a>
           </div>
         </motion.div>

@@ -11,7 +11,7 @@ export function OsSection() {
         <p className="text-xs font-semibold uppercase tracking-[0.18em] text-jade-soft">
           The {brand.name} loop
         </p>
-        <h2 className="mt-4 max-w-3xl font-display text-4xl leading-tight md:text-5xl">
+        <h2 className="mt-4 max-w-3xl font-display text-3xl leading-tight sm:text-4xl md:text-5xl">
           From floor signals to growth decisions — one connected platform.
         </h2>
         <p className="mt-5 max-w-2xl text-base text-mist/70 md:text-lg">

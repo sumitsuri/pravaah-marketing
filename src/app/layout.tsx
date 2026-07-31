@@ -3,6 +3,7 @@ import { Fraunces, Sora } from "next/font/google";
 import Script from "next/script";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
+import { WhatsAppFloatingButton } from "@/components/WhatsAppConnect";
 import { MarketingThemeProvider } from "@/components/theme/MarketingThemeProvider";
 import { brand } from "@/lib/content";
 import { MARKETING_THEME_BOOT } from "@/lib/marketing-theme";
@@ -52,8 +53,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className="min-h-screen overflow-x-hidden font-sans antialiased">
         <MarketingThemeProvider>
           <SiteHeader />
-          <main>{children}</main>
+          <main className="pb-20 sm:pb-24">{children}</main>
           <SiteFooter />
+          <WhatsAppFloatingButton />
         </MarketingThemeProvider>
       </body>
     </html>

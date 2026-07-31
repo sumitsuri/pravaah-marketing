@@ -15,7 +15,7 @@ export function PricingPreview() {
           that meter messaging separately.
         </p>
 
-        <div className="mt-12 grid gap-5 lg:grid-cols-3">
+        <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
           {pricing.map((tier, i) => (
             <motion.div
               key={tier.name}
@@ -36,7 +36,7 @@ export function PricingPreview() {
               )}
               <h3 className="font-display text-2xl text-ink">{tier.name}</h3>
               <p className="mt-1 text-sm text-ink-mute">{tier.blurb}</p>
-              <p className="mt-5 font-display text-4xl text-ink">{tier.price}</p>
+              <p className="mt-5 font-display text-3xl text-ink sm:text-4xl">{tier.price}</p>
               <p className="text-xs text-ink-mute">{tier.unit}</p>
               <ul className="mt-6 flex-1 space-y-2.5 text-sm text-ink-mute">
                 {tier.features.map((f) => (

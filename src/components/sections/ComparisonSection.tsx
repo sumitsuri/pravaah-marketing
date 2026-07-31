@@ -20,11 +20,13 @@ export function ComparisonSection() {
           based on what we have shipped.
         </p>
 
-        <div className="mt-10 overflow-x-auto rounded-2xl border border-ink/10">
-          <table className="min-w-[720px] w-full border-collapse text-left text-sm">
+        <div className="mt-10 overflow-x-auto rounded-2xl border border-ink/10 [-webkit-overflow-scrolling:touch]">
+          <table className="min-w-[640px] w-full border-collapse text-left text-sm">
             <thead className="bg-mist-soft">
               <tr>
-                <th className="px-4 py-3 font-semibold text-ink">Capability</th>
+                <th className="sticky left-0 z-10 bg-mist-soft px-4 py-3 font-semibold text-ink shadow-[4px_0_8px_-4px_rgba(11,31,28,0.08)]">
+                  Capability
+                </th>
                 <th className="px-4 py-3 font-semibold text-jade">{brand.name}</th>
                 <th className="px-4 py-3 font-semibold text-ink-mute">Enterprise suites</th>
                 <th className="px-4 py-3 font-semibold text-ink-mute">Marketplace apps</th>
@@ -34,7 +36,9 @@ export function ComparisonSection() {
             <tbody>
               {comparisonRows.map((row) => (
                 <tr key={row.capability} className="border-t border-ink/8">
-                  <td className="px-4 py-3 font-medium text-ink">{row.capability}</td>
+                  <td className="sticky left-0 z-10 bg-white px-4 py-3 font-medium text-ink shadow-[4px_0_8px_-4px_rgba(11,31,28,0.06)]">
+                    {row.capability}
+                  </td>
                   <td className="px-4 py-3">
                     <Cell value={row.antrahq} />
                   </td>
@@ -52,6 +56,7 @@ export function ComparisonSection() {
             </tbody>
           </table>
         </div>
+        <p className="mt-2 text-xs text-ink-mute lg:hidden">Swipe horizontally to compare all columns →</p>
         <p className="mt-4 text-xs text-ink-mute">
           Category columns are directional — validate against your shortlist.{" "}
           <Link href="/demo" className="font-semibold text-jade">

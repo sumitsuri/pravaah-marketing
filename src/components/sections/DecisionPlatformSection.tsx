@@ -38,7 +38,7 @@ export function DecisionPlatformSection() {
             >
               {copy.eyebrow}
             </p>
-            <h2 className="mt-4 font-display text-4xl leading-[1.08] md:text-5xl lg:text-[3.25rem]">{copy.title}</h2>
+            <h2 className="mt-4 font-display text-3xl leading-[1.08] sm:text-4xl md:text-5xl lg:text-[3.25rem]">{copy.title}</h2>
             <p className="mt-5 max-w-xl text-base leading-relaxed md:text-lg" style={{ color: "var(--mkt-text-muted)" }}>
               {copy.lede}
             </p>

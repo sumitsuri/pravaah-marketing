@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 const screens = {
   walkin: (
     <div className="space-y-3 p-4">
-      <div className="flex gap-2 text-[10px] font-semibold uppercase tracking-wider text-ink-mute">
+        <div className="flex flex-wrap items-center gap-2 text-[10px] font-semibold uppercase tracking-wider text-ink-mute">
         <span className="rounded-md bg-jade/15 px-2 py-1 text-jade">1 · Guest</span>
         <span className="rounded-md bg-mist px-2 py-1">2 · Services</span>
         <span className="rounded-md bg-mist px-2 py-1">3 · Pay</span>
@@ -88,7 +88,7 @@ const screens = {
         ].map(([name, time, status]) => (
           <div
             key={name}
-            className="flex items-center justify-between rounded-lg bg-mist-soft px-3 py-2 text-sm"
+            className="grid grid-cols-[1fr_auto_auto] items-center gap-2 rounded-lg bg-mist-soft px-3 py-2 text-sm"
           >
             <span className="font-medium">{name}</span>
             <span className="text-ink-mute">{time}</span>

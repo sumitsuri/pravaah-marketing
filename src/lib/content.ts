@@ -7,10 +7,24 @@ export const brand = {
     "Antrahq turns every signal from your locations — revenue, staff, stock, and guests — into decisions that accelerate growth. Built for operators who refuse to guess.",
   footer: "Built in India · Multi-location · Decision intelligence",
   email: "hello@antrahq.com",
+  whatsapp: {
+    /** E.164 without + for wa.me links — never rendered in UI */
+    phoneE164: "918095679454",
+    defaultMessage:
+      "Hi Antrahq team — I visited your website and would like to connect about growing my business. Can we chat?",
+    ctaLabel: "Talk to us",
+  },
 } as const;
 
-/** Rotating words in the hero kinetic headline (Linear-style). */
-export const heroWords = ["locations", "decisions", "branches", "growth"] as const;
+/** Hero kinetic headline — “Transform your {word}” / “into growth decisions.” */
+export const heroHeadline = {
+  prefix: "Transform your",
+  suffix: "into growth decisions.",
+  words: ["locations", "branches", "signals", "teams"] as const,
+} as const;
+
+/** @deprecated Use heroHeadline.words */
+export const heroWords = heroHeadline.words;
 
 /** The decision loop — core platform narrative. */
 export const decisionLoop = [
@@ -95,6 +109,7 @@ export const sectionCopy = {
     lede: "Antrahq quietly watches every branch — visits, margins, staff, and guest retention — then connects the dots into clear actions for the morning.",
     useCaseTitle: "Example: Koramangala outlet starts slipping",
     useCaseLede: "See how five insights connect overnight into one playbook you can act on.",
+    storyEyebrow: "Live growth story",
     graphStart: "Overnight",
     graphEnd: "Your morning",
     detailEyebrow: "What this means for you",

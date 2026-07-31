@@ -1,5 +1,7 @@
 import Link from "next/link";
 import { brand, platformTaxonomy, nav } from "@/lib/content";
+import { WhatsAppIconLink } from "@/components/WhatsAppConnect";
+import { whatsappHref } from "@/lib/whatsapp";
 
 export function SiteFooter() {
   return (
@@ -14,6 +16,15 @@ export function SiteFooter() {
               <Link href="/demo" className="btn-primary !py-2.5 text-xs">
                 Book a demo
               </Link>
+              <a
+                href={whatsappHref()}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-secondary !border-white/20 !bg-transparent !py-2.5 text-xs !text-white hover:!bg-white/5"
+                aria-label={`Chat with ${brand.name}`}
+              >
+                {brand.whatsapp.ctaLabel}
+              </a>
               <Link href="/roi-calculator" className="btn-secondary !border-white/20 !bg-transparent !py-2.5 text-xs !text-white hover:!bg-white/5">
                 ROI calculator
               </Link>
@@ -63,7 +74,7 @@ export function SiteFooter() {
           </div>
         </div>
 
-        <div className="mt-12 flex flex-wrap gap-6 border-t border-white/10 pt-8 text-sm">
+        <div className="mt-12 flex flex-wrap items-center gap-4 border-t border-white/10 pt-8 pb-4 text-sm sm:gap-6 lg:pb-0">
           <Link href="/customers" className="text-mist/80 hover:text-white">
             Customers
           </Link>
@@ -73,12 +84,16 @@ export function SiteFooter() {
           <Link href="/pricing" className="text-mist/80 hover:text-white">
             Pricing
           </Link>
+          <WhatsAppIconLink
+            className="inline-flex h-11 w-11 items-center justify-center rounded-lg text-[#25D366] hover:text-[#34eb77]"
+            iconClassName="h-5 w-5"
+          />
           <a href={`mailto:${brand.email}`} className="text-mist/80 hover:text-white">
             {brand.email}
           </a>
         </div>
       </div>
-      <div className="border-t border-white/10 px-5 py-5 text-center text-xs text-mist/50 md:px-8">
+      <div className="border-t border-white/10 px-5 py-5 pb-20 text-center text-xs text-mist/50 sm:pb-24 md:px-8 lg:pb-5">
         © {new Date().getFullYear()} {brand.name}. {brand.productLabel} for multi-location businesses.
       </div>
     </footer>

@@ -23,7 +23,7 @@ export function VideoStoriesSection() {
       />
       <div className="container-wide relative">
         <p className="text-xs font-semibold uppercase tracking-[0.18em] text-jade-soft">Customer stories</p>
-        <h2 className="mt-4 max-w-3xl font-display text-4xl leading-tight md:text-5xl">
+        <h2 className="mt-4 max-w-3xl font-display text-3xl leading-tight sm:text-4xl md:text-5xl">
           See growth decisions in action — before you book.
         </h2>
         <p className="mt-5 max-w-2xl text-mist/70">

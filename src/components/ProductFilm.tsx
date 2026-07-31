@@ -35,7 +35,7 @@ export function ProductFilm({ autoPlay = true }: { autoPlay?: boolean }) {
         style={{ transformStyle: "preserve-3d" }}
       >
         {/* Chrome bar */}
-        <div className="flex items-center justify-between border-b border-white/10 bg-ink-soft/80 px-4 py-3 backdrop-blur md:px-5">
+        <div className="flex flex-wrap items-center justify-between gap-3 border-b border-white/10 bg-ink-soft/80 px-4 py-3 backdrop-blur md:px-5">
           <div className="flex items-center gap-3">
             <div className="hidden gap-1.5 sm:flex" aria-hidden>
               <span className="h-2.5 w-2.5 rounded-full bg-white/20" />
@@ -45,7 +45,7 @@ export function ProductFilm({ autoPlay = true }: { autoPlay?: boolean }) {
             <button
               type="button"
               onClick={() => setPlaying((p) => !p)}
-              className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-jade text-white shadow-glow-jade transition hover:bg-jade-bright"
+              className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-jade text-white shadow-glow-jade transition hover:bg-jade-bright"
               aria-label={playing ? "Pause film" : "Play film"}
             >
               {playing ? <Pause className="h-3.5 w-3.5" /> : <Play className="h-3.5 w-3.5 ml-0.5" />}
@@ -57,7 +57,7 @@ export function ProductFilm({ autoPlay = true }: { autoPlay?: boolean }) {
               </p>
             </div>
           </div>
-          <div className="flex items-center gap-1.5">
+          <div className="flex shrink-0 items-center gap-1.5">
             {filmScenes.map((s, i) => (
               <button
                 key={s.id}
@@ -66,11 +66,16 @@ export function ProductFilm({ autoPlay = true }: { autoPlay?: boolean }) {
                   setIndex(i);
                   setPlaying(false);
                 }}
-                className={`h-1.5 rounded-full transition-all duration-300 ${
-                  i === index ? "w-8 bg-jade" : "w-3 bg-white/25 hover:bg-white/45"
-                }`}
+                className="flex h-10 w-10 items-center justify-center rounded-full"
                 aria-label={`Show ${s.title}`}
-              />
+                aria-current={i === index ? "step" : undefined}
+              >
+                <span
+                  className={`block h-1.5 rounded-full transition-all duration-300 ${
+                    i === index ? "w-8 bg-jade" : "w-3 bg-white/25 hover:bg-white/45"
+                  }`}
+                />
+              </button>
             ))}
           </div>
         </div>

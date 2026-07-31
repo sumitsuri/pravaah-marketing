@@ -28,16 +28,16 @@ export function HeroVisual() {
   }
 
   const chipPositions = [
-    { top: "4%", right: "0%", left: "auto" },
-    { top: "42%", right: "-2%", left: "auto" },
-    { top: "78%", right: "auto", left: "0%" },
+    { top: "4%", right: "4%", left: "auto" },
+    { top: "42%", right: "2%", left: "auto" },
+    { top: "78%", right: "auto", left: "2%" },
   ];
 
   return (
     <div className="w-full">
       <div
         ref={ref}
-        className="relative mx-auto w-full max-w-md px-1 sm:max-w-lg lg:max-w-none lg:px-0"
+        className="relative mx-auto w-full max-w-md overflow-hidden px-1 sm:max-w-lg lg:max-w-none lg:px-2"
         onMouseMove={onMove}
         onMouseLeave={onLeave}
         style={{ perspective: "1400px" }}
@@ -93,7 +93,7 @@ export function HeroVisual() {
       </div>
 
       {/* Metric chips below product on mobile / tablet */}
-      <div className="mt-4 grid grid-cols-1 gap-2 sm:grid-cols-3 lg:hidden">
+      <div className="mt-4 grid grid-cols-1 gap-2 md:grid-cols-3 lg:hidden">
         {heroVisualMetrics.map((metric) => (
           <div
             key={metric.label}

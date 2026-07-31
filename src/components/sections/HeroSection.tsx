@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { motion, useReducedMotion } from "framer-motion";
 import { ArrowRight, Play, Sparkles } from "lucide-react";
-import { brand, heroStats } from "@/lib/content";
+import { brand, heroHeadline, heroStats } from "@/lib/content";
 import { MeshGradient } from "@/components/visual/MeshGradient";
 import { KineticHeadline } from "@/components/visual/KineticHeadline";
 import { HeroVisual } from "@/components/visual/HeroVisual";
@@ -34,16 +34,23 @@ export function HeroSection() {
             </motion.div>
 
             <motion.h1
-              className="mt-6 font-display text-[2rem] leading-[1.12] tracking-tight sm:mt-7 sm:text-[2.35rem] md:text-5xl lg:text-[3.4rem]"
+              className="hero-headline mt-6 font-display tracking-[-0.02em] sm:mt-7"
               style={{ color: "var(--mkt-site-text)" }}
               initial={false}
               animate={{ opacity: 1, y: 0 }}
             >
-              <span className="block opacity-90" style={{ color: "var(--mkt-site-text-muted)" }}>Turn your</span>
-              <span className="mt-1 block">
-                <KineticHeadline className="text-[2rem] sm:text-[2.35rem] md:text-5xl lg:text-[3.4rem]" />
+              <span
+                className="hero-headline__prefix block md:inline md:after:content-['_']"
+                style={{ color: "var(--mkt-site-text-muted)" }}
+              >
+                {heroHeadline.prefix}
               </span>
-              <span className="mt-1 block">into growth decisions.</span>
+              <span className="hero-headline__accent block md:inline">
+                <KineticHeadline />
+              </span>
+              <span className="hero-headline__suffix block md:mt-1 md:block">
+                {heroHeadline.suffix}
+              </span>
             </motion.h1>
 
             <motion.p
@@ -55,7 +62,7 @@ export function HeroSection() {
             </motion.p>
 
             <motion.div
-              className="mt-8 flex flex-wrap justify-center gap-3 lg:justify-start"
+              className="mt-8 flex flex-wrap justify-center gap-3 sm:gap-4 lg:justify-start"
               initial={false}
               animate={{ opacity: 1, y: 0 }}
             >
@@ -70,7 +77,7 @@ export function HeroSection() {
 
             {/* Inline proof stats — visible without scrolling */}
             <motion.div
-              className="mt-8 flex flex-col gap-3 sm:mt-10 sm:grid sm:grid-cols-2 sm:gap-3 lg:grid-cols-4 lg:gap-4"
+              className="mt-8 flex flex-col gap-3 sm:mt-10 sm:grid sm:grid-cols-2 sm:gap-3 xl:grid-cols-4 xl:gap-4"
               initial={false}
               animate={{ opacity: 1, y: 0 }}
             >

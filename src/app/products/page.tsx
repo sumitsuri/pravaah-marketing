@@ -27,7 +27,7 @@ export default function ProductsHubPage() {
               <Link
                 key={p.href}
                 href={p.href}
-                className="group rounded-3xl border border-ink/10 bg-mist-soft/40 p-6 transition hover:border-jade/40 hover:bg-mist-soft md:p-8"
+                className="group min-w-0 rounded-3xl border border-ink/10 bg-mist-soft/40 p-6 transition hover:border-jade/40 hover:bg-mist-soft md:p-8"
               >
                 <p className="text-xs font-semibold uppercase tracking-wider text-jade">
                   {detail.eyebrow}
@@ -36,7 +36,7 @@ export default function ProductsHubPage() {
                   {detail.title}
                 </h2>
                 <p className="mt-3 text-sm text-ink-mute">{detail.hero}</p>
-                <div className="mt-6">
+                <div className="mt-6 overflow-hidden rounded-2xl">
                   <FeatureScreen variant={detail.screen} />
                 </div>
               </Link>

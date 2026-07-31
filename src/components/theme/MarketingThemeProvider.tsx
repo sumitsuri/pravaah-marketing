@@ -31,11 +31,6 @@ type MarketingThemeContextValue = {
 const MarketingThemeContext = createContext<MarketingThemeContextValue | null>(null);
 
 function readInitialTheme(): MarketingThemeId {
-  if (typeof window === "undefined") return DEFAULT_MARKETING_THEME;
-  const fromUrl = new URLSearchParams(window.location.search).get("theme");
-  if (fromUrl && fromUrl in marketingThemes) return fromUrl as MarketingThemeId;
-  const stored = localStorage.getItem(STORAGE_KEY);
-  if (stored && stored in marketingThemes) return stored as MarketingThemeId;
   return DEFAULT_MARKETING_THEME;
 }
 
@@ -52,7 +47,6 @@ export function MarketingThemeProvider({ children }: { children: React.ReactNode
 
   const setThemeId = useCallback((id: MarketingThemeId) => {
     setThemeIdState(id);
-    localStorage.setItem(STORAGE_KEY, id);
     applyThemeToDocument(getMarketingTheme(id));
   }, []);
 

@@ -19,7 +19,7 @@ export default function PricingPage() {
             not because you want to know the price.
           </p>
 
-          <div className="mt-14 grid gap-5 lg:grid-cols-3">
+          <div className="mt-14 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
             {pricing.map((tier) => (
               <div
                 key={tier.name}
@@ -29,7 +29,7 @@ export default function PricingPage() {
               >
                 <h2 className="font-display text-2xl">{tier.name}</h2>
                 <p className="mt-1 text-sm text-ink-mute">{tier.blurb}</p>
-                <p className="mt-5 font-display text-4xl">{tier.price}</p>
+                <p className="mt-5 font-display text-3xl sm:text-4xl">{tier.price}</p>
                 <p className="text-xs text-ink-mute">{tier.unit}</p>
                 <ul className="mt-6 flex-1 space-y-2.5 text-sm text-ink-mute">
                   {tier.features.map((f) => (
