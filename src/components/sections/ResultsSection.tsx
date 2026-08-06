@@ -12,6 +12,7 @@ export function ResultsSection() {
       <div className="container-wide">
         <p className="eyebrow">{copy.eyebrow}</p>
         <h2 className="display mt-3 max-w-3xl">{copy.title}</h2>
+        <p className="mt-4 max-w-2xl text-sm text-ink-mute">{copy.disclaimer}</p>
 
         <div className="mt-12 grid gap-6 lg:grid-cols-3">
           {results.map((item, i) => (

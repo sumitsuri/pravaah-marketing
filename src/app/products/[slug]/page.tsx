@@ -2,7 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { PageHero } from "@/components/PageHero";
 import { FeatureScreen } from "@/components/mockups/FeatureScreen";
-import { productPages } from "@/lib/content";
+import { brand, productPages } from "@/lib/content";
 import { FinalCta } from "@/components/sections/FinalCta";
 import { FaqSection } from "@/components/sections/FaqSection";
 
@@ -16,7 +16,11 @@ export function generateMetadata({ params }: { params: Promise<{ slug: string }>
   return params.then(({ slug }) => {
     const page = productPages[slug as ProductKey];
     if (!page) return { title: "Product" };
-    return { title: page.title, description: page.hero };
+    return {
+      title: page.seoTitle,
+      description: page.seoDescription,
+      alternates: { canonical: `/products/${slug}` },
+    };
   });
 }
 
@@ -46,7 +50,7 @@ export default async function ProductDetailPage({
             </ul>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link href="/demo" className="btn-primary">
-                Book a demo
+                {brand.cta.primary}
               </Link>
               <Link href="/products" className="btn-secondary">
                 All products

@@ -1,30 +1,38 @@
 export const brand = {
   name: "Antrahq",
   productLabel: "Growth Decision Platform",
-  tagline: "Decisions that compound. Growth that follows.",
-  short: "See clearly. Act faster. Grow together.",
+  /** Brand category — how we want to be remembered */
+  tagline: "Every aspect connected. Every decision sharper.",
+  /** Search category — how buyers find us on Google */
+  searchCategory: "Multi-branch salon management software",
+  short: "Run every branch. See every signal. Make the next growth decision.",
   mission:
-    "Antrahq turns every signal from your locations — revenue, staff, stock, and guests — into decisions that accelerate growth. Built for operators who refuse to guess.",
-  footer: "Built in India · Multi-location · Decision intelligence",
+    "Antrahq connects billing, guest CRM, inventory, staff attendance, WhatsApp marketing, and branch profitability for multi-location salon and spa chains in India — so founders, ops heads, and finance leaders work from one shared view.",
+  footer: "Built in India · Salon & spa chains · 3–20 branches",
   email: "hello@antrahq.com",
+  cta: {
+    primary: "Book a growth audit",
+    primaryShort: "Growth audit",
+    secondary: "Watch product film",
+  },
   whatsapp: {
     /** E.164 without + for wa.me links — never rendered in UI */
     phoneE164: "918095679454",
     defaultMessage:
-      "Hi Antrahq team — I visited your website and would like to connect about growing my business. Can we chat?",
+      "Hi Antrahq team — I'd like to book a multi-branch growth audit for our salon chain. Can we find a time?",
     ctaLabel: "Talk to us",
   },
 } as const;
 
-/** Hero kinetic headline — “Transform your {word}” / “into growth decisions.” */
+/** Homepage hero — simplified per positioning audit */
 export const heroHeadline = {
-  prefix: "Transform your",
-  suffix: "into growth decisions.",
-  words: ["locations", "branches", "signals", "teams"] as const,
+  lines: [
+    "Run every branch.",
+    "See every signal.",
+    "Make the next growth decision.",
+  ] as const,
+  subtitle: "Multi-branch salon management software for India",
 } as const;
-
-/** @deprecated Use heroHeadline.words */
-export const heroWords = heroHeadline.words;
 
 /** The decision loop — core platform narrative. */
 export const decisionLoop = [
@@ -77,73 +85,75 @@ export const heroFloatingCards = [
 
 export const sectionCopy = {
   decisionPlatform: {
-    eyebrow: "Why Antrahq",
-    title: "Not another ops tool. A decision platform for growth.",
-    lede: "Enterprise suites bury you in dashboards. Marketplaces tax your bookings. Antrahq connects floor reality to owner decisions — so every location gets sharper, and the network grows faster.",
+    eyebrow: "One connected platform",
+    title: "Billing, CRM, inventory, staff, and profitability — wired together.",
+    lede: "Most salon software handles the front desk well. Antrahq connects desk work to branch P&L, guest retention, and network coaching — so owners see where to act, not just what happened.",
   },
   growthLevers: {
-    eyebrow: "Growth levers",
-    title: "Six decisions that unlock revenue you're already leaving on the table.",
-    lede: "Each lever ties a real leak to a clear decision — with the product screen that makes action obvious.",
+    eyebrow: "What you can run on Antrahq",
+    title: "Six modules multi-branch salon chains use every day.",
+    lede: "Each module solves a real operational job — with screens your managers and owners already recognise from running a chain.",
   },
   intelligence: {
-    eyebrow: "Decision intelligence",
-    title: "Live signals that tell you where to focus — before month-end.",
-    lede: "Market Pulse, branch P&L, and attendance integrity surface coaching moments while there's still time to act.",
+    eyebrow: "Owner intelligence",
+    title: "Branch signals you can act on before month-end.",
+    lede: "Market Pulse, branch P&L, and attendance review surface coaching moments while there is still time to change the week.",
   },
   film: {
     eyebrow: "Product film",
-    title: "See decisions happen in real time.",
+    title: "See billing, attendance, and P&L in one flow.",
   },
   results: {
-    eyebrow: "Proof",
-    title: "Operators who stopped guessing — and started growing.",
+    eyebrow: "Operator scenarios",
+    title: "Outcomes multi-branch teams aim for.",
+    disclaimer:
+      "Illustrative scenarios from early deployments — your results depend on branch count, offer mix, and how consistently managers use the platform.",
   },
   finalCta: {
-    title: "Ready to make every location a growth engine?",
-    lede: "Book a walkthrough tailored to your chain. See decisions, not dashboards.",
+    title: "See where your chain can grow next.",
+    lede: "Book a 30-minute multi-branch growth audit. We map billing, CRM, staff, inventory, and branch economics to your network — then show the product on your terms.",
   },
   aiAgents: {
-    eyebrow: "Always working for you",
-    title: "While you sleep, your growth team never clocks out.",
-    lede: "Antrahq quietly watches every branch — visits, margins, staff, and guest retention — then connects the dots into clear actions for the morning.",
-    useCaseTitle: "Example: Koramangala outlet starts slipping",
-    useCaseLede: "See how five insights connect overnight into one playbook you can act on.",
-    storyEyebrow: "Live growth story",
-    graphStart: "Overnight",
-    graphEnd: "Your morning",
-    detailEyebrow: "What this means for you",
+    eyebrow: "Connected signals",
+    title: "When one branch slips, the whole story shows up together.",
+    lede: "Footfall, margin, staff attendance, and guest retention feed one morning view — so owners and branch leads know what to fix first.",
+    useCaseTitle: "Example: one outlet dips vs peer branches",
+    useCaseLede: "See how connected signals turn into three floor actions — illustrated with demo data.",
+    storyEyebrow: "Connected scenario",
+    graphStart: "Signals detected",
+    graphEnd: "Actions ready",
+    detailEyebrow: "What an owner sees",
   },
 } as const;
 
-/** Hero + site-wide growth metrics with before/after/delta */
+/** Hero capability highlights — honest framing, not unattributed performance claims */
 export const heroStats = [
   {
-    label: "Decision speed vs spreadsheets",
-    before: "1×",
-    after: "2.4×",
-    delta: "+140%",
+    label: "Built for",
+    before: "Single-outlet tools",
+    after: "3–20 branch chains",
+    delta: "Mid-market",
     improved: true,
   },
   {
-    label: "Owner admin time per week",
-    before: "12 hrs",
-    after: "7 hrs",
-    delta: "−42%",
+    label: "Connected modules",
+    before: "Separate apps",
+    after: "Billing · CRM · Staff · Stock",
+    delta: "One view",
     improved: true,
   },
   {
-    label: "Marketplace booking tax",
-    before: "15–30%",
-    after: "0%",
-    delta: "Keep all",
+    label: "India desk workflow",
+    before: "Generic POS",
+    after: "GST + WhatsApp receipts",
+    delta: "Local",
     improved: true,
   },
   {
-    label: "Verified attendance punch",
-    before: "4 min",
-    after: "15 sec",
-    delta: "−94%",
+    label: "Owner economics",
+    before: "Month-end Excel",
+    after: "Live branch P&L",
+    delta: "Actionable",
     improved: true,
   },
 ] as const;
@@ -300,33 +310,44 @@ export const nav = {
   products: [
     {
       href: "/products/billing",
-      title: "Walk-in & GST billing",
-      desc: "60-second desk flow with WhatsApp receipts.",
+      title: "Salon billing & GST",
+      desc: "Walk-in wizard, invoices, WhatsApp receipts.",
+    },
+    {
+      href: "/products/pos",
+      title: "Salon POS software",
+      desc: "Cash, UPI, card — GST-ready at the desk.",
+    },
+    {
+      href: "/products/crm",
+      title: "Salon CRM & guest profiles",
+      desc: "Phone-first profiles, leads, visit history.",
     },
     {
       href: "/products/analytics",
-      title: "P&L & Market Pulse",
-      desc: "Branch profit and peer ranking in one view.",
+      title: "Branch P&L & analytics",
+      desc: "Profit by outlet and Market Pulse ranking.",
     },
     {
-      href: "/products/attendance",
-      title: "Verified attendance",
-      desc: "Selfie + GPS geofenced punches and leave.",
+      href: "/products/staff",
+      title: "Staff & attendance",
+      desc: "Geofenced punches, leave, payroll signals.",
     },
     {
       href: "/products/campaigns",
-      title: "WhatsApp campaigns",
-      desc: "Win-backs included — not a bolt-on fee.",
+      title: "WhatsApp marketing",
+      desc: "Win-back campaigns from your guest CRM.",
     },
     {
       href: "/products/inventory",
-      title: "Inventory control",
-      desc: "Restock, usage, wastage, retail — every unit.",
+      title: "Salon inventory",
+      desc: "Stock, usage, wastage, and retail tracking.",
     },
   ],
   links: [
     { href: "/customers", label: "Customers" },
     { href: "/resources", label: "Resources" },
+    { href: "/compare", label: "Compare" },
     { href: "/pricing", label: "Pricing" },
   ],
 } as const;
@@ -519,60 +540,61 @@ export const timeline = [
     week: "Week 2+",
     title: "Steady flow",
     detail: "WhatsApp receipts humming, attendance reviews weekly, campaigns on a rhythm.",
-    stat: "No tax",
-    statLabel: "marketplace commission on bookings",
+    stat: "Connected",
+    statLabel: "billing · CRM · P&L · staff",
   },
 ] as const;
 
 export const trustLogos = [
-  "Multi-branch demo chains",
-  "India GST-ready",
-  "WhatsApp-native",
-  "Manager PWA",
-  "CEO P&L",
+  "Salon & spa chains",
+  "India GST billing",
+  "WhatsApp receipts",
+  "Manager floor app",
+  "Branch P&L",
   "Market Pulse",
 ] as const;
 
+/** Illustrative operator scenarios — not attributed customer quotes until case studies ship */
 export const results = [
   {
     quote:
-      "We stopped reconciling three Excels every Sunday. Branch P&L and Market Pulse gave us growth decisions every morning — not month-end surprises.",
-    name: "Ops lead",
-    role: "6-outlet salon brand · Bangalore",
-    focus: "Faster decisions",
+      "Replace three Sunday Excels with one branch P&L view — so ops and finance agree on numbers before the week starts.",
+    name: "Scenario · Network ops",
+    role: "6-branch salon chain · Tier 1 city",
+    focus: "Unified reporting",
     metric: {
-      label: "Admin time per week",
-      before: "12 hrs",
-      after: "7 hrs",
-      delta: "−42%",
+      label: "Reporting rhythm",
+      before: "Weekly reconcile",
+      after: "Daily branch view",
+      delta: "Aligned",
       improved: true,
     },
   },
   {
     quote:
-      "Attendance used to be a trust exercise. Verified punches gave us integrity signals before payroll — and managers finally had clarity to coach.",
-    name: "Brand admin",
+      "Give managers a punch flow with photo and location evidence — so attendance review happens before payroll, not after disputes.",
+    name: "Scenario · People ops",
     role: "Multi-branch beauty chain",
-    focus: "People signals",
+    focus: "Attendance integrity",
     metric: {
-      label: "Verified punch time",
-      before: "4 min",
-      after: "15 sec",
-      delta: "−94%",
+      label: "Punch evidence",
+      before: "Paper / honour",
+      after: "Selfie + geofence",
+      delta: "Verifiable",
       improved: true,
     },
   },
   {
     quote:
-      "WhatsApp win-backs inside Growth meant we actually filled chairs on purpose. Retention became a decision, not a hope.",
-    name: "Owner",
+      "Win back quiet guests from the same CRM graph as billing — so retention is a scheduled action, not an ad-hoc blast.",
+    name: "Scenario · Owner growth",
     role: "Mid-market salon group",
-    focus: "Revenue growth",
+    focus: "Guest retention",
     metric: {
-      label: "Empty-chair days / month",
-      before: "11",
-      after: "6",
-      delta: "−45%",
+      label: "Campaign source",
+      before: "Exported lists",
+      after: "Visit & spend CRM",
+      delta: "Connected",
       improved: true,
     },
   },
@@ -673,87 +695,91 @@ export const platformTaxonomy = [
 
 export const comparisonRows = [
   {
-    capability: "India GST depth (branch GSTIN, CGST/SGST PDF)",
+    capability: "India GST billing (branch GSTIN, CGST/SGST PDF)",
     antrahq: true,
-    enterprise: "Heavy config",
-    marketplace: "Limited",
-    smb: true,
+    enterprise: "Yes — often heavier setup",
+    marketplace: "Varies",
+    smb: "Common",
   },
   {
-    capability: "WhatsApp campaigns included in mid tier",
-    antrahq: true,
-    enterprise: "Often add-on",
-    marketplace: "Messaging fees",
+    capability: "WhatsApp receipts & campaigns",
+    antrahq: "Campaigns on Growth tier",
+    enterprise: "Often add-on modules",
+    marketplace: "Platform-dependent",
     smb: "Often extra",
   },
   {
-    capability: "Branch P&L for mid-market chains",
+    capability: "Multi-branch P&L by outlet",
     antrahq: true,
     enterprise: true,
-    marketplace: false,
-    smb: "Basic",
+    marketplace: "Rare",
+    smb: "Basic summaries",
   },
   {
     capability: "Geofenced selfie attendance",
     antrahq: true,
-    enterprise: "Hardware partners",
-    marketplace: false,
-    smb: false,
+    enterprise: "Varies — hardware options",
+    marketplace: "Rare",
+    smb: "Varies",
   },
   {
-    capability: "Market Pulse peer ranking",
-    antrahq: true,
-    enterprise: "Enterprise-only",
-    marketplace: false,
-    smb: false,
+    capability: "Branch ranking / coaching signals",
+    antrahq: "Market Pulse",
+    enterprise: "Advanced analytics tiers",
+    marketplace: "Rare",
+    smb: "Rare",
   },
   {
-    capability: "No marketplace commission on bookings",
-    antrahq: true,
-    enterprise: true,
-    marketplace: false,
-    smb: true,
+    capability: "Subscription vs marketplace commission",
+    antrahq: "Subscription — no booking cut",
+    enterprise: "Subscription",
+    marketplace: "Often commission-based",
+    smb: "Usually subscription",
   },
   {
-    capability: "Go-live in days for 3–20 branches",
-    antrahq: true,
-    enterprise: "Weeks–months",
-    marketplace: true,
-    smb: true,
+    capability: "Typical rollout for 3–20 branches",
+    antrahq: "Days to first week",
+    enterprise: "Weeks to months",
+    marketplace: "Days",
+    smb: "Days",
   },
   {
-    capability: "Transparent ₹/branch public pricing",
+    capability: "Public ₹/branch pricing",
     antrahq: true,
-    enterprise: false,
-    marketplace: "Seat + fees",
-    smb: "Soft-hidden",
+    enterprise: "Custom quote",
+    marketplace: "Mixed",
+    smb: "Often quote-based",
   },
 ] as const;
 
 export const faqs = [
   {
     q: "Who is Antrahq built for?",
-    a: "Multi-location operators in India who want growth decisions — not more dashboards. Salon chains today, clinics and pharmacies tomorrow — typically 3 to 20 outlets that need GST, WhatsApp, branch P&L, and floor intelligence without enterprise bloat or marketplace tax.",
+    a: "Multi-branch salon and spa operators in India — typically 3 to 20 outlets. Buyers are usually founders, operations heads, or finance leaders who need GST billing, guest CRM, staff attendance, inventory, WhatsApp marketing, and branch profitability in one platform.",
   },
   {
-    q: "How is Antrahq different from enterprise suites?",
-    a: "Enterprise suites are powerful but often opaque on price and slow to roll out. Antrahq is a growth decision platform for mid-market chains: faster go-live, India desk reality (GST + WhatsApp), transparent ₹/branch pricing, and Market Pulse for coaching outlets.",
+    q: "Is Antrahq salon POS software or something else?",
+    a: "Both. Antrahq includes salon POS and GST billing at the desk, plus multi-branch P&L, CRM, inventory, staff attendance, and WhatsApp campaigns. We describe it as a growth decision platform because owners use it to decide which branch to coach — not only to print a bill.",
+  },
+  {
+    q: "How does Antrahq compare to Zenoti, MioSalon, or Salonist?",
+    a: "Zenoti suits large enterprise chains with custom rollouts. MioSalon and Salonist are strong operational tools for many Indian salons. Antrahq focuses on mid-market chains that want connected branch economics and public ₹/branch pricing. See our compare pages for an honest side-by-side starting point.",
   },
   {
     q: "Do you take a cut of bookings?",
-    a: "No. Antrahq is brand-owned software. You keep 100% of booking revenue. We monetise via subscription, not marketplace commission.",
+    a: "No. Antrahq is subscription software for your brand. You keep booking revenue; we charge per branch per month.",
   },
   {
-    q: "Is WhatsApp really included?",
-    a: "WhatsApp campaign tools are part of Growth. Message delivery uses your MSG91 (or equivalent) configuration — no surprise “marketing suite” upsell just to preview an audience.",
+    q: "Is WhatsApp marketing included?",
+    a: "WhatsApp campaign tools are on the Growth plan. Message delivery connects to your MSG91 (or equivalent) account — audience preview and segmentation are in the product.",
   },
   {
     q: "Can managers use it on tablets?",
-    a: "Yes. The manager experience is an installable PWA — walk-ins, attendance, inventory, and today’s bookings on salon devices.",
+    a: "Yes. The manager app is an installable PWA for walk-ins, attendance, inventory, and bookings on salon tablets.",
   },
   {
-    q: "What about attendance hardware?",
-    a: "Verified punches use the device camera + GPS against your branch geofence. No separate biometric vendor required for the baseline flow.",
+    q: "What happens in a growth audit?",
+    a: "In 30 minutes we map your branch count, billing flow, reporting gaps, and retention rhythm — then walk the relevant product screens. It is tailored to your chain, not a generic slide deck.",
   },
 ] as const;
 
@@ -762,34 +788,49 @@ export const resources = [
     type: "Guide",
     title: "Multi-branch P&L checklist for Indian salon owners",
     desc: "What to track weekly so leaks show up before month-end.",
-    href: "/resources#pnl-guide",
+    href: "/resources/multi-branch-pnl-checklist",
   },
   {
     type: "Playbook",
     title: "WhatsApp win-back sequences that respect opt-in",
     desc: "Audience cuts by visit gap and spend — without spamming.",
-    href: "/resources#whatsapp-playbook",
+    href: "/resources/whatsapp-winback-playbook",
+  },
+  {
+    type: "Guide",
+    title: "Salon staff attendance guide for multi-branch chains",
+    desc: "Geofencing, selfie punches, and weekly review before payroll.",
+    href: "/resources/salon-attendance-guide",
   },
   {
     type: "Tool",
-    title: "Branch revenue opportunity calculator",
-    desc: "Estimate hours saved and win-back upside for your chain size.",
+    title: "Revenue opportunity calculator",
+    desc: "Estimate desk-time and win-back upside for your chain size.",
     href: "/roi-calculator",
   },
   {
+    type: "Tool",
+    title: "Branch health score",
+    desc: "Score reporting, attendance, and retention readiness across outlets.",
+    href: "/branch-health-score",
+  },
+  {
     type: "Compare",
-    title: "How Antrahq compares by category",
-    desc: "A practical buyer matrix for India mid-market chains.",
-    href: "/resources#compare",
+    title: "Antrahq vs Zenoti, MioSalon & Salonist",
+    desc: "Honest starting points for your shortlist — validate in live demos.",
+    href: "/compare/zenoti",
   },
 ] as const;
 
 export const productPages = {
   billing: {
-    title: "Walk-in & GST billing",
-    eyebrow: "Product · Front desk",
-    hero: "From guest phone number to WhatsApp receipt — under a minute.",
-    body: "Built for Indian walk-in culture: find the guest, assign stylists on every line, preview GST, collect Cash/UPI/Card, and queue a WhatsApp PDF. Discounts leave an audit trail.",
+    title: "Salon billing & GST invoicing software",
+    seoTitle: "Salon billing & GST software for multi-branch chains · Antrahq",
+    seoDescription:
+      "GST-ready salon billing for Indian chains: walk-in wizard, branch GSTIN, CGST/SGST invoices, UPI/card/cash, and WhatsApp PDF receipts.",
+    eyebrow: "Product · Billing",
+    hero: "From guest phone number to GST invoice and WhatsApp receipt — at the desk.",
+    body: "Built for Indian walk-in culture: find the guest, assign stylists on every line, preview GST, collect Cash/UPI/Card, and queue a WhatsApp PDF. Discounts leave an audit trail managers and owners can review.",
     bullets: [
       "3-step wizard on manager PWA",
       "Per-branch GSTIN with CGST/SGST split",
@@ -799,11 +840,48 @@ export const productPages = {
     ],
     screen: "walkin" as const,
   },
+  pos: {
+    title: "Salon POS software for India",
+    seoTitle: "Salon POS software India — GST, UPI & multi-branch · Antrahq",
+    seoDescription:
+      "Salon POS for multi-branch chains in India: walk-in billing, UPI and card payments, GST invoices, stylist assignment, and WhatsApp receipts from one floor app.",
+    eyebrow: "Product · POS",
+    hero: "Salon POS that matches how Indian desks actually work — walk-ins, UPI, and GST.",
+    body: "Antrahq POS is phone-first: lookup the guest, add services with stylist accountability, preview tax, and close the bill in one flow. Every sale feeds guest CRM, branch revenue, and owner P&L — no export step.",
+    bullets: [
+      "Cash, UPI, and card in one walk-in flow",
+      "GST preview before payment collection",
+      "Stylist on every line item for commissions",
+      "WhatsApp PDF receipt after payment",
+      "Works on installable manager tablets",
+    ],
+    screen: "walkin" as const,
+  },
+  crm: {
+    title: "Salon CRM & guest management",
+    seoTitle: "Salon CRM software for multi-branch chains · Antrahq",
+    seoDescription:
+      "Salon CRM tied to billing: phone-first guest profiles, visit history, spend segments, public enquiry leads, and WhatsApp win-back audiences for Indian chains.",
+    eyebrow: "Product · CRM",
+    hero: "Guest profiles that start at the phone number — and stay connected to every visit.",
+    body: "Antrahq CRM is not a separate database. Profiles grow from walk-ins, bookings, and public enquiries. Owners segment by visit gap and spend for WhatsApp win-backs; managers see history at the desk before the service starts.",
+    bullets: [
+      "Phone-first guest lookup at billing",
+      "Visit and spend history on every profile",
+      "Public enquiry leads in one queue",
+      "Audience preview for WhatsApp campaigns",
+      "Same graph powers receipts and retention",
+    ],
+    screen: "campaign" as const,
+  },
   analytics: {
-    title: "Branch P&L & Market Pulse",
-    eyebrow: "Product · Owner intelligence",
+    title: "Salon analytics, branch P&L & Market Pulse",
+    seoTitle: "Multi-branch salon analytics & branch P&L · Antrahq",
+    seoDescription:
+      "Branch P&L and salon analytics for Indian chains: revenue vs salary, rent, product cost, Market Pulse ranking, and coaching signals across 3–20 outlets.",
+    eyebrow: "Product · Analytics",
     hero: "Know which outlet is winning — and why — before the week slips away.",
-    body: "CEO dashboards combine live chain KPIs, expenditure-aware P&L, and Market Pulse rankings with anonymised peer context and playbooks your managers can act on.",
+    body: "Owner dashboards combine live chain KPIs, expenditure-aware P&L, and Market Pulse rankings with anonymised peer context. Finance and ops can agree on one branch scoreboard.",
     bullets: [
       "Revenue vs salary, rent, product, misc",
       "Payroll and product-cost sync into P&L",
@@ -813,10 +891,30 @@ export const productPages = {
     ],
     screen: "pulse" as const,
   },
+  staff: {
+    title: "Salon staff management & attendance",
+    seoTitle: "Salon staff attendance software India · Antrahq",
+    seoDescription:
+      "Salon staff attendance with selfie and GPS geofence, leave workflows, late and missing-exit flags, and payroll signals for multi-branch chains.",
+    eyebrow: "Product · Staff",
+    hero: "Staff attendance your managers can verify — before payroll runs.",
+    body: "Managers and staff punch on the branch device. Antrahq stores photo evidence, distance from location, and inside/outside status — then surfaces late arrivals and missing exits for review. Targets and incentives stay CEO-gated where needed.",
+    bullets: [
+      "Front-camera selfie capture",
+      "Accuracy-aware GPS with distance-to-branch",
+      "Configurable geofence radius",
+      "Leave request / approve / reject",
+      "Daily and period exception logs",
+    ],
+    screen: "attendance" as const,
+  },
   attendance: {
-    title: "Verified attendance",
-    eyebrow: "Product · People ops",
-    hero: "Selfie. GPS. Geofence. Trust.",
+    title: "Verified salon attendance",
+    seoTitle: "Geofenced salon attendance · Antrahq",
+    seoDescription:
+      "Geofenced selfie attendance for salon staff: GPS verification, leave workflows, and exception review for multi-branch chains in India.",
+    eyebrow: "Product · Attendance",
+    hero: "Selfie. GPS. Geofence. Review before payroll.",
     body: "Managers and staff punch on the branch device. Antrahq stores photo evidence, distance from location, and inside/outside status — then surfaces late arrivals and missing exits for review.",
     bullets: [
       "Front-camera selfie capture",
@@ -828,10 +926,13 @@ export const productPages = {
     screen: "attendance" as const,
   },
   campaigns: {
-    title: "WhatsApp campaigns",
-    eyebrow: "Product · Growth",
-    hero: "Win-backs that actually get sent — because they’re in the product.",
-    body: "Preview audiences by visit history and spend, respect opt-in, and launch campaigns from brand admin. Growth includes the capability so messaging isn’t a surprise line item.",
+    title: "Salon WhatsApp marketing",
+    seoTitle: "Salon WhatsApp marketing & win-back campaigns · Antrahq",
+    seoDescription:
+      "WhatsApp marketing for salon chains: audience preview by visit and spend, opt-in aware win-backs, and campaigns included on Growth tier.",
+    eyebrow: "Product · WhatsApp marketing",
+    hero: "Win-backs from the same CRM graph as your billing.",
+    body: "Preview audiences by visit history and spend, respect opt-in, and launch campaigns from brand admin. Growth includes the capability so messaging is part of the platform — not a surprise line item.",
     bullets: [
       "Audience preview before send",
       "Filters by visits and spend",
@@ -842,10 +943,13 @@ export const productPages = {
     screen: "campaign" as const,
   },
   inventory: {
-    title: "Inventory control",
-    eyebrow: "Product · Stock",
+    title: "Salon inventory management",
+    seoTitle: "Multi-branch salon inventory software · Antrahq",
+    seoDescription:
+      "Salon inventory for chains: branch stock, restock, usage, wastage, retail sales, and product cost in branch P&L.",
+    eyebrow: "Product · Inventory",
     hero: "Every unit has a movement — restock, usage, wastage, or sale.",
-    body: "Branch managers log stock events on the floor PWA while owners watch inventory analytics across the chain. Less “mystery shrink,” more accountable product cost in P&L.",
+    body: "Branch managers log stock events on the floor PWA while owners watch inventory analytics across the chain. Product cost flows into branch economics for clearer P&L.",
     bullets: [
       "Branch-level stock views",
       "Restock / usage / wastage / retail / adjust",

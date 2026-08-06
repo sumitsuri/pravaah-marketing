@@ -7,6 +7,7 @@ import { WhatsAppFloatingButton } from "@/components/WhatsAppConnect";
 import { MarketingThemeProvider } from "@/components/theme/MarketingThemeProvider";
 import { brand } from "@/lib/content";
 import { MARKETING_THEME_BOOT } from "@/lib/marketing-theme";
+import { MarketingAnalytics } from "@/components/analytics/MarketingAnalytics";
 import "./globals.css";
 
 const display = Fraunces({
@@ -21,19 +22,67 @@ const sans = Sora({
   display: "swap",
 });
 
+const siteUrl = "https://antrahq.com";
+
 export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
   title: {
     default: `${brand.name} — ${brand.tagline}`,
     template: `%s · ${brand.name}`,
   },
   description:
-    "Antrahq is the growth decision platform for multi-location businesses in India. Turn floor signals into growth decisions — GST billing, branch P&L, Market Pulse, WhatsApp campaigns, and verified attendance.",
+    "Multi-branch salon management software for India. Antrahq connects billing, POS, CRM, inventory, staff attendance, WhatsApp marketing, and branch P&L for 3–20 outlet salon and spa chains.",
+  keywords: [
+    "multi branch salon management software India",
+    "salon POS software India GST",
+    "salon CRM software",
+    "salon billing software GST",
+    "salon inventory management",
+    "salon staff attendance software",
+    "WhatsApp marketing for salons",
+    "branch P&L salon chain",
+  ],
   openGraph: {
-    title: `${brand.name} — ${brand.tagline}`,
-    description:
-      "The growth decision platform for multi-location operators. See clearly, act faster, grow together.",
+    title: `${brand.name} — ${brand.short}`,
+    description: brand.mission,
     type: "website",
+    url: siteUrl,
+    locale: "en_IN",
+    siteName: brand.name,
   },
+  alternates: {
+    canonical: "/",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      name: brand.name,
+      url: siteUrl,
+      email: brand.email,
+      description: brand.mission,
+    },
+    {
+      "@type": "SoftwareApplication",
+      name: brand.name,
+      applicationCategory: "BusinessApplication",
+      operatingSystem: "Web",
+      description: brand.mission,
+      offers: {
+        "@type": "Offer",
+        priceCurrency: "INR",
+        price: "2999",
+        description: "Starter plan per branch per month — see pricing page for tiers",
+      },
+    },
+  ],
 };
 
 export const viewport = {
@@ -49,8 +98,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Script id="marketing-theme-boot" strategy="beforeInteractive">
           {MARKETING_THEME_BOOT}
         </Script>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
       </head>
       <body className="min-h-screen overflow-x-hidden font-sans antialiased">
+        <MarketingAnalytics />
         <MarketingThemeProvider>
           <SiteHeader />
           <main className="pb-20 sm:pb-24">{children}</main>

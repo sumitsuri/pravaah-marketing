@@ -14,7 +14,7 @@ export function SiteFooter() {
             <p className="mt-6 text-xs tracking-wide text-jade-soft">{brand.footer}</p>
             <div className="mt-8 flex flex-wrap gap-3">
               <Link href="/demo" className="btn-primary !py-2.5 text-xs">
-                Book a demo
+                {brand.cta.primary}
               </Link>
               <a
                 href={whatsappHref()}
@@ -25,8 +25,8 @@ export function SiteFooter() {
               >
                 {brand.whatsapp.ctaLabel}
               </a>
-              <Link href="/roi-calculator" className="btn-secondary !border-white/20 !bg-transparent !py-2.5 text-xs !text-white hover:!bg-white/5">
-                ROI calculator
+              <Link href="/branch-health-score" className="btn-secondary !border-white/20 !bg-transparent !py-2.5 text-xs !text-white hover:!bg-white/5">
+                Branch health score
               </Link>
             </div>
           </div>
@@ -94,7 +94,7 @@ export function SiteFooter() {
         </div>
       </div>
       <div className="border-t border-white/10 px-5 py-5 pb-20 text-center text-xs text-mist/50 sm:pb-24 md:px-8 lg:pb-5">
-        © {new Date().getFullYear()} {brand.name}. {brand.productLabel} for multi-location businesses.
+        © {new Date().getFullYear()} {brand.name}. {brand.searchCategory} for salon & spa chains in India.
       </div>
     </footer>
   );

@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Compass, Link2, Rocket, Signal } from "lucide-react";
 import Link from "next/link";
-import { decisionLoop, sectionCopy } from "@/lib/content";
+import { decisionLoop, sectionCopy, brand } from "@/lib/content";
 import { useMarketingTheme } from "@/components/theme/MarketingThemeProvider";
 
 const icons = [Signal, Link2, Compass, Rocket];
@@ -42,8 +42,8 @@ export function DecisionPlatformSection() {
             <p className="mt-5 max-w-xl text-base leading-relaxed md:text-lg" style={{ color: "var(--mkt-text-muted)" }}>
               {copy.lede}
             </p>
-            <Link href="/demo" className="btn-primary mt-8 !bg-jade !text-white hover:!bg-jade-bright">
-              See your growth map <ArrowRight className="h-4 w-4" />
+            <Link href="/demo" className="btn-primary !bg-jade !text-white hover:!bg-jade-bright">
+              {brand.cta.primary} <ArrowRight className="h-4 w-4" />
             </Link>
           </div>
 

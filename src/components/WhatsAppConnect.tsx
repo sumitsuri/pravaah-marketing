@@ -1,6 +1,7 @@
 "use client";
 
 import { brand } from "@/lib/content";
+import { trackWhatsAppClick } from "@/lib/analytics";
 import { whatsappHref } from "@/lib/whatsapp";
 
 function WhatsAppIcon({ className = "h-5 w-5" }: { className?: string }) {
@@ -27,6 +28,7 @@ export function WhatsAppConnectButton({ className = "" }: ButtonProps) {
       className={`btn-whatsapp ${className}`}
       aria-label={whatsappAriaLabel}
       data-testid="whatsapp-connect-cta"
+      onClick={() => trackWhatsAppClick("connect_button")}
     >
       <WhatsAppIcon className="h-[1.05rem] w-[1.05rem] opacity-90" />
       {brand.whatsapp.ctaLabel}
@@ -44,6 +46,7 @@ export function WhatsAppHeaderButton({ className = "" }: ButtonProps) {
       className={`btn-whatsapp-ghost ${className}`}
       aria-label={whatsappAriaLabel}
       data-testid="whatsapp-header-cta"
+      onClick={() => trackWhatsAppClick("header")}
     >
       <WhatsAppIcon className="h-[1.15rem] w-[1.15rem]" />
     </a>
@@ -66,6 +69,7 @@ export function WhatsAppIconLink({
       className={`inline-flex items-center justify-center rounded-lg text-[#25D366] transition hover:text-[#1ebe5d] ${className}`}
       aria-label={whatsappAriaLabel}
       data-testid="whatsapp-icon-link"
+      onClick={() => trackWhatsAppClick("icon_link")}
     >
       <WhatsAppIcon className={iconClassName} />
     </a>
@@ -82,6 +86,7 @@ export function WhatsAppFloatingButton() {
       className="whatsapp-fab"
       aria-label={whatsappAriaLabel}
       data-testid="whatsapp-floating-button"
+      onClick={() => trackWhatsAppClick("floating")}
     >
       <span className="whatsapp-fab__pulse" aria-hidden />
       <WhatsAppIcon className="relative z-10 h-6 w-6 text-white" />

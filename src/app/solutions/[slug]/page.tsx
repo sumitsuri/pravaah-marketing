@@ -10,61 +10,61 @@ import { brand } from "@/lib/content";
 
 const solutions = {
   "multi-branch": {
-    eyebrow: "Solution · Multi-branch",
-    title: "Run every outlet like your best one.",
-    body: "Standardise walk-in GST, attendance, inventory, and reporting across 3–20 branches — without an enterprise programme or marketplace tax.",
+    eyebrow: "Solution · Multi-branch operations",
+    title: "Multi-branch salon management for 3–20 outlets",
+    body: "Standardise billing, CRM, staff attendance, inventory, and branch reporting across your network — with one owner view and a manager app on every floor.",
     points: [
       {
         title: "One brand admin",
-        desc: "Branches, managers, GSTINs, and geofences configured once — then every outlet inherits the flow.",
+        desc: "Branches, managers, GSTINs, and geofences configured once — then every outlet runs the same playbook.",
       },
       {
-        title: "Comparable P&Ls",
-        desc: "Same cost categories and revenue truth so you can coach every outlet with the same scoreboard.",
+        title: "Comparable branch P&L",
+        desc: "Same cost categories and revenue truth so finance and ops coach outlets on one scoreboard.",
       },
       {
-        title: "Floor app that travels",
-        desc: "Managers get the same PWA playbook whether they open a new branch or cover a shift.",
+        title: "Floor app on every tablet",
+        desc: "Managers bill walk-ins, punch attendance, and log stock from the same installable PWA.",
       },
     ],
     screen: "pulse" as const,
   },
   owners: {
-    eyebrow: "Solution · Owners & CEOs",
-    title: "Morning command: revenue, leaks, and win-backs.",
-    body: `${brand.name} gives owners a five-minute ritual — network KPIs, branch P&L, Market Pulse, then a WhatsApp campaign to fill quiet chairs.`,
+    eyebrow: "Solution · Owners & finance",
+    title: "Owner dashboard: revenue, branch P&L, and retention",
+    body: `${brand.name} gives founders and finance leaders a morning routine — network KPIs, branch profitability, Market Pulse ranking, and WhatsApp win-back previews from one CRM graph.`,
     points: [
       {
         title: "Market Pulse",
-        desc: "Rank outlets inside your brand and against anonymised peers with playbooks attached.",
+        desc: "Rank outlets inside your brand with anonymised peer context and suggested coaching actions.",
       },
       {
-        title: "Campaigns included",
-        desc: "Growth includes WhatsApp audience tools so retention isn’t a surprise invoice.",
+        title: "WhatsApp from CRM",
+        desc: "Segment guests by visit gap and spend — campaigns included on Growth, not a separate bolt-on.",
       },
       {
         title: "People economics",
-        desc: "CEO-gated salaries, targets, and incentives — aligned with attendance integrity.",
+        desc: "Salaries, targets, and attendance exceptions visible before payroll closes.",
       },
     ],
     screen: "pnl" as const,
   },
   managers: {
     eyebrow: "Solution · Branch managers",
-    title: "The floor app your desk actually uses.",
-    body: "Walk-ins, verified punches, stock movements, and today’s bookings — installable on salon tablets without waiting on an App Store release.",
+    title: "Salon floor app for walk-ins, staff, and stock",
+    body: "Walk-ins, verified punches, stock movements, and bookings on installable salon tablets — built for Indian desk speed and GST compliance.",
     points: [
       {
-        title: "60-second billing",
-        desc: "Guest → services + stylist → pay. GST preview before collection.",
+        title: "Walk-in billing",
+        desc: "Guest → services + stylist → pay, with GST preview before collection.",
       },
       {
-        title: "Trusted attendance",
-        desc: "Selfie + GPS geofence with leave workflows built in.",
+        title: "Verified attendance",
+        desc: "Selfie + GPS geofence with leave workflows managers review weekly.",
       },
       {
         title: "Stock accountability",
-        desc: "Log usage and wastage as it happens — not at month-end panic.",
+        desc: "Log usage and wastage as it happens — product cost feeds branch P&L.",
       },
     ],
     screen: "walkin" as const,

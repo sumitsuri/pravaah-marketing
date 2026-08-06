@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { brand, comparisonRows } from "@/lib/content";
+import { compareNav } from "@/lib/compare-pages";
 
 function Cell({ value }: { value: boolean | string }) {
   if (value === true) return <span className="font-semibold text-jade">Yes</span>;
@@ -14,10 +15,10 @@ export function ComparisonSection() {
     <section id="compare" className="section-pad bg-white">
       <div className="container-wide">
         <p className="eyebrow">Compare</p>
-        <h2 className="display mt-3 max-w-3xl">Why operators choose {brand.name}.</h2>
+        <h2 className="display mt-3 max-w-3xl">How {brand.name} fits the salon software landscape.</h2>
         <p className="mt-5 max-w-2xl text-ink-mute">
-          How {brand.name} stacks up against typical enterprise suites, marketplace apps, and India SMB tools —
-          based on what we have shipped.
+          A practical matrix for multi-branch buyers — not a claim that one column wins every row. Validate
+          against your shortlist in live demos.
         </p>
 
         <div className="mt-10 overflow-x-auto rounded-2xl border border-ink/10 [-webkit-overflow-scrolling:touch]">
@@ -57,12 +58,26 @@ export function ComparisonSection() {
           </table>
         </div>
         <p className="mt-2 text-xs text-ink-mute lg:hidden">Swipe horizontally to compare all columns →</p>
-        <p className="mt-4 text-xs text-ink-mute">
-          Category columns are directional — validate against your shortlist.{" "}
+
+        <div className="mt-10 grid gap-4 sm:grid-cols-3">
+          {compareNav.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              className="rounded-2xl border border-ink/10 bg-mist-soft/50 p-5 transition hover:border-jade/30 hover:bg-white"
+            >
+              <p className="font-semibold text-ink">{item.title}</p>
+              <p className="mt-2 text-xs leading-relaxed text-ink-mute">{item.desc}</p>
+            </Link>
+          ))}
+        </div>
+
+        <p className="mt-6 text-xs text-ink-mute">
+          Category columns are directional — plans and regions differ.{" "}
           <Link href="/demo" className="font-semibold text-jade">
-            Book a demo
+            Book a growth audit
           </Link>{" "}
-          for a live walkthrough.
+          with your branch count and GST setup.
         </p>
       </div>
     </section>

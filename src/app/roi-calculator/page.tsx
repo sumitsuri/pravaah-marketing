@@ -3,6 +3,7 @@
 import { useMemo, useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import { brand } from "@/lib/content";
 
 export default function RoiCalculatorPage() {
   const [branches, setBranches] = useState(6);
@@ -34,10 +35,10 @@ export default function RoiCalculatorPage() {
         <div className="container-wide grid gap-12 lg:grid-cols-[1.05fr_0.95fr]">
           <div>
             <p className="eyebrow">Tool</p>
-            <h1 className="display mt-3">Branch revenue opportunity calculator</h1>
+            <h1 className="display mt-3">Salon revenue opportunity calculator</h1>
             <p className="lede mt-5">
-              Estimate hours saved at the desk and WhatsApp win-back upside for your chain size.
-              Directional, not a guarantee.
+              Estimate desk-time value and WhatsApp win-back upside for your chain size. Directional model —
+              validate in a growth audit with your actuals.
             </p>
 
             <div className="mt-10 space-y-6 rounded-3xl border border-ink/10 bg-white p-6 md:p-8">
@@ -113,7 +114,7 @@ export default function RoiCalculatorPage() {
             </dl>
 
             <Link href="/demo" className="btn-primary mt-8 w-full !bg-jade">
-              Book a demo with these numbers
+              {brand.cta.primary}
             </Link>
             <p className="mt-4 text-center text-[11px] text-mist/50">
               Model assumes 26 working days. Validate with your actuals in a live walkthrough.

@@ -127,8 +127,8 @@ export function SiteHeader() {
             href="/demo"
             className="btn-primary hidden min-[480px]:inline-flex !px-3 !py-2.5 text-xs sm:!px-4 sm:text-sm"
           >
-            <span className="hidden sm:inline">Book a walkthrough</span>
-            <span className="sm:hidden">Demo</span>
+            <span className="hidden sm:inline">{brand.cta.primary}</span>
+            <span className="sm:hidden">{brand.cta.primaryShort}</span>
           </Link>
           <button
             type="button"
@@ -178,7 +178,7 @@ export function SiteHeader() {
             {brand.whatsapp.ctaLabel}
           </a>
           <Link href="/demo" className="btn-primary mt-3 w-full" onClick={() => setMobile(false)}>
-            Book a walkthrough
+            {brand.cta.primary}
           </Link>
         </div>
       )}

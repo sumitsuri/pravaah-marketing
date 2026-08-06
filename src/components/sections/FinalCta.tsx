@@ -35,7 +35,7 @@ export function FinalCta() {
               href="/demo"
               className="btn-primary shadow-glow-jade"
             >
-              Book a growth walkthrough <ArrowRight className="h-4 w-4" />
+              {brand.cta.primary} <ArrowRight className="h-4 w-4" />
             </Link>
             <a
               href={whatsappHref()}
