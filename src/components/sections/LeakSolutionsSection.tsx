@@ -20,7 +20,7 @@ export function LeakSolutionsSection() {
         <h2 className="display mt-3 max-w-4xl">{copy.title}</h2>
         <p className="mt-5 max-w-2xl text-base leading-relaxed text-ink-mute md:text-lg">{copy.lede}</p>
 
-        <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {leakSolutions.map((item, i) => {
             const selected = i === active;
             return (

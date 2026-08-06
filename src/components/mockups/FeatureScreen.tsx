@@ -173,6 +173,74 @@ const screens = {
       ))}
     </div>
   ),
+  localSpotlight: (
+    <div className="space-y-3 p-4">
+      <p className="text-xs font-semibold uppercase tracking-wider text-ink-mute">Local Spotlight</p>
+      <div className="rounded-xl border border-jade/30 bg-jade/5 p-3">
+        <p className="text-[11px] text-ink-mute">Local Visibility Score</p>
+        <div className="mt-1 flex items-end justify-between">
+          <p className="font-display text-3xl text-jade">78</p>
+          <span className="rounded-full bg-jade/15 px-2 py-0.5 text-[10px] font-semibold text-jade">Good</span>
+        </div>
+      </div>
+      {[
+        ["Google rating", "4.3 · 186 reviews"],
+        ["Est. local rank", "#4 for “salon near me”"],
+        ["GBP completeness", "82% · add services"],
+        ["Rival · 1.2 km", "4.6★ · 240 reviews"],
+      ].map(([label, value]) => (
+        <div key={label} className="flex items-center justify-between rounded-lg bg-mist-soft px-3 py-2 text-sm">
+          <span className="text-ink-mute">{label}</span>
+          <span className="font-medium text-ink">{value}</span>
+        </div>
+      ))}
+      <div className="rounded-xl bg-amber/10 px-3 py-2 text-xs text-amber">
+        Playbook: grow reviews toward rival median
+      </div>
+    </div>
+  ),
+  guestVoice: (
+    <div className="space-y-3 p-4">
+      <p className="text-xs font-semibold uppercase tracking-wider text-ink-mute">Customer voice · 30 days</p>
+      <div className="grid grid-cols-2 gap-2">
+        <div className="rounded-xl bg-mist-soft p-3">
+          <p className="text-[10px] text-ink-mute">Avg rating</p>
+          <p className="font-display text-2xl text-jade">4.6★</p>
+        </div>
+        <div className="rounded-xl bg-mist-soft p-3">
+          <p className="text-[10px] text-ink-mute">Reviews</p>
+          <p className="font-display text-2xl text-ink">142</p>
+        </div>
+      </div>
+      {[
+        ["Service", "4.7"],
+        ["Staff", "4.8"],
+        ["Ambience", "4.4"],
+        ["Value", "4.3"],
+      ].map(([cat, score]) => (
+        <div key={cat} className="flex items-center justify-between text-sm">
+          <span className="text-ink-mute">{cat}</span>
+          <span className="font-semibold text-ink">{score}</span>
+        </div>
+      ))}
+      <div className="rounded-xl border border-amber/30 bg-amber/5 px-3 py-2 text-xs">
+        <span className="font-semibold text-amber">3 recoveries</span>
+        <span className="text-ink-mute"> · 1–3★ awaiting follow-up</span>
+      </div>
+    </div>
+  ),
+  reviewQr: (
+    <div className="space-y-3 p-4 text-center">
+      <p className="text-xs font-semibold uppercase tracking-wider text-ink-mute">After payment</p>
+      <div className="mx-auto flex h-28 w-28 items-center justify-center rounded-xl border-2 border-dashed border-jade/40 bg-jade/5">
+        <span className="text-[10px] font-semibold uppercase tracking-wider text-jade">Review QR</span>
+      </div>
+      <p className="text-sm font-semibold text-ink">Ask for a quick rating</p>
+      <p className="text-xs text-ink-mute">Guest scans on their phone · ~10 seconds</p>
+      <div className="flex justify-center gap-1 text-lg text-jade">★★★★★</div>
+      <p className="text-[10px] text-ink-mute">4★+ can open Google review · 1–3★ stays private</p>
+    </div>
+  ),
 };
 
 export type ScreenVariant = keyof typeof screens;

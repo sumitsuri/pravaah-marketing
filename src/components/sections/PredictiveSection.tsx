@@ -20,7 +20,7 @@ export function PredictiveSection() {
         <h2 className="display mt-3 max-w-3xl">{copy.title}</h2>
         <p className="mt-5 max-w-2xl text-base text-ink-mute md:text-lg">{copy.lede}</p>
 
-        <div className="mt-14 grid gap-8 lg:grid-cols-3">
+        <div className="mt-14 grid gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5">
           {predictiveAgents.map((agent, i) => (
             <motion.div
               key={agent.title}

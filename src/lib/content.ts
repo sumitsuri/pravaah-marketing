@@ -7,7 +7,7 @@ export const brand = {
   searchCategory: "Multi-branch salon management software",
   short: "Run every branch. See every signal. Make the next growth decision.",
   mission:
-    "Antrahq connects billing, guest CRM, inventory, staff attendance, WhatsApp marketing, and branch profitability for multi-location salon and spa chains in India — so founders, ops heads, and finance leaders work from one shared view.",
+    "Antrahq connects billing, guest CRM, inventory, staff attendance, WhatsApp marketing, branch profitability, Local Spotlight, and guest reviews for multi-location salon and spa chains in India — so founders, ops heads, and finance leaders work from one shared view.",
   footer: "Built in India · Salon & spa chains · 3–20 branches",
   email: "hello@antrahq.com",
   cta: {
@@ -91,13 +91,13 @@ export const sectionCopy = {
   },
   growthLevers: {
     eyebrow: "What you can run on Antrahq",
-    title: "Six modules multi-branch salon chains use every day.",
-    lede: "Each module solves a real operational job — with screens your managers and owners already recognise from running a chain.",
+    title: "Eight modules multi-branch salon chains use every day.",
+    lede: "Desk ops, owner intelligence, local Google visibility, and guest reputation — each module maps to a job your team already does.",
   },
   intelligence: {
     eyebrow: "Owner intelligence",
-    title: "Branch signals you can act on before month-end.",
-    lede: "Market Pulse, branch P&L, and attendance review surface coaching moments while there is still time to change the week.",
+    title: "Branch economics, local search, and guest voice — in one morning view.",
+    lede: "Market Pulse, branch P&L, Local Spotlight, and Customer voice surface coaching moments while there is still time to change the week.",
   },
   film: {
     eyebrow: "Product film",
@@ -111,7 +111,12 @@ export const sectionCopy = {
   },
   finalCta: {
     title: "See where your chain can grow next.",
-    lede: "Book a 30-minute multi-branch growth audit. We map billing, CRM, staff, inventory, and branch economics to your network — then show the product on your terms.",
+    lede: "Book a 30-minute multi-branch growth audit. We map billing, CRM, staff, inventory, branch economics, Local Spotlight, and guest reviews — then show the product on your terms.",
+  },
+  localReputation: {
+    eyebrow: "Local visibility & reputation",
+    title: "Show up on Google. Hear guests before bad reviews go public.",
+    lede: "Local Spotlight tracks how each branch ranks in local search vs nearby salons. Customer voice collects ratings at the desk, routes happy guests to Google, and gives owners a recovery queue for detractors.",
   },
   aiAgents: {
     eyebrow: "Connected signals",
@@ -329,6 +334,16 @@ export const nav = {
       desc: "Profit by outlet and Market Pulse ranking.",
     },
     {
+      href: "/products/local-spotlight",
+      title: "Local Spotlight",
+      desc: "Google visibility score, rivals, and action plan.",
+    },
+    {
+      href: "/products/reviews",
+      title: "Reviews & Customer voice",
+      desc: "QR ratings, Google routing, recovery queue.",
+    },
+    {
       href: "/products/staff",
       title: "Staff & attendance",
       desc: "Geofenced punches, leave, payroll signals.",
@@ -355,9 +370,28 @@ export const nav = {
 
 export const reviewBadges = [
   { name: "India GST-ready", detail: "CGST · SGST · branch GSTIN" },
+  { name: "Local Spotlight", detail: "Google visibility & rivals" },
+  { name: "Customer voice", detail: "Ratings · recovery · Google" },
   { name: "WhatsApp-native", detail: "Receipts + campaigns" },
-  { name: "Manager PWA", detail: "Install on salon tablets" },
-  { name: "Audit trail", detail: "Discounts & payments logged" },
+] as const;
+
+/** Desk → Google reputation loop */
+export const localReputationLoop = [
+  {
+    step: "01",
+    title: "Collect at the desk",
+    desc: "After payment, managers show a QR — guests rate in ~10 seconds on their phone.",
+  },
+  {
+    step: "02",
+    title: "Route with intent",
+    desc: "4★ and 5★ guests can go straight to your Google review page. 1–3★ stays private for recovery.",
+  },
+  {
+    step: "03",
+    title: "Coach the network",
+    desc: "Customer voice summarises themes. Local Spotlight shows search rank, GBP gaps, and rival benchmarks.",
+  },
 ] as const;
 
 export const filmScenes = [
@@ -384,6 +418,12 @@ export const filmScenes = [
     title: "Retention signal",
     caption: "Audience preview → WhatsApp win-back — fill chairs on purpose",
     screen: "campaign" as const,
+  },
+  {
+    id: "reputation",
+    title: "Reputation signal",
+    caption: "QR rating at the desk → Google for promoters → recovery for detractors",
+    screen: "guestVoice" as const,
   },
 ] as const;
 
@@ -454,6 +494,40 @@ export const leakSolutions = [
     screen: "inventory" as const,
     href: "/products/inventory",
   },
+  {
+    id: "spotlight",
+    problemLabel: "THE INVISIBLE BRANCH",
+    problemStat: "Guests search Google — but you don't know your local rank",
+    title: "Local Spotlight",
+    promise: "See local search & rivals",
+    desc: "Local Visibility Score, estimated keyword rank, Google Business Profile completeness, and auto-discovered rivals within 1–5 km — with prioritised playbooks to close gaps.",
+    bullets: [
+      "LVS score per branch",
+      "Search visibility & keyword gaps",
+      "GBP completeness checklist",
+      "Local rival benchmarks",
+      "Action plan: reviews, profile, SEO",
+    ],
+    screen: "localSpotlight" as const,
+    href: "/products/local-spotlight",
+  },
+  {
+    id: "reviews",
+    problemLabel: "THE SILENT DETRACTOR",
+    problemStat: "Unhappy guests leave quietly — or blast Google without warning",
+    title: "Reviews & Customer voice",
+    promise: "Hear guests. Grow Google stars.",
+    desc: "Post-payment QR invites a quick rating. Promoters route to Google; detractors land in a recovery queue owners see in Customer voice — with category scores and feedback themes.",
+    bullets: [
+      "QR invite after walk-in payment",
+      "5 category ratings + tags",
+      "Auto-route 4★+ to Google",
+      "Private recovery for 1–3★",
+      "Owner dashboard: themes & trends",
+    ],
+    screen: "guestVoice" as const,
+    href: "/products/reviews",
+  },
 ] as const;
 
 export const predictiveAgents = [
@@ -486,12 +560,36 @@ export const predictiveAgents = [
     blurb: "Flags late, geo-outside, and missing exits before they become payroll leaks.",
     metric: {
       label: "Verified punch time",
-      before: "4 min",
-      after: "15 sec",
-      delta: "−94%",
+      before: "Paper / honour",
+      after: "Selfie + geofence",
+      delta: "Verifiable",
       improved: true,
     },
     screen: "attendance" as const,
+  },
+  {
+    title: "Local Spotlight",
+    blurb: "Local Visibility Score, Google profile gaps, search rank, and nearby rival salons — with playbooks owners can act on this week.",
+    metric: {
+      label: "Local discovery",
+      before: "Guesswork",
+      after: "LVS + rivals",
+      delta: "Measured",
+      improved: true,
+    },
+    screen: "localSpotlight" as const,
+  },
+  {
+    title: "Customer voice",
+    blurb: "Ratings from the desk, Google routing for promoters, and a recovery queue for detractors — category themes in one owner view.",
+    metric: {
+      label: "Review routing",
+      before: "Public surprises",
+      after: "Private first",
+      delta: "Controlled",
+      improved: true,
+    },
+    screen: "guestVoice" as const,
   },
 ] as const;
 
@@ -547,9 +645,9 @@ export const timeline = [
 
 export const trustLogos = [
   "Salon & spa chains",
+  "Local Spotlight",
+  "Customer voice",
   "India GST billing",
-  "WhatsApp receipts",
-  "Manager floor app",
   "Branch P&L",
   "Market Pulse",
 ] as const;
@@ -586,15 +684,29 @@ export const results = [
   },
   {
     quote:
-      "Win back quiet guests from the same CRM graph as billing — so retention is a scheduled action, not an ad-hoc blast.",
-    name: "Scenario · Owner growth",
-    role: "Mid-market salon group",
-    focus: "Guest retention",
+      "See Local Visibility Score and rival salons on Google before spending on ads — fix profile gaps and review rhythm branch by branch.",
+    name: "Scenario · Local growth",
+    role: "Multi-branch salon chain · Tier 1 city",
+    focus: "Google visibility",
     metric: {
-      label: "Campaign source",
-      before: "Exported lists",
-      after: "Visit & spend CRM",
-      delta: "Connected",
+      label: "Local discovery",
+      before: "Unknown rank",
+      after: "LVS + rivals",
+      delta: "Actionable",
+      improved: true,
+    },
+  },
+  {
+    quote:
+      "Route happy guests to Google after the bill — handle unhappy feedback in private before it becomes a one-star surprise.",
+    name: "Scenario · Guest reputation",
+    role: "Mid-market beauty chain",
+    focus: "Reviews & recovery",
+    metric: {
+      label: "Review flow",
+      before: "Random Google",
+      after: "QR → route",
+      delta: "Controlled",
       improved: true,
     },
   },
@@ -665,7 +777,8 @@ export const platformTaxonomy = [
     title: "Grow the chain",
     items: [
       "WhatsApp win-back campaigns",
-      "Audience by visit & spend",
+      "Local Spotlight & Google visibility",
+      "Customer voice & review QR",
       "Market Pulse playbooks",
       "Service contribution insights",
       "Multi-branch KPIs",
@@ -744,6 +857,20 @@ export const comparisonRows = [
     smb: "Days",
   },
   {
+    capability: "Local Google visibility (LVS, rivals, GBP gaps)",
+    antrahq: "Local Spotlight",
+    enterprise: "Varies by module",
+    marketplace: "Discovery-focused",
+    smb: "Rare",
+  },
+  {
+    capability: "Post-visit reviews with Google routing",
+    antrahq: "QR + Customer voice",
+    enterprise: "Varies",
+    marketplace: "Platform reviews",
+    smb: "Rare",
+  },
+  {
     capability: "Public ₹/branch pricing",
     antrahq: true,
     enterprise: "Custom quote",
@@ -776,6 +903,14 @@ export const faqs = [
   {
     q: "Can managers use it on tablets?",
     a: "Yes. The manager app is an installable PWA for walk-ins, attendance, inventory, and bookings on salon tablets.",
+  },
+  {
+    q: "What is Local Spotlight?",
+    a: "Local Spotlight is an owner dashboard for Google digital presence: Local Visibility Score, estimated local search rank, Google Business Profile completeness, nearby rival salons, and prioritised playbooks (profile fixes, review growth, keyword gaps). It complements Market Pulse, which ranks branches inside your network.",
+  },
+  {
+    q: "How do reviews and ratings work?",
+    a: "After a walk-in payment, managers can show a QR code. Guests submit a quick rating and category scores. Four- and five-star guests can be routed to your Google review page; lower scores stay private and appear in Customer voice for recovery. Owners see averages, themes, and open follow-ups.",
   },
   {
     q: "What happens in a growth audit?",
@@ -959,6 +1094,42 @@ export const productPages = {
     ],
     screen: "inventory" as const,
   },
+  "local-spotlight": {
+    title: "Local Spotlight for salon chains",
+    seoTitle: "Local Spotlight — salon Google visibility & local SEO · Antrahq",
+    seoDescription:
+      "Local Spotlight for multi-branch salons: Local Visibility Score, Google Business Profile completeness, search rank, local rivals, and owner action plans in India.",
+    eyebrow: "Product · Local Spotlight",
+    hero: "Know how each branch shows up on Google — vs salons nearby.",
+    body: "Local Spotlight connects your branch Google presence to a Local Visibility Score (LVS), estimated search rank for salon keywords, profile completeness checks, and auto-discovered rivals within 1–5 km. Owners get prioritised playbooks: fix GBP gaps, grow reviews, close keyword gaps, and recover reputation — linked to Customer voice when review growth is the lever.",
+    bullets: [
+      "Local Visibility Score (LVS) per branch",
+      "Google rating, review count & profile completeness",
+      "Estimated local search rank & keyword gaps",
+      "Nearby rival salons from Google Places",
+      "Action plan: profile, reviews, SEO, recovery",
+      "Refresh from Google when you update listings",
+    ],
+    screen: "localSpotlight" as const,
+  },
+  reviews: {
+    title: "Salon reviews, ratings & Customer voice",
+    seoTitle: "Salon reviews & ratings software — QR to Google · Antrahq",
+    seoDescription:
+      "Collect salon reviews after walk-in payment: QR rating invite, 5 category scores, route 4★+ to Google, private recovery for detractors, and Customer voice owner dashboard.",
+    eyebrow: "Product · Reviews & ratings",
+    hero: "Turn happy guests into Google reviews — catch unhappy ones in private first.",
+    body: "After a walk-in bill, managers share a QR code. Guests rate overall and across Service, Ambience, Staff, Cleanliness, and Value in about ten seconds. Four- and five-star guests can be sent to your branch Google review URL. One- to three-star feedback stays private and opens a recovery case your team follows up on. Owners see averages, themes, and open recoveries in Customer voice — connected to Local Spotlight playbooks.",
+    bullets: [
+      "Post-payment QR review invite at the desk",
+      "Overall + 5 category star ratings",
+      "Improvement tags and optional comment",
+      "Auto-route 4★+ to Google (per branch setting)",
+      "Private recovery queue for 1–3★",
+      "Customer voice dashboard: themes & trends",
+    ],
+    screen: "guestVoice" as const,
+  },
 } as const;
 
 export const featureGroups = [
@@ -976,6 +1147,14 @@ export const featureGroups = [
       {
         name: "Market Pulse",
         desc: "See how each branch ranks inside your brand and against anonymised peer cohorts, with playbooks to close the gap.",
+      },
+      {
+        name: "Local Spotlight",
+        desc: "Local Visibility Score, Google profile completeness, search rank, and nearby rival benchmarks — with action plans per branch.",
+      },
+      {
+        name: "Customer voice",
+        desc: "Ratings and feedback themes from the desk; recovery queue for detractors; Google routing for promoters.",
       },
       {
         name: "WhatsApp campaigns",
@@ -1000,7 +1179,7 @@ export const featureGroups = [
       },
       {
         name: "Walk-in billing wizard",
-        desc: "Three steps: guest → services + stylist → pay. GST preview before you collect.",
+        desc: "Three steps: guest → services + stylist → pay. GST preview before you collect — then optional review QR.",
       },
       {
         name: "India-ready GST invoices",
@@ -1036,6 +1215,10 @@ export const featureGroups = [
         desc: "Paid invoices queue a WhatsApp PDF so guests leave with proof, not paper clutter.",
       },
       {
+        name: "Post-visit review QR",
+        desc: "After payment, share a QR so guests rate in seconds — promoters nudged to Google, detractors handled privately.",
+      },
+      {
         name: "Audit-ready discounts",
         desc: "Discount and payment changes leave a trail managers and owners can trust.",
       },
@@ -1067,7 +1250,7 @@ export const pricing = [
       "Everything in Starter",
       "Brand admin & multi-branch P&L",
       "WhatsApp campaigns included",
-      "Market Pulse & audit logs",
+      "Market Pulse, Local Spotlight & Customer voice",
       "Verified geofenced attendance",
     ],
     cta: "Choose Growth",

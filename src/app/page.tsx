@@ -6,6 +6,7 @@ import { AgentFlowSection } from "@/components/sections/AgentFlowSection";
 import { LeakSolutionsSection } from "@/components/sections/LeakSolutionsSection";
 import { VideoStoriesSection } from "@/components/sections/VideoStoriesSection";
 import { PredictiveSection } from "@/components/sections/PredictiveSection";
+import { LocalReputationSection } from "@/components/sections/LocalReputationSection";
 import { VerticalsSection } from "@/components/sections/VerticalsSection";
 import { OsSection } from "@/components/sections/OsSection";
 import { TimelineSection } from "@/components/sections/TimelineSection";
@@ -25,6 +26,7 @@ export default function HomePage() {
       <DecisionPlatformSection />
       <AgentFlowSection />
       <LeakSolutionsSection />
+      <LocalReputationSection />
       <PredictiveSection />
       <VideoStoriesSection />
       <ResultsSection />

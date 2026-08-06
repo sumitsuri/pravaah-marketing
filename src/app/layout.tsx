@@ -40,7 +40,8 @@ export const metadata: Metadata = {
     "salon inventory management",
     "salon staff attendance software",
     "WhatsApp marketing for salons",
-    "branch P&L salon chain",
+    "salon reviews and ratings software",
+    "Google Business Profile salon management",
   ],
   openGraph: {
     title: `${brand.name} — ${brand.short}`,

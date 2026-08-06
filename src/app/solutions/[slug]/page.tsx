@@ -32,15 +32,19 @@ const solutions = {
   owners: {
     eyebrow: "Solution · Owners & finance",
     title: "Owner dashboard: revenue, branch P&L, and retention",
-    body: `${brand.name} gives founders and finance leaders a morning routine — network KPIs, branch profitability, Market Pulse ranking, and WhatsApp win-back previews from one CRM graph.`,
+    body: `${brand.name} gives founders and finance leaders a morning routine — network KPIs, branch profitability, Market Pulse ranking, Local Spotlight local search signals, Customer voice ratings, and WhatsApp win-back previews from one CRM graph.`,
     points: [
       {
         title: "Market Pulse",
         desc: "Rank outlets inside your brand with anonymised peer context and suggested coaching actions.",
       },
       {
-        title: "WhatsApp from CRM",
-        desc: "Segment guests by visit gap and spend — campaigns included on Growth, not a separate bolt-on.",
+        title: "Local Spotlight",
+        desc: "Local Visibility Score, Google profile gaps, and nearby rival salons with weekly action plans.",
+      },
+      {
+        title: "Customer voice",
+        desc: "Ratings from desk QR, category themes, Google publish status, and open recovery cases.",
       },
       {
         title: "People economics",

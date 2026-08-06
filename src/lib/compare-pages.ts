@@ -36,6 +36,8 @@ export const comparePages: Record<string, ComparePage> = {
       "Go-live in days for 3–20 branch networks — not quarters",
       "India desk reality: GST billing, WhatsApp receipts, geofenced attendance",
       "Branch P&L and Market Pulse built for owner coaching, not just dashboards",
+      "Local Spotlight: Google visibility score, rivals, and GBP action plans",
+      "Customer voice: desk QR reviews with Google routing and private recovery",
     ],
     rows: [
       {
