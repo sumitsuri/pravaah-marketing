@@ -14,9 +14,9 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const page = comparePages[slug];
   if (!page) return { title: "Compare" };
   return {
-    title: page.seoTitle,
+    title: { absolute: page.seoTitle },
     description: page.seoDescription,
-    alternates: { canonical: `/compare/${slug}` },
+    alternates: { canonical: `/compare/${slug}/` },
   };
 }
 
@@ -104,7 +104,7 @@ export default async function ComparePage({ params }: { params: Promise<{ slug: 
           <Link href="/pricing" className="btn-secondary">
             View pricing
           </Link>
-          <Link href="/compare/zenoti" className="btn-secondary">
+          <Link href="/compare/" className="btn-secondary">
             All comparisons
           </Link>
         </div>

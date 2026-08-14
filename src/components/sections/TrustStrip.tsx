@@ -7,7 +7,7 @@ export function TrustStrip() {
   return (
     <section className="overflow-hidden border-y border-ink/8 bg-white py-8">
       <p className="px-5 text-center text-xs font-semibold uppercase tracking-[0.2em] text-ink-mute md:px-8">
-        Built for multi-branch salon operators across India
+        Built for salon & spa operators across India — 1 branch to any scale
       </p>
       <div className="relative mt-6">
         <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-16 bg-gradient-to-r from-white to-transparent" />

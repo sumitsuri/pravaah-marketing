@@ -11,7 +11,7 @@ export function PricingPreview() {
         <p className="eyebrow">Pricing</p>
         <h2 className="display mt-3 max-w-2xl">Transparent mid-market pricing. No demo tax to see the number.</h2>
         <p className="lede mt-5">
-          Built for 3–20 branch chains. WhatsApp campaigns included on Growth — a real edge vs tools
+          Per-branch pricing that scales with you — from your first outlet onward. WhatsApp campaigns included on Growth — a real edge vs tools
           that meter messaging separately.
         </p>
 

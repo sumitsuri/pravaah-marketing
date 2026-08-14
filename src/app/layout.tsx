@@ -5,7 +5,7 @@ import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { WhatsAppFloatingButton } from "@/components/WhatsAppConnect";
 import { MarketingThemeProvider } from "@/components/theme/MarketingThemeProvider";
-import { brand } from "@/lib/content";
+import { brand, faqs } from "@/lib/content";
 import { MARKETING_THEME_BOOT } from "@/lib/marketing-theme";
 import { MarketingAnalytics } from "@/components/analytics/MarketingAnalytics";
 import "./globals.css";
@@ -27,13 +27,14 @@ const siteUrl = "https://antrahq.com";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: `${brand.name} — ${brand.tagline}`,
+    default: `${brand.name} — ${brand.searchCategory}`,
     template: `%s · ${brand.name}`,
   },
   description:
-    "Multi-branch salon management software for India. Antrahq connects billing, POS, CRM, inventory, staff attendance, WhatsApp marketing, and branch P&L for 3–20 outlet salon and spa chains.",
+    "Multi-branch salon management software for India. Antrahq connects billing, POS, CRM, inventory, staff attendance, WhatsApp marketing, and branch P&L for salon and spa operators — from one outlet to national chains.",
   keywords: [
-    "multi branch salon management software India",
+    "Multi-branch salon management software India",
+    "single outlet salon software India",
     "salon POS software India GST",
     "salon CRM software",
     "salon billing software GST",
@@ -43,16 +44,31 @@ export const metadata: Metadata = {
     "salon reviews and ratings software",
     "Google Business Profile salon management",
   ],
+  icons: {
+    icon: [{ url: "/favicon.svg", type: "image/svg+xml" }],
+    apple: [{ url: "/favicon.svg" }],
+  },
   openGraph: {
-    title: `${brand.name} — ${brand.short}`,
+    title: `${brand.name} — ${brand.searchCategory}`,
     description: brand.mission,
     type: "website",
     url: siteUrl,
     locale: "en_IN",
     siteName: brand.name,
+    images: [
+      {
+        url: "/og-default.png",
+        width: 1200,
+        height: 630,
+        alt: "Antrahq — multi-branch salon management software for India",
+      },
+    ],
   },
-  alternates: {
-    canonical: "/",
+  twitter: {
+    card: "summary_large_image",
+    title: `${brand.name} — ${brand.searchCategory}`,
+    description: brand.mission,
+    images: ["/og-default.png"],
   },
   robots: {
     index: true,
@@ -65,23 +81,55 @@ const jsonLd = {
   "@graph": [
     {
       "@type": "Organization",
+      "@id": `${siteUrl}/#organization`,
       name: brand.name,
       url: siteUrl,
       email: brand.email,
       description: brand.mission,
+      logo: `${siteUrl}/favicon.svg`,
+      sameAs: [siteUrl],
+      contactPoint: {
+        "@type": "ContactPoint",
+        email: brand.email,
+        contactType: "sales",
+        areaServed: "IN",
+        availableLanguage: ["en", "hi"],
+      },
+    },
+    {
+      "@type": "WebSite",
+      "@id": `${siteUrl}/#website`,
+      url: siteUrl,
+      name: brand.name,
+      publisher: { "@id": `${siteUrl}/#organization` },
+      inLanguage: "en-IN",
     },
     {
       "@type": "SoftwareApplication",
       name: brand.name,
+      url: siteUrl,
       applicationCategory: "BusinessApplication",
       operatingSystem: "Web",
       description: brand.mission,
       offers: {
         "@type": "Offer",
+        url: `${siteUrl}/pricing/`,
         priceCurrency: "INR",
         price: "2999",
         description: "Starter plan per branch per month — see pricing page for tiers",
       },
+      publisher: { "@id": `${siteUrl}/#organization` },
+    },
+    {
+      "@type": "FAQPage",
+      mainEntity: faqs.map((item) => ({
+        "@type": "Question",
+        name: item.q,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: item.a,
+        },
+      })),
     },
   ],
 };

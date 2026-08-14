@@ -8,8 +8,8 @@ import { PageHero } from "@/components/PageHero";
 export const metadata: Metadata = {
   title: "Compare salon software for multi-branch chains in India",
   description:
-    "Compare Antrahq with Zenoti, MioSalon, and Salonist — pricing, multi-branch P&L, GST billing, CRM, and rollout fit for 3–20 outlet salon chains.",
-  alternates: { canonical: "/compare/zenoti" },
+    "Compare Antrahq with Zenoti, MioSalon, and Salonist — pricing, multi-branch P&L, GST billing, CRM, and rollout fit for salon operators from one branch to large chains.",
+  alternates: { canonical: "/compare/" },
 };
 
 export default function CompareIndexPage() {
@@ -18,7 +18,7 @@ export default function CompareIndexPage() {
       <PageHero
         eyebrow="Compare"
         title="Salon software comparisons for multi-branch buyers"
-        body="Honest starting points — not attack ads. Each page explains where a competitor excels and where Antrahq fits mid-market Indian chains."
+        body="Honest starting points — not attack ads. Each page explains where a competitor excels and where Antrahq fits operators scaling from one branch to many."
       />
       <section className="section-pad bg-white">
         <div className="container-wide grid gap-4 sm:grid-cols-3">
@@ -37,7 +37,7 @@ export default function CompareIndexPage() {
           })}
         </div>
         <p className="mt-8 text-sm text-ink-mute">
-          {brand.name} focuses on salon & spa chains with 3–20 branches.{" "}
+          {brand.name} works for salon & spa operators from a single outlet to large networks.{" "}
           <Link href="/demo" className="font-semibold text-jade">
             Book a growth audit
           </Link>{" "}

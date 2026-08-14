@@ -17,9 +17,9 @@ export function generateMetadata({ params }: { params: Promise<{ slug: string }>
     const page = productPages[slug as ProductKey];
     if (!page) return { title: "Product" };
     return {
-      title: page.seoTitle,
+      title: { absolute: page.seoTitle },
       description: page.seoDescription,
-      alternates: { canonical: `/products/${slug}` },
+      alternates: { canonical: `/products/${slug}/` },
     };
   });
 }

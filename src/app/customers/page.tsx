@@ -9,6 +9,7 @@ import { brand } from "@/lib/content";
 export const metadata = {
   title: "Customers",
   description: `Stories and outcomes from multi-location operators using ${brand.name}.`,
+  alternates: { canonical: "/customers/" },
 };
 
 export default function CustomersPage() {

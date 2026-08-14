@@ -8,6 +8,7 @@ import { FinalCta } from "@/components/sections/FinalCta";
 export const metadata: Metadata = {
   title: "Products",
   description: `${brand.name} product suite — billing, analytics, attendance, campaigns, inventory.`,
+  alternates: { canonical: "/products/" },
 };
 
 export default function ProductsHubPage() {

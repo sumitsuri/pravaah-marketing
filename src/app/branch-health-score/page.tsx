@@ -45,7 +45,7 @@ export default function BranchHealthScorePage() {
             </p>
 
             <div className="mt-10 space-y-8 rounded-3xl border border-ink/10 bg-white p-6 md:p-8">
-              <Slider label="Number of branches" value={branches} min={3} max={20} onChange={setBranches} />
+              <Slider label="Number of branches" value={branches} min={1} max={50} onChange={setBranches} />
               <Likert
                 label="Branch P&L / reporting cadence"
                 value={pnlCadence}

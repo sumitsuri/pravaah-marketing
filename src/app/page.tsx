@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { HeroSection } from "@/components/sections/HeroSection";
 import { StatsBand } from "@/components/sections/StatsBand";
 import { TrustStrip } from "@/components/sections/TrustStrip";
@@ -15,6 +16,16 @@ import { ComparisonSection } from "@/components/sections/ComparisonSection";
 import { PricingPreview } from "@/components/sections/PricingPreview";
 import { FaqSection } from "@/components/sections/FaqSection";
 import { FinalCta } from "@/components/sections/FinalCta";
+import { brand } from "@/lib/content";
+
+export const metadata: Metadata = {
+  title: {
+    absolute: `${brand.name} — ${brand.searchCategory}`,
+  },
+  description:
+    "Multi-branch salon management software for India. Antrahq connects billing, POS, CRM, inventory, staff attendance, WhatsApp marketing, and branch P&L for salon and spa operators — from one outlet to national chains.",
+  alternates: { canonical: "/" },
+};
 
 /** Conversion funnel: hook → trust → platform story → proof → compare → price → close */
 export default function HomePage() {

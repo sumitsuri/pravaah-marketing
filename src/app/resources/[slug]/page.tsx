@@ -13,13 +13,14 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const article = resourceArticles[slug];
   if (!article) return { title: "Resource" };
   return {
-    title: article.seoTitle,
+    title: { absolute: `${article.seoTitle} · ${brand.name}` },
     description: article.seoDescription,
-    alternates: { canonical: `/resources/${slug}` },
+    alternates: { canonical: `/resources/${slug}/` },
     openGraph: {
       title: article.seoTitle,
       description: article.seoDescription,
       type: "article",
+      images: ["/og-default.png"],
     },
   };
 }

@@ -11,8 +11,8 @@ import { brand } from "@/lib/content";
 const solutions = {
   "multi-branch": {
     eyebrow: "Solution · Multi-branch operations",
-    title: "Multi-branch salon management for 3–20 outlets",
-    body: "Standardise billing, CRM, staff attendance, inventory, and branch reporting across your network — with one owner view and a manager app on every floor.",
+    title: "Salon management that scales — one branch to any network",
+    body: "Standardise billing, CRM, staff attendance, inventory, and branch reporting across your network — whether you operate one outlet today or dozens. One owner view and a manager app on every floor.",
     points: [
       {
         title: "One brand admin",
@@ -85,7 +85,11 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const page = solutions[slug as SolutionKey];
   if (!page) return { title: "Solutions" };
-  return { title: page.title, description: page.body };
+  return {
+    title: page.title,
+    description: page.body,
+    alternates: { canonical: `/solutions/${slug}/` },
+  };
 }
 
 export default async function SolutionPage({ params }: { params: Promise<{ slug: string }> }) {

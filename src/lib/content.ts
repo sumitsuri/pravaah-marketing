@@ -4,11 +4,11 @@ export const brand = {
   /** Brand category — how we want to be remembered */
   tagline: "Every aspect connected. Every decision sharper.",
   /** Search category — how buyers find us on Google */
-  searchCategory: "Multi-branch salon management software",
+  searchCategory: "Salon management software for India",
   short: "Run every branch. See every signal. Make the next growth decision.",
   mission:
     "Antrahq connects billing, guest CRM, inventory, staff attendance, WhatsApp marketing, branch profitability, Local Spotlight, and guest reviews for multi-location salon and spa chains in India — so founders, ops heads, and finance leaders work from one shared view.",
-  footer: "Built in India · Salon & spa chains · 3–20 branches",
+  footer: "Built in India · Salon & spa · 1 branch to any scale",
   email: "hello@antrahq.com",
   cta: {
     primary: "Book a growth audit",
@@ -24,14 +24,14 @@ export const brand = {
   },
 } as const;
 
-/** Homepage hero — simplified per positioning audit */
+/** Homepage hero — keyword-led H1 for search, brand lines underneath */
 export const heroHeadline = {
   lines: [
+    "Salon management software for India.",
     "Run every branch.",
-    "See every signal.",
     "Make the next growth decision.",
   ] as const,
-  subtitle: "Multi-branch salon management software for India",
+  subtitle: "Multi-branch POS, GST billing, CRM, attendance, and branch P&L — one platform",
 } as const;
 
 /** The decision loop — core platform narrative. */
@@ -91,7 +91,7 @@ export const sectionCopy = {
   },
   growthLevers: {
     eyebrow: "What you can run on Antrahq",
-    title: "Eight modules multi-branch salon chains use every day.",
+    title: "Eight modules salon operators use — from one outlet to full networks.",
     lede: "Desk ops, owner intelligence, local Google visibility, and guest reputation — each module maps to a job your team already does.",
   },
   intelligence: {
@@ -135,9 +135,9 @@ export const sectionCopy = {
 export const heroStats = [
   {
     label: "Built for",
-    before: "Single-outlet tools",
-    after: "3–20 branch chains",
-    delta: "Mid-market",
+    before: "Tools you outgrow",
+    after: "1 branch → any scale",
+    delta: "Same platform",
     improved: true,
   },
   {
@@ -608,7 +608,7 @@ export const osPillars = [
   },
   {
     title: "Growth scales with you",
-    desc: "Add a branch — GSTIN, geofence, seats, and decision views follow without a rebuild.",
+    desc: "Add your next branch — GSTIN, geofence, seats, and decision views follow without a rebuild.",
   },
 ] as const;
 
@@ -757,7 +757,7 @@ export const verticals = [
   },
   {
     title: "Growing salon brands",
-    desc: "Add branch three through twenty without rebuilding your ops stack each time.",
+    desc: "Add the next location without rebuilding your ops stack — whether that is branch two or branch twenty.",
     href: "/solutions/multi-branch",
   },
 ] as const;
@@ -766,42 +766,42 @@ export const platformTaxonomy = [
   {
     title: "Delight your guests",
     items: [
-      "Walk-in & appointment billing",
-      "GST invoice PDF",
-      "WhatsApp receipts",
-      "Phone-first guest profiles",
-      "Leads from public enquiries",
+      { label: "Walk-in & appointment billing", href: "/products/billing" },
+      { label: "GST invoice PDF", href: "/products/billing" },
+      { label: "WhatsApp receipts", href: "/products/campaigns" },
+      { label: "Phone-first guest profiles", href: "/products/crm" },
+      { label: "Leads from public enquiries", href: "/products/crm" },
     ],
   },
   {
     title: "Grow the chain",
     items: [
-      "WhatsApp win-back campaigns",
-      "Local Spotlight & Google visibility",
-      "Customer voice & review QR",
-      "Market Pulse playbooks",
-      "Service contribution insights",
-      "Multi-branch KPIs",
+      { label: "WhatsApp win-back campaigns", href: "/products/campaigns" },
+      { label: "Local Spotlight & Google visibility", href: "/products/local-spotlight" },
+      { label: "Customer voice & review QR", href: "/products/reviews" },
+      { label: "Market Pulse playbooks", href: "/products/analytics" },
+      { label: "Service contribution insights", href: "/products/analytics" },
+      { label: "Multi-branch KPIs", href: "/solutions/multi-branch" },
     ],
   },
   {
     title: "Productive teams",
     items: [
-      "Manager floor PWA",
-      "Geofenced attendance",
-      "Leave workflows",
-      "Staff targets & incentives",
-      "Stylist on every line item",
+      { label: "Manager floor PWA", href: "/solutions/managers" },
+      { label: "Geofenced attendance", href: "/products/attendance" },
+      { label: "Leave workflows", href: "/products/staff" },
+      { label: "Staff targets & incentives", href: "/products/staff" },
+      { label: "Stylist on every line item", href: "/products/pos" },
     ],
   },
   {
     title: "Unify operations",
     items: [
-      "Branch P&L",
-      "Inventory movements",
-      "Audit logs",
-      "Brand admin & RBAC",
-      "India locales",
+      { label: "Branch P&L", href: "/products/analytics" },
+      { label: "Inventory movements", href: "/products/inventory" },
+      { label: "Audit logs", href: "/products/analytics" },
+      { label: "Brand admin & RBAC", href: "/solutions/owners" },
+      { label: "India locales", href: "/solutions/multi-branch" },
     ],
   },
 ] as const;
@@ -850,8 +850,8 @@ export const comparisonRows = [
     smb: "Usually subscription",
   },
   {
-    capability: "Typical rollout for 3–20 branches",
-    antrahq: "Days to first week",
+    capability: "Typical rollout timeline",
+    antrahq: "Days — from first branch onward",
     enterprise: "Weeks to months",
     marketplace: "Days",
     smb: "Days",
@@ -882,7 +882,7 @@ export const comparisonRows = [
 export const faqs = [
   {
     q: "Who is Antrahq built for?",
-    a: "Multi-branch salon and spa operators in India — typically 3 to 20 outlets. Buyers are usually founders, operations heads, or finance leaders who need GST billing, guest CRM, staff attendance, inventory, WhatsApp marketing, and branch profitability in one platform.",
+    a: "Salon and spa operators in India — from a single outlet to large multi-branch networks. Buyers are usually founders, operations heads, or finance leaders who need GST billing, guest CRM, staff attendance, inventory, WhatsApp marketing, and branch profitability in one platform that scales as they grow.",
   },
   {
     q: "Is Antrahq salon POS software or something else?",
@@ -890,7 +890,7 @@ export const faqs = [
   },
   {
     q: "How does Antrahq compare to Zenoti, MioSalon, or Salonist?",
-    a: "Zenoti suits large enterprise chains with custom rollouts. MioSalon and Salonist are strong operational tools for many Indian salons. Antrahq focuses on mid-market chains that want connected branch economics and public ₹/branch pricing. See our compare pages for an honest side-by-side starting point.",
+    a: "Zenoti suits large enterprise chains with custom rollouts. MioSalon and Salonist are strong operational tools for many Indian salons. Antrahq fits operators who want connected branch economics and public ₹/branch pricing — whether you run one location today or dozens tomorrow. See our compare pages for an honest side-by-side starting point.",
   },
   {
     q: "Do you take a cut of bookings?",
@@ -1013,7 +1013,7 @@ export const productPages = {
     title: "Salon analytics, branch P&L & Market Pulse",
     seoTitle: "Multi-branch salon analytics & branch P&L · Antrahq",
     seoDescription:
-      "Branch P&L and salon analytics for Indian chains: revenue vs salary, rent, product cost, Market Pulse ranking, and coaching signals across 3–20 outlets.",
+      "Branch P&L and salon analytics for Indian operators: revenue vs salary, rent, product cost, Market Pulse ranking, and coaching signals across every outlet in your network.",
     eyebrow: "Product · Analytics",
     hero: "Know which outlet is winning — and why — before the week slips away.",
     body: "Owner dashboards combine live chain KPIs, expenditure-aware P&L, and Market Pulse rankings with anonymised peer context. Finance and ops can agree on one branch scoreboard.",
@@ -1231,7 +1231,7 @@ export const pricing = [
     name: "Starter",
     price: "₹2,999",
     unit: "per branch / month",
-    blurb: "Core decisions for a focused outlet.",
+    blurb: "Core platform for one focused outlet — upgrade paths when you add branches.",
     features: [
       "Walk-in billing & GST invoices",
       "1 manager seat",
@@ -1245,7 +1245,7 @@ export const pricing = [
     name: "Growth",
     price: "₹4,999",
     unit: "per branch / month",
-    blurb: "The growth decision platform most mid-market brands need.",
+    blurb: "Full growth platform — built for operators who run one branch or many.",
     features: [
       "Everything in Starter",
       "Brand admin & multi-branch P&L",

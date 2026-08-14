@@ -4,7 +4,8 @@ import { brand, pricing } from "@/lib/content";
 
 export const metadata: Metadata = {
   title: "Pricing",
-  description: "Transparent mid-market pricing for multi-branch salon chains in India.",
+  description: "Transparent per-branch pricing for salon and spa operators in India — from single outlets to growing chains.",
+  alternates: { canonical: "/pricing/" },
 };
 
 export default function PricingPage() {

@@ -64,8 +64,10 @@ export function SiteFooter() {
                 </p>
                 <ul className="mt-3 space-y-2">
                   {col.items.map((item) => (
-                    <li key={item} className="text-xs leading-snug text-mist/65">
-                      {item}
+                    <li key={item.href + item.label}>
+                      <Link href={item.href} className="text-xs leading-snug text-mist/65 hover:text-white">
+                        {item.label}
+                      </Link>
                     </li>
                   ))}
                 </ul>
@@ -75,6 +77,9 @@ export function SiteFooter() {
         </div>
 
         <div className="mt-12 flex flex-wrap items-center gap-4 border-t border-white/10 pt-8 pb-4 text-sm sm:gap-6 lg:pb-0">
+          <Link href="/compare" className="text-mist/80 hover:text-white">
+            Compare
+          </Link>
           <Link href="/customers" className="text-mist/80 hover:text-white">
             Customers
           </Link>
@@ -83,6 +88,9 @@ export function SiteFooter() {
           </Link>
           <Link href="/pricing" className="text-mist/80 hover:text-white">
             Pricing
+          </Link>
+          <Link href="/roi-calculator" className="text-mist/80 hover:text-white">
+            ROI calculator
           </Link>
           <WhatsAppIconLink
             className="inline-flex h-11 w-11 items-center justify-center rounded-lg text-[#25D366] hover:text-[#34eb77]"

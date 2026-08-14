@@ -20,7 +20,7 @@ export const resourceArticles: Record<string, ResourceArticle> = {
       "Weekly branch P&L checklist for salon chains: revenue, discounts, salary %, product cost, and coaching priorities before month-end surprises.",
     readMinutes: 8,
     lede:
-      "If you run three or more salon or spa branches, month-end should not be the first time you see which outlet leaked margin. This checklist is a weekly rhythm founders, ops heads, and finance leads can run in under thirty minutes — with or without software.",
+      "Whether you run one salon branch or many, month-end should not be the first time you see which outlet leaked margin. This checklist is a weekly rhythm founders, ops heads, and finance leads can run in under thirty minutes — with or without software.",
     sections: [
       {
         heading: "Why weekly beats monthly for salon chains",
@@ -90,7 +90,7 @@ export const resourceArticles: Record<string, ResourceArticle> = {
       "How multi-branch salon operators reduce buddy punching, review late arrivals before payroll, and build attendance trust without expensive biometric hardware.",
     readMinutes: 7,
     lede:
-      "Attendance disputes destroy manager time and payroll trust. For chains with 3–20 branches, the goal is verifiable punches managers can review weekly — not a surveillance programme that staff resent.",
+      "Attendance disputes destroy manager time and payroll trust. Whether you run one branch or many, the goal is verifiable punches managers can review weekly — not a surveillance programme that staff resent.",
     sections: [
       {
         heading: "What goes wrong with paper and honour systems",

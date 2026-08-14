@@ -67,7 +67,7 @@ export default function DemoPage() {
             </p>
             <ul className="mt-8 space-y-3 text-sm text-ink-mute">
               {[
-                "For salon & spa chains with 3–20 branches in India",
+                "For salon & spa operators in India — 1 branch to any network size",
                 "Covers billing, CRM, staff, inventory, WhatsApp, and branch P&L",
                 "Clear Starter vs Growth vs Enterprise fit — public pricing, no demo tax",
               ].map((item) => (
@@ -156,12 +156,13 @@ export default function DemoPage() {
                   <select
                     name="branches"
                     className="mt-1.5 w-full rounded-xl border border-ink/15 bg-mist-soft px-4 py-3 text-sm outline-none ring-jade focus:ring-2"
-                    defaultValue="3-5"
+                    defaultValue="1"
                   >
-                    <option value="1-2">1–2</option>
-                    <option value="3-5">3–5</option>
+                    <option value="1">1 (single outlet)</option>
+                    <option value="2-5">2–5</option>
                     <option value="6-15">6–15</option>
-                    <option value="16+">16+</option>
+                    <option value="16-50">16–50</option>
+                    <option value="50+">50+</option>
                   </select>
                 </div>
                 <div>

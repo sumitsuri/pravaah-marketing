@@ -46,7 +46,7 @@ export default function RoiCalculatorPage() {
                 label="Branches"
                 value={branches}
                 min={1}
-                max={20}
+                max={50}
                 onChange={setBranches}
               />
               <Slider
@@ -67,7 +67,7 @@ export default function RoiCalculatorPage() {
                 label="Quiet guests reactivated (%)"
                 value={winbackRate}
                 min={2}
-                max={20}
+                max={50}
                 onChange={setWinbackRate}
               />
               <Slider

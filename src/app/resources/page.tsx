@@ -10,7 +10,7 @@ export const metadata = {
   title: "Resources for multi-branch salon operators in India",
   description:
     "Guides, playbooks, calculators, and software comparisons for Indian salon and spa chains — P&L, attendance, WhatsApp win-backs, and branch health.",
-  alternates: { canonical: "/resources" },
+  alternates: { canonical: "/resources/" },
 };
 
 export default function ResourcesPage() {

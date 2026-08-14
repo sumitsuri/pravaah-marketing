@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { platformTaxonomy, featureGroups } from "@/lib/content";
 import { FeatureScreen } from "@/components/mockups/FeatureScreen";
@@ -28,8 +29,10 @@ export function FeaturesSection() {
               <h3 className="font-display text-xl text-ink">{col.title}</h3>
               <ul className="mt-4 space-y-2.5">
                 {col.items.map((item) => (
-                  <li key={item} className="text-sm text-ink-mute">
-                    {item}
+                  <li key={item.href + item.label}>
+                    <Link href={item.href} className="text-sm text-ink-mute hover:text-jade">
+                      {item.label}
+                    </Link>
                   </li>
                 ))}
               </ul>

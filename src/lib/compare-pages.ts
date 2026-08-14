@@ -21,7 +21,7 @@ export const comparePages: Record<string, ComparePage> = {
     competitor: "Zenoti",
     seoTitle: "Antrahq vs Zenoti for multi-branch salon chains in India",
     seoDescription:
-      "Compare Antrahq and Zenoti for multi-location salons: implementation time, pricing transparency, branch P&L, GST billing, and mid-market fit for 3–20 outlet chains in India.",
+      "Compare Antrahq and Zenoti for multi-location salons: implementation time, pricing transparency, branch P&L, GST billing, and fit for Indian operators from one branch to large chains.",
     eyebrow: "Compare · Enterprise vs mid-market",
     title: "Antrahq vs Zenoti",
     lede:
@@ -33,7 +33,7 @@ export const comparePages: Record<string, ComparePage> = {
     ],
     antrahqStrengths: [
       "Transparent ₹/branch pricing published on the website",
-      "Go-live in days for 3–20 branch networks — not quarters",
+      "Go-live in days for growing networks — not quarters",
       "India desk reality: GST billing, WhatsApp receipts, geofenced attendance",
       "Branch P&L and Market Pulse built for owner coaching, not just dashboards",
       "Local Spotlight: Google visibility score, rivals, and GBP action plans",
@@ -43,7 +43,7 @@ export const comparePages: Record<string, ComparePage> = {
       {
         topic: "Typical chain size",
         competitor: "Large multi-location brands, franchises, med-spa groups",
-        antrahq: "Growing salon & spa chains with 3–20 branches",
+        antrahq: "Indian salon & spa operators — 1 branch to large networks",
       },
       {
         topic: "Pricing",
@@ -75,7 +75,7 @@ export const comparePages: Record<string, ComparePage> = {
       competitor:
         "Operators planning 20+ locations who need enterprise integrations, dedicated account teams, and a globally proven stack.",
       antrahq:
-        "Founders and ops heads at 3–20 branch Indian salon chains who want one connected platform with clear pricing and fast rollout.",
+        "Founders and ops heads at Indian salon chains — single outlet or multi-branch — who want one connected platform with clear pricing and fast rollout.",
     },
     disclaimer:
       "Capabilities vary by plan and region. Validate your shortlist with live demos and reference checks — this page is a starting point, not a definitive scorecard.",
@@ -85,7 +85,7 @@ export const comparePages: Record<string, ComparePage> = {
     competitor: "MioSalon",
     seoTitle: "Antrahq vs MioSalon — multi-branch salon software India",
     seoDescription:
-      "Compare Antrahq and MioSalon for Indian salon chains: POS, CRM, WhatsApp, multi-branch P&L, attendance, and which platform fits 3–20 outlet operators.",
+      "Compare Antrahq and MioSalon for Indian salon operators: POS, CRM, WhatsApp, multi-branch P&L, attendance, and which platform fits from one outlet to growing chains.",
     eyebrow: "Compare · All-in-one platforms",
     title: "Antrahq vs MioSalon",
     lede:
@@ -99,7 +99,7 @@ export const comparePages: Record<string, ComparePage> = {
       "Branch P&L and Market Pulse for coaching weak outlets",
       "Verified geofenced attendance with photo evidence",
       "WhatsApp campaigns included on Growth tier — not a separate upsell",
-      "Built specifically for 3–20 branch decision-making, not just desk ops",
+      "Built for branch-level decision-making at any scale — not just desk ops",
     ],
     rows: [
       {
@@ -147,11 +147,11 @@ export const comparePages: Record<string, ComparePage> = {
     competitor: "Salonist",
     seoTitle: "Antrahq vs Salonist for growing salon chains in India",
     seoDescription:
-      "Compare Antrahq and Salonist: POS, CRM, inventory, multi-branch management, GST billing, and which fits mid-market salon chains with 3–20 branches.",
+      "Compare Antrahq and Salonist: POS, CRM, inventory, multi-branch management, GST billing, and which fits salon operators scaling from one location to many.",
     eyebrow: "Compare · Growing chains",
     title: "Antrahq vs Salonist",
     lede:
-      "Salonist is a popular, approachable salon management tool for growing businesses. Antrahq targets a narrower segment: multi-branch salon and spa chains in India that need connected profitability intelligence, not just POS and bookings.",
+      "Salonist is a popular, approachable salon management tool for growing businesses. Antrahq targets operators in India who need connected profitability intelligence and room to scale — from a single outlet to a full network — not just POS and bookings.",
     competitorStrengths: [
       "Easy to adopt for smaller teams getting off spreadsheets",
       "Core POS, booking, inventory, and client management in one place",
@@ -161,7 +161,7 @@ export const comparePages: Record<string, ComparePage> = {
       "Network view: compare branches, coach weak outlets, act same-day",
       "Branch-level GSTIN and India-specific billing workflow",
       "Manager PWA for floor teams — walk-ins, stock, attendance together",
-      "Transparent mid-market pricing designed for 3–20 outlets",
+      "Transparent per-branch pricing that scales from outlet one",
     ],
     rows: [
       {
@@ -199,7 +199,7 @@ export const comparePages: Record<string, ComparePage> = {
       competitor:
         "Owners digitising a salon for the first time or running a small team that needs simple POS and bookings.",
       antrahq:
-        "Operators already running 3+ branches who outgrew disconnected tools and need one truth from desk to dashboard.",
+        "Operators who outgrew disconnected tools and need one truth from desk to dashboard — whether they are on branch one or branch fifty.",
     },
     disclaimer:
       "Your branch count, city mix, and finance workflow matter more than feature checklists. Book audits with both vendors if you are shortlisting.",
