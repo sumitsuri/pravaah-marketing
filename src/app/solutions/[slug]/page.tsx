@@ -11,8 +11,8 @@ import { brand } from "@/lib/content";
 const solutions = {
   "multi-branch": {
     eyebrow: "Solution · Multi-branch operations",
-    title: "Salon management that scales — one branch to any network",
-    body: "Standardise billing, CRM, staff attendance, inventory, and branch reporting across your network — whether you operate one outlet today or dozens. One owner view and a manager app on every floor.",
+    title: "Multi-branch salon management platform — one outlet to any network",
+    body: "Standardise billing, CRM, staff attendance, inventory, and branch reporting across your network — whether you operate one salon or spa outlet today or dozens. One owner view and a manager app on every floor.",
     points: [
       {
         title: "One brand admin",
@@ -31,7 +31,7 @@ const solutions = {
   },
   owners: {
     eyebrow: "Solution · Owners & finance",
-    title: "Owner dashboard: revenue, branch P&L, and retention",
+    title: "Salon management platform for owners: revenue, branch P&L, retention",
     body: `${brand.name} gives founders and finance leaders a morning routine — network KPIs, branch profitability, Market Pulse ranking, Local Spotlight local search signals, Customer voice ratings, and WhatsApp win-back previews from one CRM graph.`,
     points: [
       {
@@ -55,8 +55,8 @@ const solutions = {
   },
   managers: {
     eyebrow: "Solution · Branch managers",
-    title: "Salon floor app for walk-ins, staff, and stock",
-    body: "Walk-ins, verified punches, stock movements, and bookings on installable salon tablets — built for Indian desk speed and GST compliance.",
+    title: "Salon & spa floor app — walk-ins, staff, and stock",
+    body: "Walk-ins, verified punches, stock movements, and bookings on installable salon tablets — built for Indian desk speed and GST compliance inside a full management platform.",
     points: [
       {
         title: "Walk-in billing",

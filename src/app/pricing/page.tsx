@@ -3,8 +3,9 @@ import Link from "next/link";
 import { brand, pricing } from "@/lib/content";
 
 export const metadata: Metadata = {
-  title: "Pricing",
-  description: "Transparent per-branch pricing for salon and spa operators in India — from single outlets to growing chains.",
+  title: "Pricing for salon & spa management platform",
+  description:
+    "Transparent per-branch pricing for a salon and spa management platform in India — from single outlets to growing chains.",
   alternates: { canonical: "/pricing/" },
 };
 

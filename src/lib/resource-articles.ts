@@ -193,6 +193,230 @@ export const resourceArticles: Record<string, ResourceArticle> = {
     ],
     cta: "WhatsApp campaigns from your guest CRM are included on Antrahq Growth — book a growth audit to see audience preview live.",
   },
+  "salon-management-platform-india": {
+    slug: "salon-management-platform-india",
+    type: "Guide",
+    title: "What is a salon management platform? India buyer guide",
+    seoTitle: "Salon management platform India — buyer guide for chains",
+    seoDescription:
+      "What a salon management platform includes vs basic POS: GST billing, CRM, attendance, multi-branch P&L, and WhatsApp — how Indian chains should shortlist.",
+    readMinutes: 9,
+    lede:
+      "Buyers searching for a salon management platform in India are usually past pure appointment apps. They need one system that runs the desk and gives owners branch economics — without enterprise bloat or marketplace commissions.",
+    sections: [
+      {
+        heading: "Salon POS vs salon management platform",
+        body:
+          "POS closes a bill. A salon management platform connects that bill to guest CRM, stylist accountability, inventory, attendance, WhatsApp retention, and branch P&L. If you only need appointments for one outlet, a lighter tool may be enough. If you are comparing outlets — or plan to — you need a platform.",
+      },
+      {
+        heading: "Must-have modules for Indian salon chains",
+        body: "When shortlisting a salon management platform, insist on these India-specific capabilities:",
+        bullets: [
+          "Walk-in GST billing with branch GSTIN, CGST/SGST, and PDF invoices",
+          "UPI + card + cash in one desk flow",
+          "Phone-first guest CRM tied to every visit",
+          "Verified attendance (selfie + geofence) before payroll",
+          "WhatsApp receipts and opt-in win-back campaigns",
+          "Multi-branch P&L and ranking — not only store-level reports",
+        ],
+      },
+      {
+        heading: "Who should buy a platform (not a single-outlet app)",
+        body:
+          "Founders and ops heads running — or planning — more than one location; finance leaders tired of Sunday Excel merges; brands that want Local Google visibility and review recovery next to desk ops. Single-chair studios can start lighter and upgrade when branch two is real.",
+      },
+      {
+        heading: "How Antrahq fits",
+        body:
+          "Antrahq is built as a salon and spa management platform for India: desk POS and GST, owner P&L, Market Pulse, Local Spotlight, and Customer voice in one product with public ₹/branch pricing. Validate against your shortlist in a live growth audit — not a slide deck.",
+      },
+      {
+        heading: "Next steps for buyers",
+        body: "Map your must-haves, then compare pages (Zenoti / MioSalon / Salonist), run the branch health score, and book a 30-minute audit with your branch count and GST setup.",
+      },
+    ],
+    cta: "See Antrahq as your salon management platform — book a growth audit.",
+  },
+  "spa-management-platform": {
+    slug: "spa-management-platform",
+    type: "Guide",
+    title: "Spa management platform guide for multi-location wellness",
+    seoTitle: "Spa management platform for multi-location wellness centres in India",
+    seoDescription:
+      "What spa operators need from a spa management platform: longer treatments, therapist schedules, room utilisation, GST billing, and owner P&L across outlets.",
+    readMinutes: 8,
+    lede:
+      "A spa management platform must respect longer treatments, therapist schedules, and room economics — while still delivering India GST billing and multi-outlet P&L. This guide is for wellness centres and spa chains evaluating software in India.",
+    sections: [
+      {
+        heading: "How spa ops differ from hair salons",
+        body:
+          "Spa visits run longer, therapists rotate rooms, and packages matter more than walk-in colour tickets. Your platform should still bill GST cleanly — but scheduling, attendance, and contribution by treatment type become the real coaching levers.",
+      },
+      {
+        heading: "Core capabilities of a spa management platform",
+        body:
+          "Shortlist platforms that cover the spa floor and the India desk in one system — not a booking widget bolted onto spreadsheets.",
+        bullets: [
+          "Treatment menus with therapist assignment on every line",
+          "GST invoices and WhatsApp receipts guests expect",
+          "Attendance integrity for therapists across shifts",
+          "Inventory of oils, linens, and retail without Excel",
+          "Branch / centre P&L so owners see which outlet earns",
+          "Guest CRM for package renewals and win-backs",
+        ],
+      },
+      {
+        heading: "Multi-location spa chains — what breaks first",
+        body:
+          "Centre-level spreadsheets hide therapist overtime, product shrink, and empty rooms. A spa management platform should rank centres the way salon platforms rank branches — with the same morning owner view across the network.",
+      },
+      {
+        heading: "Where Antrahq helps spa operators",
+        body:
+          "Antrahq covers spa and wellness formats with the same India desk stack (GST, WhatsApp, geofenced attendance) and owner intelligence (branch P&L, Market Pulse, reviews). Longer treatment workflows still map to services + therapist line items managers already understand.",
+      },
+    ],
+    cta: "Evaluate Antrahq as your spa management platform — book a growth audit.",
+  },
+  "choose-salon-software-india": {
+    slug: "choose-salon-software-india",
+    type: "Guide",
+    title: "How to choose salon management software for Indian chains",
+    seoTitle: "How to choose salon management software / platform in India",
+    seoDescription:
+      "Evaluation checklist for salon management software in India: GST depth, WhatsApp, multi-branch P&L, attendance, pricing transparency, and rollout time for chains.",
+    readMinutes: 10,
+    lede:
+      "Choosing salon management software in India is less about feature checklists and more about desk reality + owner truth. Use this scorecard when you compare platforms for one branch or many.",
+    sections: [
+      {
+        heading: "1. GST and payments — non-negotiable",
+        body:
+          "Ask for a live walk-in: guest → services → GST preview → UPI/cash/card → WhatsApp PDF. If GSTIN is brand-only and not per branch, mid-market chains will struggle at audit time.",
+      },
+      {
+        heading: "2. Multi-branch economics",
+        body:
+          "Demand comparable P&L by outlet (salary, rent, product). “Reports” that export to Excel are not the same as a morning coaching view. Rank branches; do not drown in charts.",
+      },
+      {
+        heading: "3. People and payroll trust",
+        body:
+          "Buddy punching and late exits leak salary. Prefer selfie + geofence attendance managers can review weekly — without forcing biometric hardware on day one.",
+      },
+      {
+        heading: "4. Retention without spam",
+        body:
+          "WhatsApp win-backs should use visit gap and spend from the same CRM as billing, with explicit opt-in. Metered messaging add-ons are fine; dark-pattern blasts are not.",
+      },
+      {
+        heading: "5. Pricing and rollout honesty",
+        body:
+          "Prefer published ₹/branch pricing and days-to-first-bill rollouts for mid-market chains. Enterprise suites can win for complex franchises — but only if you truly need that weight.",
+      },
+      {
+        heading: "Scorecard template",
+        body: "Score each vendor Y/N (or 1–5) before demos end — and insist on written answers for anything marked No:",
+        bullets: [
+          "GST walk-in demo passed (Y/N)",
+          "Branch P&L live without Excel (Y/N)",
+          "Attendance evidence before payroll (Y/N)",
+          "WhatsApp from CRM opt-in (Y/N)",
+          "Public or clear per-branch price (Y/N)",
+          "Go-live timeline in writing (days/weeks)",
+        ],
+      },
+    ],
+    cta: "Use this checklist in an Antrahq growth audit — bring your branch count and GST setup.",
+  },
+  "multi-branch-salon-platform": {
+    slug: "multi-branch-salon-platform",
+    type: "Guide",
+    title: "Multi-branch salon platform checklist",
+    seoTitle: "Multi-branch salon management platform checklist for India",
+    seoDescription:
+      "Checklist for choosing a multi-branch salon management platform: brand admin, GSTINs, geofences, manager PWAs, comparable P&L, and coaching signals.",
+    readMinutes: 7,
+    lede:
+      "Opening branch three through twenty fails when each outlet invents its own Excel. A multi-branch salon platform standardises the desk and gives owners one scoreboard.",
+    sections: [
+      {
+        heading: "Before you buy — operations prerequisites",
+        body:
+          "Software cannot invent shared catalogues or GSTINs. Align these operations prerequisites before you sign:",
+        bullets: [
+          "Shared service catalog and pricing rules",
+          "Named managers per outlet with clear RBAC",
+          "Branch GSTINs and geofence addresses ready",
+          "Agreement on salary and product cost categories for P&L",
+        ],
+      },
+      {
+        heading: "Platform capabilities that unlock scale",
+        body:
+          "Once prerequisites are ready, demand these multi-branch capabilities in the product — not as custom projects:",
+        bullets: [
+          "Brand admin that configures outlets once",
+          "Identical walk-in and attendance apps on every tablet",
+          "Comparable branch P&L and Market Pulse ranking",
+          "Local Spotlight / reviews so Google presence scales with outlets",
+          "Campaigns that segment guests across the network",
+        ],
+      },
+      {
+        heading: "Rollout sequence that works",
+        body:
+          "Day 1 tenant + GSTINs → Days 2–3 floor PWA training → Days 4–5 owner P&L and campaigns. Measure first-week bills, punch compliance, and one Sunday owner review — not a six-month transformation programme.",
+      },
+      {
+        heading: "How Antrahq approaches multi-branch",
+        body:
+          "Antrahq is designed as a multi-branch salon and spa management platform with public Growth-tier pricing, geofenced attendance, and owner coaching views. Compare against enterprise suites if you need deep franchise complexity; otherwise validate speed-to-desk in a live audit.",
+      },
+    ],
+    cta: "Walk a multi-branch rollout plan in an Antrahq growth audit.",
+  },
+  "salon-vs-spa-software": {
+    slug: "salon-vs-spa-software",
+    type: "Guide",
+    title: "Salon vs spa software — what actually differs",
+    seoTitle: "Salon vs spa management software / platform — India guide",
+    seoDescription:
+      "Salon vs spa management platform needs: walk-in colour desks vs longer treatments, therapist rooms, packages — and when one India platform covers both.",
+    readMinutes: 6,
+    lede:
+      "Salon management software and spa management platforms share GST, CRM, and multi-outlet P&L — but the floor rhythm differs. Know what must change before you force one tool on both formats.",
+    sections: [
+      {
+        heading: "What stays the same",
+        body:
+          "India GST invoicing, UPI collections, WhatsApp receipts, guest CRM, attendance integrity, inventory movements, and owner branch/centre P&L. These should be one platform language across salon and spa brands.",
+      },
+      {
+        heading: "What differs on the floor",
+        body:
+          "Scheduling, utilisation, and package economics diverge even when billing and CRM stay the same:",
+        bullets: [
+          "Salons: walk-in heavy, stylist colour tickets, weekend peaks",
+          "Spas: longer treatments, therapist + room utilisation, packages",
+          "Salons optimise empty chairs; spas optimise room blocks and therapist load",
+        ],
+      },
+      {
+        heading: "When one platform is enough",
+        body:
+          "If both formats are under one brand admin, shared GST rules, and the same owner coaching cadence, a single salon & spa management platform reduces tool sprawl. Split systems only when clinical/medical spa workflows demand specialised compliance.",
+      },
+      {
+        heading: "Antrahq positioning",
+        body:
+          "Antrahq markets to hair, beauty, spa, and growing brands on one India-ready stack. Use product pages for billing/POS/CRM and the spa guide for wellness-specific buyer questions — then confirm fit in a growth audit.",
+      },
+    ],
+    cta: "Tell us your mix of salon vs spa outlets — book a growth audit.",
+  },
 };
 
 export const resourceArticleList = Object.values(resourceArticles);

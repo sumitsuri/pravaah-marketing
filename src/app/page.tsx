@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     absolute: `${brand.name} — ${brand.searchCategory}`,
   },
   description:
-    "Multi-branch salon management software for India. Antrahq connects billing, POS, CRM, inventory, staff attendance, WhatsApp marketing, and branch P&L for salon and spa operators — from one outlet to national chains.",
+    "Salon and spa management platform for India. Antrahq connects billing, POS, CRM, inventory, staff attendance, WhatsApp marketing, and branch P&L for multi-location operators — from one outlet to national chains.",
   alternates: { canonical: "/" },
 };
 

@@ -7,9 +7,9 @@ import { FaqSection } from "@/components/sections/FaqSection";
 import { FinalCta } from "@/components/sections/FinalCta";
 
 export const metadata = {
-  title: "Resources for multi-branch salon operators in India",
+  title: "Resources for salon & spa management platforms in India",
   description:
-    "Guides, playbooks, calculators, and software comparisons for Indian salon and spa chains — P&L, attendance, WhatsApp win-backs, and branch health.",
+    "Guides on salon management platforms, spa management software, multi-branch checklists, GST, attendance, and WhatsApp win-backs for Indian chains.",
   alternates: { canonical: "/resources/" },
 };
 
@@ -21,8 +21,8 @@ export default function ResourcesPage() {
     <>
       <PageHero
         eyebrow="Resources"
-        title="Guides and tools for multi-branch salon chains"
-        body="SEO-friendly playbooks for owners, ops heads, and finance leads — plus calculators and honest software comparisons."
+        title="Guides for salon & spa management platforms"
+        body="Buyer guides and playbooks for owners, ops heads, and finance leads — plus calculators and honest software comparisons."
       />
       <section className="section-pad bg-white">
         <div className="container-wide">

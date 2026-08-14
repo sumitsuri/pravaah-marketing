@@ -4,10 +4,10 @@ export const brand = {
   /** Brand category — how we want to be remembered */
   tagline: "Every aspect connected. Every decision sharper.",
   /** Search category — how buyers find us on Google */
-  searchCategory: "Salon management software for India",
+  searchCategory: "Salon & spa management platform for India",
   short: "Run every branch. See every signal. Make the next growth decision.",
   mission:
-    "Antrahq connects billing, guest CRM, inventory, staff attendance, WhatsApp marketing, branch profitability, Local Spotlight, and guest reviews for multi-location salon and spa chains in India — so founders, ops heads, and finance leaders work from one shared view.",
+    "Antrahq is a salon and spa management platform for India — connecting billing, guest CRM, inventory, staff attendance, WhatsApp marketing, branch profitability, Local Spotlight, and guest reviews for multi-location chains so founders, ops heads, and finance leaders work from one shared view.",
   footer: "Built in India · Salon & spa · 1 branch to any scale",
   email: "hello@antrahq.com",
   cta: {
@@ -27,11 +27,12 @@ export const brand = {
 /** Homepage hero — keyword-led H1 for search, brand lines underneath */
 export const heroHeadline = {
   lines: [
-    "Salon management software for India.",
+    "Salon & spa management platform for India.",
     "Run every branch.",
     "Make the next growth decision.",
   ] as const,
-  subtitle: "Multi-branch POS, GST billing, CRM, attendance, and branch P&L — one platform",
+  subtitle:
+    "One multi-branch platform for POS, GST billing, CRM, attendance, WhatsApp, and branch P&L",
 } as const;
 
 /** The decision loop — core platform narrative. */
@@ -752,13 +753,13 @@ export const verticals = [
   },
   {
     title: "Spa & wellness centres",
-    desc: "Longer treatments, therapist schedules, and owner P&L across rooms and outlets.",
-    href: "/solutions/owners",
+    desc: "Longer treatments, therapist schedules, and owner P&L across rooms and outlets — see our spa management platform guide.",
+    href: "/resources/spa-management-platform",
   },
   {
     title: "Growing salon brands",
-    desc: "Add the next location without rebuilding your ops stack — whether that is branch two or branch twenty.",
-    href: "/solutions/multi-branch",
+    desc: "Add the next location without rebuilding your ops stack — multi-branch salon platform checklist included.",
+    href: "/resources/multi-branch-salon-platform",
   },
 ] as const;
 
@@ -886,7 +887,7 @@ export const faqs = [
   },
   {
     q: "Is Antrahq salon POS software or something else?",
-    a: "Both. Antrahq includes salon POS and GST billing at the desk, plus multi-branch P&L, CRM, inventory, staff attendance, and WhatsApp campaigns. We describe it as a growth decision platform because owners use it to decide which branch to coach — not only to print a bill.",
+    a: "Antrahq is a salon and spa management platform — not only POS. It includes GST billing at the desk, plus multi-branch P&L, CRM, inventory, staff attendance, and WhatsApp campaigns. Owners use it to decide which branch to coach — not only to print a bill.",
   },
   {
     q: "How does Antrahq compare to Zenoti, MioSalon, or Salonist?",
@@ -919,6 +920,36 @@ export const faqs = [
 ] as const;
 
 export const resources = [
+  {
+    type: "Guide",
+    title: "What is a salon management platform? (India buyer guide)",
+    desc: "POS vs platform, must-have modules, and how mid-market chains should shortlist.",
+    href: "/resources/salon-management-platform-india",
+  },
+  {
+    type: "Guide",
+    title: "Spa management platform guide for multi-location wellness",
+    desc: "Therapist schedules, longer treatments, and owner P&L across spa rooms and outlets.",
+    href: "/resources/spa-management-platform",
+  },
+  {
+    type: "Guide",
+    title: "How to choose salon management software for Indian chains",
+    desc: "Evaluation checklist: GST, WhatsApp, multi-branch P&L, attendance, and rollout time.",
+    href: "/resources/choose-salon-software-india",
+  },
+  {
+    type: "Guide",
+    title: "Multi-branch salon platform checklist",
+    desc: "What must be standardised before you open branch three through twenty.",
+    href: "/resources/multi-branch-salon-platform",
+  },
+  {
+    type: "Guide",
+    title: "Salon vs spa software — what actually differs",
+    desc: "Where salon and spa ops diverge — and when one platform can cover both.",
+    href: "/resources/salon-vs-spa-software",
+  },
   {
     type: "Guide",
     title: "Multi-branch P&L checklist for Indian salon owners",
@@ -960,9 +991,9 @@ export const resources = [
 export const productPages = {
   billing: {
     title: "Salon billing & GST invoicing software",
-    seoTitle: "Salon billing & GST software for multi-branch chains · Antrahq",
+    seoTitle: "Salon billing & GST software — salon management platform · Antrahq",
     seoDescription:
-      "GST-ready salon billing for Indian chains: walk-in wizard, branch GSTIN, CGST/SGST invoices, UPI/card/cash, and WhatsApp PDF receipts.",
+      "GST-ready salon billing inside a salon management platform for Indian chains: walk-in wizard, branch GSTIN, CGST/SGST invoices, UPI/card/cash, and WhatsApp PDF receipts.",
     eyebrow: "Product · Billing",
     hero: "From guest phone number to GST invoice and WhatsApp receipt — at the desk.",
     body: "Built for Indian walk-in culture: find the guest, assign stylists on every line, preview GST, collect Cash/UPI/Card, and queue a WhatsApp PDF. Discounts leave an audit trail managers and owners can review.",
@@ -977,9 +1008,9 @@ export const productPages = {
   },
   pos: {
     title: "Salon POS software for India",
-    seoTitle: "Salon POS software India — GST, UPI & multi-branch · Antrahq",
+    seoTitle: "Salon POS software India — GST, UPI & multi-branch platform · Antrahq",
     seoDescription:
-      "Salon POS for multi-branch chains in India: walk-in billing, UPI and card payments, GST invoices, stylist assignment, and WhatsApp receipts from one floor app.",
+      "Salon POS inside a multi-branch salon management platform for India: walk-in billing, UPI and card, GST invoices, stylist assignment, and WhatsApp receipts from one floor app.",
     eyebrow: "Product · POS",
     hero: "Salon POS that matches how Indian desks actually work — walk-ins, UPI, and GST.",
     body: "Antrahq POS is phone-first: lookup the guest, add services with stylist accountability, preview tax, and close the bill in one flow. Every sale feeds guest CRM, branch revenue, and owner P&L — no export step.",
@@ -994,9 +1025,9 @@ export const productPages = {
   },
   crm: {
     title: "Salon CRM & guest management",
-    seoTitle: "Salon CRM software for multi-branch chains · Antrahq",
+    seoTitle: "Salon CRM software for multi-branch salon management platforms · Antrahq",
     seoDescription:
-      "Salon CRM tied to billing: phone-first guest profiles, visit history, spend segments, public enquiry leads, and WhatsApp win-back audiences for Indian chains.",
+      "Salon CRM in a salon management platform: phone-first guest profiles, visit history, spend segments, public enquiry leads, and WhatsApp win-back audiences for Indian chains.",
     eyebrow: "Product · CRM",
     hero: "Guest profiles that start at the phone number — and stay connected to every visit.",
     body: "Antrahq CRM is not a separate database. Profiles grow from walk-ins, bookings, and public enquiries. Owners segment by visit gap and spend for WhatsApp win-backs; managers see history at the desk before the service starts.",
@@ -1011,9 +1042,9 @@ export const productPages = {
   },
   analytics: {
     title: "Salon analytics, branch P&L & Market Pulse",
-    seoTitle: "Multi-branch salon analytics & branch P&L · Antrahq",
+    seoTitle: "Multi-branch salon analytics & branch P&L platform · Antrahq",
     seoDescription:
-      "Branch P&L and salon analytics for Indian operators: revenue vs salary, rent, product cost, Market Pulse ranking, and coaching signals across every outlet in your network.",
+      "Branch P&L and salon analytics in a salon management platform for India: revenue vs salary, rent, product cost, Market Pulse ranking, and coaching signals across every outlet.",
     eyebrow: "Product · Analytics",
     hero: "Know which outlet is winning — and why — before the week slips away.",
     body: "Owner dashboards combine live chain KPIs, expenditure-aware P&L, and Market Pulse rankings with anonymised peer context. Finance and ops can agree on one branch scoreboard.",

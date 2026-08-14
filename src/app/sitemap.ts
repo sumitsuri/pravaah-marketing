@@ -36,11 +36,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return all.map((path) => ({
     url: loc(path),
     lastModified: new Date("2026-08-14"),
-    changeFrequency: path === "/" ? "weekly" : "monthly",
+    changeFrequency: path === "/" ? "weekly" : path.startsWith("/resources") ? "weekly" : "monthly",
     priority:
       path === "/"
         ? 1
-        : path.startsWith("/products") || path.startsWith("/compare") || path.startsWith("/pricing")
+        : path.startsWith("/products") ||
+            path.startsWith("/compare") ||
+            path.startsWith("/pricing") ||
+            path.startsWith("/resources")
           ? 0.8
           : 0.6,
   }));
