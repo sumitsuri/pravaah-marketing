@@ -36,7 +36,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return all.map((path) => ({
     url: loc(path),
     lastModified: new Date("2026-08-14"),
-    changeFrequency: path === "/" ? "weekly" : path.startsWith("/resources") ? "weekly" : "monthly",
+    changeFrequency: path === "/" || path.startsWith("/resources") ? "weekly" : "monthly",
     priority:
       path === "/"
         ? 1

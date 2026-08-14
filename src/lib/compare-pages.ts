@@ -19,9 +19,9 @@ export const comparePages: Record<string, ComparePage> = {
   zenoti: {
     slug: "zenoti",
     competitor: "Zenoti",
-    seoTitle: "Antrahq vs Zenoti for multi-branch salon chains in India",
+    seoTitle: "Antrahq vs Zenoti — Zenoti alternative for Indian salon chains",
     seoDescription:
-      "Compare Antrahq and Zenoti for multi-location salons: implementation time, pricing transparency, branch P&L, GST billing, and fit for Indian operators from one branch to large chains.",
+      "Zenoti alternative for India: compare Antrahq vs Zenoti on pricing transparency, GST billing, WhatsApp, multi-branch P&L, and rollout speed for mid-market salon chains.",
     eyebrow: "Compare · Enterprise vs mid-market",
     title: "Antrahq vs Zenoti",
     lede:
@@ -83,9 +83,9 @@ export const comparePages: Record<string, ComparePage> = {
   miosalon: {
     slug: "miosalon",
     competitor: "MioSalon",
-    seoTitle: "Antrahq vs MioSalon — multi-branch salon software India",
+    seoTitle: "Antrahq vs MioSalon — MioSalon alternative India",
     seoDescription:
-      "Compare Antrahq and MioSalon for Indian salon operators: POS, CRM, WhatsApp, multi-branch P&L, attendance, and which platform fits from one outlet to growing chains.",
+      "MioSalon alternative for Indian chains: compare Antrahq vs MioSalon on multi-branch P&L, GST POS, WhatsApp, attendance, and growth-decision fit.",
     eyebrow: "Compare · All-in-one platforms",
     title: "Antrahq vs MioSalon",
     lede:
@@ -145,9 +145,9 @@ export const comparePages: Record<string, ComparePage> = {
   salonist: {
     slug: "salonist",
     competitor: "Salonist",
-    seoTitle: "Antrahq vs Salonist for growing salon chains in India",
+    seoTitle: "Antrahq vs Salonist — Salonist alternative for India chains",
     seoDescription:
-      "Compare Antrahq and Salonist: POS, CRM, inventory, multi-branch management, GST billing, and which fits salon operators scaling from one location to many.",
+      "Salonist alternative for growing Indian salons: compare Antrahq vs Salonist on GST billing, multi-branch P&L, WhatsApp, attendance, and scale from one outlet to many.",
     eyebrow: "Compare · Growing chains",
     title: "Antrahq vs Salonist",
     lede:

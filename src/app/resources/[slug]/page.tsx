@@ -34,18 +34,48 @@ export default async function ResourceArticlePage({
   const article = resourceArticles[slug];
   if (!article) notFound();
 
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    headline: article.title,
-    description: article.seoDescription,
-    author: { "@type": "Organization", name: brand.name },
-    publisher: { "@type": "Organization", name: brand.name },
-  };
+  const schemas: Record<string, unknown>[] = [
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      headline: article.title,
+      description: article.seoDescription,
+      author: { "@type": "Organization", name: brand.name },
+      publisher: {
+        "@type": "Organization",
+        name: brand.name,
+        url: "https://antrahq.com",
+      },
+      mainEntityOfPage: `https://antrahq.com/resources/${slug}/`,
+      dateModified: "2026-08-14",
+    },
+  ];
+
+  if (article.faqs?.length) {
+    schemas.push({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: article.faqs.map((f) => ({
+        "@type": "Question",
+        name: f.q,
+        acceptedAnswer: { "@type": "Answer", text: f.a },
+      })),
+    });
+  }
+
+  const related = Object.values(resourceArticles)
+    .filter((a) => a.slug !== slug)
+    .slice(0, 4);
 
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      {schemas.map((schema, i) => (
+        <script
+          key={i}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        />
+      ))}
       <article className="bg-flow-hero pt-28">
         <header className="section-pad !pb-8 !pt-10">
           <div className="container-narrow">
@@ -78,12 +108,50 @@ export default async function ResourceArticlePage({
               </section>
             ))}
 
+            {article.faqs?.length ? (
+              <section>
+                <h2 className="font-display text-2xl text-ink md:text-3xl">Frequently asked questions</h2>
+                <div className="mt-6 space-y-5">
+                  {article.faqs.map((f) => (
+                    <div key={f.q}>
+                      <h3 className="text-base font-semibold text-ink">{f.q}</h3>
+                      <p className="mt-2 text-sm leading-relaxed text-ink-mute">{f.a}</p>
+                    </div>
+                  ))}
+                </div>
+              </section>
+            ) : null}
+
             <div className="rounded-2xl border border-jade/25 bg-jade/5 p-6 md:p-8">
               <p className="text-sm leading-relaxed text-ink-mute">{article.cta}</p>
-              <Link href="/demo" className="btn-primary mt-5 inline-flex">
-                {brand.cta.primary}
-              </Link>
+              <div className="mt-5 flex flex-wrap gap-3">
+                <Link href="/demo" className="btn-primary inline-flex">
+                  {brand.cta.primary}
+                </Link>
+                <Link href="/pricing" className="btn-secondary inline-flex">
+                  See pricing
+                </Link>
+                <Link href="/compare" className="btn-secondary inline-flex">
+                  Compare software
+                </Link>
+              </div>
             </div>
+
+            <section>
+              <h2 className="font-display text-xl text-ink">Related guides</h2>
+              <ul className="mt-4 space-y-2">
+                {related.map((a) => (
+                  <li key={a.slug}>
+                    <Link
+                      href={`/resources/${a.slug}`}
+                      className="text-sm font-semibold text-jade hover:underline"
+                    >
+                      {a.title}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </section>
           </div>
         </div>
       </article>

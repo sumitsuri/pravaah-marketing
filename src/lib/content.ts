@@ -922,6 +922,30 @@ export const faqs = [
 export const resources = [
   {
     type: "Guide",
+    title: "Best salon management software in India (2026)",
+    desc: "Honest 2026 ranking by buyer type — GST, WhatsApp, multi-branch P&L, and go-live speed.",
+    href: "/resources/best-salon-software-india-2026",
+  },
+  {
+    type: "Guide",
+    title: "Salon billing & GST software in India",
+    desc: "Walk-in POS, CGST/SGST invoices, UPI, WhatsApp receipts, and multi-branch GSTIN tips.",
+    href: "/resources/salon-billing-gst-software-india",
+  },
+  {
+    type: "Guide",
+    title: "Beauty parlour software in India",
+    desc: "What parlour owners should buy — and when to upgrade to a multi-branch platform.",
+    href: "/resources/beauty-parlour-software-india",
+  },
+  {
+    type: "Guide",
+    title: "Salon software for small business in India",
+    desc: "Single-outlet must-haves vs when small-salon tools become a migration trap.",
+    href: "/resources/salon-software-small-business-india",
+  },
+  {
+    type: "Guide",
     title: "What is a salon management platform? (India buyer guide)",
     desc: "POS vs platform, must-have modules, and how mid-market chains should shortlist.",
     href: "/resources/salon-management-platform-india",

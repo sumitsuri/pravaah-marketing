@@ -8,9 +8,267 @@ export type ResourceArticle = {
   lede: string;
   sections: { heading: string; body: string; bullets?: string[] }[];
   cta: string;
+  faqs?: { q: string; a: string }[];
 };
 
 export const resourceArticles: Record<string, ResourceArticle> = {
+  "best-salon-software-india-2026": {
+    slug: "best-salon-software-india-2026",
+    type: "Guide",
+    title: "Best salon management software in India (2026)",
+    seoTitle: "Best salon management software in India 2026 — buyer ranking",
+    seoDescription:
+      "Best salon software in India 2026: how to rank Zenoti, MioSalon, Salonist, Antrahq and others for GST billing, WhatsApp, multi-branch P&L, and rollout speed.",
+    readMinutes: 12,
+    lede:
+      "Searching for the best salon management software in India usually means you need GST-ready billing, WhatsApp, and either a simple desk app or a true multi-branch platform. This 2026 guide ranks options by buyer type — not a paid #1 badge — so founders and ops heads can shortlist honestly.",
+    sections: [
+      {
+        heading: "How we ranked salon software for India in 2026",
+        body: "We scored platforms on criteria Indian salon and spa operators actually buy on:",
+        bullets: [
+          "GST walk-in billing with UPI/cash/card and PDF invoices",
+          "WhatsApp receipts and opt-in retention (not SMS-only)",
+          "Multi-branch P&L / comparable outlet reporting",
+          "Attendance integrity before payroll",
+          "Published or clear ₹ pricing and days-to-go-live",
+          "Fit for single outlet vs growing chains",
+        ],
+      },
+      {
+        heading: "Quick picks — best salon software by buyer type",
+        body: "Use this table-of-intent before deep-diving vendors:",
+        bullets: [
+          "Best for multi-branch mid-market India chains: Antrahq — public ₹/branch pricing, GST desk, WhatsApp, geofenced attendance, branch P&L",
+          "Best for large enterprise / franchise complexity: Zenoti — deepest global suite; longer rollout and higher cost band",
+          "Best for established mid-market cloud suites: MioSalon or Salonist — strong India presence; validate multi-branch P&L depth in a live demo",
+          "Best for budget single-outlet experiments: lighter POS/booking tools — upgrade when branch two is real",
+        ],
+      },
+      {
+        heading: "1. Antrahq — best salon & spa management platform for growing Indian chains",
+        body:
+          "Antrahq is built as a salon and spa management platform for India: walk-in GST billing, POS, CRM, inventory, staff attendance, WhatsApp campaigns, Local Spotlight, guest reviews, and owner branch P&L in one product. Ideal when you run — or plan — more than one outlet and want coaching views without an enterprise programme. See pricing on antrahq.com/pricing and validate in a growth audit.",
+      },
+      {
+        heading: "2. Zenoti — best enterprise salon management software",
+        body:
+          "Zenoti leads for large multi-country chains that need deep franchise workflows, mature marketing automation, and a long-term platform budget. For mid-market Indian brands that need go-live in days and transparent per-branch pricing, compare carefully — see Antrahq vs Zenoti.",
+      },
+      {
+        heading: "3. MioSalon — strong all-in-one for Indian salons",
+        body:
+          "MioSalon is a well-known India cloud suite for appointments, billing, and operations. Shortlist it when you want a proven mid-market brand. Pressure-test GSTIN-per-branch, WhatsApp depth, and comparable multi-outlet P&L in a demo — then contrast with Antrahq vs MioSalon.",
+      },
+      {
+        heading: "4. Salonist — popular salon software for growing studios",
+        body:
+          "Salonist serves many Indian salons with booking, billing, and CRM-style flows. Good evaluation candidate for single to few outlets. Confirm multi-branch economics and attendance evidence before you standardise a chain — see Antrahq vs Salonist.",
+      },
+      {
+        heading: "5. Other India options worth a glance",
+        body:
+          "Salon360, JHD, Dingg, EasySalon, Zylu, and Invoay appear often in Indian “best salon software” SERPs. Treat them as segment-specific: some win on price, some on longevity, some on WhatsApp automation. Always run the same GST walk-in + multi-branch scorecard.",
+      },
+      {
+        heading: "Salon software vs salon management platform",
+        body:
+          "“Salon software” on Google often means booking + billing. A salon management platform connects the desk to CRM, attendance, inventory, WhatsApp, and branch P&L. If you only need appointments for one parlour, a lighter tool may suffice. If you compare outlets weekly, buy a platform.",
+      },
+      {
+        heading: "Must-have checklist before you buy",
+        body: "Print this for every demo:",
+        bullets: [
+          "Live walk-in: guest → services → GST preview → UPI → WhatsApp PDF",
+          "Branch GSTIN support (not brand-only) if you have multiple outlets",
+          "Comparable P&L by outlet without Excel merges",
+          "Attendance evidence managers can review before payroll",
+          "Clear ₹/month or ₹/branch price and written go-live timeline",
+        ],
+      },
+      {
+        heading: "How to choose in one week",
+        body:
+          "Day 1–2: score vendors on the checklist. Day 3: watch two live demos with your real service menu. Day 4: call two reference customers in your city tier. Day 5: book a growth audit or pilot on your hardest branch. Avoid six-month “transformation” decks for a mid-market chain.",
+      },
+    ],
+    cta: "Shortlisting the best salon management software in India for your chain? Book a 30-minute Antrahq growth audit with your branch count and GST setup.",
+    faqs: [
+      {
+        q: "What is the best salon management software in India in 2026?",
+        a: "It depends on scale. Multi-branch mid-market chains often fit Antrahq; large enterprise franchises may need Zenoti; single outlets can start with lighter India suites. Rank vendors on GST, WhatsApp, multi-branch P&L, and go-live time.",
+      },
+      {
+        q: "What is the difference between salon software and a salon management platform?",
+        a: "Salon software often means booking and billing. A salon management platform also connects CRM, attendance, inventory, WhatsApp retention, and branch profitability so owners coach outlets from one view.",
+      },
+      {
+        q: "How much does salon software cost in India?",
+        a: "Expect a wide band: lighter tools from a few hundred rupees per month, mid-market platforms typically priced per branch, and enterprise suites significantly higher with implementation. Prefer published ₹/branch pricing where available.",
+      },
+      {
+        q: "Does salon software in India need GST billing?",
+        a: "Yes for most registered salons and spas. Insist on CGST/SGST invoices, branch GSTIN where relevant, and PDF/WhatsApp delivery from the same desk flow.",
+      },
+    ],
+  },
+  "salon-billing-gst-software-india": {
+    slug: "salon-billing-gst-software-india",
+    type: "Guide",
+    title: "Salon billing & GST software in India — buyer guide",
+    seoTitle: "Salon billing & GST software India — POS invoicing guide",
+    seoDescription:
+      "Salon billing software India with GST: walk-in POS, CGST/SGST invoices, UPI/cash/card, WhatsApp PDF receipts, and multi-branch GSTIN tips for chains.",
+    readMinutes: 8,
+    lede:
+      "Salon billing software in India is not just “print a receipt.” Buyers need GST-correct invoices, fast UPI collection, and a desk flow stylists will actually use on Saturday peaks — ideally inside a broader salon management platform.",
+    sections: [
+      {
+        heading: "What salon billing / POS software must do in India",
+        body: "Non-negotiables for Indian salon and spa desks:",
+        bullets: [
+          "GST invoice with taxable value, CGST/SGST (or IGST), and invoice number series",
+          "Branch-level GSTIN when outlets are separately registered",
+          "Cash + UPI + card on one bill with clear tender split",
+          "Stylist assignment on service lines for commission truth",
+          "WhatsApp or PDF receipt the guest can keep",
+          "Discount/void audit trail for managers",
+        ],
+      },
+      {
+        heading: "Billing-only tools vs salon management platform",
+        body:
+          "A pure billing app closes the sale. A salon management platform ties that sale to guest CRM, inventory deduction, attendance, and branch P&L. If you only need invoices for one parlour, billing-first tools can work. If you run a chain, billing without P&L recreates Sunday Excel.",
+      },
+      {
+        heading: "Walk-in billing flow that survives Saturday rush",
+        body:
+          "Find guest by phone → add services with stylists → preview GST → collect tenders → send WhatsApp PDF. Train managers to finish a bill in under two minutes. Anything slower gets bypassed with handwritten notes.",
+      },
+      {
+        heading: "Multi-branch GST pitfalls",
+        body:
+          "Brand-level GSTIN with outlet-level cash collection creates audit pain. Confirm how software maps invoice series per branch, how credit notes work, and whether reports reconcile collections to GST liability without a CA spreadsheet every month.",
+      },
+      {
+        heading: "How Antrahq handles salon billing & GST",
+        body:
+          "Antrahq billing is built for Indian walk-ins inside the full platform: GST preview, tenders, WhatsApp receipts, and owner-visible discounts — then the same bill feeds CRM and branch economics. Explore the billing product page and book a growth audit to watch a live walk-in.",
+      },
+    ],
+    cta: "Need GST-ready salon billing inside a multi-branch platform? Book an Antrahq growth audit.",
+    faqs: [
+      {
+        q: "What is the best salon billing software in India?",
+        a: "The best fit includes GST invoices, UPI/cash/card, stylist lines, and WhatsApp receipts. For chains, prefer billing inside a salon management platform so P&L and CRM stay connected.",
+      },
+      {
+        q: "Does salon POS software need GST?",
+        a: "Registered salons and spas generally need GST-compliant tax invoices. Verify CGST/SGST breakdown and invoice series in a live demo before you buy.",
+      },
+    ],
+  },
+  "beauty-parlour-software-india": {
+    slug: "beauty-parlour-software-india",
+    type: "Guide",
+    title: "Beauty parlour software in India — what to buy in 2026",
+    seoTitle: "Beauty parlour software India — management & billing guide 2026",
+    seoDescription:
+      "Beauty parlour software in India: GST billing, appointments, staff, WhatsApp, and when parlour owners should upgrade to a salon management platform.",
+    readMinutes: 7,
+    lede:
+      "“Beauty parlour software” is how many Indian owners search for salon management tools. The job is the same: bill correctly, remember guests, and know which services and staff make money — whether you say parlour or salon.",
+    sections: [
+      {
+        heading: "What beauty parlour software usually includes",
+        body: "Typical modules parlour owners evaluate:",
+        bullets: [
+          "Appointment book + walk-in billing",
+          "GST invoices and digital payments",
+          "Customer history (phone-first)",
+          "Staff / beautician assignment",
+          "Simple inventory for colour and retail",
+          "SMS or WhatsApp reminders",
+        ],
+      },
+      {
+        heading: "Parlour vs chain — when software requirements jump",
+        body:
+          "A single beauty parlour can run on a light app. The moment you open a second outlet — or want weekly profit by chair — you need multi-branch reporting, attendance trust, and standardised menus. That is the jump from parlour software to a salon management platform.",
+      },
+      {
+        heading: "India-specific buying tips",
+        body:
+          "Prefer WhatsApp over SMS-only, UPI at the desk, Hindi/English staff training materials, and local support hours. Ask for a live GST walk-in demo with your actual service menu (facials, cleanup, hair colour, bridal packages).",
+      },
+      {
+        heading: "Where Antrahq fits parlour brands that are scaling",
+        body:
+          "Antrahq serves hair, beauty, and spa formats on one India stack. Solo parlours evaluating first software can still learn from the checklist — growing brands with multiple parlours should book a growth audit to see branch P&L and desk billing together.",
+      },
+    ],
+    cta: "Running one or more beauty parlours? See if Antrahq fits — book a growth audit.",
+    faqs: [
+      {
+        q: "What is the best beauty parlour software in India?",
+        a: "Look for GST billing, WhatsApp, guest history, and staff assignment. Single parlours can use lighter tools; multi-outlet brands should shortlist a salon management platform with branch P&L.",
+      },
+      {
+        q: "Is beauty parlour software the same as salon software?",
+        a: "Yes in practice — Google shows overlapping results. “Parlour” is common India vernacular; “salon management software” is the broader category term.",
+      },
+    ],
+  },
+  "salon-software-small-business-india": {
+    slug: "salon-software-small-business-india",
+    type: "Guide",
+    title: "Salon software for small business in India",
+    seoTitle: "Salon software for small business & small salons in India",
+    seoDescription:
+      "Best salon software for small business in India: what single-outlet salons need vs when to upgrade to a multi-branch salon management platform.",
+    readMinutes: 7,
+    lede:
+      "Owners searching for salon software for small business in India usually want something staff can learn in a day: bookings or walk-ins, GST bills, and guest phone numbers. This guide separates “small salon now” needs from “branch two soon” needs.",
+    sections: [
+      {
+        heading: "Must-haves for a small salon or studio",
+        bullets: [
+          "Fast billing with GST",
+          "Guest phone book with last visit",
+          "Basic appointment or token queue",
+          "Simple staff sales view",
+          "Affordable monthly price without hidden seats",
+        ],
+        body: "Keep the first stack thin so the desk adopts it.",
+      },
+      {
+        heading: "When small-business software becomes a trap",
+        body:
+          "If you plan a second outlet in 12 months, buying a dead-end single-store tool forces a painful migration later. Prefer vendors that sell a clear upgrade path to multi-branch P&L, attendance, and campaigns — even if you start on one branch.",
+      },
+      {
+        heading: "Small salon vs multi-branch platform",
+        body:
+          "Small salon software optimises the desk. A multi-branch salon management platform optimises the network. Antrahq is aimed at operators who care about outlet comparison — including ambitious single-branch owners who already think like a chain.",
+      },
+      {
+        heading: "Practical next step",
+        body:
+          "Run the branch health score and the choose-salon-software checklist. If multi-branch signals matter, book an Antrahq growth audit; if you are truly one chair forever, a lighter India POS may be enough.",
+      },
+    ],
+    cta: "Small today, chain tomorrow? Map your path in an Antrahq growth audit.",
+    faqs: [
+      {
+        q: "What is the best salon software for a small salon in India?",
+        a: "Prioritise easy GST billing, guest CRM by phone, and price clarity. If you expect a second branch, shortlist platforms with multi-outlet reporting from day one.",
+      },
+      {
+        q: "Is free salon software in India good enough?",
+        a: "Free tools help you learn habits, but GST depth, WhatsApp, and support are often limited. Budget for a paid plan before Saturday peak season.",
+      },
+    ],
+  },
   "multi-branch-pnl-checklist": {
     slug: "multi-branch-pnl-checklist",
     type: "Guide",

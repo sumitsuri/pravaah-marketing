@@ -6,9 +6,9 @@ import { FinalCta } from "@/components/sections/FinalCta";
 import { PageHero } from "@/components/PageHero";
 
 export const metadata: Metadata = {
-  title: "Compare salon software for multi-branch chains in India",
+  title: "Compare best salon software — Antrahq vs Zenoti, MioSalon, Salonist",
   description:
-    "Compare Antrahq with Zenoti, MioSalon, and Salonist — pricing, multi-branch P&L, GST billing, CRM, and rollout fit for salon operators from one branch to large chains.",
+    "Compare the best salon management software options in India: Antrahq vs Zenoti, MioSalon, and Salonist — pricing, GST billing, multi-branch P&L, and rollout fit.",
   alternates: { canonical: "/compare/" },
 };
 
