@@ -9,7 +9,7 @@ export const brand = {
   mission:
     "Antrahq is a salon and spa management platform for India — connecting billing, guest CRM, inventory, staff attendance, WhatsApp marketing, branch profitability, Local Spotlight, and guest reviews for multi-location chains so founders, ops heads, and finance leaders work from one shared view.",
   footer: "Built in India · Salon & spa · 1 branch to any scale",
-  email: "hello@antrahq.com",
+  email: "antrahq@gmail.com",
   cta: {
     primary: "Book a growth audit",
     primaryShort: "Growth audit",
