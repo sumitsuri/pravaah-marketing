@@ -16,7 +16,7 @@ Open [http://localhost:3000](http://localhost:3000)
 ## Brand
 
 - **Site:** `antrahq.com` (primary)
-- **Email:** `antrahq@gmail.com`
+- **Email:** `contact@antrahq.com`
 - **Tagline:** Every location in sync. Every day clearer.
 
 ## Deploy
