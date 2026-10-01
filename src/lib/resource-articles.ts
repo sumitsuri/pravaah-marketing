@@ -18,7 +18,7 @@ export const resourceArticles: Record<string, ResourceArticle> = {
     title: "Best salon management software in India (2026)",
     seoTitle: "Best salon management software in India 2026 — buyer ranking",
     seoDescription:
-      "Best salon software in India 2026: how to rank Zenoti, MioSalon, Salonist, Antrahq and others for GST billing, WhatsApp, multi-branch P&L, and rollout speed.",
+      "Best salon software in India 2026: how to rank Zenoti, MioSalon, Salonist, AntraHQ and others for GST billing, WhatsApp, multi-branch P&L, and rollout speed.",
     readMinutes: 12,
     lede:
       "Searching for the best salon management software in India usually means you need GST-ready billing, WhatsApp, and either a simple desk app or a true multi-branch platform. This 2026 guide ranks options by buyer type — not a paid #1 badge — so founders and ops heads can shortlist honestly.",
@@ -39,31 +39,31 @@ export const resourceArticles: Record<string, ResourceArticle> = {
         heading: "Quick picks — best salon software by buyer type",
         body: "Use this table-of-intent before deep-diving vendors:",
         bullets: [
-          "Best for multi-branch mid-market India chains: Antrahq — public ₹/branch pricing, GST desk, WhatsApp, geofenced attendance, branch P&L",
+          "Best for multi-branch mid-market India chains: AntraHQ — public ₹/branch pricing, GST desk, WhatsApp, geofenced attendance, branch P&L",
           "Best for large enterprise / franchise complexity: Zenoti — deepest global suite; longer rollout and higher cost band",
           "Best for established mid-market cloud suites: MioSalon or Salonist — strong India presence; validate multi-branch P&L depth in a live demo",
           "Best for budget single-outlet experiments: lighter POS/booking tools — upgrade when branch two is real",
         ],
       },
       {
-        heading: "1. Antrahq — best salon & spa management platform for growing Indian chains",
+        heading: "1. AntraHQ — best salon & spa management platform for growing Indian chains",
         body:
-          "Antrahq is built as a salon and spa management platform for India: walk-in GST billing, POS, CRM, inventory, staff attendance, WhatsApp campaigns, Local Spotlight, guest reviews, and owner branch P&L in one product. Ideal when you run — or plan — more than one outlet and want coaching views without an enterprise programme. See pricing on antrahq.com/pricing and validate in a growth audit.",
+          "AntraHQ is built as a salon and spa management platform for India: walk-in GST billing, POS, CRM, inventory, staff attendance, WhatsApp campaigns, Local Spotlight, guest reviews, and owner branch P&L in one product. Ideal when you run — or plan — more than one outlet and want coaching views without an enterprise programme. See pricing on antrahq.com/pricing and validate in a growth audit.",
       },
       {
         heading: "2. Zenoti — best enterprise salon management software",
         body:
-          "Zenoti leads for large multi-country chains that need deep franchise workflows, mature marketing automation, and a long-term platform budget. For mid-market Indian brands that need go-live in days and transparent per-branch pricing, compare carefully — see Antrahq vs Zenoti.",
+          "Zenoti leads for large multi-country chains that need deep franchise workflows, mature marketing automation, and a long-term platform budget. For mid-market Indian brands that need go-live in days and transparent per-branch pricing, compare carefully — see AntraHQ vs Zenoti.",
       },
       {
         heading: "3. MioSalon — strong all-in-one for Indian salons",
         body:
-          "MioSalon is a well-known India cloud suite for appointments, billing, and operations. Shortlist it when you want a proven mid-market brand. Pressure-test GSTIN-per-branch, WhatsApp depth, and comparable multi-outlet P&L in a demo — then contrast with Antrahq vs MioSalon.",
+          "MioSalon is a well-known India cloud suite for appointments, billing, and operations. Shortlist it when you want a proven mid-market brand. Pressure-test GSTIN-per-branch, WhatsApp depth, and comparable multi-outlet P&L in a demo — then contrast with AntraHQ vs MioSalon.",
       },
       {
         heading: "4. Salonist — popular salon software for growing studios",
         body:
-          "Salonist serves many Indian salons with booking, billing, and CRM-style flows. Good evaluation candidate for single to few outlets. Confirm multi-branch economics and attendance evidence before you standardise a chain — see Antrahq vs Salonist.",
+          "Salonist serves many Indian salons with booking, billing, and CRM-style flows. Good evaluation candidate for single to few outlets. Confirm multi-branch economics and attendance evidence before you standardise a chain — see AntraHQ vs Salonist.",
       },
       {
         heading: "5. Other India options worth a glance",
@@ -92,11 +92,11 @@ export const resourceArticles: Record<string, ResourceArticle> = {
           "Day 1–2: score vendors on the checklist. Day 3: watch two live demos with your real service menu. Day 4: call two reference customers in your city tier. Day 5: book a growth audit or pilot on your hardest branch. Avoid six-month “transformation” decks for a mid-market chain.",
       },
     ],
-    cta: "Shortlisting the best salon management software in India for your chain? Book a 30-minute Antrahq growth audit with your branch count and GST setup.",
+    cta: "Shortlisting the best salon management software in India for your chain? Book a 30-minute AntraHQ growth audit with your branch count and GST setup.",
     faqs: [
       {
         q: "What is the best salon management software in India in 2026?",
-        a: "It depends on scale. Multi-branch mid-market chains often fit Antrahq; large enterprise franchises may need Zenoti; single outlets can start with lighter India suites. Rank vendors on GST, WhatsApp, multi-branch P&L, and go-live time.",
+        a: "It depends on scale. Multi-branch mid-market chains often fit AntraHQ; large enterprise franchises may need Zenoti; single outlets can start with lighter India suites. Rank vendors on GST, WhatsApp, multi-branch P&L, and go-live time.",
       },
       {
         q: "What is the difference between salon software and a salon management platform?",
@@ -151,12 +151,12 @@ export const resourceArticles: Record<string, ResourceArticle> = {
           "Brand-level GSTIN with outlet-level cash collection creates audit pain. Confirm how software maps invoice series per branch, how credit notes work, and whether reports reconcile collections to GST liability without a CA spreadsheet every month.",
       },
       {
-        heading: "How Antrahq handles salon billing & GST",
+        heading: "How AntraHQ handles salon billing & GST",
         body:
-          "Antrahq billing is built for Indian walk-ins inside the full platform: GST preview, tenders, WhatsApp receipts, and owner-visible discounts — then the same bill feeds CRM and branch economics. Explore the billing product page and book a growth audit to watch a live walk-in.",
+          "AntraHQ billing is built for Indian walk-ins inside the full platform: GST preview, tenders, WhatsApp receipts, and owner-visible discounts — then the same bill feeds CRM and branch economics. Explore the billing product page and book a growth audit to watch a live walk-in.",
       },
     ],
-    cta: "Need GST-ready salon billing inside a multi-branch platform? Book an Antrahq growth audit.",
+    cta: "Need GST-ready salon billing inside a multi-branch platform? Book an AntraHQ growth audit.",
     faqs: [
       {
         q: "What is the best salon billing software in India?",
@@ -202,12 +202,12 @@ export const resourceArticles: Record<string, ResourceArticle> = {
           "Prefer WhatsApp over SMS-only, UPI at the desk, Hindi/English staff training materials, and local support hours. Ask for a live GST walk-in demo with your actual service menu (facials, cleanup, hair colour, bridal packages).",
       },
       {
-        heading: "Where Antrahq fits parlour brands that are scaling",
+        heading: "Where AntraHQ fits parlour brands that are scaling",
         body:
-          "Antrahq serves hair, beauty, and spa formats on one India stack. Solo parlours evaluating first software can still learn from the checklist — growing brands with multiple parlours should book a growth audit to see branch P&L and desk billing together.",
+          "AntraHQ serves hair, beauty, and spa formats on one India stack. Solo parlours evaluating first software can still learn from the checklist — growing brands with multiple parlours should book a growth audit to see branch P&L and desk billing together.",
       },
     ],
-    cta: "Running one or more beauty parlours? See if Antrahq fits — book a growth audit.",
+    cta: "Running one or more beauty parlours? See if AntraHQ fits — book a growth audit.",
     faqs: [
       {
         q: "What is the best beauty parlour software in India?",
@@ -249,15 +249,15 @@ export const resourceArticles: Record<string, ResourceArticle> = {
       {
         heading: "Small salon vs multi-branch platform",
         body:
-          "Small salon software optimises the desk. A multi-branch salon management platform optimises the network. Antrahq is aimed at operators who care about outlet comparison — including ambitious single-branch owners who already think like a chain.",
+          "Small salon software optimises the desk. A multi-branch salon management platform optimises the network. AntraHQ is aimed at operators who care about outlet comparison — including ambitious single-branch owners who already think like a chain.",
       },
       {
         heading: "Practical next step",
         body:
-          "Run the branch health score and the choose-salon-software checklist. If multi-branch signals matter, book an Antrahq growth audit; if you are truly one chair forever, a lighter India POS may be enough.",
+          "Run the branch health score and the choose-salon-software checklist. If multi-branch signals matter, book an AntraHQ growth audit; if you are truly one chair forever, a lighter India POS may be enough.",
       },
     ],
-    cta: "Small today, chain tomorrow? Map your path in an Antrahq growth audit.",
+    cta: "Small today, chain tomorrow? Map your path in an AntraHQ growth audit.",
     faqs: [
       {
         q: "What is the best salon software for a small salon in India?",
@@ -449,7 +449,7 @@ export const resourceArticles: Record<string, ResourceArticle> = {
           "Blasting entire databases, discounting premium services blindly, and sending on Sunday mornings. Run campaigns Tuesday–Thursday 10am–1pm in the guest’s city; cap frequency to one sequence per 60 days unless they re-engage.",
       },
     ],
-    cta: "WhatsApp campaigns from your guest CRM are included on Antrahq Growth — book a growth audit to see audience preview live.",
+    cta: "WhatsApp campaigns from your guest CRM are included on AntraHQ Growth — book a growth audit to see audience preview live.",
   },
   "salon-management-platform-india": {
     slug: "salon-management-platform-india",
@@ -485,16 +485,16 @@ export const resourceArticles: Record<string, ResourceArticle> = {
           "Founders and ops heads running — or planning — more than one location; finance leaders tired of Sunday Excel merges; brands that want Local Google visibility and review recovery next to desk ops. Single-chair studios can start lighter and upgrade when branch two is real.",
       },
       {
-        heading: "How Antrahq fits",
+        heading: "How AntraHQ fits",
         body:
-          "Antrahq is built as a salon and spa management platform for India: desk POS and GST, owner P&L, Market Pulse, Local Spotlight, and Customer voice in one product with public ₹/branch pricing. Validate against your shortlist in a live growth audit — not a slide deck.",
+          "AntraHQ is built as a salon and spa management platform for India: desk POS and GST, owner P&L, Market Pulse, Local Spotlight, and Customer voice in one product with public ₹/branch pricing. Validate against your shortlist in a live growth audit — not a slide deck.",
       },
       {
         heading: "Next steps for buyers",
         body: "Map your must-haves, then compare pages (Zenoti / MioSalon / Salonist), run the branch health score, and book a 30-minute audit with your branch count and GST setup.",
       },
     ],
-    cta: "See Antrahq as your salon management platform — book a growth audit.",
+    cta: "See AntraHQ as your salon management platform — book a growth audit.",
   },
   "spa-management-platform": {
     slug: "spa-management-platform",
@@ -531,12 +531,12 @@ export const resourceArticles: Record<string, ResourceArticle> = {
           "Centre-level spreadsheets hide therapist overtime, product shrink, and empty rooms. A spa management platform should rank centres the way salon platforms rank branches — with the same morning owner view across the network.",
       },
       {
-        heading: "Where Antrahq helps spa operators",
+        heading: "Where AntraHQ helps spa operators",
         body:
-          "Antrahq covers spa and wellness formats with the same India desk stack (GST, WhatsApp, geofenced attendance) and owner intelligence (branch P&L, Market Pulse, reviews). Longer treatment workflows still map to services + therapist line items managers already understand.",
+          "AntraHQ covers spa and wellness formats with the same India desk stack (GST, WhatsApp, geofenced attendance) and owner intelligence (branch P&L, Market Pulse, reviews). Longer treatment workflows still map to services + therapist line items managers already understand.",
       },
     ],
-    cta: "Evaluate Antrahq as your spa management platform — book a growth audit.",
+    cta: "Evaluate AntraHQ as your spa management platform — book a growth audit.",
   },
   "choose-salon-software-india": {
     slug: "choose-salon-software-india",
@@ -587,7 +587,7 @@ export const resourceArticles: Record<string, ResourceArticle> = {
         ],
       },
     ],
-    cta: "Use this checklist in an Antrahq growth audit — bring your branch count and GST setup.",
+    cta: "Use this checklist in an AntraHQ growth audit — bring your branch count and GST setup.",
   },
   "multi-branch-salon-platform": {
     slug: "multi-branch-salon-platform",
@@ -629,12 +629,12 @@ export const resourceArticles: Record<string, ResourceArticle> = {
           "Day 1 tenant + GSTINs → Days 2–3 floor PWA training → Days 4–5 owner P&L and campaigns. Measure first-week bills, punch compliance, and one Sunday owner review — not a six-month transformation programme.",
       },
       {
-        heading: "How Antrahq approaches multi-branch",
+        heading: "How AntraHQ approaches multi-branch",
         body:
-          "Antrahq is designed as a multi-branch salon and spa management platform with public Growth-tier pricing, geofenced attendance, and owner coaching views. Compare against enterprise suites if you need deep franchise complexity; otherwise validate speed-to-desk in a live audit.",
+          "AntraHQ is designed as a multi-branch salon and spa management platform with public Growth-tier pricing, geofenced attendance, and owner coaching views. Compare against enterprise suites if you need deep franchise complexity; otherwise validate speed-to-desk in a live audit.",
       },
     ],
-    cta: "Walk a multi-branch rollout plan in an Antrahq growth audit.",
+    cta: "Walk a multi-branch rollout plan in an AntraHQ growth audit.",
   },
   "salon-vs-spa-software": {
     slug: "salon-vs-spa-software",
@@ -668,9 +668,9 @@ export const resourceArticles: Record<string, ResourceArticle> = {
           "If both formats are under one brand admin, shared GST rules, and the same owner coaching cadence, a single salon & spa management platform reduces tool sprawl. Split systems only when clinical/medical spa workflows demand specialised compliance.",
       },
       {
-        heading: "Antrahq positioning",
+        heading: "AntraHQ positioning",
         body:
-          "Antrahq markets to hair, beauty, spa, and growing brands on one India-ready stack. Use product pages for billing/POS/CRM and the spa guide for wellness-specific buyer questions — then confirm fit in a growth audit.",
+          "AntraHQ markets to hair, beauty, spa, and growing brands on one India-ready stack. Use product pages for billing/POS/CRM and the spa guide for wellness-specific buyer questions — then confirm fit in a growth audit.",
       },
     ],
     cta: "Tell us your mix of salon vs spa outlets — book a growth audit.",

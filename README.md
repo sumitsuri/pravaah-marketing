@@ -1,8 +1,8 @@
-# Antrahq Marketing Site
+# AntraHQ Marketing Site
 
-Public marketing website for **Antrahq** — independent multi-location ops platform for India (salon chains today; clinics, pharmacies, and more tomorrow).
+Public marketing website for **AntraHQ** — independent multi-location ops platform for India (salon chains today; clinics, pharmacies, and more tomorrow).
 
-Repo folder name remains `pravaah-marketing` for deployment continuity; all user-facing copy uses **Antrahq**.
+Repo folder name remains `pravaah-marketing` for deployment continuity; all user-facing copy uses **AntraHQ**.
 
 ## Run locally
 

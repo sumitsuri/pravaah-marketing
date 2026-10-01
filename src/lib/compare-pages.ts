@@ -19,13 +19,13 @@ export const comparePages: Record<string, ComparePage> = {
   zenoti: {
     slug: "zenoti",
     competitor: "Zenoti",
-    seoTitle: "Antrahq vs Zenoti — Zenoti alternative for Indian salon chains",
+    seoTitle: "AntraHQ vs Zenoti — Zenoti alternative for Indian salon chains",
     seoDescription:
-      "Zenoti alternative for India: compare Antrahq vs Zenoti on pricing transparency, GST billing, WhatsApp, multi-branch P&L, and rollout speed for mid-market salon chains.",
+      "Zenoti alternative for India: compare AntraHQ vs Zenoti on pricing transparency, GST billing, WhatsApp, multi-branch P&L, and rollout speed for mid-market salon chains.",
     eyebrow: "Compare · Enterprise vs mid-market",
-    title: "Antrahq vs Zenoti",
+    title: "AntraHQ vs Zenoti",
     lede:
-      "Zenoti is a proven enterprise platform for large salon and spa chains worldwide. Antrahq focuses on mid-market Indian chains that want connected billing, CRM, staff, inventory, and branch profitability without a long enterprise rollout.",
+      "Zenoti is a proven enterprise platform for large salon and spa chains worldwide. AntraHQ focuses on mid-market Indian chains that want connected billing, CRM, staff, inventory, and branch profitability without a long enterprise rollout.",
     competitorStrengths: [
       "Deep enterprise feature set for large chains and franchises",
       "Mature multi-location reporting, marketing automation, and integrations",
@@ -83,13 +83,13 @@ export const comparePages: Record<string, ComparePage> = {
   miosalon: {
     slug: "miosalon",
     competitor: "MioSalon",
-    seoTitle: "Antrahq vs MioSalon — MioSalon alternative India",
+    seoTitle: "AntraHQ vs MioSalon — MioSalon alternative India",
     seoDescription:
-      "MioSalon alternative for Indian chains: compare Antrahq vs MioSalon on multi-branch P&L, GST POS, WhatsApp, attendance, and growth-decision fit.",
+      "MioSalon alternative for Indian chains: compare AntraHQ vs MioSalon on multi-branch P&L, GST POS, WhatsApp, attendance, and growth-decision fit.",
     eyebrow: "Compare · All-in-one platforms",
-    title: "Antrahq vs MioSalon",
+    title: "AntraHQ vs MioSalon",
     lede:
-      "MioSalon is a widely used cloud salon platform with strong automation for appointments, billing, and client management. Antrahq adds a growth-decision layer — branch P&L, Market Pulse, and connected profitability signals for multi-branch operators.",
+      "MioSalon is a widely used cloud salon platform with strong automation for appointments, billing, and client management. AntraHQ adds a growth-decision layer — branch P&L, Market Pulse, and connected profitability signals for multi-branch operators.",
     competitorStrengths: [
       "Established salon automation: bookings, billing, feedback, and marketing",
       "Outlet-based pricing that scales with location count",
@@ -145,13 +145,13 @@ export const comparePages: Record<string, ComparePage> = {
   salonist: {
     slug: "salonist",
     competitor: "Salonist",
-    seoTitle: "Antrahq vs Salonist — Salonist alternative for India chains",
+    seoTitle: "AntraHQ vs Salonist — Salonist alternative for India chains",
     seoDescription:
-      "Salonist alternative for growing Indian salons: compare Antrahq vs Salonist on GST billing, multi-branch P&L, WhatsApp, attendance, and scale from one outlet to many.",
+      "Salonist alternative for growing Indian salons: compare AntraHQ vs Salonist on GST billing, multi-branch P&L, WhatsApp, attendance, and scale from one outlet to many.",
     eyebrow: "Compare · Growing chains",
-    title: "Antrahq vs Salonist",
+    title: "AntraHQ vs Salonist",
     lede:
-      "Salonist is a popular, approachable salon management tool for growing businesses. Antrahq targets operators in India who need connected profitability intelligence and room to scale — from a single outlet to a full network — not just POS and bookings.",
+      "Salonist is a popular, approachable salon management tool for growing businesses. AntraHQ targets operators in India who need connected profitability intelligence and room to scale — from a single outlet to a full network — not just POS and bookings.",
     competitorStrengths: [
       "Easy to adopt for smaller teams getting off spreadsheets",
       "Core POS, booking, inventory, and client management in one place",

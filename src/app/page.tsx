@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     absolute: `${brand.name} — ${brand.searchCategory}`,
   },
   description:
-    "Best salon and spa management platform for India. Antrahq connects GST billing, POS, CRM, attendance, WhatsApp, and multi-branch P&L — salon software built for chains from one outlet to national networks.",
+    "Best salon and spa management platform for India. AntraHQ connects GST billing, POS, CRM, attendance, WhatsApp, and multi-branch P&L — salon software built for chains from one outlet to national networks.",
   alternates: { canonical: "/" },
 };
 

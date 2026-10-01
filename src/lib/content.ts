@@ -1,5 +1,5 @@
 export const brand = {
-  name: "Antrahq",
+  name: "AntraHQ",
   productLabel: "Growth Decision Platform",
   /** Brand category — how we want to be remembered */
   tagline: "Every aspect connected. Every decision sharper.",
@@ -7,7 +7,7 @@ export const brand = {
   searchCategory: "Salon & spa management platform for India",
   short: "Run every branch. See every signal. Make the next growth decision.",
   mission:
-    "Antrahq is a salon and spa management platform for India — connecting billing, guest CRM, inventory, staff attendance, WhatsApp marketing, branch profitability, Local Spotlight, and guest reviews for multi-location chains so founders, ops heads, and finance leaders work from one shared view.",
+    "AntraHQ is a salon and spa management platform for India — connecting billing, guest CRM, inventory, staff attendance, WhatsApp marketing, branch profitability, Local Spotlight, and guest reviews for multi-location chains so founders, ops heads, and finance leaders work from one shared view.",
   footer: "Built in India · Salon & spa · 1 branch to any scale",
   email: "contact@antrahq.com",
   cta: {
@@ -19,7 +19,7 @@ export const brand = {
     /** E.164 without + for wa.me links — never rendered in UI */
     phoneE164: "918095679454",
     defaultMessage:
-      "Hi Antrahq team — I'd like to book a multi-branch growth audit for our salon chain. Can we find a time?",
+      "Hi AntraHQ team — I'd like to book a multi-branch growth audit for our salon chain. Can we find a time?",
     ctaLabel: "Talk to us",
   },
 } as const;
@@ -88,10 +88,10 @@ export const sectionCopy = {
   decisionPlatform: {
     eyebrow: "One connected platform",
     title: "Billing, CRM, inventory, staff, and profitability — wired together.",
-    lede: "Most salon software handles the front desk well. Antrahq connects desk work to branch P&L, guest retention, and network coaching — so owners see where to act, not just what happened.",
+    lede: "Most salon software handles the front desk well. AntraHQ connects desk work to branch P&L, guest retention, and network coaching — so owners see where to act, not just what happened.",
   },
   growthLevers: {
-    eyebrow: "What you can run on Antrahq",
+    eyebrow: "What you can run on AntraHQ",
     title: "Eight modules salon operators use — from one outlet to full networks.",
     lede: "Desk ops, owner intelligence, local Google visibility, and guest reputation — each module maps to a job your team already does.",
   },
@@ -882,20 +882,20 @@ export const comparisonRows = [
 
 export const faqs = [
   {
-    q: "Who is Antrahq built for?",
+    q: "Who is AntraHQ built for?",
     a: "Salon and spa operators in India — from a single outlet to large multi-branch networks. Buyers are usually founders, operations heads, or finance leaders who need GST billing, guest CRM, staff attendance, inventory, WhatsApp marketing, and branch profitability in one platform that scales as they grow.",
   },
   {
-    q: "Is Antrahq salon POS software or something else?",
-    a: "Antrahq is a salon and spa management platform — not only POS. It includes GST billing at the desk, plus multi-branch P&L, CRM, inventory, staff attendance, and WhatsApp campaigns. Owners use it to decide which branch to coach — not only to print a bill.",
+    q: "Is AntraHQ salon POS software or something else?",
+    a: "AntraHQ is a salon and spa management platform — not only POS. It includes GST billing at the desk, plus multi-branch P&L, CRM, inventory, staff attendance, and WhatsApp campaigns. Owners use it to decide which branch to coach — not only to print a bill.",
   },
   {
-    q: "How does Antrahq compare to Zenoti, MioSalon, or Salonist?",
-    a: "Zenoti suits large enterprise chains with custom rollouts. MioSalon and Salonist are strong operational tools for many Indian salons. Antrahq fits operators who want connected branch economics and public ₹/branch pricing — whether you run one location today or dozens tomorrow. See our compare pages for an honest side-by-side starting point.",
+    q: "How does AntraHQ compare to Zenoti, MioSalon, or Salonist?",
+    a: "Zenoti suits large enterprise chains with custom rollouts. MioSalon and Salonist are strong operational tools for many Indian salons. AntraHQ fits operators who want connected branch economics and public ₹/branch pricing — whether you run one location today or dozens tomorrow. See our compare pages for an honest side-by-side starting point.",
   },
   {
     q: "Do you take a cut of bookings?",
-    a: "No. Antrahq is subscription software for your brand. You keep booking revenue; we charge per branch per month.",
+    a: "No. AntraHQ is subscription software for your brand. You keep booking revenue; we charge per branch per month.",
   },
   {
     q: "Is WhatsApp marketing included?",
@@ -1006,7 +1006,7 @@ export const resources = [
   },
   {
     type: "Compare",
-    title: "Antrahq vs Zenoti, MioSalon & Salonist",
+    title: "AntraHQ vs Zenoti, MioSalon & Salonist",
     desc: "Honest starting points for your shortlist — validate in live demos.",
     href: "/compare/zenoti",
   },
@@ -1015,7 +1015,7 @@ export const resources = [
 export const productPages = {
   billing: {
     title: "Salon billing & GST invoicing software",
-    seoTitle: "Salon billing & GST software — salon management platform · Antrahq",
+    seoTitle: "Salon billing & GST software — salon management platform · AntraHQ",
     seoDescription:
       "GST-ready salon billing inside a salon management platform for Indian chains: walk-in wizard, branch GSTIN, CGST/SGST invoices, UPI/card/cash, and WhatsApp PDF receipts.",
     eyebrow: "Product · Billing",
@@ -1032,12 +1032,12 @@ export const productPages = {
   },
   pos: {
     title: "Salon POS software for India",
-    seoTitle: "Salon POS software India — GST, UPI & multi-branch platform · Antrahq",
+    seoTitle: "Salon POS software India — GST, UPI & multi-branch platform · AntraHQ",
     seoDescription:
       "Salon POS inside a multi-branch salon management platform for India: walk-in billing, UPI and card, GST invoices, stylist assignment, and WhatsApp receipts from one floor app.",
     eyebrow: "Product · POS",
     hero: "Salon POS that matches how Indian desks actually work — walk-ins, UPI, and GST.",
-    body: "Antrahq POS is phone-first: lookup the guest, add services with stylist accountability, preview tax, and close the bill in one flow. Every sale feeds guest CRM, branch revenue, and owner P&L — no export step.",
+    body: "AntraHQ POS is phone-first: lookup the guest, add services with stylist accountability, preview tax, and close the bill in one flow. Every sale feeds guest CRM, branch revenue, and owner P&L — no export step.",
     bullets: [
       "Cash, UPI, and card in one walk-in flow",
       "GST preview before payment collection",
@@ -1049,12 +1049,12 @@ export const productPages = {
   },
   crm: {
     title: "Salon CRM & guest management",
-    seoTitle: "Salon CRM software for multi-branch salon management platforms · Antrahq",
+    seoTitle: "Salon CRM software for multi-branch salon management platforms · AntraHQ",
     seoDescription:
       "Salon CRM in a salon management platform: phone-first guest profiles, visit history, spend segments, public enquiry leads, and WhatsApp win-back audiences for Indian chains.",
     eyebrow: "Product · CRM",
     hero: "Guest profiles that start at the phone number — and stay connected to every visit.",
-    body: "Antrahq CRM is not a separate database. Profiles grow from walk-ins, bookings, and public enquiries. Owners segment by visit gap and spend for WhatsApp win-backs; managers see history at the desk before the service starts.",
+    body: "AntraHQ CRM is not a separate database. Profiles grow from walk-ins, bookings, and public enquiries. Owners segment by visit gap and spend for WhatsApp win-backs; managers see history at the desk before the service starts.",
     bullets: [
       "Phone-first guest lookup at billing",
       "Visit and spend history on every profile",
@@ -1066,7 +1066,7 @@ export const productPages = {
   },
   analytics: {
     title: "Salon analytics, branch P&L & Market Pulse",
-    seoTitle: "Multi-branch salon analytics & branch P&L platform · Antrahq",
+    seoTitle: "Multi-branch salon analytics & branch P&L platform · AntraHQ",
     seoDescription:
       "Branch P&L and salon analytics in a salon management platform for India: revenue vs salary, rent, product cost, Market Pulse ranking, and coaching signals across every outlet.",
     eyebrow: "Product · Analytics",
@@ -1083,12 +1083,12 @@ export const productPages = {
   },
   staff: {
     title: "Salon staff management & attendance",
-    seoTitle: "Salon staff attendance software India · Antrahq",
+    seoTitle: "Salon staff attendance software India · AntraHQ",
     seoDescription:
       "Salon staff attendance with selfie and GPS geofence, leave workflows, late and missing-exit flags, and payroll signals for multi-branch chains.",
     eyebrow: "Product · Staff",
     hero: "Staff attendance your managers can verify — before payroll runs.",
-    body: "Managers and staff punch on the branch device. Antrahq stores photo evidence, distance from location, and inside/outside status — then surfaces late arrivals and missing exits for review. Targets and incentives stay CEO-gated where needed.",
+    body: "Managers and staff punch on the branch device. AntraHQ stores photo evidence, distance from location, and inside/outside status — then surfaces late arrivals and missing exits for review. Targets and incentives stay CEO-gated where needed.",
     bullets: [
       "Front-camera selfie capture",
       "Accuracy-aware GPS with distance-to-branch",
@@ -1100,12 +1100,12 @@ export const productPages = {
   },
   attendance: {
     title: "Verified salon attendance",
-    seoTitle: "Geofenced salon attendance · Antrahq",
+    seoTitle: "Geofenced salon attendance · AntraHQ",
     seoDescription:
       "Geofenced selfie attendance for salon staff: GPS verification, leave workflows, and exception review for multi-branch chains in India.",
     eyebrow: "Product · Attendance",
     hero: "Selfie. GPS. Geofence. Review before payroll.",
-    body: "Managers and staff punch on the branch device. Antrahq stores photo evidence, distance from location, and inside/outside status — then surfaces late arrivals and missing exits for review.",
+    body: "Managers and staff punch on the branch device. AntraHQ stores photo evidence, distance from location, and inside/outside status — then surfaces late arrivals and missing exits for review.",
     bullets: [
       "Front-camera selfie capture",
       "Accuracy-aware GPS with distance-to-branch",
@@ -1117,7 +1117,7 @@ export const productPages = {
   },
   campaigns: {
     title: "Salon WhatsApp marketing",
-    seoTitle: "Salon WhatsApp marketing & win-back campaigns · Antrahq",
+    seoTitle: "Salon WhatsApp marketing & win-back campaigns · AntraHQ",
     seoDescription:
       "WhatsApp marketing for salon chains: audience preview by visit and spend, opt-in aware win-backs, and campaigns included on Growth tier.",
     eyebrow: "Product · WhatsApp marketing",
@@ -1134,7 +1134,7 @@ export const productPages = {
   },
   inventory: {
     title: "Salon inventory management",
-    seoTitle: "Multi-branch salon inventory software · Antrahq",
+    seoTitle: "Multi-branch salon inventory software · AntraHQ",
     seoDescription:
       "Salon inventory for chains: branch stock, restock, usage, wastage, retail sales, and product cost in branch P&L.",
     eyebrow: "Product · Inventory",
@@ -1151,7 +1151,7 @@ export const productPages = {
   },
   "local-spotlight": {
     title: "Local Spotlight for salon chains",
-    seoTitle: "Local Spotlight — salon Google visibility & local SEO · Antrahq",
+    seoTitle: "Local Spotlight — salon Google visibility & local SEO · AntraHQ",
     seoDescription:
       "Local Spotlight for multi-branch salons: Local Visibility Score, Google Business Profile completeness, search rank, local rivals, and owner action plans in India.",
     eyebrow: "Product · Local Spotlight",
@@ -1169,7 +1169,7 @@ export const productPages = {
   },
   reviews: {
     title: "Salon reviews, ratings & Customer voice",
-    seoTitle: "Salon reviews & ratings software — QR to Google · Antrahq",
+    seoTitle: "Salon reviews & ratings software — QR to Google · AntraHQ",
     seoDescription:
       "Collect salon reviews after walk-in payment: QR rating invite, 5 category scores, route 4★+ to Google, private recovery for detractors, and Customer voice owner dashboard.",
     eyebrow: "Product · Reviews & ratings",

@@ -23,7 +23,7 @@ export default function BranchHealthScorePage() {
     if (pct >= 75) {
       band = "Strong foundation";
       note =
-        "You have solid rhythms — Antrahq can unify signals you already track into one owner view across branches.";
+        "You have solid rhythms — AntraHQ can unify signals you already track into one owner view across branches.";
     } else if (pct >= 50) {
       band = "Growing discipline";
       note =

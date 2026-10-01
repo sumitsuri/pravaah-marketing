@@ -1,4 +1,4 @@
-name: Deploy Antrahq marketing
+name: Deploy AntraHQ marketing
 
 on:
   push:

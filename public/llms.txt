@@ -1,4 +1,4 @@
-# Antrahq
+# AntraHQ
 > Salon & spa management platform for India — GST billing, POS, CRM, attendance, WhatsApp, multi-branch P&L.
 
 ## Primary
@@ -18,9 +18,9 @@
 - [Multi-branch salon platform](https://antrahq.com/resources/multi-branch-salon-platform/)
 
 ## Comparisons
-- [Antrahq vs Zenoti](https://antrahq.com/compare/zenoti/)
-- [Antrahq vs MioSalon](https://antrahq.com/compare/miosalon/)
-- [Antrahq vs Salonist](https://antrahq.com/compare/salonist/)
+- [AntraHQ vs Zenoti](https://antrahq.com/compare/zenoti/)
+- [AntraHQ vs MioSalon](https://antrahq.com/compare/miosalon/)
+- [AntraHQ vs Salonist](https://antrahq.com/compare/salonist/)
 
 ## Contact
 - Email: antrahq@gmail.com

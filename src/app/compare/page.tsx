@@ -6,9 +6,9 @@ import { FinalCta } from "@/components/sections/FinalCta";
 import { PageHero } from "@/components/PageHero";
 
 export const metadata: Metadata = {
-  title: "Compare best salon software — Antrahq vs Zenoti, MioSalon, Salonist",
+  title: "Compare best salon software — AntraHQ vs Zenoti, MioSalon, Salonist",
   description:
-    "Compare the best salon management software options in India: Antrahq vs Zenoti, MioSalon, and Salonist — pricing, GST billing, multi-branch P&L, and rollout fit.",
+    "Compare the best salon management software options in India: AntraHQ vs Zenoti, MioSalon, and Salonist — pricing, GST billing, multi-branch P&L, and rollout fit.",
   alternates: { canonical: "/compare/" },
 };
 
@@ -18,7 +18,7 @@ export default function CompareIndexPage() {
       <PageHero
         eyebrow="Compare"
         title="Salon software comparisons for multi-branch buyers"
-        body="Honest starting points — not attack ads. Each page explains where a competitor excels and where Antrahq fits operators scaling from one branch to many."
+        body="Honest starting points — not attack ads. Each page explains where a competitor excels and where AntraHQ fits operators scaling from one branch to many."
       />
       <section className="section-pad bg-white">
         <div className="container-wide grid gap-4 sm:grid-cols-3">

@@ -31,7 +31,7 @@ function ThemePreviewCard({ themeId }: { themeId: MarketingThemeId }) {
         </div>
         <div>
           <p className="text-[10px] font-semibold" style={{ color: site.text }}>
-            Antrahq
+            AntraHQ
           </p>
           <p className="text-[9px]" style={{ color: site.textMuted }}>
             {theme.label}

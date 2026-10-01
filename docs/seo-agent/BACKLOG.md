@@ -67,7 +67,7 @@ autonomous action per the agent's operating rules. Log them here as standing
 recommendations for the human owner, and don't repeat the same recommendation every run
 once it's been surfaced twice — check `LOG.md` first.
 
-- [ ] Google Business Profile listing(s) for Antrahq itself (not just the demo salon
+- [ ] Google Business Profile listing(s) for AntraHQ itself (not just the demo salon
       brands) if applicable — improves brand SERP presence.
 - [ ] Listings on B2B software review/discovery sites that rank heavily for "best X
       software" queries: G2, Capterra, GetApp, SoftwareSuggest, TrustRadius, Crozdesk.

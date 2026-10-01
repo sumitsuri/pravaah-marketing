@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Page not found",
-  description: "The page you requested does not exist on Antrahq.",
+  description: "The page you requested does not exist on AntraHQ.",
   robots: { index: false, follow: true },
 };
 
@@ -13,7 +13,7 @@ export default function NotFound() {
       <section className="section-pad !pt-10">
         <div className="container-narrow text-center">
           <p className="eyebrow">404</p>
-          <h1 className="display mt-3">This page is not on Antrahq.</h1>
+          <h1 className="display mt-3">This page is not on AntraHQ.</h1>
           <p className="lede mx-auto mt-5 max-w-xl">
             The link may be outdated, or the page was moved. Head back to the homepage or explore
             products and pricing.

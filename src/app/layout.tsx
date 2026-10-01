@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     template: `%s · ${brand.name}`,
   },
   description:
-    "Salon and spa management platform for India. Antrahq connects billing, POS, CRM, inventory, staff attendance, WhatsApp marketing, and branch P&L for multi-location salon and spa operators — from one outlet to national chains.",
+    "Salon and spa management platform for India. AntraHQ connects billing, POS, CRM, inventory, staff attendance, WhatsApp marketing, and branch P&L for multi-location salon and spa operators — from one outlet to national chains.",
   keywords: [
     "best salon software in India",
     "best salon management software in India",
@@ -66,7 +66,7 @@ export const metadata: Metadata = {
         url: "/og-default.png",
         width: 1200,
         height: 630,
-        alt: "Antrahq — multi-branch salon management software for India",
+        alt: "AntraHQ — multi-branch salon management software for India",
       },
     ],
   },

@@ -42,7 +42,7 @@ This file scopes what's being tracked; `BACKLOG.md` scopes what's being *done* a
 - salon software vs spa software
 - how to choose salon software India
 - [competitor] alternative (see below)
-- [competitor] vs Antrahq
+- [competitor] vs AntraHQ
 
 ## Named competitors to track and, where it's a fair fit, build `/compare/<slug>` pages for
 
