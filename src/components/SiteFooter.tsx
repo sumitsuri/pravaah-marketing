@@ -89,6 +89,12 @@ export function SiteFooter() {
           <Link href="/pricing" className="text-mist/80 hover:text-white">
             Pricing
           </Link>
+          <Link href="/privacy/" className="text-mist/80 hover:text-white">
+            Privacy
+          </Link>
+          <Link href="/terms/" className="text-mist/80 hover:text-white">
+            Terms
+          </Link>
           <Link href="/roi-calculator" className="text-mist/80 hover:text-white">
             ROI calculator
           </Link>
