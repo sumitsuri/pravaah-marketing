@@ -37,11 +37,15 @@ const config: Config = {
           DEFAULT: "#DB2777",
           soft: "#FCE7F3",
         },
-        /** Logo gold — wordmark "HQ", premium highlights. `dark` passes AA on white. */
+        /**
+         * Antra Gold has two tones — same 40° hue, tuned per background:
+         *  DEFAULT/light: on dark & violet backgrounds (7.7:1 on midnight)
+         *  dark ("Gold on Light"): on white & light backgrounds (5.1:1 on white) — never use DEFAULT for text on light.
+         */
         gold: {
-          DEFAULT: "#C08A2E",
-          light: "#E9C46A",
-          dark: "#8F6419",
+          DEFAULT: "#E3B04B",
+          light: "#E3B04B",
+          dark: "#92650C",
           soft: "#FBF3DC",
         },
         /** Problem / risk callouts and warning statuses */

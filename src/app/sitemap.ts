@@ -17,6 +17,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/compare/", priority: 0.8, changeFrequency: "monthly" },
     { path: "/resources/", priority: 0.7, changeFrequency: "weekly" },
     { path: "/customers/", priority: 0.5, changeFrequency: "monthly" },
+    { path: "/brand/", priority: 0.4, changeFrequency: "yearly" },
     { path: "/roi-calculator/", priority: 0.5, changeFrequency: "monthly" },
     { path: "/branch-health-score/", priority: 0.5, changeFrequency: "monthly" },
     { path: "/privacy/", priority: 0.2, changeFrequency: "yearly" },

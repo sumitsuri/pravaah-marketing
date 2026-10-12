@@ -574,6 +574,104 @@ export const resourceArticles: Record<string, ResourceArticle> = {
       },
     ],
   },
+  "barbershop-software-india": {
+    slug: "barbershop-software-india",
+    type: "Guide",
+    title: "Barbershop & men's salon software in India: a practical guide",
+    seoTitle: "Barbershop Software India: Men's Salon Guide",
+    seoDescription:
+      "Barbershop and men's salon software for India: fast walk-in billing, GST, UPI, chair-wise staff tracking, memberships for regulars and WhatsApp reminders.",
+    readMinutes: 7,
+    lede:
+      "Barbershops and men's salons run on speed: short services, heavy walk-ins, weekend rushes and regulars who come back every two to four weeks. The right software keeps the queue moving, tracks every barber's sales fairly and brings regulars back on time — without adding work at the counter.",
+    sections: [
+      {
+        heading: "What makes barbershops different",
+        body: "Compared with a full-service salon, a barbershop sells fewer, faster services to more people. That shifts what software must do well:",
+        bullets: [
+          "Billing in seconds — most tickets are a haircut, beard trim or shave",
+          "Walk-in heavy days, especially weekends and before festivals",
+          "Barbers paid on service share, so each line must record who did it",
+          "Regulars on a predictable cycle — perfect for reminders and memberships",
+          "Small retail (beard oil, wax, shampoo) that is easy to lose track of",
+        ],
+      },
+      {
+        heading: "Must-have features for barbershop software",
+        body: "Shortlist tools that cover these without extra apps:",
+        bullets: [
+          "Phone-number guest lookup and a 3-step walk-in bill",
+          "GST invoice with your GSTIN and a WhatsApp PDF receipt",
+          "UPI, cash and card in one flow",
+          "Barber on every line item for fair commissions",
+          "Memberships or grooming packages for regulars",
+          "WhatsApp reminders to guests past their usual visit gap",
+          "Selfie + GPS attendance if you run more than one shop",
+        ],
+      },
+      {
+        heading: "One shop vs a barbershop chain",
+        body: "A single shop mainly needs fast billing and reminders. Once you open a second outlet you also need comparable profit per shop, one service menu across outlets and verified attendance — buy for where you'll be in 18 months.",
+      },
+      {
+        heading: "Where AntraHQ fits",
+        body: "AntraHQ gives barbershops GST walk-in billing with the barber on every line, guest history, memberships, WhatsApp win-backs, inventory for retail products, geofenced attendance and branch P&L — at ₹499 per branch per month on Starter, with no booking commission.",
+      },
+    ],
+    cta: "Running a barbershop or men's salon? Book a free demo and see a walk-in billed in under a minute.",
+    faqs: [
+      { q: "What is the best software for a barbershop in India?", a: "Look for fast GST walk-in billing, UPI, barber-wise commissions, WhatsApp reminders and memberships. AntraHQ covers these for single shops and chains with published per-branch pricing." },
+      { q: "Can I track each barber's sales and commission?", a: "Yes, if every service line records the barber. AntraHQ requires a staff member on each line, so commission reports are accurate." },
+      { q: "How much does barbershop software cost?", a: "In India it typically ranges from under ₹1,000 to around ₹5,000 per outlet per month. AntraHQ starts at ₹499 per branch per month." },
+    ],
+  },
+  "salon-software-hindi-regional-languages": {
+    slug: "salon-software-hindi-regional-languages",
+    type: "Guide",
+    title: "Salon software in Hindi and Indian languages: why it matters",
+    seoTitle: "Salon Software in Hindi & Indian Languages",
+    seoDescription:
+      "Why salon staff adopt software faster in their own language, and how AntraHQ's apps work in English, Hindi, Tamil, Telugu, Kannada, Marathi and more.",
+    readMinutes: 6,
+    lede:
+      "Most salon software is built in English. Many stylists, therapists and front-desk staff in India work more comfortably in Hindi, Tamil, Telugu, Kannada, Marathi, Bengali or another language — and software they can't read easily is software they avoid. Language is often the hidden reason a rollout fails.",
+    sections: [
+      {
+        heading: "Why language decides adoption",
+        body: "Owners usually buy software in English, but staff use it every hour. When the floor team struggles with the language:",
+        bullets: [
+          "Attendance punches get skipped or done for colleagues",
+          "Bills are entered late or wrong, so reports can't be trusted",
+          "Managers fall back to paper and WhatsApp groups",
+          "Training takes longer and has to be repeated for new hires",
+        ],
+      },
+      {
+        heading: "What to look for",
+        body: "Ask vendors for these in the demo:",
+        bullets: [
+          "Staff and manager apps fully translated — not just the login screen",
+          "Each user can choose their own language",
+          "Numbers, dates and currency in Indian formats",
+          "Owner dashboards can stay in English while the floor uses regional languages",
+        ],
+      },
+      {
+        heading: "Languages AntraHQ supports",
+        body: "AntraHQ's manager and staff apps are available in English plus nine Indian languages: Hindi, Bengali, Gujarati, Marathi, Punjabi, Kannada, Telugu, Tamil and Malayalam. Each person picks their own language, so a Chennai branch and a Pune branch can each work in theirs while the owner sees one report.",
+      },
+      {
+        heading: "Rolling out in the team's language",
+        body: "Set each staff member's language on day one, train with real walk-ins in that language, and review attendance and billing exceptions after the first week. Adoption shows up quickly in cleaner reports and fewer paper workarounds.",
+      },
+    ],
+    cta: "Want your team to use salon software in their own language? Book a free AntraHQ demo.",
+    faqs: [
+      { q: "Is there salon software in Hindi?", a: "Yes. AntraHQ's manager and staff apps are available in Hindi and eight other Indian languages, alongside English." },
+      { q: "Can different staff use different languages?", a: "Yes. Each person chooses their own language in the app." },
+      { q: "Which Indian languages does AntraHQ support?", a: "Hindi, Bengali, Gujarati, Marathi, Punjabi, Kannada, Telugu, Tamil and Malayalam, plus English." },
+    ],
+  },
   "spa-management-platform": {
     slug: "spa-management-platform",
     type: "Guide",
@@ -746,12 +844,28 @@ export const resourceArticles: Record<string, ResourceArticle> = {
           "If both formats are under one brand admin, shared GST rules, and the same owner coaching cadence, a single salon & spa management platform reduces tool sprawl. Split systems only when clinical/medical spa workflows demand specialised compliance.",
       },
       {
+        heading: "Booking, memberships and staff: side by side",
+        body: "The same modules behave differently in each format — check these in any demo:",
+        bullets: [
+          "Booking: salons fill short walk-in slots; spas schedule longer treatments and rooms in advance",
+          "Memberships and packages: spas sell multi-session packages; salons sell memberships to regulars",
+          "Staff: salons pay stylists on service share; spas track therapist hours and treatment mix",
+          "Inventory: salons track colour and retail; spas track oils, linens and consumables per treatment",
+          "Reviews: both win on Google, but spas depend more on ambience and cleanliness scores",
+        ],
+      },
+      {
         heading: "AntraHQ positioning",
         body:
           "AntraHQ markets to hair, beauty, spa, and growing brands on one India-ready stack. Use product pages for billing/POS/CRM and the spa guide for wellness-specific buyer questions — then confirm fit in a free demo.",
       },
     ],
     cta: "Tell us your mix of salon vs spa outlets — book a free demo.",
+    faqs: [
+      { q: "What is the difference between salon software and spa software?", a: "Salon software is built around fast walk-ins, stylist commissions and colour stock; spa software around longer treatments, therapist scheduling and multi-session packages. A platform that handles both lets a mixed brand run one system." },
+      { q: "Can one software run both a salon and a spa?", a: "Yes, if it supports services of different lengths, packages, staff-wise reporting and per-branch P&L. AntraHQ runs hair, beauty, nail and spa formats on one platform." },
+      { q: "Do spas need different reports from salons?", a: "Spas usually watch therapist utilisation and package redemption more closely; salons watch stylist sales and repeat-visit gaps. Both need profit by branch." },
+    ],
   },
 };
 

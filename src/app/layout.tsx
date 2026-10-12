@@ -31,6 +31,7 @@ export const metadata: Metadata = {
     icon: [
       { url: "/favicon.svg", type: "image/svg+xml" },
       { url: "/brand/icon-192.png", type: "image/png", sizes: "192x192" },
+      { url: "/brand/icon-512.png", type: "image/png", sizes: "512x512" },
     ],
     apple: [{ url: "/brand/apple-touch-icon.png", sizes: "180x180" }],
   },
@@ -73,10 +74,11 @@ const siteJsonLd = [
     "@type": "Organization",
     "@id": `${SITE_URL}/#organization`,
     name: SITE_NAME,
+    legalName: brand.legalName,
     url: SITE_URL,
     email: brand.email,
     description: brand.mission,
-    logo: { "@type": "ImageObject", url: `${SITE_URL}/brand/antrahq-mark-512.png`, width: 512, height: 512 },
+    logo: { "@type": "ImageObject", url: `${SITE_URL}/brand/icon-512.png`, width: 512, height: 512 },
     slogan: "Salons & Beyond",
     areaServed: { "@type": "Country", name: "India" },
     contactPoint: {
@@ -94,6 +96,8 @@ const siteJsonLd = [
     url: SITE_URL,
     name: SITE_NAME,
     publisher: { "@id": `${SITE_URL}/#organization` },
+    copyrightHolder: { "@id": `${SITE_URL}/#organization` },
+    copyrightYear: 2026,
     inLanguage: "en-IN",
   },
 ];

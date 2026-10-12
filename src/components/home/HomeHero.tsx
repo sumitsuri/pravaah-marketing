@@ -1,11 +1,11 @@
 import Link from "next/link";
-import { ArrowRight, CheckCircle2 } from "lucide-react";
+import { ArrowRight, ArrowUpRight, CheckCircle2 } from "lucide-react";
 import { brand, hero, painPoints } from "@/lib/content";
 import { FeatureScreen } from "@/components/mockups/FeatureScreen";
 import { HeroToasts } from "@/components/home/HeroToasts";
 import { painVisuals, tones } from "@/components/home/tones";
 
-const reassurance = ["Live the same day", "From ₹499 / branch / month", "No booking commission"];
+const reassurance = ["Live in about 2 hours", "0% booking commission", "GST + WhatsApp built in"];
 
 export function HomeHero() {
   return (
@@ -27,21 +27,34 @@ export function HomeHero() {
             </h1>
             <p className="lede mx-auto mt-5 lg:mx-0">{hero.subtitle}</p>
             <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row lg:justify-start">
-              <Link href="/demo" className="btn-primary btn-lg">
-                {brand.cta.primary} <ArrowRight className="h-4 w-4" aria-hidden />
+              <Link href="/demo" className="btn-primary btn-lg !bg-[#1a0b3d] hover:!bg-brand">
+                {brand.cta.primary}
+                <span className="arrow-tile" aria-hidden>
+                  <ArrowUpRight className="h-4 w-4" />
+                </span>
               </Link>
               <Link href="#problems" className="btn-secondary btn-lg">
                 {brand.cta.secondary}
               </Link>
             </div>
-            <ul className="mt-6 flex flex-wrap justify-center gap-x-5 gap-y-2 text-sm text-ink-mute lg:justify-start">
-              {reassurance.map((r) => (
-                <li key={r} className="inline-flex items-center gap-1.5">
-                  <CheckCircle2 className="h-4 w-4 text-win" aria-hidden />
-                  {r}
-                </li>
-              ))}
-            </ul>
+            {/* Offer card — the price hook, cashfree-style */}
+            <div className="relative mx-auto mt-8 flex max-w-md items-stretch overflow-hidden rounded-2xl border border-brand-200 bg-gradient-to-r from-brand-50 via-white to-amber-50 text-left shadow-card lg:mx-0">
+              <div className="flex flex-col justify-center border-r border-brand-100 px-5 py-4">
+                <p className="text-[11px] font-semibold uppercase tracking-[0.14em] text-ink-mute">Starts at</p>
+                <p className="font-display text-4xl leading-none text-ink">
+                  ₹499
+                </p>
+                <p className="mt-1 text-xs text-ink-mute">per branch / month</p>
+              </div>
+              <ul className="flex flex-col justify-center gap-1.5 px-5 py-4 text-sm text-ink-soft">
+                {reassurance.map((r) => (
+                  <li key={r} className="flex items-center gap-2">
+                    <CheckCircle2 className="h-4 w-4 shrink-0 text-win" aria-hidden />
+                    {r}
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
 
           <div className="relative mx-auto w-full max-w-lg lg:max-w-none" data-reveal>

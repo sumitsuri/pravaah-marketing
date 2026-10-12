@@ -63,7 +63,7 @@ export function SiteHeader() {
 
   return (
     <header
-      className={`fixed inset-x-0 top-0 z-50 border-b bg-white/90 backdrop-blur-lg transition-shadow ${
+      className={`fixed inset-x-0 top-0 z-50 border-b bg-white transition-shadow ${
         scrolled || mobile ? "border-surface-line shadow-sm" : "border-transparent"
       }`}
     >

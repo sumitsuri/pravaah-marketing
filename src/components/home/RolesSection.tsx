@@ -18,7 +18,10 @@ export function RolesSection() {
           <p className="eyebrow">One platform, every role</p>
           <h2 className="h-section mt-3">Everyone in your salon works from the same numbers</h2>
           <p className="lede mt-4">
-            Owners, managers, the front desk and stylists each get an app shaped around their job — all feeding one source of truth.
+            Owners, managers, the front desk and stylists each get an app shaped around their job — all feeding one source of truth.{" "}
+            <Link href="/customers" className="font-semibold text-brand hover:underline">
+              See how operators use AntraHQ
+            </Link>
           </p>
         </div>
         <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">

@@ -8,6 +8,8 @@
 
 export const brand = {
   name: "AntraHQ",
+  /** Registered company — use in copyright, legal pages and Organization schema */
+  legalName: "ANTRAHQ TECHNOLOGIES PRIVATE LIMITED",
   productLabel: "Salon & spa management software",
   tagline: "Every branch in sync. Every decision clearer.",
   /** Primary search category — matches the homepage <title> and H1 */
@@ -425,6 +427,11 @@ export const nav = {
       desc: "Phone-first guest profiles and visit history.",
     },
     {
+      href: "/products/online-booking",
+      title: "Online booking",
+      desc: "A booking link guests use any time.",
+    },
+    {
       href: "/products/memberships",
       title: "Memberships & packages",
       desc: "Sell plans at the desk with staff credit.",
@@ -477,6 +484,11 @@ export const verticals = [
     title: "Beauty parlours & nail studios",
     desc: "Service-mix reporting, packages, memberships and staff targets.",
     href: "/resources/nail-salon-software-india",
+  },
+  {
+    title: "Barbershops & men's salons",
+    desc: "Fast walk-ins, barber-wise commissions and reminders for regulars.",
+    href: "/resources/barbershop-software-india",
   },
   {
     title: "Spas & wellness centres",
@@ -678,6 +690,23 @@ export const productPages = {
       "Package and membership sales visible in owner reports",
     ],
     screen: "campaign" as const,
+  },
+  "online-booking": {
+    title: "Salon online booking & appointments",
+    seoTitle: "Salon Appointment Booking Software India | AntraHQ",
+    seoDescription:
+      "Online booking for salons and spas: a booking link guests use any time, bookings in the branch app, and WhatsApp confirmations for opted-in guests.",
+    eyebrow: "Product · Online booking",
+    hero: "Let guests book any time — even after you close — from a link you share everywhere.",
+    body: "Every AntraHQ brand and branch gets an online booking page. Guests pick a branch, services and a time slot; the booking appears in the branch's bookings list next to walk-ins, and guests who have opted in get a WhatsApp confirmation. Share the link on WhatsApp, Instagram and your Google Business Profile so new guests can book without calling.",
+    bullets: [
+      "Booking page for your brand and each branch",
+      "Guests choose branch, services and time",
+      "Bookings land in the branch app with walk-ins",
+      "WhatsApp confirmation for opted-in guests",
+      "Same guest profile as billing and campaigns",
+    ],
+    screen: "booking" as const,
   },
   analytics: {
     title: "Salon analytics, branch P&L & Market Pulse",

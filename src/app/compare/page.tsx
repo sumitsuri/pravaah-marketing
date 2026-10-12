@@ -4,7 +4,8 @@ import { PageHero } from "@/components/PageHero";
 import { EdgeSection } from "@/components/home/EdgeSection";
 import { FinalCta } from "@/components/sections/FinalCta";
 import { comparePages } from "@/lib/compare-pages";
-import { pageMetadata } from "@/lib/seo";
+import { itemListJsonLd, pageMetadata } from "@/lib/seo";
+import { JsonLd } from "@/components/JsonLd";
 
 export const metadata = pageMetadata({
   title: "Salon Software India Compared: AntraHQ vs Zenoti & Fresha",
@@ -18,6 +19,7 @@ export default function CompareIndexPage() {
   const pages = Object.values(comparePages);
   return (
     <>
+      <JsonLd data={itemListJsonLd(pages.map((p) => ({ name: p.title, path: `/compare/${p.slug}/` })))} />
       <PageHero
         eyebrow="Compare"
         title="Salon software comparisons for Indian salon & spa owners"

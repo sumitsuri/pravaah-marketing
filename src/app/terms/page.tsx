@@ -14,17 +14,19 @@ export default function TermsPage() {
         <div className="container-narrow prose prose-neutral max-w-none">
           <p className="eyebrow">Legal</p>
           <h1 className="display mt-3">Terms of use</h1>
-          <p className="lede mt-4 text-sm text-ink/70">Last updated: 10 March 2026</p>
+          <p className="lede mt-4 text-sm text-ink/70">Last updated: 12 October 2026</p>
 
           <p className="mt-6 text-sm leading-relaxed text-ink/80">
-            By accessing antrahq.com, api.antrahq.com, or Antrahq mobile/web applications, you agree to these terms.
+            These terms are an agreement between you and {brand.legalName} (&quot;AntraHQ&quot;, &quot;we&quot;, &quot;us&quot;), the
+            company that operates AntraHQ. By accessing antrahq.com, api.antrahq.com, or AntraHQ mobile/web applications, you
+            agree to these terms.
             If you use the product on behalf of a salon or brand, you confirm you have authority to bind that
             organization.
           </p>
 
           <h2 className="mt-10 font-display text-2xl text-ink">Service</h2>
           <p className="mt-3 text-sm leading-relaxed text-ink/80">
-            Antrahq provides software for salon and spa operations. Features depend on your subscription and
+            AntraHQ provides software for salon and spa operations. Features depend on your subscription and
             configuration. We may modify or discontinue features with reasonable notice where practical.
           </p>
 
@@ -52,7 +54,7 @@ export default function TermsPage() {
 
           <h2 className="mt-10 font-display text-2xl text-ink">Disclaimer &amp; liability</h2>
           <p className="mt-3 text-sm leading-relaxed text-ink/80">
-            The service is provided &quot;as is&quot; to the maximum extent permitted by law. Antrahq is not liable for
+            The service is provided &quot;as is&quot; to the maximum extent permitted by law. AntraHQ is not liable for
             indirect or consequential damages arising from use of the software. Business decisions (pricing, payroll,
             compliance) remain your responsibility.
           </p>

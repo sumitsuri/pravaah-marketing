@@ -81,6 +81,14 @@ export function breadcrumbJsonLd(crumbs: Crumb[]) {
   };
 }
 
+export function itemListJsonLd(items: { name: string; path: string }[]) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    itemListElement: items.map((it, i) => ({ "@type": "ListItem", position: i + 1, name: it.name, url: absoluteUrl(it.path) })),
+  };
+}
+
 export function faqJsonLd(faqs: readonly { q: string; a: string }[]) {
   return {
     "@context": "https://schema.org",

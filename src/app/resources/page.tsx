@@ -5,7 +5,8 @@ import { FinalCta } from "@/components/sections/FinalCta";
 import { resources } from "@/lib/content";
 import { compareNav } from "@/lib/compare-pages";
 import { resourceArticleList } from "@/lib/resource-articles";
-import { pageMetadata } from "@/lib/seo";
+import { itemListJsonLd, pageMetadata } from "@/lib/seo";
+import { JsonLd } from "@/components/JsonLd";
 
 export const metadata = pageMetadata({
   title: "Salon & Spa Software Guides for India",
@@ -17,6 +18,7 @@ export const metadata = pageMetadata({
 export default function ResourcesPage() {
   return (
     <>
+      <JsonLd data={itemListJsonLd(resourceArticleList.map((a) => ({ name: a.title, path: `/resources/${a.slug}/` })))} />
       <PageHero
         eyebrow="Resources"
         title="Salon & spa software guides for Indian owners"

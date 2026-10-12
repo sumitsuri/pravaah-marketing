@@ -227,6 +227,25 @@ const screens = {
       </div>
     </div>
   ),
+  booking: (
+    <div className="space-y-3 p-4">
+      <p className="text-xs font-semibold uppercase tracking-wider text-ink-mute">Book online · Indiranagar</p>
+      <div className="rounded-xl bg-surface p-3">
+        <p className="text-[11px] text-ink-mute">Service</p>
+        <p className="font-semibold text-ink">Hair spa · 60 min · ₹1,800</p>
+      </div>
+      <div className="grid grid-cols-4 gap-2 text-center text-xs font-semibold">
+        {["10:00", "11:30", "1:00", "4:30"].map((t, i) => (
+          <span key={t} className={`rounded-lg py-2 ${i === 1 ? "bg-brand text-white" : "bg-surface text-ink-mute"}`}>
+            {t}
+          </span>
+        ))}
+      </div>
+      <div className="rounded-xl bg-emerald-50 px-3 py-2 text-xs font-medium text-emerald-700">
+        Booked for Sat 11:30 · confirmation sent on WhatsApp
+      </div>
+    </div>
+  ),
   reviewQr: (
     <div className="space-y-3 p-4 text-center">
       <p className="text-xs font-semibold uppercase tracking-wider text-ink-mute">After payment</p>

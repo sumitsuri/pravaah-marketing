@@ -5,7 +5,12 @@ import { PageHero } from "@/components/PageHero";
 import { FeatureScreen } from "@/components/mockups/FeatureScreen";
 import { FinalCta } from "@/components/sections/FinalCta";
 import { nav, painPoints, productPages } from "@/lib/content";
-import { pageMetadata } from "@/lib/seo";
+import { faqJsonLd, pageMetadata } from "@/lib/seo";
+import { productSeo } from "@/lib/product-seo";
+import { resourceArticles } from "@/lib/resource-articles";
+import { compareNav } from "@/lib/compare-pages";
+import { JsonLd } from "@/components/JsonLd";
+import { FaqSection } from "@/components/sections/FaqSection";
 
 type ProductKey = keyof typeof productPages;
 
@@ -34,9 +39,12 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
   const href = `/products/${slug}`;
   const solves = painPoints.filter((p) => p.modules.some((m) => m.href === href));
   const related = nav.products.filter((p) => p.href !== href).slice(0, 4);
+  const seo = productSeo[slug];
+  const guides = (seo?.guides ?? []).map((g) => resourceArticles[g]).filter(Boolean);
 
   return (
     <>
+      {seo?.faqs?.length ? <JsonLd data={faqJsonLd(seo.faqs)} /> : null}
       <PageHero
         eyebrow={page.eyebrow}
         title={page.title}
@@ -64,6 +72,34 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
           <FeatureScreen variant={page.screen} elevated label={`${page.title} screen (demo data)`} />
         </div>
       </section>
+
+      {seo && (
+        <section className="section-pad bg-white !pt-0">
+          <div className="container-wide grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
+            <div>
+              <p className="eyebrow">Who it&apos;s for</p>
+              <h2 className="h-section mt-3 !text-3xl">Built for teams like yours</h2>
+              <p className="body-copy mt-4 !text-base">{seo.forWho}</p>
+            </div>
+            <div>
+              <p className="eyebrow">How it works</p>
+              <ol className="mt-4 space-y-4">
+                {seo.steps.map((st, i) => (
+                  <li key={st.title} className="flex gap-4">
+                    <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-brand to-accent text-sm font-bold text-white">
+                      {i + 1}
+                    </span>
+                    <span>
+                      <span className="block font-semibold text-ink">{st.title}</span>
+                      <span className="mt-0.5 block text-sm leading-relaxed text-ink-mute">{st.desc}</span>
+                    </span>
+                  </li>
+                ))}
+              </ol>
+            </div>
+          </div>
+        </section>
+      )}
 
       {solves.length > 0 && (
         <section className="section-pad bg-surface">
@@ -105,6 +141,38 @@ export default async function ProductDetailPage({ params }: { params: Promise<{ 
         </div>
       </section>
 
+      {(guides.length > 0 || compareNav.length > 0) && (
+        <section className="section-pad-sm bg-surface">
+          <div className="container-wide grid gap-8 md:grid-cols-2">
+            <div>
+              <h2 className="font-display text-xl text-ink">Guides for salon owners</h2>
+              <ul className="mt-4 space-y-2.5">
+                {guides.map((g) => (
+                  <li key={g.slug}>
+                    <Link href={`/resources/${g.slug}`} className="text-sm font-semibold text-brand hover:underline">
+                      {g.title}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <h2 className="font-display text-xl text-ink">Compare AntraHQ</h2>
+              <ul className="mt-4 space-y-2.5">
+                {compareNav.map((c) => (
+                  <li key={c.href}>
+                    <Link href={c.href} className="text-sm font-semibold text-brand hover:underline">
+                      {c.title}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {seo?.faqs?.length ? <FaqSection faqs={seo.faqs} title={`${page.title}: questions`} /> : null}
       <FinalCta />
     </>
   );

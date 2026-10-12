@@ -14,11 +14,11 @@ export default function PrivacyPage() {
         <div className="container-narrow prose prose-neutral max-w-none">
           <p className="eyebrow">Legal</p>
           <h1 className="display mt-3">Privacy policy</h1>
-          <p className="lede mt-4 text-sm text-ink/70">Last updated: 10 March 2026</p>
+          <p className="lede mt-4 text-sm text-ink/70">Last updated: 12 October 2026</p>
 
           <h2 className="mt-10 font-display text-2xl text-ink">Who we are</h2>
           <p className="mt-3 text-sm leading-relaxed text-ink/80">
-            {brand.name} (&quot;Antrahq&quot;, &quot;we&quot;, &quot;us&quot;) provides multi-location operations software for
+            {brand.legalName} (&quot;AntraHQ&quot;, &quot;we&quot;, &quot;us&quot;) provides multi-location operations software for
             salon and spa businesses in India. This policy covers our marketing site (antrahq.com), cloud API (
             api.antrahq.com), and mobile/web applications:
           </p>
@@ -30,7 +30,7 @@ export default function PrivacyPage() {
               <strong>Manager app</strong> (app.antrahq.com) — branch managers and brand owners (CEO)
             </li>
             <li>
-              <strong>Platform app</strong> (platform.antrahq.com) — Antrahq internal platform and sales operations
+              <strong>Platform app</strong> (platform.antrahq.com) — AntraHQ internal platform and sales operations
             </li>
           </ul>
 
@@ -65,8 +65,8 @@ export default function PrivacyPage() {
 
           <h2 className="mt-10 font-display text-2xl text-ink">Legal basis &amp; roles</h2>
           <p className="mt-3 text-sm leading-relaxed text-ink/80">
-            For salon customer and staff data, your business is typically the data controller and Antrahq acts as a
-            processor providing the platform. For Antrahq account administration and platform sales tools, Antrahq may act
+            For salon customer and staff data, your business is typically the data controller and AntraHQ acts as a
+            processor providing the platform. For AntraHQ account administration and platform sales tools, AntraHQ may act
             as controller for internal user accounts.
           </p>
 

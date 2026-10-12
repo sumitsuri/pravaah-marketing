@@ -6,6 +6,8 @@ import { JsonLd } from "@/components/JsonLd";
 import { FinalCta } from "@/components/sections/FinalCta";
 import { brand } from "@/lib/content";
 import { compareNav } from "@/lib/compare-pages";
+import { nav } from "@/lib/content";
+import { productSeo } from "@/lib/product-seo";
 import { resourceArticles } from "@/lib/resource-articles";
 import { absoluteUrl, CONTENT_UPDATED, faqJsonLd, pageMetadata, SITE_URL } from "@/lib/seo";
 
@@ -59,6 +61,8 @@ export default async function ResourceArticlePage({ params }: { params: Promise<
   if (article.faqs?.length) schemas.push(faqJsonLd(article.faqs));
 
   const related = relatedArticles(slug);
+  // Products whose pages point at this guide — keeps guides and product pages linked both ways.
+  const products = nav.products.filter((p) => productSeo[p.href.split("/").pop() as string]?.guides.includes(slug)).slice(0, 4);
 
   return (
     <>
@@ -129,6 +133,20 @@ export default async function ResourceArticlePage({ params }: { params: Promise<
                 </Link>
               </div>
             </aside>
+
+            {products.length > 0 && (
+              <section className="rounded-2xl border border-surface-line bg-surface p-6">
+                <h2 className="text-sm font-semibold uppercase tracking-[0.12em] text-ink">AntraHQ modules mentioned</h2>
+                <div className="mt-4 grid gap-3 sm:grid-cols-2">
+                  {products.map((p) => (
+                    <Link key={p.href} href={p.href} className="card card-hover p-4">
+                      <span className="block font-semibold text-ink">{p.title}</span>
+                      <span className="mt-0.5 block text-sm text-ink-mute">{p.desc}</span>
+                    </Link>
+                  ))}
+                </div>
+              </section>
+            )}
 
             <nav aria-label="Related reading" className="grid gap-8 border-t border-surface-line pt-8 sm:grid-cols-2">
               <div>

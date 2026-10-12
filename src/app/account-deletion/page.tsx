@@ -4,7 +4,7 @@ import Link from "next/link";
 import { brand } from "@/lib/content";
 
 export const metadata: Metadata = {
-  ...pageMetadata({ title: "Account deletion", description: `Request deletion of Antrahq app accounts and associated personal data.`, path: "/account-deletion/" }),
+  ...pageMetadata({ title: "Account deletion", description: `Request deletion of AntraHQ app accounts and associated personal data.`, path: "/account-deletion/" }),
 };
 
 export default function AccountDeletionPage() {
@@ -14,10 +14,10 @@ export default function AccountDeletionPage() {
         <div className="container-narrow prose prose-neutral max-w-none">
           <p className="eyebrow">Legal</p>
           <h1 className="display mt-3">Account deletion</h1>
-          <p className="lede mt-4 text-sm text-ink/70">Last updated: 10 March 2026</p>
+          <p className="lede mt-4 text-sm text-ink/70">Last updated: 12 October 2026</p>
 
           <p className="mt-6 text-sm leading-relaxed text-ink/80">
-            Antrahq publishes Employee, Manager, and Platform apps on Google Play and the Apple App Store. This page
+            {brand.legalName} (&quot;AntraHQ&quot;) publishes Employee, Manager, and Platform apps on Google Play and the Apple App Store. This page
             explains how users can request deletion of personal data tied to an app login.
           </p>
 
@@ -25,10 +25,10 @@ export default function AccountDeletionPage() {
           <p className="mt-3 text-sm leading-relaxed text-ink/80">
             Work accounts are created and managed by your salon or brand administrator. To remove your staff app login
             or personal profile data, contact your manager or brand owner first — they can deactivate the employee record
-            in Antrahq.
+            in AntraHQ.
           </p>
 
-          <h2 className="mt-10 font-display text-2xl text-ink">Request deletion from Antrahq</h2>
+          <h2 className="mt-10 font-display text-2xl text-ink">Request deletion from AntraHQ</h2>
           <p className="mt-3 text-sm leading-relaxed text-ink/80">
             Email{" "}
             <a href={`mailto:${brand.email}?subject=Account%20deletion%20request`} className="text-brand underline">

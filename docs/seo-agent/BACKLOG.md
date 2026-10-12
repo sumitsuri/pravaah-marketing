@@ -64,10 +64,23 @@ different query is more winnable.
 
 - [ ] `/compare/dingg` and `/compare/invoay` — India-native competitors that rank for the head terms
 - [ ] `/resources/salon-membership-software-india` (pairs with `/products/memberships`)
-- [ ] `/resources/salon-software-hindi` — the 10-Indian-language staff app is an angle no competitor owns
+- [x] (2026-10-12) `/resources/salon-software-hindi-regional-languages` — the 10-Indian-language angle
 - [ ] Replace illustrative scenarios on `/customers` with one named, permissioned customer story
 - [ ] Bump `CONTENT_UPDATED` in `src/lib/seo.ts` whenever page copy materially changes
 - [ ] Restore `npm run lint` — `next lint` was removed in Next 16 and the repo has no ESLint flat config
+
+## Done 2026-10-12 (SEO depth pass, not yet deployed)
+
+- Product pages deepened (who it's for, how it works, product FAQ + FAQPage schema, related guides/compare links)
+- New `/products/online-booking/` (salon appointment booking software), `/resources/barbershop-software-india/`
+- Tool pages get server-rendered method + FAQ + breadcrumbs; ItemList schema on /resources and /compare
+- Guides ⇄ products linked both ways; salon-vs-spa guide expanded
+
+## Next content candidates
+
+- [ ] `/compare/dingg`, `/compare/invoay`
+- [ ] `/resources/salon-membership-software-india`
+- [ ] City pages only once there are named customers per city
 
 ## Off-page / manual actions (agent cannot do these autonomously — surface, don't attempt)
 

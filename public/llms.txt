@@ -11,6 +11,7 @@
 - [Salon billing & GST](https://antrahq.com/products/billing/)
 - [Salon POS](https://antrahq.com/products/pos/)
 - [Salon CRM](https://antrahq.com/products/crm/)
+- [Online booking](https://antrahq.com/products/online-booking/)
 - [Memberships & packages](https://antrahq.com/products/memberships/)
 - [Branch P&L & analytics](https://antrahq.com/products/analytics/)
 - [Staff & attendance](https://antrahq.com/products/staff/)
@@ -25,6 +26,8 @@
 - [Beauty parlour software India](https://antrahq.com/resources/beauty-parlour-software-india/)
 - [Nail salon software India](https://antrahq.com/resources/nail-salon-software-india/)
 - [Spa management software](https://antrahq.com/resources/spa-management-platform/)
+- [Barbershop & men's salon software](https://antrahq.com/resources/barbershop-software-india/)
+- [Salon software in Hindi & Indian languages](https://antrahq.com/resources/salon-software-hindi-regional-languages/)
 - [Salon software for small business India](https://antrahq.com/resources/salon-software-small-business-india/)
 - [How to choose salon software in India](https://antrahq.com/resources/choose-salon-software-india/)
 - [Multi-branch salon software checklist](https://antrahq.com/resources/multi-branch-salon-platform/)
@@ -35,6 +38,10 @@
 - [AntraHQ vs Salonist](https://antrahq.com/compare/salonist/)
 - [AntraHQ vs Fresha](https://antrahq.com/compare/fresha/)
 
+## Brand
+- [Brand Centre — logo & guidelines](https://antrahq.com/brand/)
+
 ## Contact
+- Company: ANTRAHQ TECHNOLOGIES PRIVATE LIMITED
 - Email: contact@antrahq.com
 - Site: https://antrahq.com/

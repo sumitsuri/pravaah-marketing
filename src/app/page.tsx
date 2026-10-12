@@ -3,6 +3,8 @@ import { ProofBar } from "@/components/home/ProofBar";
 import { ProblemsSection } from "@/components/home/ProblemsSection";
 import { RolesSection } from "@/components/home/RolesSection";
 import { AutopilotSection } from "@/components/home/AutopilotSection";
+import { PlatformSection } from "@/components/home/PlatformSection";
+import { ModuleDock } from "@/components/home/ModuleDock";
 import { EdgeSection } from "@/components/home/EdgeSection";
 import { FitSection } from "@/components/home/FitSection";
 import { PricingPreview } from "@/components/sections/PricingPreview";
@@ -65,6 +67,7 @@ export default function HomePage() {
       <HomeHero />
       <ProofBar />
       <ProblemsSection />
+      <PlatformSection />
       <AutopilotSection />
       <RolesSection />
       <EdgeSection />
@@ -72,6 +75,7 @@ export default function HomePage() {
       <PricingPreview />
       <FaqSection />
       <FinalCta />
+      <ModuleDock />
     </>
   );
 }
