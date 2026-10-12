@@ -1,27 +1,40 @@
 # AntraHQ
-> Salon & spa management platform for India — GST billing, POS, CRM, attendance, WhatsApp, multi-branch P&L.
+> Salon & spa management software for India — GST billing, POS, guest CRM, memberships & packages, geofenced staff attendance, inventory, WhatsApp marketing, branch P&L, Local Spotlight (Google visibility) and QR reviews. One platform from a single salon to multi-city chains. Published pricing: ₹499 (Starter) and ₹699 (Growth) per branch per month; Enterprise on request. No booking commission. Manager and staff apps in English + 9 Indian languages.
 
 ## Primary
-- [Home](https://antrahq.com/): Platform overview
-- [Pricing](https://antrahq.com/pricing/): Public ₹/branch pricing
-- [Demo / growth audit](https://antrahq.com/demo/): Book a 30-minute audit
-- [Products](https://antrahq.com/products/): Full product suite
+- [Home](https://antrahq.com/): Problems AntraHQ solves for salon owners, by role, with a category comparison
+- [Pricing](https://antrahq.com/pricing/): Public ₹ per-branch pricing and plan FAQ
+- [Products](https://antrahq.com/products/): Every module
+- [Book a demo](https://antrahq.com/demo/): Free 30-minute demo
 
-## High-intent guides
+## Products
+- [Salon billing & GST](https://antrahq.com/products/billing/)
+- [Salon POS](https://antrahq.com/products/pos/)
+- [Salon CRM](https://antrahq.com/products/crm/)
+- [Memberships & packages](https://antrahq.com/products/memberships/)
+- [Branch P&L & analytics](https://antrahq.com/products/analytics/)
+- [Staff & attendance](https://antrahq.com/products/staff/)
+- [Inventory](https://antrahq.com/products/inventory/)
+- [WhatsApp marketing](https://antrahq.com/products/campaigns/)
+- [Local Spotlight](https://antrahq.com/products/local-spotlight/)
+- [Reviews & Customer voice](https://antrahq.com/products/reviews/)
+
+## Buyer guides
 - [Best salon management software in India 2026](https://antrahq.com/resources/best-salon-software-india-2026/)
 - [Salon billing & GST software India](https://antrahq.com/resources/salon-billing-gst-software-india/)
 - [Beauty parlour software India](https://antrahq.com/resources/beauty-parlour-software-india/)
+- [Nail salon software India](https://antrahq.com/resources/nail-salon-software-india/)
+- [Spa management software](https://antrahq.com/resources/spa-management-platform/)
 - [Salon software for small business India](https://antrahq.com/resources/salon-software-small-business-india/)
-- [Salon management platform India](https://antrahq.com/resources/salon-management-platform-india/)
-- [Spa management platform](https://antrahq.com/resources/spa-management-platform/)
-- [Choose salon software India](https://antrahq.com/resources/choose-salon-software-india/)
-- [Multi-branch salon platform](https://antrahq.com/resources/multi-branch-salon-platform/)
+- [How to choose salon software in India](https://antrahq.com/resources/choose-salon-software-india/)
+- [Multi-branch salon software checklist](https://antrahq.com/resources/multi-branch-salon-platform/)
 
 ## Comparisons
 - [AntraHQ vs Zenoti](https://antrahq.com/compare/zenoti/)
 - [AntraHQ vs MioSalon](https://antrahq.com/compare/miosalon/)
 - [AntraHQ vs Salonist](https://antrahq.com/compare/salonist/)
+- [AntraHQ vs Fresha](https://antrahq.com/compare/fresha/)
 
 ## Contact
-- Email: antrahq@gmail.com
+- Email: contact@antrahq.com
 - Site: https://antrahq.com/

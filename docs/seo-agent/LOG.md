@@ -6,6 +6,24 @@ access) — a log entry is required every run so gaps in the cadence are visible
 
 ---
 
+## 2026-10-12 — Full SEO + UX revamp (manual, branch `revamp/seo-enterprise-site`, not yet merged)
+
+**Context:** Owner asked for an SEO audit plus an enterprise-grade, pain-point-led homepage and a
+consistent visual system. Full findings and the 30-day owner plan are in `AUDIT-2026-10-12.md`.
+
+**Key finding:** antrahq.com is not visible in Google even for its brand name — indexing and
+authority (Search Console, directories, reviews, links) are the bottleneck, not on-page code.
+
+**Shipped on the branch:** single design system (violet tokens matching the product app, one font,
+one type scale); homepage 17 → 9 sections built around 6 customer pains; per-page canonical/OG via
+`src/lib/seo.ts`; breadcrumbs + page-scoped JSON-LD; all titles ≤ 60 and descriptions ≤ 158;
+`/compare/fresha`, `/resources/nail-salon-software-india`, `/products/memberships`; new OG image;
+accessibility fixes; honesty fixes (no fake logos, scenario labels, no unverifiable SLAs).
+
+**Next run should:** confirm the branch is merged and deployed, then pick from "New content queue".
+
+---
+
 ## 2026-09-27 — Setup run (manual, not the scheduled task)
 
 **Context:** Initial setup of the recurring SEO agent for antrahq.com, requested by the

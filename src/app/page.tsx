@@ -1,50 +1,74 @@
-import type { Metadata } from "next";
-import { HeroSection } from "@/components/sections/HeroSection";
-import { StatsBand } from "@/components/sections/StatsBand";
-import { TrustStrip } from "@/components/sections/TrustStrip";
-import { DecisionPlatformSection } from "@/components/sections/DecisionPlatformSection";
-import { AgentFlowSection } from "@/components/sections/AgentFlowSection";
-import { LeakSolutionsSection } from "@/components/sections/LeakSolutionsSection";
-import { VideoStoriesSection } from "@/components/sections/VideoStoriesSection";
-import { PredictiveSection } from "@/components/sections/PredictiveSection";
-import { LocalReputationSection } from "@/components/sections/LocalReputationSection";
-import { VerticalsSection } from "@/components/sections/VerticalsSection";
-import { OsSection } from "@/components/sections/OsSection";
-import { TimelineSection } from "@/components/sections/TimelineSection";
-import { ResultsSection } from "@/components/sections/ResultsSection";
-import { ComparisonSection } from "@/components/sections/ComparisonSection";
+import { HomeHero } from "@/components/home/HomeHero";
+import { ProofBar } from "@/components/home/ProofBar";
+import { ProblemsSection } from "@/components/home/ProblemsSection";
+import { RolesSection } from "@/components/home/RolesSection";
+import { AutopilotSection } from "@/components/home/AutopilotSection";
+import { EdgeSection } from "@/components/home/EdgeSection";
+import { FitSection } from "@/components/home/FitSection";
 import { PricingPreview } from "@/components/sections/PricingPreview";
 import { FaqSection } from "@/components/sections/FaqSection";
 import { FinalCta } from "@/components/sections/FinalCta";
-import { brand } from "@/lib/content";
+import { JsonLd } from "@/components/JsonLd";
+import { brand, faqs, pricing } from "@/lib/content";
+import { faqJsonLd, pageMetadata, SITE_URL } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: {
-    absolute: `${brand.name} — ${brand.searchCategory}`,
-  },
+export const metadata = pageMetadata({
+  title: "Salon & Spa Management Software India | AntraHQ",
+  absoluteTitle: true,
   description:
-    "Best salon and spa management platform for India. AntraHQ connects GST billing, POS, CRM, attendance, WhatsApp, and multi-branch P&L — salon software built for chains from one outlet to national networks.",
-  alternates: { canonical: "/" },
+    "Salon & spa management software for India: GST billing, POS, CRM, memberships, staff attendance, WhatsApp marketing and branch P&L. From ₹499/branch.",
+  path: "/",
+});
+
+const softwareJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "@id": `${SITE_URL}/#software`,
+  name: brand.name,
+  url: SITE_URL,
+  applicationCategory: "BusinessApplication",
+  applicationSubCategory: "Salon and spa management software",
+  operatingSystem: "Web, Android",
+  description: brand.mission,
+  inLanguage: ["en-IN", "hi-IN", "bn-IN", "gu-IN", "mr-IN", "pa-IN", "kn-IN", "te-IN", "ta-IN", "ml-IN"],
+  featureList: [
+    "GST salon billing with per-branch GSTIN",
+    "Salon POS with UPI, card and cash",
+    "Guest CRM and WhatsApp marketing",
+    "Memberships and service packages",
+    "Geofenced selfie staff attendance",
+    "Salon inventory management",
+    "Multi-branch P&L and branch ranking",
+    "Local Google visibility tracking",
+    "QR review collection with Google routing",
+  ],
+  offers: {
+    "@type": "AggregateOffer",
+    priceCurrency: "INR",
+    lowPrice: "499",
+    highPrice: "699",
+    offerCount: pricing.filter((p) => p.price.startsWith("₹")).length,
+    url: `${SITE_URL}/pricing/`,
+  },
+  publisher: { "@id": `${SITE_URL}/#organization` },
 };
 
-/** Conversion funnel: hook → trust → platform story → proof → compare → price → close */
+/**
+ * Homepage narrative — each section answers one buyer question, in order:
+ * What is it? → Is it credible? → Does it solve MY problem? → What runs for me 24×7? → Who uses it? →
+ * Why not a competitor? → Does it fit my business / how fast? → What does it cost? → Objections → Act.
+ */
 export default function HomePage() {
   return (
     <>
-      <HeroSection />
-      <StatsBand />
-      <TrustStrip />
-      <DecisionPlatformSection />
-      <AgentFlowSection />
-      <LeakSolutionsSection />
-      <LocalReputationSection />
-      <PredictiveSection />
-      <VideoStoriesSection />
-      <ResultsSection />
-      <VerticalsSection />
-      <OsSection />
-      <TimelineSection />
-      <ComparisonSection />
+      <JsonLd data={[softwareJsonLd, faqJsonLd(faqs)]} />
+      <HomeHero />
+      <ProofBar />
+      <ProblemsSection />
+      <AutopilotSection />
+      <RolesSection />
+      <EdgeSection />
+      <FitSection />
       <PricingPreview />
       <FaqSection />
       <FinalCta />

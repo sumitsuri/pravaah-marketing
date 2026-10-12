@@ -1,16 +1,14 @@
-"use client";
-
-import { motion } from "framer-motion";
+/** Illustrative product screens (demo data) — server-rendered, no client JS. */
 
 const screens = {
   walkin: (
     <div className="space-y-3 p-4">
         <div className="flex flex-wrap items-center gap-2 text-[10px] font-semibold uppercase tracking-wider text-ink-mute">
-        <span className="rounded-md bg-jade/15 px-2 py-1 text-jade">1 · Guest</span>
-        <span className="rounded-md bg-mist px-2 py-1">2 · Services</span>
-        <span className="rounded-md bg-mist px-2 py-1">3 · Pay</span>
+        <span className="rounded-md bg-brand/15 px-2 py-1 text-brand">1 · Guest</span>
+        <span className="rounded-md bg-surface-muted px-2 py-1">2 · Services</span>
+        <span className="rounded-md bg-surface-muted px-2 py-1">3 · Pay</span>
       </div>
-      <div className="rounded-xl bg-mist-soft p-3">
+      <div className="rounded-xl bg-surface p-3">
         <p className="text-[11px] text-ink-mute">Phone</p>
         <p className="font-semibold text-ink">+91 98XXX 41208 · Ananya R.</p>
       </div>
@@ -21,7 +19,7 @@ const screens = {
         ].map(([svc, staff, price]) => (
           <div
             key={svc}
-            className="flex items-center justify-between rounded-lg border border-ink/8 px-3 py-2 text-sm"
+            className="flex items-center justify-between rounded-lg border border-surface-line px-3 py-2 text-sm"
           >
             <div>
               <p className="font-medium text-ink">{svc}</p>
@@ -31,7 +29,7 @@ const screens = {
           </div>
         ))}
       </div>
-      <div className="rounded-xl bg-jade px-4 py-3 text-center text-sm font-semibold text-white">
+      <div className="rounded-xl bg-brand px-4 py-3 text-center text-sm font-semibold text-white">
         Collect ₹5,200 · GST ready
       </div>
     </div>
@@ -42,13 +40,13 @@ const screens = {
         Branch P&L · March
       </p>
       <div className="grid grid-cols-2 gap-2">
-        <div className="rounded-xl bg-mist-soft p-3">
+        <div className="rounded-xl bg-surface p-3">
           <p className="text-[11px] text-ink-mute">Revenue</p>
           <p className="font-display text-2xl text-ink">₹18.2L</p>
         </div>
-        <div className="rounded-xl bg-mist-soft p-3">
+        <div className="rounded-xl bg-surface p-3">
           <p className="text-[11px] text-ink-mute">Net after costs</p>
-          <p className="font-display text-2xl text-jade">₹4.6L</p>
+          <p className="font-display text-2xl text-brand">₹4.6L</p>
         </div>
       </div>
       {[
@@ -61,8 +59,8 @@ const screens = {
             <span>{label}</span>
             <span className="text-ink-mute">{pct}</span>
           </div>
-          <div className="h-2 overflow-hidden rounded-full bg-mist">
-            <div className="h-full rounded-full bg-jade" style={{ width: `${w}%` }} />
+          <div className="h-2 overflow-hidden rounded-full bg-surface-muted">
+            <div className="bar-grow h-full rounded-full bg-gradient-to-r from-brand to-accent" style={{ width: `${w}%` }} />
           </div>
         </div>
       ))}
@@ -71,8 +69,8 @@ const screens = {
   attendance: (
     <div className="space-y-3 p-4">
       <p className="text-xs font-semibold uppercase tracking-wider text-ink-mute">Verified punch</p>
-      <div className="flex items-center gap-3 rounded-xl border border-jade/30 bg-jade/5 p-3">
-        <div className="flex h-14 w-14 items-center justify-center rounded-full bg-jade/20 text-xs font-semibold text-jade">
+      <div className="flex items-center gap-3 rounded-xl border border-brand/30 bg-brand/5 p-3">
+        <div className="flex h-14 w-14 items-center justify-center rounded-full bg-brand/20 text-xs font-semibold text-brand">
           SELFIE
         </div>
         <div>
@@ -88,11 +86,11 @@ const screens = {
         ].map(([name, time, status]) => (
           <div
             key={name}
-            className="grid grid-cols-[1fr_auto_auto] items-center gap-2 rounded-lg bg-mist-soft px-3 py-2 text-sm"
+            className="grid grid-cols-[1fr_auto_auto] items-center gap-2 rounded-lg bg-surface px-3 py-2 text-sm"
           >
             <span className="font-medium">{name}</span>
             <span className="text-ink-mute">{time}</span>
-            <span className={status === "Late" || status === "Missing" ? "text-amber" : "text-jade"}>
+            <span className={status === "Late" || status === "Missing" ? "text-pain" : "text-brand"}>
               {status}
             </span>
           </div>
@@ -105,7 +103,7 @@ const screens = {
       <p className="text-xs font-semibold uppercase tracking-wider text-ink-mute">
         WhatsApp campaign
       </p>
-      <div className="rounded-xl border border-ink/8 p-3">
+      <div className="rounded-xl border border-surface-line p-3">
         <p className="text-sm font-semibold text-ink">Win-back · 45–90 days</p>
         <p className="mt-1 text-xs leading-relaxed text-ink-mute">
           Hi {"{{name}}"}, missing your glow? Book this week and enjoy 15% on colour services.
@@ -117,13 +115,13 @@ const screens = {
           ["Opted in", "171"],
           ["Est. reach", "93%"],
         ].map(([k, v]) => (
-          <div key={k} className="rounded-lg bg-mist-soft py-2">
+          <div key={k} className="rounded-lg bg-surface py-2">
             <p className="text-[10px] text-ink-mute">{k}</p>
             <p className="font-display text-lg text-ink">{v}</p>
           </div>
         ))}
       </div>
-      <div className="rounded-xl bg-jade py-2.5 text-center text-sm font-semibold text-white">
+      <div className="rounded-xl bg-brand py-2.5 text-center text-sm font-semibold text-white">
         Send campaign
       </div>
     </div>
@@ -138,7 +136,7 @@ const screens = {
       ].map((row) => (
         <div
           key={row.name}
-          className="flex items-center justify-between rounded-xl bg-mist-soft px-3 py-3"
+          className="flex items-center justify-between rounded-xl bg-surface px-3 py-3"
         >
           <div>
             <p className="text-sm font-semibold text-ink">{row.name}</p>
@@ -146,7 +144,7 @@ const screens = {
               {row.rank} · {row.note}
             </p>
           </div>
-          <span className="font-display text-lg text-jade">{row.score}</span>
+          <span className="font-display text-lg text-brand">{row.score}</span>
         </div>
       ))}
     </div>
@@ -164,11 +162,11 @@ const screens = {
       ].map(([name, qty, status]) => (
         <div
           key={name}
-          className="flex items-center justify-between rounded-lg border border-ink/8 px-3 py-2 text-sm"
+          className="flex items-center justify-between rounded-lg border border-surface-line px-3 py-2 text-sm"
         >
           <span className="font-medium">{name}</span>
           <span className="text-ink-mute">{qty} units</span>
-          <span className={status === "OK" ? "text-jade" : "text-amber"}>{status}</span>
+          <span className={status === "OK" ? "text-brand" : "text-pain"}>{status}</span>
         </div>
       ))}
     </div>
@@ -176,11 +174,11 @@ const screens = {
   localSpotlight: (
     <div className="space-y-3 p-4">
       <p className="text-xs font-semibold uppercase tracking-wider text-ink-mute">Local Spotlight</p>
-      <div className="rounded-xl border border-jade/30 bg-jade/5 p-3">
+      <div className="rounded-xl border border-brand/30 bg-brand/5 p-3">
         <p className="text-[11px] text-ink-mute">Local Visibility Score</p>
         <div className="mt-1 flex items-end justify-between">
-          <p className="font-display text-3xl text-jade">78</p>
-          <span className="rounded-full bg-jade/15 px-2 py-0.5 text-[10px] font-semibold text-jade">Good</span>
+          <p className="font-display text-3xl text-brand">78</p>
+          <span className="rounded-full bg-brand/15 px-2 py-0.5 text-[10px] font-semibold text-brand">Good</span>
         </div>
       </div>
       {[
@@ -189,12 +187,12 @@ const screens = {
         ["GBP completeness", "82% · add services"],
         ["Rival · 1.2 km", "4.6★ · 240 reviews"],
       ].map(([label, value]) => (
-        <div key={label} className="flex items-center justify-between rounded-lg bg-mist-soft px-3 py-2 text-sm">
+        <div key={label} className="flex items-center justify-between rounded-lg bg-surface px-3 py-2 text-sm">
           <span className="text-ink-mute">{label}</span>
           <span className="font-medium text-ink">{value}</span>
         </div>
       ))}
-      <div className="rounded-xl bg-amber/10 px-3 py-2 text-xs text-amber">
+      <div className="rounded-xl bg-pain-soft px-3 py-2 text-xs text-pain">
         Playbook: grow reviews toward rival median
       </div>
     </div>
@@ -203,11 +201,11 @@ const screens = {
     <div className="space-y-3 p-4">
       <p className="text-xs font-semibold uppercase tracking-wider text-ink-mute">Customer voice · 30 days</p>
       <div className="grid grid-cols-2 gap-2">
-        <div className="rounded-xl bg-mist-soft p-3">
+        <div className="rounded-xl bg-surface p-3">
           <p className="text-[10px] text-ink-mute">Avg rating</p>
-          <p className="font-display text-2xl text-jade">4.6★</p>
+          <p className="font-display text-2xl text-brand">4.6★</p>
         </div>
-        <div className="rounded-xl bg-mist-soft p-3">
+        <div className="rounded-xl bg-surface p-3">
           <p className="text-[10px] text-ink-mute">Reviews</p>
           <p className="font-display text-2xl text-ink">142</p>
         </div>
@@ -223,8 +221,8 @@ const screens = {
           <span className="font-semibold text-ink">{score}</span>
         </div>
       ))}
-      <div className="rounded-xl border border-amber/30 bg-amber/5 px-3 py-2 text-xs">
-        <span className="font-semibold text-amber">3 recoveries</span>
+      <div className="rounded-xl border border-pain/20 bg-pain-soft px-3 py-2 text-xs">
+        <span className="font-semibold text-pain">3 recoveries</span>
         <span className="text-ink-mute"> · 1–3★ awaiting follow-up</span>
       </div>
     </div>
@@ -232,12 +230,12 @@ const screens = {
   reviewQr: (
     <div className="space-y-3 p-4 text-center">
       <p className="text-xs font-semibold uppercase tracking-wider text-ink-mute">After payment</p>
-      <div className="mx-auto flex h-28 w-28 items-center justify-center rounded-xl border-2 border-dashed border-jade/40 bg-jade/5">
-        <span className="text-[10px] font-semibold uppercase tracking-wider text-jade">Review QR</span>
+      <div className="mx-auto flex h-28 w-28 items-center justify-center rounded-xl border-2 border-dashed border-brand/40 bg-brand/5">
+        <span className="text-[10px] font-semibold uppercase tracking-wider text-brand">Review QR</span>
       </div>
       <p className="text-sm font-semibold text-ink">Ask for a quick rating</p>
       <p className="text-xs text-ink-mute">Guest scans on their phone · ~10 seconds</p>
-      <div className="flex justify-center gap-1 text-lg text-jade">★★★★★</div>
+      <div className="flex justify-center gap-1 text-lg text-brand">★★★★★</div>
       <p className="text-[10px] text-ink-mute">4★+ can open Google review · 1–3★ stays private</p>
     </div>
   ),
@@ -248,28 +246,26 @@ export type ScreenVariant = keyof typeof screens;
 export function FeatureScreen({
   variant,
   elevated = false,
+  label,
 }: {
   variant: ScreenVariant;
   elevated?: boolean;
+  /** Accessible name for the mock, e.g. "Branch P&L screen" */
+  label?: string;
 }) {
   return (
-    <motion.div
-      className={`overflow-hidden rounded-2xl border bg-white ${
-        elevated
-          ? "border-ink/12 shadow-premium ring-1 ring-white/80"
-          : "border-ink/10 shadow-[0_20px_50px_-30px_rgba(11,31,28,0.4)]"
+    <figure
+      className={`overflow-hidden rounded-2xl border border-surface-line bg-white ${
+        elevated ? "shadow-premium-lg" : "shadow-card"
       }`}
-      initial={{ opacity: 0, y: 16 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-80px" }}
-      transition={{ duration: 0.55 }}
+      aria-label={label ?? "AntraHQ product screen (demo data)"}
     >
-      <div className="flex items-center gap-1.5 border-b border-ink/8 bg-mist-soft px-3 py-2.5">
+      <div className="flex items-center gap-1.5 border-b border-surface-line bg-surface px-3 py-2.5" aria-hidden>
         <span className="h-2 w-2 rounded-full bg-ink/15" />
         <span className="h-2 w-2 rounded-full bg-ink/15" />
         <span className="h-2 w-2 rounded-full bg-ink/15" />
       </div>
       {screens[variant]}
-    </motion.div>
+    </figure>
   );
 }

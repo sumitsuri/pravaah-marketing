@@ -19,9 +19,9 @@ export const comparePages: Record<string, ComparePage> = {
   zenoti: {
     slug: "zenoti",
     competitor: "Zenoti",
-    seoTitle: "AntraHQ vs Zenoti — Zenoti alternative for Indian salon chains",
+    seoTitle: "AntraHQ vs Zenoti — Zenoti Alternative for India",
     seoDescription:
-      "Zenoti alternative for India: compare AntraHQ vs Zenoti on pricing transparency, GST billing, WhatsApp, multi-branch P&L, and rollout speed for mid-market salon chains.",
+      "Zenoti alternative for India: AntraHQ vs Zenoti on pricing transparency, GST billing, WhatsApp, multi-branch P&L and rollout speed for salon chains.",
     eyebrow: "Compare · Enterprise vs mid-market",
     title: "AntraHQ vs Zenoti",
     lede:
@@ -33,7 +33,7 @@ export const comparePages: Record<string, ComparePage> = {
     ],
     antrahqStrengths: [
       "Transparent ₹/branch pricing published on the website",
-      "Go-live in days for growing networks — not quarters",
+      "Live the same day — first GST bill within hours, not after a months-long rollout",
       "India desk reality: GST billing, WhatsApp receipts, geofenced attendance",
       "Branch P&L and Market Pulse built for owner coaching, not just dashboards",
       "Local Spotlight: Google visibility score, rivals, and GBP action plans",
@@ -48,12 +48,12 @@ export const comparePages: Record<string, ComparePage> = {
       {
         topic: "Pricing",
         competitor: "Custom enterprise quotes — typically premium",
-        antrahq: "Public ₹2,999–₹4,999 per branch / month",
+        antrahq: "Public ₹499–₹699 per branch / month",
       },
       {
         topic: "Implementation",
         competitor: "Structured rollout — often weeks to months",
-        antrahq: "Tenant live day 1; floor billing within the first week",
+        antrahq: "Same day — set up on a call, first GST bill within about two hours",
       },
       {
         topic: "India GST billing",
@@ -83,7 +83,7 @@ export const comparePages: Record<string, ComparePage> = {
   miosalon: {
     slug: "miosalon",
     competitor: "MioSalon",
-    seoTitle: "AntraHQ vs MioSalon — MioSalon alternative India",
+    seoTitle: "AntraHQ vs MioSalon — MioSalon Alternative India",
     seoDescription:
       "MioSalon alternative for Indian chains: compare AntraHQ vs MioSalon on multi-branch P&L, GST POS, WhatsApp, attendance, and growth-decision fit.",
     eyebrow: "Compare · All-in-one platforms",
@@ -145,9 +145,9 @@ export const comparePages: Record<string, ComparePage> = {
   salonist: {
     slug: "salonist",
     competitor: "Salonist",
-    seoTitle: "AntraHQ vs Salonist — Salonist alternative for India chains",
+    seoTitle: "AntraHQ vs Salonist — Salonist Alternative India",
     seoDescription:
-      "Salonist alternative for growing Indian salons: compare AntraHQ vs Salonist on GST billing, multi-branch P&L, WhatsApp, attendance, and scale from one outlet to many.",
+      "Salonist alternative for growing Indian salons: AntraHQ vs Salonist on GST billing, multi-branch P&L, WhatsApp, attendance and scaling past one outlet.",
     eyebrow: "Compare · Growing chains",
     title: "AntraHQ vs Salonist",
     lede:
@@ -192,7 +192,7 @@ export const comparePages: Record<string, ComparePage> = {
       {
         topic: "Onboarding scope",
         competitor: "Quick start for smaller operations",
-        antrahq: "Structured go-live across branches in days",
+        antrahq: "Same-day go-live, then add each new branch in minutes",
       },
     ],
     bestFor: {
@@ -202,12 +202,81 @@ export const comparePages: Record<string, ComparePage> = {
         "Operators who outgrew disconnected tools and need one truth from desk to dashboard — whether they are on branch one or branch fifty.",
     },
     disclaimer:
-      "Your branch count, city mix, and finance workflow matter more than feature checklists. Book audits with both vendors if you are shortlisting.",
+      "Your branch count, city mix, and finance workflow matter more than feature checklists. Book demos with both vendors if you are shortlisting.",
+  },
+  fresha: {
+    slug: "fresha",
+    competitor: "Fresha",
+    seoTitle: "AntraHQ vs Fresha — Fresha Alternative for India",
+    seoDescription:
+      "Fresha alternative for Indian salons: AntraHQ vs Fresha on total cost (marketplace fees vs subscription), GST billing, WhatsApp and branch P&L.",
+    eyebrow: "Compare · Marketplace vs owner platform",
+    title: "AntraHQ vs Fresha",
+    lede:
+      "Fresha is a global booking platform and consumer marketplace that is free to start in many markets and earns through new-client marketplace fees, payments and paid add-ons. AntraHQ is a subscription platform for Indian operators who want GST billing, verified attendance and branch profitability — with no fee on any booking.",
+    competitorStrengths: [
+      "Consumer marketplace that can bring new clients to a listed salon",
+      "Polished online booking and client app experience",
+      "Free core plan in many regions — low barrier for a single stylist or studio",
+    ],
+    antrahqStrengths: [
+      "No commission or new-client fee — every booking and guest stays yours",
+      "India desk workflow: per-branch GSTIN, CGST/SGST invoices, UPI, WhatsApp receipts",
+      "Branch P&L, targets and Market Pulse ranking for multi-outlet owners",
+      "Selfie + GPS geofenced attendance and a staff app in 10 Indian languages",
+      "WhatsApp win-back campaigns included on Growth — not metered add-ons",
+    ],
+    rows: [
+      {
+        topic: "Business model",
+        competitor: "Free core plan in many regions; earns via marketplace, payments and add-ons",
+        antrahq: "Per-branch subscription — ₹499 to ₹699 / month, published",
+      },
+      {
+        topic: "Fees on bookings",
+        competitor: "One-time fee on new clients who book via the Fresha marketplace",
+        antrahq: "None",
+      },
+      {
+        topic: "Who owns the guest relationship",
+        competitor: "Shared with a consumer marketplace that lists nearby salons",
+        antrahq: "Your brand only — guest CRM is never shown to other salons",
+      },
+      {
+        topic: "India GST billing",
+        competitor: "Check invoice format and per-branch GSTIN support in a trial",
+        antrahq: "Per-branch GSTIN, CGST/SGST split, sequential invoices, WhatsApp PDF",
+      },
+      {
+        topic: "Messaging",
+        competitor: "Limited free messages, then paid per SMS/WhatsApp",
+        antrahq: "WhatsApp receipts with billing; campaigns included on Growth",
+      },
+      {
+        topic: "Multi-branch owner view",
+        competitor: "Location reporting; advanced insights as a paid add-on",
+        antrahq: "Branch P&L with salary, rent and product cost + branch ranking",
+      },
+      {
+        topic: "Staff attendance",
+        competitor: "Scheduling and timesheets",
+        antrahq: "Selfie + GPS geofence with late and missing-exit review",
+      },
+    ],
+    bestFor: {
+      competitor:
+        "Independent stylists and small studios that want free booking software and new clients from a marketplace, and are comfortable with per-client fees.",
+      antrahq:
+        "Indian salon and spa operators who want to own every guest, bill GST correctly at each branch, and run branches on profit — at a fixed monthly cost.",
+    },
+    disclaimer:
+      "Fresha's plans and fees differ by country and change over time — confirm current pricing on fresha.com for India before deciding. Run the same walk-in GST bill and month-end report in both trials.",
   },
 };
 
 export const compareNav = Object.values(comparePages).map((p) => ({
   href: `/compare/${p.slug}`,
-  title: `vs ${p.competitor}`,
-  desc: p.seoDescription.slice(0, 80) + "…",
+  title: `AntraHQ vs ${p.competitor}`,
+  competitor: p.competitor,
+  desc: p.bestFor.competitor,
 }));

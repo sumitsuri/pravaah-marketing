@@ -2,7 +2,7 @@
 
 import { useMemo, useState } from "react";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { brand } from "@/lib/content";
 
 /** Score branches on operational readiness — directional self-assessment, not a guarantee. */
 export default function BranchHealthScorePage() {
@@ -19,7 +19,7 @@ export default function BranchHealthScorePage() {
     const pct = Math.round((raw / max) * 100);
     let band = "Needs structure";
     let note =
-      "Disconnected tools or irregular reviews — a growth audit can map where to connect billing, CRM, and branch P&L first.";
+      "Disconnected tools or irregular reviews — a free demo can map where to connect billing, CRM, and branch P&L first.";
     if (pct >= 75) {
       band = "Strong foundation";
       note =
@@ -33,7 +33,7 @@ export default function BranchHealthScorePage() {
   }, [pnlCadence, attendanceTrust, crmDiscipline, retentionRhythm]);
 
   return (
-    <div className="bg-flow-hero pt-28">
+    <div className="bg-hero pt-28">
       <section className="section-pad !pt-10">
         <div className="container-wide grid gap-12 lg:grid-cols-[1.05fr_0.95fr]">
           <div>
@@ -41,10 +41,10 @@ export default function BranchHealthScorePage() {
             <h1 className="display mt-3">Branch health score for salon chains</h1>
             <p className="lede mt-5">
               A quick self-assessment across {branches} branches — reporting cadence, attendance trust, CRM
-              discipline, and retention rhythm. Directional only; book an audit to validate with your numbers.
+              discipline, and retention rhythm. Directional only; book a free demo to validate with your numbers.
             </p>
 
-            <div className="mt-10 space-y-8 rounded-3xl border border-ink/10 bg-white p-6 md:p-8">
+            <div className="mt-10 space-y-8 rounded-3xl border border-surface-line bg-white p-6 md:p-8">
               <Slider label="Number of branches" value={branches} min={1} max={50} onChange={setBranches} />
               <Likert
                 label="Branch P&L / reporting cadence"
@@ -77,28 +77,24 @@ export default function BranchHealthScorePage() {
             </div>
           </div>
 
-          <motion.div
-            className="h-fit rounded-3xl border border-jade/30 bg-ink p-8 text-white shadow-[0_30px_80px_-40px_rgba(15,107,92,0.6)]"
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-          >
-            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-jade-soft">
+          <div className="h-fit rounded-2xl bg-ink p-8 text-white shadow-premium-lg lg:sticky lg:top-24">
+            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-brand-300">
               Network readiness
             </p>
             <p className="mt-4 font-display text-5xl text-white">{score.pct}</p>
-            <p className="mt-1 text-sm text-mist/65">out of 100 · {score.band}</p>
-            <p className="mt-6 text-sm leading-relaxed text-mist/75">{score.note}</p>
+            <p className="mt-1 text-sm text-ink-faint">out of 100 · {score.band}</p>
+            <p className="mt-6 text-sm leading-relaxed text-ink-faint">{score.note}</p>
 
-            <Link href="/demo" className="btn-primary mt-8 w-full !bg-jade">
-              Book a growth audit
+            <Link href="/demo" className="btn-primary mt-8 w-full">
+              {brand.cta.primary}
             </Link>
             <Link
               href="/roi-calculator"
-              className="mt-3 block text-center text-xs font-semibold text-jade-soft hover:text-white"
+              className="mt-3 block text-center text-xs font-semibold text-brand-300 hover:text-white"
             >
               Also try revenue opportunity calculator →
             </Link>
-          </motion.div>
+          </div>
         </div>
       </section>
     </div>
@@ -122,7 +118,7 @@ function Slider({
     <label className="block">
       <div className="mb-2 flex items-center justify-between text-sm">
         <span className="font-medium text-ink">{label}</span>
-        <span className="font-display text-lg text-jade">{value}</span>
+        <span className="font-display text-lg text-brand">{value}</span>
       </div>
       <input
         type="range"
@@ -130,7 +126,7 @@ function Slider({
         max={max}
         value={value}
         onChange={(e) => onChange(Number(e.target.value))}
-        className="w-full accent-jade"
+        className="w-full accent-brand"
       />
     </label>
   );
@@ -160,8 +156,8 @@ function Likert({
             onClick={() => onChange(n)}
             className={`flex-1 rounded-xl border py-2.5 text-sm font-semibold transition ${
               value === n
-                ? "border-jade bg-jade/10 text-jade"
-                : "border-ink/10 text-ink-mute hover:border-jade/30"
+                ? "border-brand bg-brand/10 text-brand"
+                : "border-surface-line text-ink-mute hover:border-brand/30"
             }`}
           >
             {n}

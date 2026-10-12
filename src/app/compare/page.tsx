@@ -1,49 +1,44 @@
-import type { Metadata } from "next";
 import Link from "next/link";
-import { compareNav, comparePages } from "@/lib/compare-pages";
-import { brand } from "@/lib/content";
-import { FinalCta } from "@/components/sections/FinalCta";
+import { ArrowRight } from "lucide-react";
 import { PageHero } from "@/components/PageHero";
+import { EdgeSection } from "@/components/home/EdgeSection";
+import { FinalCta } from "@/components/sections/FinalCta";
+import { comparePages } from "@/lib/compare-pages";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Compare best salon software — AntraHQ vs Zenoti, MioSalon, Salonist",
+export const metadata = pageMetadata({
+  title: "Salon Software India Compared: AntraHQ vs Zenoti & Fresha",
+  absoluteTitle: true,
   description:
-    "Compare the best salon management software options in India: AntraHQ vs Zenoti, MioSalon, and Salonist — pricing, GST billing, multi-branch P&L, and rollout fit.",
-  alternates: { canonical: "/compare/" },
-};
+    "Compare salon management software in India: AntraHQ vs Zenoti, MioSalon, Salonist and Fresha on pricing, GST billing, WhatsApp, attendance and branch P&L.",
+  path: "/compare/",
+});
 
 export default function CompareIndexPage() {
+  const pages = Object.values(comparePages);
   return (
     <>
       <PageHero
         eyebrow="Compare"
-        title="Salon software comparisons for multi-branch buyers"
-        body="Honest starting points — not attack ads. Each page explains where a competitor excels and where AntraHQ fits operators scaling from one branch to many."
+        title="Salon software comparisons for Indian salon & spa owners"
+        body="Fair, side-by-side starting points — where each tool is strong, where AntraHQ fits, and what to check in a demo."
+        crumbs={[{ name: "Compare", path: "/compare/" }]}
       />
       <section className="section-pad bg-white">
-        <div className="container-wide grid gap-4 sm:grid-cols-3">
-          {compareNav.map((item) => {
-            const page = comparePages[item.href.replace("/compare/", "")];
-            return (
-              <Link
-                key={item.href}
-                href={item.href}
-                className="rounded-2xl border border-ink/10 p-6 transition hover:border-jade/30"
-              >
-                <p className="font-display text-xl text-ink">{page.title}</p>
-                <p className="mt-3 text-sm text-ink-mute">{page.lede.slice(0, 140)}…</p>
-              </Link>
-            );
-          })}
+        <div className="container-wide grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          {pages.map((page) => (
+            <Link key={page.slug} href={`/compare/${page.slug}`} className="card card-hover group flex flex-col p-6">
+              <p className="eyebrow">{page.eyebrow.replace("Compare · ", "")}</p>
+              <h2 className="h-card mt-2">{page.title}</h2>
+              <p className="mt-3 flex-1 text-sm leading-relaxed text-ink-mute">{page.bestFor.antrahq}</p>
+              <span className="link-arrow mt-5">
+                Read comparison <ArrowRight className="h-3.5 w-3.5" aria-hidden />
+              </span>
+            </Link>
+          ))}
         </div>
-        <p className="mt-8 text-sm text-ink-mute">
-          {brand.name} works for salon & spa operators from a single outlet to large networks.{" "}
-          <Link href="/demo" className="font-semibold text-jade">
-            Book a growth audit
-          </Link>{" "}
-          with your shortlist.
-        </p>
       </section>
+      <EdgeSection showCompareLinks={false} />
       <FinalCta />
     </>
   );

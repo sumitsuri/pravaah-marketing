@@ -1,11 +1,11 @@
-import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Salon revenue opportunity calculator",
+export const metadata = pageMetadata({
+  title: "Salon Revenue Opportunity Calculator",
   description:
-    "Estimate desk-time value and WhatsApp win-back upside for your multi-branch salon chain in India.",
-  alternates: { canonical: "/roi-calculator/" },
-};
+    "Estimate the desk time you save and the WhatsApp win-back revenue you could recover across your salon branches in India. Free calculator.",
+  path: "/roi-calculator/",
+});
 
 export default function RoiCalculatorLayout({ children }: { children: React.ReactNode }) {
   return children;

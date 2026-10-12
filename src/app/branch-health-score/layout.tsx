@@ -1,11 +1,11 @@
-import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Branch health score for multi-branch salon chains",
+export const metadata = pageMetadata({
+  title: "Salon Branch Health Score — Free Self-Assessment",
   description:
-    "Self-assess reporting, attendance, CRM, and retention readiness across your salon chain. Directional branch health score — then book a multi-branch growth audit.",
-  alternates: { canonical: "/branch-health-score/" },
-};
+    "Score your salon chain's reporting, attendance, CRM and retention readiness in two minutes, then see which AntraHQ modules close the gaps.",
+  path: "/branch-health-score/",
+});
 
 export default function BranchHealthLayout({ children }: { children: React.ReactNode }) {
   return children;

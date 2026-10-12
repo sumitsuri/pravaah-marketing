@@ -2,49 +2,50 @@ import type { MetadataRoute } from "next";
 import { productPages } from "@/lib/content";
 import { comparePages } from "@/lib/compare-pages";
 import { resourceArticles } from "@/lib/resource-articles";
+import { absoluteUrl, CONTENT_UPDATED } from "@/lib/seo";
 
 export const dynamic = "force-static";
 
-const base = "https://antrahq.com";
-
-function loc(path: string): string {
-  if (!path || path === "/") return `${base}/`;
-  const normalized = path.startsWith("/") ? path : `/${path}`;
-  return `${base}${normalized.endsWith("/") ? normalized : `${normalized}/`}`;
-}
+type Entry = { path: string; priority: number; changeFrequency: "weekly" | "monthly" | "yearly" };
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const staticRoutes = [
-    "/",
-    "/demo/",
-    "/pricing/",
-    "/products/",
-    "/customers/",
-    "/resources/",
-    "/roi-calculator/",
-    "/branch-health-score/",
-    "/compare/",
+  const entries: Entry[] = [
+    { path: "/", priority: 1, changeFrequency: "weekly" },
+    { path: "/pricing/", priority: 0.9, changeFrequency: "monthly" },
+    { path: "/demo/", priority: 0.8, changeFrequency: "monthly" },
+    { path: "/products/", priority: 0.8, changeFrequency: "monthly" },
+    { path: "/compare/", priority: 0.8, changeFrequency: "monthly" },
+    { path: "/resources/", priority: 0.7, changeFrequency: "weekly" },
+    { path: "/customers/", priority: 0.5, changeFrequency: "monthly" },
+    { path: "/roi-calculator/", priority: 0.5, changeFrequency: "monthly" },
+    { path: "/branch-health-score/", priority: 0.5, changeFrequency: "monthly" },
+    { path: "/privacy/", priority: 0.2, changeFrequency: "yearly" },
+    { path: "/terms/", priority: 0.2, changeFrequency: "yearly" },
+    ...["multi-branch", "owners", "managers"].map((s) => ({
+      path: `/solutions/${s}/`,
+      priority: 0.7,
+      changeFrequency: "monthly" as const,
+    })),
+    // Pages that canonicalise elsewhere stay out of the sitemap.
+    ...Object.entries(productPages)
+      .filter(([, p]) => !("canonicalSlug" in p))
+      .map(([slug]) => ({ path: `/products/${slug}/`, priority: 0.8, changeFrequency: "monthly" as const })),
+    ...Object.keys(comparePages).map((slug) => ({
+      path: `/compare/${slug}/`,
+      priority: 0.8,
+      changeFrequency: "monthly" as const,
+    })),
+    ...Object.keys(resourceArticles).map((slug) => ({
+      path: `/resources/${slug}/`,
+      priority: 0.7,
+      changeFrequency: "monthly" as const,
+    })),
   ];
 
-  const productRoutes = Object.keys(productPages).map((slug) => `/products/${slug}/`);
-  const compareRoutes = Object.keys(comparePages).map((slug) => `/compare/${slug}/`);
-  const solutionRoutes = ["/solutions/multi-branch/", "/solutions/owners/", "/solutions/managers/"];
-  const resourceRoutes = Object.keys(resourceArticles).map((slug) => `/resources/${slug}/`);
-
-  const all = [...staticRoutes, ...productRoutes, ...compareRoutes, ...solutionRoutes, ...resourceRoutes];
-
-  return all.map((path) => ({
-    url: loc(path),
-    lastModified: new Date("2026-08-14"),
-    changeFrequency: path === "/" || path.startsWith("/resources") ? "weekly" : "monthly",
-    priority:
-      path === "/"
-        ? 1
-        : path.startsWith("/products") ||
-            path.startsWith("/compare") ||
-            path.startsWith("/pricing") ||
-            path.startsWith("/resources")
-          ? 0.8
-          : 0.6,
+  return entries.map((e) => ({
+    url: absoluteUrl(e.path),
+    lastModified: new Date(CONTENT_UPDATED),
+    changeFrequency: e.changeFrequency,
+    priority: e.priority,
   }));
 }

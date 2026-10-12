@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function NotFound() {
   return (
-    <div className="bg-mist-soft pt-28">
+    <div className="bg-surface pt-28">
       <section className="section-pad !pt-10">
         <div className="container-narrow text-center">
           <p className="eyebrow">404</p>
@@ -26,7 +26,7 @@ export default function NotFound() {
               Browse products
             </Link>
             <Link href="/demo" className="btn-secondary">
-              Book a growth audit
+              Book a free demo
             </Link>
           </div>
         </div>

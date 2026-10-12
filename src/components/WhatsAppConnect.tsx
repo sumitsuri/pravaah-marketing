@@ -25,12 +25,12 @@ export function WhatsAppConnectButton({ className = "" }: ButtonProps) {
       href={whatsappHref()}
       target="_blank"
       rel="noopener noreferrer"
-      className={`btn-whatsapp ${className}`}
+      className={`btn-secondary ${className}`}
       aria-label={whatsappAriaLabel}
       data-testid="whatsapp-connect-cta"
       onClick={() => trackWhatsAppClick("connect_button")}
     >
-      <WhatsAppIcon className="h-[1.05rem] w-[1.05rem] opacity-90" />
+      <WhatsAppIcon className="h-[1.05rem] w-[1.05rem] text-[#128C7E]" />
       {brand.whatsapp.ctaLabel}
     </a>
   );
@@ -43,7 +43,7 @@ export function WhatsAppHeaderButton({ className = "" }: ButtonProps) {
       href={whatsappHref()}
       target="_blank"
       rel="noopener noreferrer"
-      className={`btn-whatsapp-ghost ${className}`}
+      className={`inline-flex h-10 w-10 items-center justify-center rounded-lg border border-surface-line bg-white text-[#128C7E] transition hover:border-[#25D366]/40 hover:bg-[#25D366]/10 ${className}`}
       aria-label={whatsappAriaLabel}
       data-testid="whatsapp-header-cta"
       onClick={() => trackWhatsAppClick("header")}
@@ -88,13 +88,8 @@ export function WhatsAppFloatingButton() {
       data-testid="whatsapp-floating-button"
       onClick={() => trackWhatsAppClick("floating")}
     >
-      <span className="whatsapp-fab__pulse" aria-hidden />
       <WhatsAppIcon className="relative z-10 h-6 w-6 text-white" />
     </a>
   );
 }
 
-/** @deprecated Use WhatsAppIconLink */
-export function WhatsAppTextLink({ className = "" }: { className?: string }) {
-  return <WhatsAppIconLink className={className} />;
-}

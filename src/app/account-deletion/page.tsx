@@ -1,15 +1,15 @@
+import { pageMetadata } from "@/lib/seo";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { brand } from "@/lib/content";
 
 export const metadata: Metadata = {
-  title: "Account deletion",
-  description: `Request deletion of Antrahq app accounts and associated personal data.`,
+  ...pageMetadata({ title: "Account deletion", description: `Request deletion of Antrahq app accounts and associated personal data.`, path: "/account-deletion/" }),
 };
 
 export default function AccountDeletionPage() {
   return (
-    <div className="bg-mist-soft pt-28">
+    <div className="bg-surface pt-28">
       <section className="section-pad !pt-10">
         <div className="container-narrow prose prose-neutral max-w-none">
           <p className="eyebrow">Legal</p>
@@ -31,7 +31,7 @@ export default function AccountDeletionPage() {
           <h2 className="mt-10 font-display text-2xl text-ink">Request deletion from Antrahq</h2>
           <p className="mt-3 text-sm leading-relaxed text-ink/80">
             Email{" "}
-            <a href={`mailto:${brand.email}?subject=Account%20deletion%20request`} className="text-jade underline">
+            <a href={`mailto:${brand.email}?subject=Account%20deletion%20request`} className="text-brand underline">
               {brand.email}
             </a>{" "}
             from your work email with:
@@ -53,7 +53,7 @@ export default function AccountDeletionPage() {
           </p>
 
           <p className="mt-10 text-sm">
-            <Link href="/privacy/" className="text-jade underline">
+            <Link href="/privacy/" className="text-brand underline">
               Privacy policy
             </Link>
           </p>

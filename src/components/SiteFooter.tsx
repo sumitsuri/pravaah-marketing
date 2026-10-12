@@ -1,114 +1,84 @@
 import Link from "next/link";
-import { brand, platformTaxonomy, nav } from "@/lib/content";
+import { brand, nav } from "@/lib/content";
+import { compareNav } from "@/lib/compare-pages";
+import { Logo } from "@/components/Logo";
 import { WhatsAppIconLink } from "@/components/WhatsAppConnect";
-import { whatsappHref } from "@/lib/whatsapp";
+
+const guides = [
+  { href: "/resources/best-salon-software-india-2026", label: "Best salon software in India" },
+  { href: "/resources/salon-billing-gst-software-india", label: "Salon GST billing software" },
+  { href: "/resources/beauty-parlour-software-india", label: "Beauty parlour software" },
+  { href: "/resources/nail-salon-software-india", label: "Nail salon software" },
+  { href: "/resources/spa-management-platform", label: "Spa management software" },
+  { href: "/resources/multi-branch-salon-platform", label: "Multi-branch salon software" },
+];
+
+const company = [
+  { href: "/pricing", label: "Pricing" },
+  { href: "/demo", label: "Book a demo" },
+  { href: "/customers", label: "Customers" },
+  { href: "/roi-calculator", label: "ROI calculator" },
+  { href: "/branch-health-score", label: "Branch health score" },
+  { href: "/privacy/", label: "Privacy" },
+  { href: "/terms/", label: "Terms" },
+];
+
+function Column({ title, links }: { title: string; links: { href: string; label: string }[] }) {
+  return (
+    <div>
+      <p className="text-xs font-semibold uppercase tracking-[0.14em] text-white">{title}</p>
+      <ul className="mt-4 space-y-2.5">
+        {links.map((l) => (
+          <li key={l.href}>
+            <Link href={l.href} className="text-sm text-ink-faint transition hover:text-white">
+              {l.label}
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
 
 export function SiteFooter() {
   return (
-    <footer className="border-t border-ink/10 bg-ink text-mist-soft">
-      <div className="container-wide px-5 py-14 md:px-8 lg:px-12">
-        <div className="grid gap-12 lg:grid-cols-[1.1fr_2fr]">
-          <div>
-            <p className="font-display text-3xl text-white">{brand.name}</p>
-            <p className="mt-3 max-w-sm text-sm leading-relaxed text-mist/70">{brand.mission}</p>
-            <p className="mt-6 text-xs tracking-wide text-jade-soft">{brand.footer}</p>
-            <div className="mt-8 flex flex-wrap gap-3">
-              <Link href="/demo" className="btn-primary !py-2.5 text-xs">
-                {brand.cta.primary}
-              </Link>
-              <a
-                href={whatsappHref()}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-secondary !border-white/20 !bg-transparent !py-2.5 text-xs !text-white hover:!bg-white/5"
-                aria-label={`Chat with ${brand.name}`}
-              >
-                {brand.whatsapp.ctaLabel}
+    <footer className="bg-ink text-ink-faint">
+      <div className="container-wide py-14 lg:py-16">
+        <div className="grid gap-10 lg:grid-cols-[1.3fr_3fr]">
+          <div className="max-w-sm">
+            <Logo tone="light" size="lg" />
+            <p className="mt-4 text-sm leading-relaxed">{brand.mission}</p>
+            <div className="mt-6 flex items-center gap-3">
+              <a href={`mailto:${brand.email}`} className="text-sm text-white hover:text-brand-300">
+                {brand.email}
               </a>
-              <Link href="/branch-health-score" className="btn-secondary !border-white/20 !bg-transparent !py-2.5 text-xs !text-white hover:!bg-white/5">
-                Branch health score
-              </Link>
+              <WhatsAppIconLink className="h-10 w-10" iconClassName="h-5 w-5" />
             </div>
           </div>
-          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-            <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.14em] text-jade-soft">
-                Solutions
-              </p>
-              <ul className="mt-3 space-y-2">
-                {nav.solutions.map((s) => (
-                  <li key={s.href}>
-                    <Link href={s.href} className="text-sm text-mist/75 hover:text-white">
-                      {s.title}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-              <p className="mt-6 text-xs font-semibold uppercase tracking-[0.14em] text-jade-soft">
-                Products
-              </p>
-              <ul className="mt-3 space-y-2">
-                {nav.products.map((p) => (
-                  <li key={p.href}>
-                    <Link href={p.href} className="text-sm text-mist/75 hover:text-white">
-                      {p.title}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            {platformTaxonomy.slice(0, 2).map((col) => (
-              <div key={col.title}>
-                <p className="text-xs font-semibold uppercase tracking-[0.14em] text-jade-soft">
-                  {col.title}
-                </p>
-                <ul className="mt-3 space-y-2">
-                  {col.items.map((item) => (
-                    <li key={item.href + item.label}>
-                      <Link href={item.href} className="text-xs leading-snug text-mist/65 hover:text-white">
-                        {item.label}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
+          <div className="grid grid-cols-2 gap-8 sm:grid-cols-3 lg:grid-cols-5">
+            <Column title="Products" links={nav.products.slice(0, 7).map((p) => ({ href: p.href, label: p.title }))} />
+            <Column
+              title="Solutions"
+              links={[
+                ...nav.solutions.map((s) => ({ href: s.href, label: s.title })),
+                { href: "/products/local-spotlight", label: "Local Spotlight" },
+                { href: "/products/reviews", label: "Reviews & ratings" },
+                { href: "/products/campaigns", label: "WhatsApp marketing" },
+              ]}
+            />
+            <Column title="Compare" links={compareNav.map((c) => ({ href: c.href, label: c.title }))} />
+            <Column title="Guides" links={guides} />
+            <Column title="Company" links={company} />
           </div>
-        </div>
-
-        <div className="mt-12 flex flex-wrap items-center gap-4 border-t border-white/10 pt-8 pb-4 text-sm sm:gap-6 lg:pb-0">
-          <Link href="/compare" className="text-mist/80 hover:text-white">
-            Compare
-          </Link>
-          <Link href="/customers" className="text-mist/80 hover:text-white">
-            Customers
-          </Link>
-          <Link href="/resources" className="text-mist/80 hover:text-white">
-            Resources
-          </Link>
-          <Link href="/pricing" className="text-mist/80 hover:text-white">
-            Pricing
-          </Link>
-          <Link href="/privacy/" className="text-mist/80 hover:text-white">
-            Privacy
-          </Link>
-          <Link href="/terms/" className="text-mist/80 hover:text-white">
-            Terms
-          </Link>
-          <Link href="/roi-calculator" className="text-mist/80 hover:text-white">
-            ROI calculator
-          </Link>
-          <WhatsAppIconLink
-            className="inline-flex h-11 w-11 items-center justify-center rounded-lg text-[#25D366] hover:text-[#34eb77]"
-            iconClassName="h-5 w-5"
-          />
-          <a href={`mailto:${brand.email}`} className="text-mist/80 hover:text-white">
-            {brand.email}
-          </a>
         </div>
       </div>
-      <div className="border-t border-white/10 px-5 py-5 pb-20 text-center text-xs text-mist/50 sm:pb-24 md:px-8 lg:pb-5">
-        © {new Date().getFullYear()} {brand.name}. {brand.searchCategory} for salon & spa chains in India.
+      <div className="border-t border-white/10">
+        <div className="container-wide flex flex-col gap-2 py-6 pb-24 text-xs sm:flex-row sm:items-center sm:justify-between sm:pb-6">
+          <p>
+            © {new Date().getFullYear()} {brand.name}. {brand.searchCategory}.
+          </p>
+          <p>{brand.footer}</p>
+        </div>
       </div>
     </footer>
   );

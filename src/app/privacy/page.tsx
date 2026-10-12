@@ -1,15 +1,15 @@
+import { pageMetadata } from "@/lib/seo";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { brand } from "@/lib/content";
 
 export const metadata: Metadata = {
-  title: "Privacy policy",
-  description: `How ${brand.name} collects, uses, and protects personal data across web apps and mobile apps.`,
+  ...pageMetadata({ title: "Privacy policy", description: `How ${brand.name} collects, uses, and protects personal data across web apps and mobile apps.`, path: "/privacy/" }),
 };
 
 export default function PrivacyPage() {
   return (
-    <div className="bg-mist-soft pt-28">
+    <div className="bg-surface pt-28">
       <section className="section-pad !pt-10">
         <div className="container-narrow prose prose-neutral max-w-none">
           <p className="eyebrow">Legal</p>
@@ -88,11 +88,11 @@ export default function PrivacyPage() {
           <p className="mt-3 text-sm leading-relaxed text-ink/80">
             Staff and operators should contact their salon administrator for access, correction, or deletion requests.
             Administrators may contact us at{" "}
-            <a href={`mailto:${brand.email}`} className="text-jade underline">
+            <a href={`mailto:${brand.email}`} className="text-brand underline">
               {brand.email}
             </a>
             . See our{" "}
-            <Link href="/account-deletion/" className="text-jade underline">
+            <Link href="/account-deletion/" className="text-brand underline">
               account deletion
             </Link>{" "}
             page for app-store requirements.
@@ -106,14 +106,14 @@ export default function PrivacyPage() {
           <h2 className="mt-10 font-display text-2xl text-ink">Changes &amp; contact</h2>
           <p className="mt-3 text-sm leading-relaxed text-ink/80">
             We may update this policy; the date above will change. Questions:{" "}
-            <a href={`mailto:${brand.email}`} className="text-jade underline">
+            <a href={`mailto:${brand.email}`} className="text-brand underline">
               {brand.email}
             </a>
             .
           </p>
 
           <p className="mt-10 text-sm">
-            <Link href="/terms/" className="text-jade underline">
+            <Link href="/terms/" className="text-brand underline">
               Terms of use
             </Link>
           </p>

@@ -1,171 +1,120 @@
-import type { Metadata } from "next";
-import { Fraunces, Sora } from "next/font/google";
-import Script from "next/script";
+import type { Metadata, Viewport } from "next";
+import { Plus_Jakarta_Sans } from "next/font/google";
 import { SiteHeader } from "@/components/SiteHeader";
 import { SiteFooter } from "@/components/SiteFooter";
 import { WhatsAppFloatingButton } from "@/components/WhatsAppConnect";
-import { MarketingThemeProvider } from "@/components/theme/MarketingThemeProvider";
-import { brand, faqs } from "@/lib/content";
-import { MARKETING_THEME_BOOT } from "@/lib/marketing-theme";
 import { MarketingAnalytics } from "@/components/analytics/MarketingAnalytics";
+import { JsonLd } from "@/components/JsonLd";
+import { RevealObserver } from "@/components/RevealObserver";
+import { brand } from "@/lib/content";
+import { OG_IMAGE, SITE_NAME, SITE_URL } from "@/lib/seo";
 import "./globals.css";
 
-const display = Fraunces({
-  subsets: ["latin"],
-  variable: "--font-display",
-  display: "swap",
-});
-
-const sans = Sora({
+const sans = Plus_Jakarta_Sans({
   subsets: ["latin"],
   variable: "--font-sans",
   display: "swap",
+  weight: ["400", "500", "600", "700", "800"],
 });
 
-const siteUrl = "https://antrahq.com";
+const defaultTitle = "Salon & Spa Management Software India | AntraHQ";
 
 export const metadata: Metadata = {
-  metadataBase: new URL(siteUrl),
+  metadataBase: new URL(SITE_URL),
   title: {
-    default: `${brand.name} — ${brand.searchCategory}`,
-    template: `%s · ${brand.name}`,
+    default: defaultTitle,
+    template: `%s · ${SITE_NAME}`,
   },
-  description:
-    "Salon and spa management platform for India. AntraHQ connects billing, POS, CRM, inventory, staff attendance, WhatsApp marketing, and branch P&L for multi-location salon and spa operators — from one outlet to national chains.",
-  keywords: [
-    "best salon software in India",
-    "best salon management software in India",
-    "salon software India",
-    "salon management software India",
-    "salon management platform",
-    "spa management platform",
-    "spa management software India",
-    "salon billing software India",
-    "salon POS software India GST",
-    "beauty parlour software",
-    "beauty salon software India",
-    "multi-branch salon management platform",
-    "salon CRM software",
-    "salon staff attendance software",
-    "WhatsApp marketing for salons",
-    "Zenoti alternative India",
-  ],
+  description: brand.mission,
+  applicationName: SITE_NAME,
   icons: {
-    icon: [{ url: "/favicon.svg", type: "image/svg+xml" }],
-    apple: [{ url: "/favicon.svg" }],
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/brand/icon-192.png", type: "image/png", sizes: "192x192" },
+    ],
+    apple: [{ url: "/brand/apple-touch-icon.png", sizes: "180x180" }],
   },
   openGraph: {
-    title: `${brand.name} — ${brand.searchCategory}`,
+    title: defaultTitle,
     description: brand.mission,
     type: "website",
-    url: siteUrl,
+    url: SITE_URL,
     locale: "en_IN",
-    siteName: brand.name,
-    images: [
-      {
-        url: "/og-default.png",
-        width: 1200,
-        height: 630,
-        alt: "AntraHQ — multi-branch salon management software for India",
-      },
-    ],
+    siteName: SITE_NAME,
+    images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: "AntraHQ — salon & spa management software for India" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: `${brand.name} — ${brand.searchCategory}`,
+    title: defaultTitle,
     description: brand.mission,
-    images: ["/og-default.png"],
+    images: [OG_IMAGE],
   },
   robots: {
     index: true,
     follow: true,
+    googleBot: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1 },
   },
+  ...(process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION
+    ? { verification: { google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION } }
+    : {}),
 };
 
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Organization",
-      "@id": `${siteUrl}/#organization`,
-      name: brand.name,
-      url: siteUrl,
-      email: brand.email,
-      description: brand.mission,
-      logo: `${siteUrl}/favicon.svg`,
-      sameAs: [siteUrl],
-      contactPoint: {
-        "@type": "ContactPoint",
-        email: brand.email,
-        contactType: "sales",
-        areaServed: "IN",
-        availableLanguage: ["en", "hi"],
-      },
-    },
-    {
-      "@type": "WebSite",
-      "@id": `${siteUrl}/#website`,
-      url: siteUrl,
-      name: brand.name,
-      publisher: { "@id": `${siteUrl}/#organization` },
-      inLanguage: "en-IN",
-    },
-    {
-      "@type": "SoftwareApplication",
-      name: brand.name,
-      url: siteUrl,
-      applicationCategory: "BusinessApplication",
-      operatingSystem: "Web",
-      description: brand.mission,
-      offers: {
-        "@type": "Offer",
-        url: `${siteUrl}/pricing/`,
-        priceCurrency: "INR",
-        price: "2999",
-        description: "Starter plan per branch per month — see pricing page for tiers",
-      },
-      publisher: { "@id": `${siteUrl}/#organization` },
-    },
-    {
-      "@type": "FAQPage",
-      mainEntity: faqs.map((item) => ({
-        "@type": "Question",
-        name: item.q,
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: item.a,
-        },
-      })),
-    },
-  ],
-};
-
-export const viewport = {
+export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
-  viewportFit: "cover" as const,
+  viewportFit: "cover",
+  themeColor: "#6D28D9",
 };
+
+/** Site-wide entities only. Page-specific schema (FAQ, Article, Breadcrumbs, Software) lives on its page. */
+const siteJsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": `${SITE_URL}/#organization`,
+    name: SITE_NAME,
+    url: SITE_URL,
+    email: brand.email,
+    description: brand.mission,
+    logo: { "@type": "ImageObject", url: `${SITE_URL}/brand/antrahq-mark-512.png`, width: 512, height: 512 },
+    slogan: "Salons & Beyond",
+    areaServed: { "@type": "Country", name: "India" },
+    contactPoint: {
+      "@type": "ContactPoint",
+      email: brand.email,
+      contactType: "sales",
+      areaServed: "IN",
+      availableLanguage: ["English", "Hindi"],
+    },
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": `${SITE_URL}/#website`,
+    url: SITE_URL,
+    name: SITE_NAME,
+    publisher: { "@id": `${SITE_URL}/#organization` },
+    inLanguage: "en-IN",
+  },
+];
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en-IN" className={`${display.variable} ${sans.variable}`} suppressHydrationWarning>
-      <head>
-        <Script id="marketing-theme-boot" strategy="beforeInteractive">
-          {MARKETING_THEME_BOOT}
-        </Script>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
-      </head>
-      <body className="min-h-screen overflow-x-hidden font-sans antialiased">
+    <html lang="en-IN" className={sans.variable}>
+      <body className="min-h-screen font-sans">
+        <JsonLd data={siteJsonLd} />
         <MarketingAnalytics />
-        <MarketingThemeProvider>
-          <SiteHeader />
-          <main className="pb-20 sm:pb-24">{children}</main>
-          <SiteFooter />
-          <WhatsAppFloatingButton />
-        </MarketingThemeProvider>
+        <RevealObserver />
+        <a
+          href="#main"
+          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[60] focus:rounded-lg focus:bg-white focus:px-4 focus:py-2 focus:shadow-premium"
+        >
+          Skip to content
+        </a>
+        <SiteHeader />
+        <main id="main">{children}</main>
+        <SiteFooter />
+        <WhatsAppFloatingButton />
       </body>
     </html>
   );

@@ -16,7 +16,7 @@ export const resourceArticles: Record<string, ResourceArticle> = {
     slug: "best-salon-software-india-2026",
     type: "Guide",
     title: "Best salon management software in India (2026)",
-    seoTitle: "Best salon management software in India 2026 — buyer ranking",
+    seoTitle: "Best Salon Management Software in India (2026)",
     seoDescription:
       "Best salon software in India 2026: how to rank Zenoti, MioSalon, Salonist, AntraHQ and others for GST billing, WhatsApp, multi-branch P&L, and rollout speed.",
     readMinutes: 12,
@@ -48,12 +48,12 @@ export const resourceArticles: Record<string, ResourceArticle> = {
       {
         heading: "1. AntraHQ — best salon & spa management platform for growing Indian chains",
         body:
-          "AntraHQ is built as a salon and spa management platform for India: walk-in GST billing, POS, CRM, inventory, staff attendance, WhatsApp campaigns, Local Spotlight, guest reviews, and owner branch P&L in one product. Ideal when you run — or plan — more than one outlet and want coaching views without an enterprise programme. See pricing on antrahq.com/pricing and validate in a growth audit.",
+          "AntraHQ is built as a salon and spa management platform for India: walk-in GST billing, POS, CRM, inventory, staff attendance, WhatsApp campaigns, Local Spotlight, guest reviews, and owner branch P&L in one product. Ideal when you run — or plan — more than one outlet and want coaching views without an enterprise programme. See pricing on antrahq.com/pricing and validate in a free demo.",
       },
       {
         heading: "2. Zenoti — best enterprise salon management software",
         body:
-          "Zenoti leads for large multi-country chains that need deep franchise workflows, mature marketing automation, and a long-term platform budget. For mid-market Indian brands that need go-live in days and transparent per-branch pricing, compare carefully — see AntraHQ vs Zenoti.",
+          "Zenoti leads for large multi-country chains that need deep franchise workflows, mature marketing automation, and a long-term platform budget. For mid-market Indian brands that need same-day go-live and transparent per-branch pricing, compare carefully — see AntraHQ vs Zenoti.",
       },
       {
         heading: "3. MioSalon — strong all-in-one for Indian salons",
@@ -89,10 +89,10 @@ export const resourceArticles: Record<string, ResourceArticle> = {
       {
         heading: "How to choose in one week",
         body:
-          "Day 1–2: score vendors on the checklist. Day 3: watch two live demos with your real service menu. Day 4: call two reference customers in your city tier. Day 5: book a growth audit or pilot on your hardest branch. Avoid six-month “transformation” decks for a mid-market chain.",
+          "Day 1–2: score vendors on the checklist. Day 3: watch two live demos with your real service menu. Day 4: call two reference customers in your city tier. Day 5: book a free demo or pilot on your hardest branch. Avoid six-month “transformation” decks for a mid-market chain.",
       },
     ],
-    cta: "Shortlisting the best salon management software in India for your chain? Book a 30-minute AntraHQ growth audit with your branch count and GST setup.",
+    cta: "Shortlisting the best salon management software in India for your chain? Book a free 30-minute AntraHQ demo with your branch count and GST setup.",
     faqs: [
       {
         q: "What is the best salon management software in India in 2026?",
@@ -116,7 +116,7 @@ export const resourceArticles: Record<string, ResourceArticle> = {
     slug: "salon-billing-gst-software-india",
     type: "Guide",
     title: "Salon billing & GST software in India — buyer guide",
-    seoTitle: "Salon billing & GST software India — POS invoicing guide",
+    seoTitle: "Salon Billing & GST Software India: Buyer Guide",
     seoDescription:
       "Salon billing software India with GST: walk-in POS, CGST/SGST invoices, UPI/cash/card, WhatsApp PDF receipts, and multi-branch GSTIN tips for chains.",
     readMinutes: 8,
@@ -153,10 +153,10 @@ export const resourceArticles: Record<string, ResourceArticle> = {
       {
         heading: "How AntraHQ handles salon billing & GST",
         body:
-          "AntraHQ billing is built for Indian walk-ins inside the full platform: GST preview, tenders, WhatsApp receipts, and owner-visible discounts — then the same bill feeds CRM and branch economics. Explore the billing product page and book a growth audit to watch a live walk-in.",
+          "AntraHQ billing is built for Indian walk-ins inside the full platform: GST preview, tenders, WhatsApp receipts, and owner-visible discounts — then the same bill feeds CRM and branch economics. Explore the billing product page and book a free demo to watch a live walk-in.",
       },
     ],
-    cta: "Need GST-ready salon billing inside a multi-branch platform? Book an AntraHQ growth audit.",
+    cta: "Need GST-ready salon billing inside a multi-branch platform? Book a free AntraHQ demo.",
     faqs: [
       {
         q: "What is the best salon billing software in India?",
@@ -172,7 +172,7 @@ export const resourceArticles: Record<string, ResourceArticle> = {
     slug: "beauty-parlour-software-india",
     type: "Guide",
     title: "Beauty parlour software in India — what to buy in 2026",
-    seoTitle: "Beauty parlour software India — management & billing guide 2026",
+    seoTitle: "Beauty Parlour Software India: Billing & Booking",
     seoDescription:
       "Beauty parlour software in India: GST billing, appointments, staff, WhatsApp, and when parlour owners should upgrade to a salon management platform.",
     readMinutes: 7,
@@ -204,10 +204,10 @@ export const resourceArticles: Record<string, ResourceArticle> = {
       {
         heading: "Where AntraHQ fits parlour brands that are scaling",
         body:
-          "AntraHQ serves hair, beauty, and spa formats on one India stack. Solo parlours evaluating first software can still learn from the checklist — growing brands with multiple parlours should book a growth audit to see branch P&L and desk billing together.",
+          "AntraHQ serves hair, beauty, and spa formats on one India stack. Solo parlours evaluating first software can still learn from the checklist — growing brands with multiple parlours should book a free demo to see branch P&L and desk billing together.",
       },
     ],
-    cta: "Running one or more beauty parlours? See if AntraHQ fits — book a growth audit.",
+    cta: "Running one or more beauty parlours? See if AntraHQ fits — book a free demo.",
     faqs: [
       {
         q: "What is the best beauty parlour software in India?",
@@ -223,7 +223,7 @@ export const resourceArticles: Record<string, ResourceArticle> = {
     slug: "salon-software-small-business-india",
     type: "Guide",
     title: "Salon software for small business in India",
-    seoTitle: "Salon software for small business & small salons in India",
+    seoTitle: "Salon Software for Small Business in India",
     seoDescription:
       "Best salon software for small business in India: what single-outlet salons need vs when to upgrade to a multi-branch salon management platform.",
     readMinutes: 7,
@@ -254,10 +254,10 @@ export const resourceArticles: Record<string, ResourceArticle> = {
       {
         heading: "Practical next step",
         body:
-          "Run the branch health score and the choose-salon-software checklist. If multi-branch signals matter, book an AntraHQ growth audit; if you are truly one chair forever, a lighter India POS may be enough.",
+          "Run the branch health score and the choose-salon-software checklist. If multi-branch signals matter, book a free AntraHQ demo; if you are truly one chair forever, a lighter India POS may be enough.",
       },
     ],
-    cta: "Small today, chain tomorrow? Map your path in an AntraHQ growth audit.",
+    cta: "Small today, chain tomorrow? Map your path in an AntraHQ free demo.",
     faqs: [
       {
         q: "What is the best salon software for a small salon in India?",
@@ -273,7 +273,7 @@ export const resourceArticles: Record<string, ResourceArticle> = {
     slug: "multi-branch-pnl-checklist",
     type: "Guide",
     title: "Multi-branch P&L checklist for Indian salon owners",
-    seoTitle: "Multi-branch salon P&L checklist for owners in India",
+    seoTitle: "Multi-Branch Salon P&L Checklist for Owners",
     seoDescription:
       "Weekly branch P&L checklist for salon chains: revenue, discounts, salary %, product cost, and coaching priorities before month-end surprises.",
     readMinutes: 8,
@@ -337,13 +337,13 @@ export const resourceArticles: Record<string, ResourceArticle> = {
         ],
       },
     ],
-    cta: "Want branch P&L and Market Pulse in one owner view? Book a growth audit.",
+    cta: "Want branch P&L and Market Pulse in one owner view? Book a free demo.",
   },
   "salon-attendance-guide": {
     slug: "salon-attendance-guide",
     type: "Guide",
     title: "Salon staff attendance guide for multi-branch chains",
-    seoTitle: "Salon staff attendance & geofencing guide for chains in India",
+    seoTitle: "Salon Staff Attendance App & Geofencing Guide",
     seoDescription:
       "How multi-branch salon operators reduce buddy punching, review late arrivals before payroll, and build attendance trust without expensive biometric hardware.",
     readMinutes: 7,
@@ -391,13 +391,13 @@ export const resourceArticles: Record<string, ResourceArticle> = {
           "Transparency beats stealth. Explain that photo + location evidence protects honest stylists, speeds leave approvals, and replaces Sunday arguments. Managers punch on shared branch devices — not personal surveillance apps.",
       },
     ],
-    cta: "See geofenced selfie attendance on salon tablets — book a growth audit.",
+    cta: "See geofenced selfie attendance on salon tablets — book a free demo.",
   },
   "whatsapp-winback-playbook": {
     slug: "whatsapp-winback-playbook",
     type: "Playbook",
     title: "WhatsApp win-back playbook for salon chains",
-    seoTitle: "WhatsApp win-back marketing playbook for Indian salon chains",
+    seoTitle: "WhatsApp Marketing for Salons: Win-Back Playbook",
     seoDescription:
       "Opt-in WhatsApp win-back sequences for salon chains: segment by visit gap and spend, respect TRAI/DPDP consent, and fill empty chairs without spamming.",
     readMinutes: 6,
@@ -449,13 +449,13 @@ export const resourceArticles: Record<string, ResourceArticle> = {
           "Blasting entire databases, discounting premium services blindly, and sending on Sunday mornings. Run campaigns Tuesday–Thursday 10am–1pm in the guest’s city; cap frequency to one sequence per 60 days unless they re-engage.",
       },
     ],
-    cta: "WhatsApp campaigns from your guest CRM are included on AntraHQ Growth — book a growth audit to see audience preview live.",
+    cta: "WhatsApp campaigns from your guest CRM are included on AntraHQ Growth — book a free demo to see audience preview live.",
   },
   "salon-management-platform-india": {
     slug: "salon-management-platform-india",
     type: "Guide",
     title: "What is a salon management platform? India buyer guide",
-    seoTitle: "Salon management platform India — buyer guide for chains",
+    seoTitle: "Salon Management Platform India: Buyer Guide",
     seoDescription:
       "What a salon management platform includes vs basic POS: GST billing, CRM, attendance, multi-branch P&L, and WhatsApp — how Indian chains should shortlist.",
     readMinutes: 9,
@@ -487,20 +487,98 @@ export const resourceArticles: Record<string, ResourceArticle> = {
       {
         heading: "How AntraHQ fits",
         body:
-          "AntraHQ is built as a salon and spa management platform for India: desk POS and GST, owner P&L, Market Pulse, Local Spotlight, and Customer voice in one product with public ₹/branch pricing. Validate against your shortlist in a live growth audit — not a slide deck.",
+          "AntraHQ is built as a salon and spa management platform for India: desk POS and GST, owner P&L, Market Pulse, Local Spotlight, and Customer voice in one product with public ₹/branch pricing. Validate against your shortlist in a live free demo — not a slide deck.",
       },
       {
         heading: "Next steps for buyers",
-        body: "Map your must-haves, then compare pages (Zenoti / MioSalon / Salonist), run the branch health score, and book a 30-minute audit with your branch count and GST setup.",
+        body: "Map your must-haves, then compare pages (Zenoti / MioSalon / Salonist / Fresha), run the branch health score, and book a free 30-minute demo with your branch count and GST setup.",
       },
     ],
-    cta: "See AntraHQ as your salon management platform — book a growth audit.",
+    cta: "See AntraHQ as your salon management platform — book a free demo.",
+  },
+  "nail-salon-software-india": {
+    slug: "nail-salon-software-india",
+    type: "Guide",
+    title: "Nail salon software in India: what nail studios actually need",
+    seoTitle: "Nail Salon Software India: Nail Studio Guide",
+    seoDescription:
+      "Nail salon software for India: GST billing, nail-tech commissions, packages and memberships, refill reminders on WhatsApp, product stock and multi-studio P&L.",
+    readMinutes: 9,
+    lede:
+      "Nail studios run on short, repeatable services, refill cycles, nail-tech commissions and a lot of small-ticket product use. Generic salon apps cover the booking; the money is lost in refills nobody reminds, gel and acrylic stock nobody counts, and commissions argued over every month. This guide covers what to look for in nail salon software in India — for a single studio or a growing chain.",
+    sections: [
+      {
+        heading: "How nail studios differ from hair salons",
+        body:
+          "A nail studio sells many short, similar services — gel polish, extensions, refills, nail art add-ons — with a predictable 2–4 week return cycle. That changes what software has to do well:",
+        bullets: [
+          "Refill and maintenance cycles drive most repeat revenue",
+          "Add-ons (art, chrome, French tips) need clean line items for pricing and commissions",
+          "Nail technicians are often paid on service share, so every line needs the right tech",
+          "Gel, acrylic, tips and removers are consumed per service — stock leaks quietly",
+          "Many guests discover studios on Instagram and Google Maps, so reviews matter",
+        ],
+      },
+      {
+        heading: "Must-have features in nail salon software",
+        body: "Use this checklist in every demo you take:",
+        bullets: [
+          "GST invoice with your GSTIN, CGST/SGST split, and a WhatsApp PDF receipt",
+          "Phone-number guest lookup with visit history — to see when a refill is due",
+          "Nail technician on every line item for fair commission and incentive reports",
+          "Packages and memberships (e.g. a refill pack) sold at the desk",
+          "WhatsApp win-back to guests who have passed their usual refill window",
+          "Inventory movements for gels, acrylics and consumables, feeding product cost",
+          "Staff attendance you can verify — selfie + location, not a paper register",
+          "Post-visit review QR that sends happy guests to your Google profile",
+        ],
+      },
+      {
+        heading: "Single nail studio vs nail salon chain",
+        body:
+          "One studio needs fast billing, guest history and a reminder rhythm. Once you open a second studio — or a counter inside a salon — you also need comparable P&L per location, one brand-wide service menu and a way to see which studio is slipping. Buy for the shape you expect in 18 months, so you are not migrating data when you expand.",
+      },
+      {
+        heading: "Reducing product leakage in a nail studio",
+        body:
+          "Gel and acrylic usage is small per service but large per month. Log restock, usage and wastage at the studio level, compare product cost against service revenue, and flag studios whose product cost runs ahead of their service mix. Software that feeds stock into P&L turns this from a guess into a weekly check.",
+      },
+      {
+        heading: "Turning refill cycles into predictable revenue",
+        body:
+          "Segment guests by days since their last visit and their usual spend, then send a WhatsApp reminder when they cross their normal refill window. Pair it with a refill package sold at the desk so the next visit is already paid for. Keep it opt-in and personal — one well-timed message beats a weekly blast.",
+      },
+      {
+        heading: "Where AntraHQ fits for nail studios",
+        body:
+          "AntraHQ gives nail studios the same India-ready stack as hair salons and spas: GST walk-in billing with the nail tech on every line, guest CRM with visit history, memberships and packages, WhatsApp win-backs, inventory that feeds branch P&L, geofenced attendance, and QR reviews routed to Google. Starter suits a single studio; Growth adds campaigns and multi-studio P&L.",
+      },
+    ],
+    cta: "Running a nail studio or planning your second one? Book a free demo and we'll map your refill cycle, commissions and stock in AntraHQ.",
+    faqs: [
+      {
+        q: "What is the best nail salon software in India?",
+        a: "The best fit depends on size. A single nail studio needs fast GST billing, guest history and WhatsApp reminders. A growing chain also needs per-studio P&L, verified attendance and stock tracking. AntraHQ covers both on one platform with published per-branch pricing.",
+      },
+      {
+        q: "Can nail salon software track nail technician commissions?",
+        a: "Yes, if every service line records the technician who did it. AntraHQ requires a staff member on each line item, so commission and incentive reports reflect who actually did the work.",
+      },
+      {
+        q: "How do I remind nail clients about refills?",
+        a: "Filter guests by days since their last visit and send a WhatsApp reminder when they pass their usual refill window. AntraHQ's audience preview lets you see who will receive the message before you send it.",
+      },
+      {
+        q: "How much does nail studio software cost in India?",
+        a: "Nail salon software in India typically ranges from under ₹1,000 to around ₹5,000 per studio per month. AntraHQ is ₹499 (Starter) or ₹699 (Growth) per branch per month with no booking commission.",
+      },
+    ],
   },
   "spa-management-platform": {
     slug: "spa-management-platform",
     type: "Guide",
     title: "Spa management platform guide for multi-location wellness",
-    seoTitle: "Spa management platform for multi-location wellness centres in India",
+    seoTitle: "Spa Management Software India: Buyer Guide",
     seoDescription:
       "What spa operators need from a spa management platform: longer treatments, therapist schedules, room utilisation, GST billing, and owner P&L across outlets.",
     readMinutes: 8,
@@ -536,15 +614,15 @@ export const resourceArticles: Record<string, ResourceArticle> = {
           "AntraHQ covers spa and wellness formats with the same India desk stack (GST, WhatsApp, geofenced attendance) and owner intelligence (branch P&L, Market Pulse, reviews). Longer treatment workflows still map to services + therapist line items managers already understand.",
       },
     ],
-    cta: "Evaluate AntraHQ as your spa management platform — book a growth audit.",
+    cta: "Evaluate AntraHQ as your spa management platform — book a free demo.",
   },
   "choose-salon-software-india": {
     slug: "choose-salon-software-india",
     type: "Guide",
     title: "How to choose salon management software for Indian chains",
-    seoTitle: "How to choose salon management software / platform in India",
+    seoTitle: "How to Choose Salon Software in India",
     seoDescription:
-      "Evaluation checklist for salon management software in India: GST depth, WhatsApp, multi-branch P&L, attendance, pricing transparency, and rollout time for chains.",
+      "Checklist for choosing salon management software in India: GST depth, WhatsApp, multi-branch P&L, attendance, pricing transparency and rollout time.",
     readMinutes: 10,
     lede:
       "Choosing salon management software in India is less about feature checklists and more about desk reality + owner truth. Use this scorecard when you compare platforms for one branch or many.",
@@ -587,13 +665,13 @@ export const resourceArticles: Record<string, ResourceArticle> = {
         ],
       },
     ],
-    cta: "Use this checklist in an AntraHQ growth audit — bring your branch count and GST setup.",
+    cta: "Use this checklist in an AntraHQ free demo — bring your branch count and GST setup.",
   },
   "multi-branch-salon-platform": {
     slug: "multi-branch-salon-platform",
     type: "Guide",
     title: "Multi-branch salon platform checklist",
-    seoTitle: "Multi-branch salon management platform checklist for India",
+    seoTitle: "Multi-Branch Salon Software: 2026 Checklist",
     seoDescription:
       "Checklist for choosing a multi-branch salon management platform: brand admin, GSTINs, geofences, manager PWAs, comparable P&L, and coaching signals.",
     readMinutes: 7,
@@ -626,21 +704,21 @@ export const resourceArticles: Record<string, ResourceArticle> = {
       {
         heading: "Rollout sequence that works",
         body:
-          "Day 1 tenant + GSTINs → Days 2–3 floor PWA training → Days 4–5 owner P&L and campaigns. Measure first-week bills, punch compliance, and one Sunday owner review — not a six-month transformation programme.",
+          "Hour 1: brand, GSTINs and your first branch → same day: first GST bills on the floor app → first week: every branch live, owner P&L and campaigns switched on. Measure first-week bills, punch compliance, and one Sunday owner review — not a six-month transformation programme.",
       },
       {
         heading: "How AntraHQ approaches multi-branch",
         body:
-          "AntraHQ is designed as a multi-branch salon and spa management platform with public Growth-tier pricing, geofenced attendance, and owner coaching views. Compare against enterprise suites if you need deep franchise complexity; otherwise validate speed-to-desk in a live audit.",
+          "AntraHQ is designed as a multi-branch salon and spa management platform with public Growth-tier pricing, geofenced attendance, and owner coaching views. Compare against enterprise suites if you need deep franchise complexity; otherwise validate speed-to-desk in a live demo.",
       },
     ],
-    cta: "Walk a multi-branch rollout plan in an AntraHQ growth audit.",
+    cta: "Walk a multi-branch rollout plan in an AntraHQ free demo.",
   },
   "salon-vs-spa-software": {
     slug: "salon-vs-spa-software",
     type: "Guide",
     title: "Salon vs spa software — what actually differs",
-    seoTitle: "Salon vs spa management software / platform — India guide",
+    seoTitle: "Salon vs Spa Software: What Actually Differs",
     seoDescription:
       "Salon vs spa management platform needs: walk-in colour desks vs longer treatments, therapist rooms, packages — and when one India platform covers both.",
     readMinutes: 6,
@@ -670,10 +748,10 @@ export const resourceArticles: Record<string, ResourceArticle> = {
       {
         heading: "AntraHQ positioning",
         body:
-          "AntraHQ markets to hair, beauty, spa, and growing brands on one India-ready stack. Use product pages for billing/POS/CRM and the spa guide for wellness-specific buyer questions — then confirm fit in a growth audit.",
+          "AntraHQ markets to hair, beauty, spa, and growing brands on one India-ready stack. Use product pages for billing/POS/CRM and the spa guide for wellness-specific buyer questions — then confirm fit in a free demo.",
       },
     ],
-    cta: "Tell us your mix of salon vs spa outlets — book a growth audit.",
+    cta: "Tell us your mix of salon vs spa outlets — book a free demo.",
   },
 };
 

@@ -21,10 +21,10 @@ different query is more winnable.
 
 ## Content gaps (highest priority — nail studios are explicitly in scope and currently unaddressed)
 
-- [ ] Add `/resources/nail-salon-software-india` guide (mirror the depth and structure of
+- [x] (2026-10-12, branch revamp/seo-enterprise-site) Add `/resources/nail-salon-software-india` guide (mirror the depth and structure of
       `spa-management-platform` and `best-salon-software-india-2026`) targeting "nail
       salon software", "nail studio software", "nail studio management software India".
-- [ ] Add a nail-studio-specific angle to `VerticalsSection.tsx`'s "Beauty & nail studios"
+- [x] (2026-10-12) Homepage "Built for your format" now links nail studios to the new guide (was: Add a nail-studio-specific angle to `VerticalsSection.tsx`'s "Beauty & nail studios"
       card linking to the new guide once it exists (mirrors how the spa card already
       links to `spa-management-platform`).
 - [ ] Check whether `/solutions/[slug]` should gain a vertical-specific page for nail
@@ -34,7 +34,7 @@ different query is more winnable.
 
 ## Competitor comparison gaps
 
-- [ ] Add `/compare/fresha` — Fresha is free/commission-based and shows up often in
+- [x] (2026-10-12) Add `/compare/fresha` — Fresha is free/commission-based and shows up often in
       India studio searches; a fair comparison on total cost of ownership (commission
       vs subscription) and India-specific needs (GST, WhatsApp) is a clear opportunity.
 - [ ] Add `/compare/vagaro` — similar rationale, global tool with India visibility.
@@ -44,21 +44,30 @@ different query is more winnable.
 
 ## Technical / on-page SEO
 
-- [ ] Audit every page's title + meta description length (Google truncates ~60 char
+- [x] (2026-10-12) Audit every page's title + meta description length (Google truncates ~60 char
       titles / ~155-160 char descriptions) — fix any that are truncated or duplicated.
-- [ ] Confirm every `/compare/*` and `/resources/*` page has unique, complete JSON-LD
+- [x] (2026-10-12) Confirm every `/compare/*` and `/resources/*` page has unique, complete JSON-LD
       (the homepage has rich `@graph` schema per `src/app/layout.tsx`-equivalent for this
       repo — verify comparison/resource pages carry their own `Article`/`FAQPage`/
       `SoftwareApplication` schema, not just inherited site-wide schema).
 - [ ] Check internal linking: does every resource guide and compare page link to at
       least 2-3 other relevant resource/compare/product pages? Orphaned pages rank worse.
-- [ ] Verify `sitemap.ts` `lastModified` dates reflect actual last-changed dates per page
+- [x] (2026-10-12, via CONTENT_UPDATED in src/lib/seo.ts) Verify `sitemap.ts` `lastModified` dates reflect actual last-changed dates per page
       (currently a single hardcoded date for everything — low priority but easy fix once
       other items are done).
 - [ ] Run a Core Web Vitals / Lighthouse-style check on the homepage and top 3 landing
       pages (largest contentful paint, layout shift) — heavy motion/3D components
       (`Scene3DWrapper`, `Floating3DCards`) are worth checking for mobile performance
       impact since mobile-first indexing is what Google actually scores.
+
+## New content queue (from 2026-10-12 audit)
+
+- [ ] `/compare/dingg` and `/compare/invoay` — India-native competitors that rank for the head terms
+- [ ] `/resources/salon-membership-software-india` (pairs with `/products/memberships`)
+- [ ] `/resources/salon-software-hindi` — the 10-Indian-language staff app is an angle no competitor owns
+- [ ] Replace illustrative scenarios on `/customers` with one named, permissioned customer story
+- [ ] Bump `CONTENT_UPDATED` in `src/lib/seo.ts` whenever page copy materially changes
+- [ ] Restore `npm run lint` — `next lint` was removed in Next 16 and the repo has no ESLint flat config
 
 ## Off-page / manual actions (agent cannot do these autonomously — surface, don't attempt)
 

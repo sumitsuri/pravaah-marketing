@@ -1,5 +1,24 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="AntraHQ">
-  <rect width="64" height="64" rx="14" fill="#0F3D3A"/>
-  <path d="M18 44 L32 16 L46 44 H39.5 L32 28 L24.5 44 Z" fill="#F7F4EF"/>
-  <circle cx="46" cy="20" r="5" fill="#2DD4A8"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="AntraHQ">
+  <defs>
+    <linearGradient id="ahq-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#7C3AED"/>
+      <stop offset="0.55" stop-color="#5B21B6"/>
+      <stop offset="1" stop-color="#2E1065"/>
+    </linearGradient>
+    <linearGradient id="ahq-gold" x1="0.1" y1="0" x2="0.9" y2="1">
+      <stop offset="0" stop-color="#FDECB2"/>
+      <stop offset="0.45" stop-color="#E8C266"/>
+      <stop offset="1" stop-color="#B07A22"/>
+    </linearGradient>
+    <!-- leaf-shaped counter, tilted upward for growth -->
+    <mask id="ahq-leaf">
+      <rect width="512" height="512" fill="#fff"/>
+      <path d="M256 214 C 294 248 302 296 256 342 C 210 296 218 248 256 214 Z" fill="#000" transform="rotate(24 256 280)"/>
+    </mask>
+  </defs>
+  <rect width="512" height="512" rx="116" fill="url(#ahq-bg)"/>
+  <!-- the A: one solid shape, arched base like a salon doorway -->
+  <path d="M256 100 C 270 100 281 108 287 121 L404 384 C 413 404 399 424 377 424 L328 424 C 300 368 212 368 184 424 L135 424 C 113 424 99 404 108 384 L225 121 C 231 108 242 100 256 100 Z" fill="url(#ahq-gold)" mask="url(#ahq-leaf)"/>
+  <!-- spark: always-on Autopilot -->
+  <path d="M392 92 l11 29 29 11 -29 11 -11 29 -11 -29 -29 -11 29 -11 Z" fill="#FDECB2"/>
 </svg>

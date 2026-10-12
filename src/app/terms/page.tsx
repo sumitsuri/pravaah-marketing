@@ -1,15 +1,15 @@
+import { pageMetadata } from "@/lib/seo";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { brand } from "@/lib/content";
 
 export const metadata: Metadata = {
-  title: "Terms of use",
-  description: `Terms governing use of ${brand.name} websites and applications.`,
+  ...pageMetadata({ title: "Terms of use", description: `Terms governing use of ${brand.name} websites and applications.`, path: "/terms/" }),
 };
 
 export default function TermsPage() {
   return (
-    <div className="bg-mist-soft pt-28">
+    <div className="bg-surface pt-28">
       <section className="section-pad !pt-10">
         <div className="container-narrow prose prose-neutral max-w-none">
           <p className="eyebrow">Legal</p>
@@ -43,7 +43,7 @@ export default function TermsPage() {
           <h2 className="mt-10 font-display text-2xl text-ink">Data &amp; privacy</h2>
           <p className="mt-3 text-sm leading-relaxed text-ink/80">
             Our{" "}
-            <Link href="/privacy/" className="text-jade underline">
+            <Link href="/privacy/" className="text-brand underline">
               Privacy policy
             </Link>{" "}
             describes how we handle personal data. Customer data entered by your business remains subject to your policies
@@ -59,7 +59,7 @@ export default function TermsPage() {
 
           <h2 className="mt-10 font-display text-2xl text-ink">Contact</h2>
           <p className="mt-3 text-sm leading-relaxed text-ink/80">
-            <a href={`mailto:${brand.email}`} className="text-jade underline">
+            <a href={`mailto:${brand.email}`} className="text-brand underline">
               {brand.email}
             </a>
           </p>

@@ -2,7 +2,6 @@
 
 import { useMemo, useState } from "react";
 import Link from "next/link";
-import { motion } from "framer-motion";
 import { brand } from "@/lib/content";
 
 export default function RoiCalculatorPage() {
@@ -30,7 +29,7 @@ export default function RoiCalculatorPage() {
   }, [branches, dailyWalkins, minutesSaved, winbackRate, avgTicket]);
 
   return (
-    <div className="bg-flow-hero pt-28">
+    <div className="bg-hero pt-28">
       <section className="section-pad !pt-10">
         <div className="container-wide grid gap-12 lg:grid-cols-[1.05fr_0.95fr]">
           <div>
@@ -38,10 +37,10 @@ export default function RoiCalculatorPage() {
             <h1 className="display mt-3">Salon revenue opportunity calculator</h1>
             <p className="lede mt-5">
               Estimate desk-time value and WhatsApp win-back upside for your chain size. Directional model —
-              validate in a growth audit with your actuals.
+              validate in a free demo with your actuals.
             </p>
 
-            <div className="mt-10 space-y-6 rounded-3xl border border-ink/10 bg-white p-6 md:p-8">
+            <div className="mt-10 space-y-6 rounded-3xl border border-surface-line bg-white p-6 md:p-8">
               <Slider
                 label="Branches"
                 value={branches}
@@ -81,45 +80,41 @@ export default function RoiCalculatorPage() {
             </div>
           </div>
 
-          <motion.div
-            className="h-fit rounded-3xl border border-jade/30 bg-ink p-8 text-white shadow-[0_30px_80px_-40px_rgba(15,107,92,0.6)]"
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-          >
-            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-jade-soft">
+          <div className="h-fit rounded-2xl bg-ink p-8 text-white shadow-premium-lg lg:sticky lg:top-24">
+            <p className="text-xs font-semibold uppercase tracking-[0.16em] text-brand-300">
               Monthly opportunity
             </p>
             <p className="mt-4 font-display text-5xl text-white">
               ₹{model.total.toLocaleString("en-IN")}
             </p>
-            <p className="mt-2 text-sm text-mist/65">Combined desk-time value + win-back revenue</p>
+            <p className="mt-2 text-sm text-ink-faint">Combined desk-time value + win-back revenue</p>
 
             <dl className="mt-8 space-y-4 border-t border-white/10 pt-6 text-sm">
               <div className="flex justify-between gap-4">
-                <dt className="text-mist/65">Desk hours saved / mo</dt>
+                <dt className="text-ink-faint">Desk hours saved / mo</dt>
                 <dd className="font-semibold">{model.deskHoursSaved} hrs</dd>
               </div>
               <div className="flex justify-between gap-4">
-                <dt className="text-mist/65">Notional admin value</dt>
+                <dt className="text-ink-faint">Notional admin value</dt>
                 <dd className="font-semibold">₹{model.adminValue.toLocaleString("en-IN")}</dd>
               </div>
               <div className="flex justify-between gap-4">
-                <dt className="text-mist/65">Est. win-back visits</dt>
+                <dt className="text-ink-faint">Est. win-back visits</dt>
                 <dd className="font-semibold">{model.monthlyWinbacks}</dd>
               </div>
               <div className="flex justify-between gap-4">
-                <dt className="text-mist/65">Win-back revenue</dt>
+                <dt className="text-ink-faint">Win-back revenue</dt>
                 <dd className="font-semibold">₹{model.winbackRevenue.toLocaleString("en-IN")}</dd>
               </div>
             </dl>
 
-            <Link href="/demo" className="btn-primary mt-8 w-full !bg-jade">
+            <Link href="/demo" className="btn-primary mt-8 w-full">
               {brand.cta.primary}
             </Link>
-            <p className="mt-4 text-center text-[11px] text-mist/50">
+            <p className="mt-4 text-center text-[11px] text-ink-faint">
               Model assumes 26 working days. Validate with your actuals in a live walkthrough.
             </p>
-          </motion.div>
+          </div>
         </div>
       </section>
     </div>
@@ -145,7 +140,7 @@ function Slider({
     <label className="block">
       <div className="mb-2 flex items-center justify-between text-sm">
         <span className="font-medium text-ink">{label}</span>
-        <span className="font-display text-lg text-jade">{value}</span>
+        <span className="font-display text-lg text-brand">{value}</span>
       </div>
       <input
         type="range"
@@ -154,7 +149,7 @@ function Slider({
         step={step}
         value={value}
         onChange={(e) => onChange(Number(e.target.value))}
-        className="w-full accent-jade"
+        className="w-full accent-brand"
       />
     </label>
   );
